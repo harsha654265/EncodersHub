@@ -1,18 +1,5 @@
 const movies = [
   {
-    title: "Court: State vs. A Nobody (2025)",
-    img: "https://image.tmdb.org/t/p/original/15HkWo90ma17wAyAG6rCaumVrLd.jpg",
-    description: "A determined lawyer takes on a high-stakes case to defend a 19-year-old boy, challenging a system that has already branded him guilty.",
-    downloadLinks: [
-      { quality: "576p AVC WEB-DL – 6GB", link: "https://ziddiflix.com/ionicboy/file/ZL1aFph9ugNjyFY" },
-      { quality: "1080p AVC WEBRip – 6GB", link: "https://hubcloud.bz/drive/3bkkrdrhdhzfvw4" },
-      { quality: "1080p AVC WEBRip – 3.7GB", link: "https://hubcloud.lol/drive/55pzkmzoy5111iu" },
-      { quality: "720p AVC WEBRip – 1.5GB", link: "https://appdrive.dev/file/FlUGNiRTR9" },
-      { quality: "576p AVC WEBRip – 800MB", link: "https://gd.vifix.site/file/qvMFdVw4rD" },
-      { quality: "480p AVC WEBRip – 500MB", link: "https://fpgo.xyz/file/67f8d6d1bdafa4d9cb3f8b7e" }
-    ]
-  },
-  {
     title: "Game of Thrones S01 (2011)",
     img: "https://image.tmdb.org/t/p/original/fw9hNiJO0U5MUg2XGyCOlTS3jdS.jpg",
     description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
