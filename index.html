@@ -281,6 +281,13 @@
       modal.classList.remove('show');
     }
 
+    // ✅ Close modal when clicking outside content
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
     searchInput.addEventListener('input', () => {
       const keyword = searchInput.value.toLowerCase();
       const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
