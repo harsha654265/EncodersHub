@@ -3,170 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Encoders Hub 🎬</title>
+  <title>Encoders Hub</title>
   <style>
+    /* [ Same CSS from your original code ] */
     body {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
+      background: #121212;
       color: #fff;
     }
-    h1 {
-      text-align: center;
-      padding-top: 20px;
+
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .tagline {
-      text-align: center;
-      color: orange;
-      margin-top: -10px;
-      margin-bottom: 20px;
-      font-size: 14px;
+      font-size: 0.85rem;
+      color: #FFD700;
     }
-    #search {
-      display: block;
-      margin: 0 auto 20px;
-      padding: 10px;
-      width: 90%;
-      max-width: 400px;
-      font-size: 16px;
+
+    input[type="text"] {
+      padding: 0.5rem;
       border-radius: 8px;
       border: none;
+      width: 200px;
+      margin-top: 0.5rem;
     }
-    .movie-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
     }
+
     .movie-card {
-      background-color: #111;
-      border-radius: 10px;
-      width: 160px;
+      background: #1e1e1e;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+      position: relative;
     }
-    .movie-card:hover {
-      transform: scale(1.05);
-    }
+
     .movie-card img {
       width: 100%;
-      height: auto;
+      height: 270px;
       object-fit: cover;
-      display: block;
+      border-radius: 12px;
     }
+
     .movie-title {
-      padding: 8px;
-      font-size: 14px;
-      font-weight: bold;
-      color: #ffcc00;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
       text-align: center;
-      word-wrap: break-word;
+      color: #FFD700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+      border-radius: 0 0 12px 12px;
     }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+    }
+
     .modal {
+      display: none;
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.95);
-      display: none;
+      background-color: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      z-index: 1000;
-      overflow-y: auto;
+      z-index: 999;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
+
+    .modal.show {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
     .modal-content {
-      background-color: #222;
-      padding: 20px;
-      max-width: 500px;
-      width: 100%;
-      border-radius: 10px;
-    }
-    .modal h2 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-    .modal p {
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-    .modal button {
-      background-color: red;
-      border: none;
+      background: linear-gradient(135deg, #333, #444);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
       color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.5s ease-in-out;
     }
-    .download-btn {
-      display: block;
-      background-color: #333;
-      color: yellow;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 8px;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #FFD700;
       text-align: center;
-      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .file-list a {
+      display: block;
+      background: #333;
+      border-radius: 8px;
+      color: #FFD700;
+      padding: 12px;
+      margin: 8px 0;
       text-decoration: none;
+      font-size: 1.1rem;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .file-list a:hover {
+      background: #FFD700;
+      color: #121212;
+      transform: translateY(-3px);
+    }
+
+    .close-btn {
+      background: #ff4444;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .close-btn:hover {
+      background: #ff1a1a;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Encoders Hub 🎥</h1>
-  <div class="tagline">Download through Instant DL for immediate download</div>
-  <input type="text" id="search" placeholder="Search movies...">
-  <div class="movie-container" id="movie-container"></div>
 
-  <div class="modal" id="modal">
+  <header>
+    <div>
+      <h1>Encoders Hub 🎬</h1>
+      <div class="tagline">Download through Instant DL for immediate download</div>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search movies...">
+  </header>
+
+  <div class="movie-grid" id="movieGrid"></div>
+
+  <div class="modal" id="movieModal">
     <div class="modal-content">
-      <h2 id="modal-title"></h2>
-      <p id="modal-description"></p>
-      <div id="modal-links"></div>
-      <button onclick="closeModal()">Close</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="file-list" id="downloadLinks"></div>
+      <button class="close-btn" onclick="closeModal()">Close</button>
     </div>
   </div>
 
   <script src="movies.js"></script>
   <script>
-    const container = document.getElementById("movie-container");
-    const modal = document.getElementById("modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalDesc = document.getElementById("modal-description");
-    const modalLinks = document.getElementById("modal-links");
-    const search = document.getElementById("search");
+    const movieGrid = document.getElementById('movieGrid');
+    const searchInput = document.getElementById('searchInput');
+    const modal = document.getElementById('movieModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const downloadLinks = document.getElementById('downloadLinks');
 
-    function renderMovies(list) {
-      container.innerHTML = "";
-      list.forEach(movie => {
-        const card = document.createElement("div");
-        card.className = "movie-card";
+    function renderMovies(movieList) {
+      movieGrid.innerHTML = '';
+      movieList.slice().reverse().forEach(movie => {
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
         card.innerHTML = `
-          <img src="${movie.image}" alt="${movie.title}" />
+          <img src="${movie.img}" alt="${movie.title}">
           <div class="movie-title">${movie.title}</div>
         `;
-        card.onclick = () => {
-          modalTitle.textContent = movie.title;
-          modalDesc.textContent = movie.description;
-          modalLinks.innerHTML = movie.links.map(link =>
-            `<a class="download-btn" href="${link}" target="_blank">${link}</a>`
-          ).join("");
-          modal.style.display = "flex";
-        };
-        container.appendChild(card);
+        card.addEventListener('click', () => openModal(movie));
+        movieGrid.appendChild(card);
       });
     }
 
-    function closeModal() {
-      modal.style.display = "none";
+    function openModal(movie) {
+      modalTitle.textContent = movie.title;
+      modalDescription.textContent = movie.description;
+      downloadLinks.innerHTML = '';
+      movie.downloadLinks.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.link;
+        a.target = "_blank";
+        a.textContent = link.quality;
+        downloadLinks.appendChild(a);
+      });
+      modal.classList.add('show');
     }
 
-    search.addEventListener("input", () => {
-      const term = search.value.toLowerCase();
-      const filtered = movies.filter(movie =>
-        (movie.title || "").toLowerCase().includes(term)
-      );
+    function closeModal() {
+      modal.classList.remove('show');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    searchInput.addEventListener('input', () => {
+      const keyword = searchInput.value.toLowerCase();
+      const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
       renderMovies(filtered);
     });
 
