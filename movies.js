@@ -34,12 +34,11 @@ const movies = [
     ]
   },
   {
-  title: "WWE WrestleMania 41 (2025) Night 2",
-  img: "https://1max.top/wp-content/uploads/2025/04/Watch-WWE-WrestleMania-41-2025-Night-2-PPV-Live-42025-April-20th-2025-Online-Full-Show-Free.jpg",
-  description: "WWE WrestleMania 41 Night 2 (2025) showcases epic battles and historic moments as the biggest names in professional wrestling clash for dominance. Don't miss out on the action from the grandest stage of them all!",
-  downloadLinks: [
-    { quality: "HD WWE WrestleMania 41 Night 2", link: "https://gofile.io/d/MTyuSW" }
-  ]
-}
-
+    title: "WWE WrestleMania 41 (2025) Night 2",
+    img: "https://1max.top/wp-content/uploads/2025/04/Watch-WWE-WrestleMania-41-2025-Night-2-PPV-Live-42025-April-20th-2025-Online-Full-Show-Free.jpg",
+    description: "WWE WrestleMania 41 Night 2 (2025) showcases epic battles and historic moments as the biggest names in professional wrestling clash for dominance. Don't miss out on the action from the grandest stage of them all!",
+    downloadLinks: [
+      { quality: "HD WWE WrestleMania 41 Night 2", link: "https://gofile.io/d/MTyuSW" }
+    ]
+  }
 ];
