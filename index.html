@@ -3,166 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Encoders Hub</title>
+  <title>Encoders Hub 🎬</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
-
     h1 {
       text-align: center;
-      padding: 20px;
+      padding-top: 20px;
     }
-
     .tagline {
       text-align: center;
       color: orange;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
-
-    .search-box {
-      text-align: center;
-      margin: 10px;
-    }
-
-    .search-box input {
+    #search {
+      display: block;
+      margin: 0 auto 20px;
       padding: 10px;
-      width: 80%;
+      width: 90%;
       max-width: 400px;
-      border-radius: 5px;
-      border: none;
       font-size: 16px;
+      border-radius: 8px;
+      border: none;
     }
-
-    .movies-container {
+    .movie-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 10px;
+      gap: 20px;
+      padding: 20px;
     }
-
     .movie-card {
-      background-color: #222;
-      margin: 10px;
-      padding: 10px;
-      border-radius: 8px;
-      width: 180px;
-      text-align: center;
+      background-color: #111;
+      border-radius: 10px;
+      width: 160px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+      cursor: pointer;
       transition: transform 0.2s;
     }
-
     .movie-card:hover {
       transform: scale(1.05);
     }
-
     .movie-card img {
       width: 100%;
       height: auto;
-      border-radius: 6px;
       object-fit: cover;
+      display: block;
     }
-
-    .movie-card h3 {
-      font-size: 1rem;
-      margin: 10px 0 5px;
+    .movie-title {
+      padding: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #ffcc00;
+      text-align: center;
       word-wrap: break-word;
-      white-space: normal;
-      color: #facc15;
     }
-
-    .movie-card p {
-      font-size: 0.85rem;
-      color: #ccc;
-    }
-
-    /* Modal Styles */
     .modal {
-      display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.9);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
+      z-index: 1000;
       overflow-y: auto;
-      z-index: 999;
     }
-
     .modal-content {
-      max-width: 600px;
-      margin: auto;
       background-color: #222;
       padding: 20px;
+      max-width: 500px;
+      width: 100%;
       border-radius: 10px;
     }
-
     .modal h2 {
-      color: #facc15;
+      margin-top: 0;
+      font-size: 22px;
     }
-
     .modal p {
-      color: #ddd;
+      margin-bottom: 15px;
+      line-height: 1.5;
     }
-
-    .download-links button {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
-      width: 100%;
-      background-color: #333;
-      border: none;
-      color: gold;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .close-btn {
-      margin-top: 10px;
+    .modal button {
       background-color: red;
-      color: white;
       border: none;
+      color: #fff;
       padding: 10px 20px;
-      border-radius: 5px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 6px;
       cursor: pointer;
     }
-
-    @media (max-width: 600px) {
-      .movie-card {
-        width: 90%;
-      }
-
-      .search-box input {
-        width: 90%;
-      }
+    .download-btn {
+      display: block;
+      background-color: #333;
+      color: yellow;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Encoders Hub 📀</h1>
+  <h1>Encoders Hub 🎥</h1>
   <div class="tagline">Download through Instant DL for immediate download</div>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search movies..." />
-  </div>
-  <div class="movies-container" id="moviesContainer"></div>
+  <input type="text" id="search" placeholder="Search movies...">
+  <div class="movie-container" id="movie-container"></div>
 
-  <div class="modal" id="movieModal">
-    <div class="modal-content" id="modalContent">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
-      <div class="download-links" id="downloadLinks"></div>
-      <button class="close-btn" onclick="closeModal()">Close</button>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-links"></div>
+      <button onclick="closeModal()">Close</button>
     </div>
   </div>
 
   <script src="movies.js"></script>
+  <script>
+    const container = document.getElementById("movie-container");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-description");
+    const modalLinks = document.getElementById("modal-links");
+    const search = document.getElementById("search");
+
+    function renderMovies(list) {
+      container.innerHTML = "";
+      list.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "movie-card";
+        card.innerHTML = `
+          <img src="${movie.image}" alt="${movie.title}" />
+          <div class="movie-title">${movie.title}</div>
+        `;
+        card.onclick = () => {
+          modalTitle.textContent = movie.title;
+          modalDesc.textContent = movie.description;
+          modalLinks.innerHTML = movie.links.map(link =>
+            `<a class="download-btn" href="${link}" target="_blank">${link}</a>`
+          ).join("");
+          modal.style.display = "flex";
+        };
+        container.appendChild(card);
+      });
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    search.addEventListener("input", () => {
+      const term = search.value.toLowerCase();
+      const filtered = movies.filter(movie =>
+        (movie.title || "").toLowerCase().includes(term)
+      );
+      renderMovies(filtered);
+    });
+
+    renderMovies(movies);
+  </script>
 </body>
 </html>
