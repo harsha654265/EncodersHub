@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
   <style>
-    /* [ Same CSS from your original code ] */
+    /* Basic CSS Styles */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -86,6 +86,7 @@
       box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
     }
 
+    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
@@ -116,7 +117,7 @@
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
       animation: fadeIn 0.5s ease-in-out;
       overflow-y: auto;
-      max-height: 80vh; /* Limit height on mobile */
+      max-height: 80vh;
     }
 
     @keyframes fadeIn {
@@ -179,32 +180,6 @@
       background: #ff1a1a;
       transform: scale(1.05);
     }
-
-    /* Modal responsiveness */
-    @media (max-width: 768px) {
-      .modal-content {
-        max-width: 90%;
-        width: 100%;
-        max-height: 75vh; /* Further limit height */
-        padding: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .modal-content {
-        max-width: 100%;
-        padding: 0.8rem;
-        max-height: 70vh; /* Further limit height */
-      }
-
-      .movie-title {
-        font-size: 1rem; /* Adjust text size for mobile */
-      }
-
-      .file-list a {
-        font-size: 1rem; /* Adjust download link text for mobile */
-      }
-    }
   </style>
 </head>
 <body>
@@ -217,10 +192,15 @@
     <input type="text" id="searchInput" placeholder="Search movies...">
   </header>
 
-  <!-- Featured Movies Section -->
-  <section id="featuredMovies" class="movie-grid"></section>
+  <section>
+    <h2>Featured Movies</h2>
+    <div class="movie-grid" id="featuredMovies"></div>
+  </section>
 
-  <div class="movie-grid" id="movieGrid"></div>
+  <section>
+    <h2>All Movies</h2>
+    <div class="movie-grid" id="movieGrid"></div>
+  </section>
 
   <div class="modal" id="movieModal">
     <div class="modal-content">
@@ -233,28 +213,20 @@
 
   <script src="movies.js"></script>
   <script>
-    const movieGrid = document.getElementById('movieGrid');
     const featuredMoviesGrid = document.getElementById('featuredMovies');
+    const movieGrid = document.getElementById('movieGrid');
     const searchInput = document.getElementById('searchInput');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDescription = document.getElementById('modalDescription');
     const downloadLinks = document.getElementById('downloadLinks');
 
-    const featuredMovies = [];
+    let allMovies = [...movies];  // All movies
+    let featuredMovies = []  // Featured movies
 
-    function addFeaturedMovie(movie) {
-      if (featuredMovies.length >= 10) {
-        featuredMovies.shift(); // Remove the oldest featured movie
-      }
-      featuredMovies.unshift(movie); // Add the new movie to the top
-      renderFeaturedMovies();
-    }
-
-    function renderFeaturedMovies() {
-      featuredMoviesGrid.innerHTML = ''; // Clear existing featured movies
-
-      featuredMovies.forEach(movie => {
+    function renderMovies(movieList, grid) {
+      grid.innerHTML = '';
+      movieList.forEach(movie => {
         const card = document.createElement('div');
         card.classList.add('movie-card');
         card.innerHTML = `
@@ -262,22 +234,7 @@
           <div class="movie-title">${movie.title}</div>
         `;
         card.addEventListener('click', () => openModal(movie));
-        featuredMoviesGrid.appendChild(card);
-      });
-    }
-
-    function renderMovies(movieList) {
-      movieGrid.innerHTML = '';
-      movieList.slice().reverse().forEach(movie => {
-        const card = document.createElement('div');
-        card.classList.add('movie-card');
-        card.innerHTML = `
-          <img src="${movie.img}" alt="${movie.title}">
-          <div class="movie-title">${movie.title}</div>
-        `;
-        card.addEventListener('click', () => openModal(movie));
-        movieGrid.appendChild(card);
-        addFeaturedMovie(movie); // Add movie to the featured section
+        grid.appendChild(card);
       });
     }
 
@@ -318,19 +275,33 @@
       modal.classList.remove('show');
     }
 
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
+    function updateFeaturedMovies() {
+      if (featuredMovies.length > 10) {
+        featuredMovies.pop(); // Remove oldest movie if more than 10
       }
-    });
+      renderMovies(featuredMovies, featuredMoviesGrid);
+    }
+
+    function addMovieToFeatured(movie) {
+      featuredMovies.unshift(movie);
+      updateFeaturedMovies();
+    }
+
+    function addMovie(movie) {
+      allMovies.unshift(movie);  // Add movie to all movies list
+      renderMovies(allMovies, movieGrid);
+      addMovieToFeatured(movie); // Add movie to featured
+    }
 
     searchInput.addEventListener('input', () => {
       const keyword = searchInput.value.toLowerCase();
-      const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
-      renderMovies(filtered);
+      const filtered = allMovies.filter(movie => movie.title.toLowerCase().includes(keyword));
+      renderMovies(filtered, movieGrid);
     });
 
-    renderMovies(movies); // Render the main movies
+    renderMovies(allMovies, movieGrid);
+    renderMovies(featuredMovies, featuredMoviesGrid);
+
   </script>
 </body>
 </html>
