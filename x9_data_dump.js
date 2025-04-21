@@ -18,6 +18,28 @@ const movies = [
     ]
   },
   {
+  title: "John Wick Collection",
+  img: "https://theposterdb.com/api/assets/17550/view",
+  description: "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+  downloadLinks: [
+    { quality: "1080p WEBDL ChapteR 1", link: "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
+    { quality: "1080p WEBDL ChapteR 2", link: "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
+    { quality: "1080p WEBDL ChapteR 3", link: "https://gdlink.dev/file/2eQHtRChOshri6W" },
+    { quality: "1080p WEBDL ChapteR 4", link: "https://gdlink.dev/file/Edn4T5T3TxrM0xf" },
+    
+  ]
+  },
+  {
+  title: "Moon knight(2022)",
+  img: "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
+  description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
+  downloadLinks: [
+    { quality: "1080p BluraY S01 ZIP", link: "https://vifix.site/gdflix/YsVUM3pVym" },
+
+  ]
+},
+
+  {
     title: "Game of Thrones S02 (2011)",
     img: "https://image.tmdb.org/t/p/original/bw6DlqljVFIinhBA7uDSNha6Lnp.jpg",
     description: "The war for the Iron Throne intensifies as five kings claim their right to rule the land. The Night's Watch discovers something deadly beyond the Wall...",
@@ -36,7 +58,7 @@ const movies = [
   },
   {
   title: "Game of Thrones S03 (2011)",
-  img: "hhttps://image.tmdb.org/t/p/original/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+  img: "https://image.tmdb.org/t/p/original/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
   description: "The war for the Iron Throne intensifies as five kings claim their right to rule the land. The Night's Watch discovers something deadly beyond the Wall...",
   downloadLinks: [
     { quality: "4K UHD GOT S03E01 MUL", link: "https://new6.gdflix.dad/file/cXcU7PCJKG" },
