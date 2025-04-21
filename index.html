@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encoders Hub</title>
+  <style>
+    /* [ Same CSS from your original code ] */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #121212;
+      color: #fff;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: #FFD700;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+      width: 200px;
+      margin-top: 0.5rem;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .movie-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .movie-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #FFD700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .modal.show {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #333, #444);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      color: #fff;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .file-list a {
+      display: block;
+      background: #333;
+      border-radius: 8px;
+      color: #FFD700;
+      padding: 12px;
+      margin: 8px 0;
+      text-decoration: none;
+      font-size: 1.1rem;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .file-list a:hover {
+      background: #FFD700;
+      color: #121212;
+      transform: translateY(-3px);
+    }
+
+    .close-btn {
+      background: #ff4444;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .close-btn:hover {
+      background: #ff1a1a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Encoders Hub 🎬</h1>
+      <div class="tagline">Download through Instant DL for immediate download</div>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search movies...">
+  </header>
+
+  <div class="movie-grid" id="movieGrid"></div>
+
+  <div class="modal" id="movieModal">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="file-list" id="downloadLinks"></div>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="movies.js"></script>
+  <script>
+    const movieGrid = document.getElementById('movieGrid');
+    const searchInput = document.getElementById('searchInput');
+    const modal = document.getElementById('movieModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const downloadLinks = document.getElementById('downloadLinks');
+
+    function renderMovies(movieList) {
+      movieGrid.innerHTML = '';
+      movieList.slice().reverse().forEach(movie => {
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
+        card.innerHTML = `
+          <img src="${movie.img}" alt="${movie.title}">
+          <div class="movie-title">${movie.title}</div>
+        `;
+        card.addEventListener('click', () => openModal(movie));
+        movieGrid.appendChild(card);
+      });
+    }
+
+    function openModal(movie) {
+      modalTitle.textContent = movie.title;
+      modalDescription.textContent = movie.description;
+      downloadLinks.innerHTML = '';
+      movie.downloadLinks.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.link;
+        a.target = "_blank";
+        a.textContent = link.quality;
+        downloadLinks.appendChild(a);
+      });
+      modal.classList.add('show');
+    }
+
+    function closeModal() {
+      modal.classList.remove('show');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    searchInput.addEventListener('input', () => {
+      const keyword = searchInput.value.toLowerCase();
+      const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
+      renderMovies(filtered);
+    });
+
+    renderMovies(movies);
+  </script>
+</body>
+</html>
