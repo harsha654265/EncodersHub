@@ -217,6 +217,9 @@
     <input type="text" id="searchInput" placeholder="Search movies...">
   </header>
 
+  <!-- Featured Movies Section -->
+  <section id="featuredMovies" class="movie-grid"></section>
+
   <div class="movie-grid" id="movieGrid"></div>
 
   <div class="modal" id="movieModal">
@@ -231,11 +234,37 @@
   <script src="movies.js"></script>
   <script>
     const movieGrid = document.getElementById('movieGrid');
+    const featuredMoviesGrid = document.getElementById('featuredMovies');
     const searchInput = document.getElementById('searchInput');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDescription = document.getElementById('modalDescription');
     const downloadLinks = document.getElementById('downloadLinks');
+
+    const featuredMovies = [];
+
+    function addFeaturedMovie(movie) {
+      if (featuredMovies.length >= 10) {
+        featuredMovies.shift(); // Remove the oldest featured movie
+      }
+      featuredMovies.unshift(movie); // Add the new movie to the top
+      renderFeaturedMovies();
+    }
+
+    function renderFeaturedMovies() {
+      featuredMoviesGrid.innerHTML = ''; // Clear existing featured movies
+
+      featuredMovies.forEach(movie => {
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
+        card.innerHTML = `
+          <img src="${movie.img}" alt="${movie.title}">
+          <div class="movie-title">${movie.title}</div>
+        `;
+        card.addEventListener('click', () => openModal(movie));
+        featuredMoviesGrid.appendChild(card);
+      });
+    }
 
     function renderMovies(movieList) {
       movieGrid.innerHTML = '';
@@ -248,15 +277,15 @@
         `;
         card.addEventListener('click', () => openModal(movie));
         movieGrid.appendChild(card);
+        addFeaturedMovie(movie); // Add movie to the featured section
       });
     }
 
     function openModal(movie) {
       modalTitle.textContent = movie.title;
 
-      // Truncate description if it's too long
       let description = movie.description;
-      const maxLength = 150; // Max length of description before truncating
+      const maxLength = 150;
       if (description.length > maxLength) {
         description = description.substring(0, maxLength) + '...';
         const readMore = document.createElement('span');
@@ -301,7 +330,7 @@
       renderMovies(filtered);
     });
 
-    renderMovies(movies);
+    renderMovies(movies); // Render the main movies
   </script>
 </body>
 </html>
