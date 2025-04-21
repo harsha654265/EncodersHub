@@ -1,5 +1,13 @@
 const movies = [
   {
+    title: "WWE WrestleMania 41 (2025) Night 1",
+    img: "https://1max.top/wp-content/uploads/2025/04/Watch-WWE-WrestleMania-41-2025-Night-2-PPV-Live-42025-April-20th-2025-Online-Full-Show-Free.jpg",
+    description: "WWE WrestleMania 41 Night 2 (2025) showcases epic battles and historic moments as the biggest names in professional wrestling clash for dominance. Don't miss out on the action from the grandest stage of them all!",
+    downloadLinks: [
+      { quality: "HD WWE WrestleMania 41 Night 2", link: "https://gofile.io/d/MTyuSW" }
+    ]
+  },
+  {
     title: "Game of Thrones S01 (2011)",
     img: "https://image.tmdb.org/t/p/original/fw9hNiJO0U5MUg2XGyCOlTS3jdS.jpg",
     description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
