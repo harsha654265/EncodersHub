@@ -290,8 +290,18 @@
 
     searchInput.addEventListener('input', () => {
       const keyword = searchInput.value.toLowerCase();
-      const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
-      renderMovies(filtered, movieGrid);
+      const featuredSection = document.querySelector('section h2');
+
+      if (keyword) {
+        const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
+        renderMovies(filtered, movieGrid);
+        featuredMoviesGrid.innerHTML = '';
+        featuredSection.style.display = 'none';
+      } else {
+        renderMovies(featuredMovies, featuredMoviesGrid);
+        renderMovies(movies, movieGrid);
+        featuredSection.style.display = 'block';
+      }
     });
 
     const featuredMovies = movies.slice(0, 10);
