@@ -1,5 +1,16 @@
 const movies = [
       {
+  title: "Eeshwar (2002)",
+  img: "https://image.tmdb.org/t/p/original/xy5WSj34dM4ZEHNhrm0RViLnLMS.jpg",
+  description: "Eeshwar (Telugu: ఈశ్వర్) is a 2002 Telugu film directed by Jayanth C. Paranjee and starring Prabhas[1] and Sridevi Vijaykumar. Siva Krishna and Revathi played supporting roles. Eeswar (Prabhas) is a motherless child and brat living in Dhoolpet, a slum area in Old City. Eeswar's father (Siva Krishna) manufactures Gudumba (arrack) with the help of neighborhood people. Eeswar falls in love at first sight when he sees a college going beauty Indu (Sridevi). In the meantime, Eeswar's father marries Sujatha (Revathi), who has been waiting for him for the past 20 years so that she can be a good mother to Eeswar. Eeswar hates his stepmother thinking that his father married her to enjoy worldly pleasures. Meanwhile, Indu's father turns out to be a local MLA (Ashok Kumar) who hates poor. The local MLA sends goons to finish him off Eeswar. What follows next forms the second half of the film.",
+  downloadLinks: [
+    { quality: "1080p HEVC Ai Upscale Rip 15.85GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=1be72becab424d933e5149a347b73cac%3A3b517d04aaffae8bb8c337be4569a35b0011b49f8ed42f7218dec8511a0d78bdf7ceb3223370ae2b760c9f8266aeb88d963f3d10fcd33a30474ef3309182099e586841d0b73b70cf80cc4fe8e9d284cf43b5010a4d4e57d0363cfef54e8dadcb1a7e9eb90117918663e1113a9d918f0a64d4f37023d2d9075000151df379814f0c787f9d86db109aae0644ff98cdba98f4328c930c54288d5584b19174cff30cc6de9eecfc3be6c7349e5ee337377f18" },
+    { quality: "1080p HEVC Ai Upscale Rip 11GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=2ffbd46a808ff2a185676fb9108ebfbf%3Aa52be9d96bd59914000e0cb6c14e51724b92f63af52b97db0709b5da37bd53e173e9d9f803c5d315996890cce295e88e034a0a93a7bc13fcd7bba5e468ace3bfd4b18146c5a0bb608ab8b743d668ae00665f6f3285e6c2f75dc9e73716e0d2c05fef5481e2f8b1d1671fcb5b852152c9a0c1fb6c40a9b8e901886a65ffb0a1b0556f91d991aac271ba233a6add1e3b2927ef9b756afeb7e5aef469017bdba7c530b47dfbe525bf7097135fc5f27023a3" },
+    { quality: "1080p HEVC Ai Upscale Rip 7.28GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=5242e89272b7161f91654b1b05f4a60a%3A886b0352e9aa34c60174871c79de93476cba52482b6e40a9d4cd06268285fcf5ac8fa86cc7a88695acd60fc2d4e8333dd46e126dbb5b38f64283bc6e7431b4d7f90c19875b9dcf00749c0ffac5b6b8b8b110f8a773d332cdda3ed1847991e6afdb9343313797eb84dac4b6698f1552ab8add5e64cb01e4a9a5532d984de9fb3093a7422ba3638f9c8a34d1e13ca0ddc38bcc3f8422c803c184e3b5e7f4fa36677b3d0a3f58e0eb8946664303a1ec9cf7" },
+    { quality: "1080p HEVC Ai Upscale Rip 3.8GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=a72493198a3b3f76a90efa459e1ee7f0%3A2f2955b15108f29ef5a4912f175625a6b85f006463200a8ef3412bcd487e63ba9f74b5f99772b232717ab13976101347267e288a6b26dc1e574fce59899b08f0bfbea1e7ac995890a6215c7dc1d001a3047439e138fa9753f08c62857f8bc7429b79f0faa076c64690270d6816d67e4f13d8d0dc0068e97477b4fc01f85c389f95ad21515367a1e4723da33e503f116ba48c71e1cfecb1e1a33a731c5f3c0cbe0b992a46a564b598ccf08f1b9b91179f" }
+  ]
+},
+      {
   title: "John Wick Collection",
   img: "https://theposterdb.com/api/assets/17550/view",
   description: "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
