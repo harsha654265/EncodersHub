@@ -1,5 +1,16 @@
 const movies = [
       {
+  title: "Raghavendra (2003)",
+  img: "https://image.tmdb.org/t/p/original/bQ5T8Uh8l44uBXSJgv9I26IE1sA.jpg",
+  description: "Raghava (Prabhas) is a hot-blooded and restless youth who cannot tolerate injustice that is being done in the society. In the process, he picks up fight with local mafia leader Ankineedu (Anandraj). Ankineedu stabs Sirisha (Anshu) - the ladylove of Raghava - to death. He also issues an ultimatum to Raghava's parents to leave the city in few hours. The vexed parents ask Raghava to accompany them only if he agrees to listen to their words. They take Raghava to Mantralayam - a relatives place - and make him become a devotee of Lord Raghavendra Swamy.",
+  downloadLinks: [
+   { quality: "1080p AMZN WEB-DL 1.8GB", link: "https://new1.filepress.icu/file/65361e7c42c56e79254de2fc" },
+{ quality: "1080p AMZN WEB-DL 3.2GB", link: "https://new1.filepress.icu/file/65361e7942c56e79254de1e9 " },
+{ quality: "1080p AMZN WEB-DL 6.52GB", link: "https://new1.filepress.icu/file/65361e7b42c56e79254de2a6" }
+ ]
+},
+    
+      {
   title: "Eeshwar (2002)",
   img: "https://image.tmdb.org/t/p/original/xy5WSj34dM4ZEHNhrm0RViLnLMS.jpg",
   description: "Eeshwar (Telugu: ఈశ్వర్) is a 2002 Telugu film directed by Jayanth C. Paranjee and starring Prabhas[1] and Sridevi Vijaykumar. Siva Krishna and Revathi played supporting roles. Eeswar (Prabhas) is a motherless child and brat living in Dhoolpet, a slum area in Old City. Eeswar's father (Siva Krishna) manufactures Gudumba (arrack) with the help of neighborhood people. Eeswar falls in love at first sight when he sees a college going beauty Indu (Sridevi). In the meantime, Eeswar's father marries Sujatha (Revathi), who has been waiting for him for the past 20 years so that she can be a good mother to Eeswar. Eeswar hates his stepmother thinking that his father married her to enjoy worldly pleasures. Meanwhile, Indu's father turns out to be a local MLA (Ashok Kumar) who hates poor. The local MLA sends goons to finish him off Eeswar. What follows next forms the second half of the film.",
