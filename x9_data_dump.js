@@ -30,6 +30,46 @@ const movies = [
   ]
   },
   {
+  title: "Stranger Things S01",
+  img: "https://image.tmdb.org/t/p/original/jS3pbMv7CCajFRd52eK77R0scku.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/07w8XtoMLN" },
+  
+  ]
+},
+    {
+  title: "Stranger Things S02",
+  img: "https://image.tmdb.org/t/p/original/uAc35R8pBa7ykvDfgy1tQs76ETP.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/r97hySr6JG" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/L6r29hgAVH" },
+  
+  ]
+},
+    {
+  title: "Stranger Things S03",
+  img: "https://image.tmdb.org/t/p/original/3Emf1Nal5M3h3gsw8KGcs21IhNG.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/a5GnxcYQwa" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/esdn2Otz5S" },
+  
+  ]
+},
+      {
+  title: "Stranger Things S04",
+  img: "https://image.tmdb.org/t/p/original/dOzW7UEVlQJs1WtNHfIe9JzcKKv.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/HQl8QNbspx" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/shESG15vae" },
+  
+  ]
+},
+  {
   title: "Moon knight(2022)",
   img: "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
   description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
