@@ -1,4 +1,4 @@
-[
+const movies = [
   {
     "title": "Munna (2007)",
     "poster_url": "https://image.tmdb.org/t/p/original/nny02VHCbeMVoYuezJidDSr7eLN.jpg",
