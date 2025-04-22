@@ -1,5 +1,73 @@
 const movies = [
       {
+  title: "",
+  img: "",
+  description: "",
+  downloadLinks: [
+    { quality: "", link: "" },
+    { quality: "", link: "" },
+  ]
+},
+      {
+  title: "Munna (2007)",
+  img: "https://image.tmdb.org/t/p/original/nny02VHCbeMVoYuezJidDSr7eLN.jpg",
+  description: "Munna (Prabhas) is a college student. His aim is to finish off mafia don Kakha (Prakash Raj) who keeps the entire city under his grip. Munna has personal vengeance to take on Kakha. An honest politician Srinivasa Rao (Kota Srinivasa Rao) relentlessly works to expose Kakha but gets killed. Meanwhile, Munna’s classmate Nidhi (Ileana D'Cruz) falls in love with him. The twist in the tale is that Kakha is none other than his estranged father who tries to sell off his mother and was responsible for the death of his mother and his kid sister. Another don in the city named Aatma, who is the opposition of Kakha (Rahul Dev) asks Munna to join him. But Munna refuses his proposal. Munna starts to beat Kakha and the mind game begins. Kakha's second wife and son-daughter left him and join Munna. After some incidents including the death of his best friend, Munna finds out that Aatma was working for Kakha all along.",
+  downloadLinks: [
+    { quality: "1080p Ai Upscaled 10bit HQ HEVC 5.71GB", link: "https://new2.gdtot.zip/file/6132425977" },
+    
+  ]
+},
+      {
+  title: "Yogi (2007)",
+  img: "https://image.tmdb.org/t/p/original/dWtPLjOST3hkG8rJKBrTETlkl0v.jpg",
+  description: "Eeshwar Chandra Prasad (Prabhas) is the son of Ram Murthy (Chalapathi Rao) and Shantamma (Sharada Urvashi). Ram Murthy wants his son to do some job. However, Shantamma pampers Eeshwar very much and hence he doesn't want to leave the village. Ram Murthy dies and in order to fulfil his last wish, Eeshwar goes to the city to earn money on the advice of his friend Basha (Ali), who was a pickpocket. Eeshwar could not meet Basha. On the other hand Kotaiah (Kota Srinivasa Rao) runs big land mafia in Hyderabad city and a bitter rival of Narsing Pahilwan (Pradeep Rawat). Saidulu (Subbaraju) is Narsing's brother. Once Saidulu hacks Kotaiah and his assistant, when Eeshwar accidentally saves him. Eeshwar gets a job in a tea stall run by Chandranna (Chandra Mohan). He earns good money and purchases two gold bangles for his mother and plans to leave the city.",
+  downloadLinks: [
+    { quality: "1080p HEVC AMZN WEB-DL 10.42GB", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=e548831a28dba76100b020e61c6df773%3A8b5109f615f3239a76e977625137f229504772adcb5c28b577bf34586d034c2ca83551c2057bedab81c4af8df4ec4d85b1d7998cafb1889a55479fb0c149d9d433a539affcb188aeae2e0c62efacb6bb532ff9930b8d546bafcc341e73d8794eda8a0bf3158999851b694abf55baaa702d2343353c7eab44e9fff1af60c83a6546ab5335ea6136a84c9df18fe667902cade4bf963551ad90277cc96a36af9be0cea95d09b1d7df504959337f9659854a" },
+    { quality: "1080p HEVC AMZN WEB-DL 2.50GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=5046fe36fdd770d4530afcea5358d5bf%3A527d0f638968550e3463b7dc869a3209e527299fb820cd5cf8561fb429f55b6a15c6fbd8341acd6fceadf1720922b7ab34bef0c455e0999242b3a380ee43181bae56d105b1285e0535357a2eaf686d75378e432b087cabad55206446ef923ae35a8b0724fa7013e27925c4d3990aa873baa8e33c12eee8b0eba85b6c17dcf828ba44d461a3fd5e532973a538854423207d0abbe531c972d744b1a51c68a2d956f359cbd2bb1fc3adfaa268c9991d1cc7
+" },
+  ]
+},
+      {
+  title: "Pournami (2006)",
+  img: "https://image.tmdb.org/t/p/original/gSrssdk6NDFeuIkFuLskaI14EPb.jpg",
+  description: "A dancer trains for an event where she has to perform a special dance in Lord Shiva's temple. But when she suddenly disappears, her younger sister Chandrakala decides to learn the dance.",
+  downloadLinks: [
+    { quality: "1080p HYBRID JC WEBRIP 7.96GB", link: "https://hubcloud.bz/drive/nmspql7ckg7wplq" },
+    { quality: "1080p HEVC EROSNOW+AMZN WEBRIP 6GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=03a52e87ce5528c2a54ef3431b95fc4d%3Ac5ffca35742393c09e600d0e2ce6b5cabb1d430c85187d8cf6c48679fa1ccb7f6b826aaa5b63fea9b60dce530f282b53c17f6f68de8110ee33c9e0cfd47b552435bc47ef933b2191f74506e2caf9c3b510bfc7e840a5345af0171c0b834856c8f318a09d6a02b2b6e789fc3395ca017e9b103e26365b0ffc777d42969e235e770093ef0a9b6699279e8b1490229f6da636d6af9a4f3b0aa0ab33ff52b59fa97b690578493a7c040757c4b0a92e6316f0" },
+    { quality: "1080p HEVC EROSNOW+AMZN WEBRIP 3.77GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=01c6c158928d15401949ab6248953d05%3A024e4f0d5fd150b5a33bd873a04687d5e2da092879905baf753cda6225af2f1ce39caa53c6f102a96bce0db3a64578d1700352e87c98131472f82c2698848bb427f5839fb2a5075ad1e73e1dd0bb16a8a07da376be09555ee37dd7bce0df58f10b3a18b9d76942d948e9a7749a7c8814837fc206ea68bdd2c83bc808beec8c06acaad20675fba07834f13233eea3cf789139972ebef1bfaa2dd3d8050aaaf89385a39686e2e2441b325f60f13b4c45ce" },
+  ]
+},{
+  title: "Chatrapathi (2005)",
+  img: "https://image.tmdb.org/t/p/original/sW7aw6fLcQC4rVYLNcDuyXjbM0S.jpg",
+  description: "Sivaji and his family are uprooted from their community in Sri Lanka and wind up as bonded labourers in Vishakhapatnam. Like his legendary namesake, he rises up to become the saviour of the oppressed.",
+  downloadLinks: [
+    { quality: "1080p HEVC Ai Upscale Rip 15.3GB", link: "https://new6.gdflix.dad/file/3aVsm8qonm" },
+    { quality: "AMZN WEB-DL HIN + TEL 5.19GB", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=b0eaa8d984894f1af1ad47c47a4f103d%3A5b7b71668a1edc0c425039671464ae169cdfd221fb421dc967abf862aa06bd13aeb19ecfcd9f3b8d7ad6551ac18c1df72aa6a2faa8a78ca52dde93e1dc1dc39b54494e0d7143dcfd11d7ae91b6158c369608d9c6291fc8ab358fb78f4294b7d516649ea58f5a957391d900a456954a549432323412f75dc8933156a69487631aeada3827823a2864a2532521ecefd3b54f08e3d78c93409ecef2bfae99335f46aac50deb3da61a4ff855d542bbe8e4e3" },
+    { quality: "1080p HEVC Ai Upscale Rip 3.47GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=d3dacda72a6fdaea05bfa4fbd33c6563%3Aaceeafee8ec754dbdaaf0a0f5fc0508efd228af8a4c5d2f2e0928202708868fa630d8c0266e81119ba64cb8933285674331e2053600d17d8c64b88f9d4ae22766167ee419d76c0aed0029111e2344e869be66b4e2713641f9cf02bea792a0a6211bc207b99885f7c1b6fff99f487bc0d43428a13d4aeba00db8d0321d86325129320e0ee36204e4637d6ffab9f96a296959de4dd57e315985c764fa7224429696a0e6d42d3a2a292e4dbfd5587979175
+" },
+    { quality: "1080p HEVC Ai Upscale Rip 2.95GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=6f43007c46ad852dc8c79af52ffa2d11%3Adff1d0c40126426380e7551c7e6640565b14cb841d62f21fa171faab95f996c7fc9226dd6c3b370d748c1d34bb5d453774ed62f4d2cd0f4f311aa7b633cc8d5b90411e352ad6734e62c4e5c3ba7c1f961fd8215e7dbe5737f17297d70e50fd30574de6c6484cd491c53c355eff7451d6b579fe87f1aff7d760334272099c49fff77263ece5292e04d5a5d7f5cedc169ea1f90ea4bc30948bb6f47734068cce53d7a4d1a8f8d2ab6f9b631bf0961" },
+    { quality: "720p AMZN WEB-DL 1.28GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=98b286ebb855f5d6bdf3b003e061e483%3A03a6e4a20024417aa218058216d939c1fc3673c14f0b0bf0968ba82b24347f05f73160d9e6f374be37fd388c031959ea6e0e174125f0ecab8292ecc95ccfb08afc274bac1516712768225cfc835fda0c0ecb535cda2b865f762b01259881bc6e95a7a09bdd068683699152352677c49ed6e7789f6cdb088986dae937c4cce05198642c66f2ed4c44a7018890e8e41e83325e47bfe142503063c451930be8242b3d5d51326392bd2be4084d30ad062a52" },
+  ]
+},
+      {
+  title: "Chakram (2005)",
+  img: "https://image.tmdb.org/t/p/original/a6GsbSqaFFUjIMWqutlVbnE3Lgo.jpg"
+  description: "Chakram (Prabhas) is a foreign returnee and has a dream of building a hospital at Pulivendula. He is in love with his colleague, Lakshmi (Asin Thottumkal) who studied with him abroad. But leaves her half-way through after he realizes that he was struck with cancer. Not wanting to tell her, he moves to Hyderabad and stays in place called ‘Sahara Colony’. There, he tries to solve people problem's in the colony. Seeing all this, another girl who is also named Lakshmi (Charmy) falls in love with Chakram. The rest is a heart-rending saga of the cancer-struck patient's love station.",
+  downloadLinks: [
+    { quality: "1080p AMZN WEB-DL 9.45GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=9eaae39ce96f27c96d5210e1aa81e4be%3Adaeef9eb0464e2b1cbffbd687848eb116e25ad1e42a3b99628d03fba1c17a9d0acac5b8e410db8aae3605f28c6be5b93ffeca87cc90b18deed82816af990ab5b6c223e645681ec4c402b77d9d715abcb1d18a5d608d257f2785a09689b08ecef9738f87c3d714aa2eb9b0d29faaad3e9f53e44f94bcf0768fda3f4c67be11053ccf75f269ef97bcbc4a3e9d53a831d69241989af610102512072410406f66af5da8bda2a9d0bcb930283f77f7d7cd219" },
+    { quality: "1080p AMZN WEB-DL 2.86GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=7c95b965ba7eaf6e334d60e1d4362adf%3A868682b2bcb6b8bb95d026d2d7750c76b8ce13e3eb1822a8c32f0a1d9900fde40a79912c3bfd6ac2d60b5e43d07a4eb0bb71e67d1c572453bc191c7d001226b1d4f8542135414bb779fa236cd41b4b892fb14970a3a9e6754c483f911769238f21040829d0fe2b12b3c551461b6b0bd198eb08aaead2e9bb390904ce9b0bc8e48f41dd270dcf96a600bf695b33176b7ef81fdc71330c6c69187b416a03730af311a5a69dc6b351d494d89b9444875ce6" },
+  ]
+},
+  {
+  title: "Adavi Ramudu (2004)",
+  img: "https://image.tmdb.org/t/p/original/hyFMf4CVCfxUfSqW788j6nQR9Lq.jpg",
+  description: "Madhu comes to a village in childhood here she taught a boy and tells him to be educated person.10 years later the boy Ramadu(Prabhas) returns to the college,here he meets college most wanted sexiest woman Madhu(Aarthi Aggarwal).Madhu gots into love with him.Later she reveals in her birthday party that she was the childhood girl who told him to be educated person.However Madhu mother Tribhuvna(Telangana Shakuntala) insults him and through out of her party and house.Tribhuvna is a hot minded woman who can do whatever she wants either Mafia or Politics.She want kill ramadu.What happens then is rest of movie",
+  downloadLinks: [
+    { quality: "1080p AMZN WEB-DL", link: "" },
+    { quality: "1080p AMZN WEB-DL", link: "" },
+  ]
+},  
+      {
   title: "Varsham (2004)",
   img: "https://image.tmdb.org/t/p/original/3OkbWNeRVQopeGwdocnwk0fXW3j.jpg",
   description: "Venkat and Sailaja meet on a train and fall in love. But Sailaja's father disapproves of their relationship and decides to marry her off to Bhadranna, a ruthless landlord, who is obsessed with her.",
