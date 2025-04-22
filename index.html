@@ -350,43 +350,5 @@
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-  <script>
-  // Prevent links from opening in new tabs (popups) and handle ads properly
-  document.addEventListener('DOMContentLoaded', function () {
-    // Select all links on the page
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
-      link.addEventListener('click', function (e) {
-        // If the link is an ad link and has a target="_blank", disable new tab opening
-        if (link.target === "_blank" || link.href.includes('advertisement')) {
-          e.preventDefault(); // Prevent the default behavior
-          window.location.href = link.href; // Open the link in the same window
-        }
-      });
-    });
-
-    // Optional: Prevent popups or new windows from being opened
-    window.open = function () {
-      console.log('Popup blocked');
-      return null; // This will block the window.open() calls made by any ad scripts
-    };
-  });
-</script>
-  <script type="text/javascript">
-	atOptions = {
-		'key' : '227915762de219121780abb9d42ba81c',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/227915762de219121780abb9d42ba81c/invoke.js"></script>
-  <script type='text/javascript' src='//pl26448161.profitableratecpm.com/fa/c8/6c/fac86ca59d46b3e41ea1da75cc618404.js'></script>
-  <script type='text/javascript' src='//pl26449492.profitableratecpm.com/3e/c3/4b/3ec34b71e01b0fcfbc935fddde5175ba.js'></script>
-  <script async="async" data-cfasync="false" src="//pl26448228.profitableratecpm.com/f0c66a39eddef88b616c3aa1cac5951e/invoke.js"></script>
-<div id="container-f0c66a39eddef88b616c3aa1cac5951e"></div>
-
 </body>
 </html>
