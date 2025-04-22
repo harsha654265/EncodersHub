@@ -1,13 +1,5 @@
 const movies = [
-      {
-  title: "",
-  img: "",
-  description: "",
-  downloadLinks: [
-    { quality: "", link: "" },
-    { quality: "", link: "" },
-  ]
-},
+
       {
   title: "Munna (2007)",
   img: "https://image.tmdb.org/t/p/original/nny02VHCbeMVoYuezJidDSr7eLN.jpg",
