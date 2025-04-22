@@ -26,9 +26,6 @@
     header h1 {
       margin: 0;
       font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       white-space: nowrap;
     }
 
@@ -36,9 +33,6 @@
       color: #FFD700;
       font-weight: bold;
       font-size: 1rem;
-      text-align: center;
-      flex: 1;
-      padding: 0 1rem;
       white-space: nowrap;
     }
 
@@ -47,24 +41,29 @@
       border-radius: 8px;
       border: none;
       width: 200px;
-      margin-top: 0.5rem;
     }
 
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .middle-highlight {
-        margin: 0.5rem 0;
-        font-size: 0.95rem;
+        align-items: center;
         text-align: center;
       }
 
+      header h1,
+      .middle-highlight,
       input[type="text"] {
         width: 100%;
         max-width: 300px;
+      }
+
+      .middle-highlight {
+        font-size: 0.95rem;
+        margin: 0.5rem 0;
+      }
+
+      input[type="text"] {
+        margin-top: 0.5rem;
       }
     }
 
