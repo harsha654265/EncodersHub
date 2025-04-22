@@ -1,5 +1,16 @@
 const movies = [
       {
+  title: "Varsham (2004)",
+  img: "https://image.tmdb.org/t/p/original/3OkbWNeRVQopeGwdocnwk0fXW3j.jpg",
+  description: "Venkat and Sailaja meet on a train and fall in love. But Sailaja's father disapproves of their relationship and decides to marry her off to Bhadranna, a ruthless landlord, who is obsessed with her.",
+  downloadLinks: [
+    { quality: "1080p HEVC Ai Upscale Rip", link: "https://pmslink.sbs/5618/" },
+    
+  ]
+},
+
+      
+      {
   title: "Raghavendra (2003)",
   img: "https://image.tmdb.org/t/p/original/bQ5T8Uh8l44uBXSJgv9I26IE1sA.jpg",
   description: "Raghava (Prabhas) is a hot-blooded and restless youth who cannot tolerate injustice that is being done in the society. In the process, he picks up fight with local mafia leader Ankineedu (Anandraj). Ankineedu stabs Sirisha (Anshu) - the ladylove of Raghava - to death. He also issues an ultimatum to Raghava's parents to leave the city in few hours. The vexed parents ask Raghava to accompany them only if he agrees to listen to their words. They take Raghava to Mantralayam - a relatives place - and make him become a devotee of Lord Raghavendra Swamy.",
