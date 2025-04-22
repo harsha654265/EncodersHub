@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,6 +12,7 @@
       background: #121212;
       color: #fff;
     }
+
     header {
       background: #1f1f1f;
       padding: 1rem 2rem;
@@ -20,64 +22,77 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
+
     header h1 {
       margin: 0;
       font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       white-space: nowrap;
     }
+
     .middle-highlight {
       color: #FFD700;
       font-weight: bold;
       font-size: 1rem;
+      text-align: center;
+      flex: 1;
+      padding: 0 1rem;
       white-space: nowrap;
     }
+
     input[type="text"] {
       padding: 0.5rem;
       border-radius: 8px;
       border: none;
       width: 200px;
+      margin-top: 0.5rem;
     }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+      }
+
+      .middle-highlight {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
         text-align: center;
       }
-      header h1,
-      .middle-highlight,
+
       input[type="text"] {
         width: 100%;
         max-width: 300px;
       }
-      .middle-highlight {
-        font-size: 0.95rem;
-        margin: 0.5rem 0;
-      }
-      input[type="text"] {
-        margin-top: 0.5rem;
-      }
     }
+
     .movie-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
       gap: 1rem;
       padding: 1rem;
     }
+
     @media (min-width: 480px) {
       .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       }
     }
+
     @media (min-width: 768px) {
       .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       }
     }
+
     @media (min-width: 1024px) {
       .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       }
     }
+
     .movie-card {
       background: #1e1e1e;
       border-radius: 12px;
@@ -86,6 +101,7 @@
       transition: transform 0.5s ease, box-shadow 0.3s ease;
       position: relative;
     }
+
     .movie-card img {
       width: 100%;
       height: auto;
@@ -93,6 +109,7 @@
       object-fit: cover;
       border-radius: 12px;
     }
+
     .movie-title {
       position: absolute;
       bottom: 0;
@@ -107,10 +124,12 @@
       text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
       border-radius: 0 0 12px 12px;
     }
+
     .movie-card:hover {
       transform: scale(1.05);
       box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
     }
+
     .modal {
       display: none;
       position: fixed;
@@ -124,11 +143,13 @@
       transform: scale(0.9);
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
+
     .modal.show {
       display: flex;
       opacity: 1;
       transform: scale(1);
     }
+
     .modal-content {
       background: linear-gradient(135deg, #333, #444);
       padding: 2rem;
@@ -141,6 +162,7 @@
       overflow-y: auto;
       max-height: 80vh;
     }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -151,6 +173,7 @@
         transform: translateY(0);
       }
     }
+
     .modal-content h2 {
       margin-top: 0;
       font-size: 1.6rem;
@@ -158,11 +181,13 @@
       text-align: center;
       margin-bottom: 1rem;
     }
+
     .modal-content p {
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: 1.5rem;
     }
+
     .file-list a {
       display: block;
       background: #333;
@@ -175,11 +200,13 @@
       text-align: center;
       transition: background 0.3s, transform 0.3s;
     }
+
     .file-list a:hover {
       background: #FFD700;
       color: #121212;
       transform: translateY(-3px);
     }
+
     .close-btn {
       background: #ff4444;
       border: none;
@@ -191,10 +218,12 @@
       font-size: 1rem;
       transition: background 0.3s, transform 0.2s;
     }
+
     .close-btn:hover {
       background: #ff1a1a;
       transform: scale(1.05);
     }
+
     .footer {
       background: #1f1f1f;
       padding: 1rem 2rem;
@@ -204,6 +233,7 @@
       flex-wrap: wrap;
       color: #fff;
     }
+
     .footer a {
       display: flex;
       align-items: center;
@@ -212,6 +242,7 @@
       color: #fff;
       font-size: 1rem;
     }
+
     .footer img {
       width: 30px;
       height: 30px;
@@ -251,7 +282,6 @@
     </a>
   </div>
 
-  <script src="x9_data_dump.js"></script>
   <script>
     const featuredMoviesGrid = document.getElementById('featuredMovies');
     const movieGrid = document.getElementById('movieGrid');
@@ -276,68 +306,57 @@
     }
 
     function openModal(movie) {
-    modalTitle.textContent = movie.title;
-    modalDescription.textContent = movie.description;
-    downloadLinks.innerHTML = '';
-
-    movie.downloadLinks.forEach(link => {
-      const a = document.createElement('a');
-      a.href = link.link;
-      a.target = "_blank";  // Keeping this to open the download link
-      a.textContent = link.quality;
-
-      // Trigger the popunder only when the user clicks the download button
-      a.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the immediate link opening
-        setTimeout(function() {
-          // Trigger the popunder ad with a slight delay
-          const script = document.createElement('script');
-          script.src = "//pl26448161.profitableratecpm.com/fa/c8/6c/fac86ca59d46b3e41ea1da75cc618404.js";
-          document.body.appendChild(script);
-
-          // Open the download link in a new tab after a slight delay
-          window.open(link.link, '_blank');
-        }, 300); // Delay to let the popunder open in the background
-      });
-
-      downloadLinks.appendChild(a);
-    });
-
-    modal.classList.add('show');
-  }
-
+      modalTitle.textContent = movie.title;
+      modalDescription.textContent = movie.description;
+      downloadLinks.innerHTML = movie.downloadLinks.map(link => `
+        <a href="${link}" target="_blank">Download Link</a>
+      `).join('');
+      modal.classList.add('show');
+    }
 
     function closeModal() {
       modal.classList.remove('show');
     }
 
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
     searchInput.addEventListener('input', () => {
-      const keyword = searchInput.value.toLowerCase();
-      const featuredSection = document.querySelector('section h2');
-
-      if (keyword) {
-        const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
-        renderMovies(filtered, movieGrid);
-        featuredMoviesGrid.innerHTML = '';
-        featuredSection.style.display = 'none';
-      } else {
-        renderMovies(featuredMovies, featuredMoviesGrid);
-        renderMovies(movies, movieGrid);
-        featuredSection.style.display = 'block';
-      }
+      const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchInput.value.toLowerCase()));
+      renderMovies(filteredMovies, movieGrid);
     });
 
-    const featuredMovies = movies.slice(0, 10);
-    renderMovies(featuredMovies, featuredMoviesGrid);
-    renderMovies(movies, movieGrid);
-  </script>
+    const movies = [
+      {
+        title: "Movie 1",
+        description: "Description of movie 1",
+        img: "https://via.placeholder.com/300x400",
+        downloadLinks: ["#link1", "#link2"]
+      },
+      {
+        title: "Movie 2",
+        description: "Description of movie 2",
+        img: "https://via.placeholder.com/300x400",
+        downloadLinks: ["#link1", "#link2"]
+      },
+      // Add more movies as needed
+    ];
 
-  
+    renderMovies(movies, movieGrid);
+    renderMovies(movies.slice(0, 4), featuredMoviesGrid);
+    
+    (function() {
+      const popunderScript = document.createElement('script');
+      popunderScript.src = 'https://cdn.propdog.com/popunder.js'; // URL to PropellerAds Popunder script
+      popunderScript.onload = function() {
+        // Assuming Popunder's SDK/API provides a method to trigger ads
+        const popunderTrigger = document.createElement('button');
+        popunderTrigger.textContent = 'Download Now';
+        popunderTrigger.addEventListener('click', function() {
+          // Trigger popunder on button click
+          popunder.show();
+        });
+        document.body.appendChild(popunderTrigger);
+      };
+      document.head.appendChild(popunderScript);
+    })();
+  </script>
 </body>
 </html>
