@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
   <script src="brighttag.js"></script>
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -246,6 +245,10 @@
     <input type="text" id="searchInput" placeholder="Search movies...">
   </header>
 
+  <div id="adblock-message">
+    😢 It looks like you're using an ad blocker or private DNS. Please consider disabling it to support us. Thank you! ❤️
+  </div>
+
   <section>
     <h2>Featured</h2>
     <div class="movie-grid" id="featuredMovies"></div>
@@ -270,10 +273,6 @@
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
       Join our Telegram Channel to Request Movies!
     </a>
-  </div>
-
-  <div id="adblock-message">
-    😢 It looks like you're using an ad blocker or private DNS. Please consider disabling it to support us. Thank you! ❤️
   </div>
 
   <script src="x9_data_dump.js"></script>
@@ -345,29 +344,21 @@
     renderMovies(movies, movieGrid);
   </script>
 
-  <!-- Ads Scripts -->
-  <script async="async" data-cfasync="false" src="//pl26448228.profitableratecpm.com/f0c66a39eddef88b616c3aa1cac5951e/invoke.js"></script>
-  <div id="container-f0c66a39eddef88b616c3aa1cac5951e"></div>
-  <script type="text/javascript">
-    atOptions = {
-      'key' : '227915762de219121780abb9d42ba81c',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
-    };
-  </script>
-  <script type="text/javascript" src="//www.highperformanceformat.com/227915762de219121780abb9d42ba81c/invoke.js"></script>
-  <script type='text/javascript' src='//pl26449492.profitableratecpm.com/3e/c3/4b/3ec34b71e01b0fcfbc935fddde5175ba.js'></script>
-
-  <!-- AdBlock Detection Script -->
+  <!-- Anti-AdBlock Logic -->
   <script>
-    const testAd = document.createElement("script");
-    testAd.src = "https://ad.propellerads.com/script.js"; // replace with your actual ad zone if needed
-    testAd.onerror = function() {
+    const testAdScript = document.createElement("script");
+    testAdScript.src = "https://ad.propellerads.com/script.js";
+    testAdScript.onload = () => {
+      console.log("Ad script loaded, no blocker");
+    };
+    testAdScript.onerror = () => {
       document.getElementById("adblock-message").style.display = "block";
     };
-    document.head.appendChild(testAd);
+    document.head.appendChild(testAdScript);
   </script>
+
+  <!-- Your Ads -->
+  <script async="async" data-cfasync="false" src="//pl26448228.profitableratecpm.com/f0c66a39eddef88b616c3aa1cac5951e/invoke.js"></script>
+  <div id="container-f0c66a39eddef88b616c3aa1cac5951e"></div>
 </body>
 </html>
