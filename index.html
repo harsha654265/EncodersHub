@@ -276,30 +276,35 @@
     }
 
     function openModal(movie) {
-  modalTitle.textContent = movie.title;
-  modalDescription.textContent = movie.description;
-  downloadLinks.innerHTML = '';
+    modalTitle.textContent = movie.title;
+    modalDescription.textContent = movie.description;
+    downloadLinks.innerHTML = '';
 
-  movie.downloadLinks.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.link;
-    a.target = "_blank";
-    a.textContent = link.quality;
+    movie.downloadLinks.forEach(link => {
+      const a = document.createElement('a');
+      a.href = link.link;
+      a.target = "_blank";  // Keeping this to open the download link
+      a.textContent = link.quality;
 
-    // Add the event listener to trigger popunder after a slight delay
-    a.addEventListener('click', function () {
-      setTimeout(() => {
-        const script = document.createElement('script');
-        script.src = "//pl26448161.profitableratecpm.com/fa/c8/6c/fac86ca59d46b3e41ea1da75cc618404.js";
-        document.body.appendChild(script);
-      }, 150); // short delay to improve chance of background pop
+      // Trigger the popunder only when the user clicks the download button
+      a.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the immediate link opening
+        setTimeout(function() {
+          // Trigger the popunder ad with a slight delay
+          const script = document.createElement('script');
+          script.src = "//pl26448161.profitableratecpm.com/fa/c8/6c/fac86ca59d46b3e41ea1da75cc618404.js";
+          document.body.appendChild(script);
+
+          // Open the download link in a new tab after a slight delay
+          window.open(link.link, '_blank');
+        }, 300); // Delay to let the popunder open in the background
+      });
+
+      downloadLinks.appendChild(a);
     });
 
-    downloadLinks.appendChild(a);
-  });
-
-  modal.classList.add('show');
-}
+    modal.classList.add('show');
+  }
 
 
     function closeModal() {
