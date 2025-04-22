@@ -51,14 +51,7 @@ const movies = [
     { quality: "1080p AMZN WEB-DL 2.86GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=7c95b965ba7eaf6e334d60e1d4362adf%3A868682b2bcb6b8bb95d026d2d7750c76b8ce13e3eb1822a8c32f0a1d9900fde40a79912c3bfd6ac2d60b5e43d07a4eb0bb71e67d1c572453bc191c7d001226b1d4f8542135414bb779fa236cd41b4b892fb14970a3a9e6754c483f911769238f21040829d0fe2b12b3c551461b6b0bd198eb08aaead2e9bb390904ce9b0bc8e48f41dd270dcf96a600bf695b33176b7ef81fdc71330c6c69187b416a03730af311a5a69dc6b351d494d89b9444875ce6" },
   ]
 },
-  {
-  title: "Adavi Ramudu (2004)",
-  img: "https://image.tmdb.org/t/p/original/hyFMf4CVCfxUfSqW788j6nQR9Lq.jpg",
-  description: "Madhu comes to a village in childhood here she taught a boy and tells him to be educated person.10 years later the boy Ramadu(Prabhas) returns to the college,here he meets college most wanted sexiest woman Madhu(Aarthi Aggarwal).Madhu gots into love with him.Later she reveals in her birthday party that she was the childhood girl who told him to be educated person.However Madhu mother Tribhuvna(Telangana Shakuntala) insults him and through out of her party and house.Tribhuvna is a hot minded woman who can do whatever she wants either Mafia or Politics.She want kill ramadu.What happens then is rest of movie",
   
-    
-  ]
-},  
       {
   title: "Varsham (2004)",
   img: "https://image.tmdb.org/t/p/original/3OkbWNeRVQopeGwdocnwk0fXW3j.jpg",
