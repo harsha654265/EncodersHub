@@ -28,7 +28,8 @@ const movies = [
     { quality: "1080p HEVC EROSNOW+AMZN WEBRIP 6GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=03a52e87ce5528c2a54ef3431b95fc4d%3Ac5ffca35742393c09e600d0e2ce6b5cabb1d430c85187d8cf6c48679fa1ccb7f6b826aaa5b63fea9b60dce530f282b53c17f6f68de8110ee33c9e0cfd47b552435bc47ef933b2191f74506e2caf9c3b510bfc7e840a5345af0171c0b834856c8f318a09d6a02b2b6e789fc3395ca017e9b103e26365b0ffc777d42969e235e770093ef0a9b6699279e8b1490229f6da636d6af9a4f3b0aa0ab33ff52b59fa97b690578493a7c040757c4b0a92e6316f0" },
     { quality: "1080p HEVC EROSNOW+AMZN WEBRIP 3.77GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=01c6c158928d15401949ab6248953d05%3A024e4f0d5fd150b5a33bd873a04687d5e2da092879905baf753cda6225af2f1ce39caa53c6f102a96bce0db3a64578d1700352e87c98131472f82c2698848bb427f5839fb2a5075ad1e73e1dd0bb16a8a07da376be09555ee37dd7bce0df58f10b3a18b9d76942d948e9a7749a7c8814837fc206ea68bdd2c83bc808beec8c06acaad20675fba07834f13233eea3cf789139972ebef1bfaa2dd3d8050aaaf89385a39686e2e2441b325f60f13b4c45ce" },
   ]
-},{
+},
+      {
   title: "Chatrapathi (2005)",
   img: "https://image.tmdb.org/t/p/original/sW7aw6fLcQC4rVYLNcDuyXjbM0S.jpg",
   description: "Sivaji and his family are uprooted from their community in Sri Lanka and wind up as bonded labourers in Vishakhapatnam. Like his legendary namesake, he rises up to become the saviour of the oppressed.",
