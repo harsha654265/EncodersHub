@@ -55,9 +55,8 @@ const movies = [
   title: "Adavi Ramudu (2004)",
   img: "https://image.tmdb.org/t/p/original/hyFMf4CVCfxUfSqW788j6nQR9Lq.jpg",
   description: "Madhu comes to a village in childhood here she taught a boy and tells him to be educated person.10 years later the boy Ramadu(Prabhas) returns to the college,here he meets college most wanted sexiest woman Madhu(Aarthi Aggarwal).Madhu gots into love with him.Later she reveals in her birthday party that she was the childhood girl who told him to be educated person.However Madhu mother Tribhuvna(Telangana Shakuntala) insults him and through out of her party and house.Tribhuvna is a hot minded woman who can do whatever she wants either Mafia or Politics.She want kill ramadu.What happens then is rest of movie",
-  downloadLinks: [
-    { quality: "1080p AMZN WEB-DL", link: "" },
-    { quality: "1080p AMZN WEB-DL", link: "" },
+  
+    
   ]
 },  
       {
