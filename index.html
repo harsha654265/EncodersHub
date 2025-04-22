@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -19,6 +20,7 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     header h1 {
@@ -27,14 +29,43 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      white-space: nowrap;
+    }
+
+    .middle-highlight {
+      color: #FFD700;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      flex: 1;
+      padding: 0 1rem;
+      white-space: nowrap;
     }
 
     input[type="text"] {
       padding: 0.5rem;
       border-radius: 8px;
       border: none;
-      width: 220px;
+      width: 200px;
       margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .middle-highlight {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+      }
     }
 
     .movie-grid {
@@ -220,15 +251,10 @@
 </head>
 <body>
   <header>
-  <div>
     <h1>Encoders Hub 🎬</h1>
-    <div style="color: #FFD700; font-weight: bold; margin-top: 0.5rem; font-size: 0.95rem;">
-      🚀 Use Brave Browser for Better Experience!
-    </div>
-  </div>
-  <input type="text" id="searchInput" placeholder="Search movies...">
-</header>
-
+    <div class="middle-highlight">🚀 Use Brave Browser for Better Experience!</div>
+    <input type="text" id="searchInput" placeholder="Search movies...">
+  </header>
 
   <section>
     <h2>Featured</h2>
@@ -324,6 +350,5 @@
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-
 </body>
 </html>
