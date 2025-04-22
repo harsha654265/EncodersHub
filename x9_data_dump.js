@@ -1,4 +1,36 @@
 const movies = [
+      {
+  title: "John Wick Collection",
+  img: "https://theposterdb.com/api/assets/17550/view",
+  description: "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+  downloadLinks: [
+    { quality: "1080p WEBDL ChapteR 1", link: "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
+    { quality: "1080p WEBDL ChapteR 2", link: "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
+    { quality: "1080p WEBDL ChapteR 3", link: "https://gdlink.dev/file/2eQHtRChOshri6W" },
+    { quality: "1080p WEBDL ChapteR 4", link: "https://gdlink.dev/file/Edn4T5T3TxrM0xf" },
+    
+  ]
+  },
+      {
+  title: "Khauf (2025)",
+  img: "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/07w8XtoMLN" },
+  
+  ]
+},
+      {
+  title: "Moon knight(2022)",
+  img: "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
+  description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
+  downloadLinks: [
+    { quality: "1080p BluraY S01 ZIP", link: "https://vifix.site/gdflix/YsVUM3pVym" },
+
+  ]
+},
+  
     {
   title: "Mirzapur (2018) S01 ",
   img: "https://image.tmdb.org/t/p/original/p0qM8hhlMF5DuxHBzl2EZR6TehX.jpg",
@@ -31,48 +63,12 @@ const movies = [
   ]
 },
   
-  {
-    title: "Game of Thrones S01 (2011)",
-    img: "https://image.tmdb.org/t/p/original/fw9hNiJO0U5MUg2XGyCOlTS3jdS.jpg",
-    description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
-    downloadLinks: [
-      { quality: "4K UHD GOT S01E01 MUL", link: "https://new6.gdflix.dad/file/NseSwvJISK" },
-      { quality: "4K UHD GOT S01E02 MUL", link: "https://new6.gdflix.dad/file/RgNpAjB7q2" },
-      { quality: "4K UHD GOT S01E03 MUL", link: "https://new6.gdflix.dad/file/UX512ZJ1RX" },
-      { quality: "4K UHD GOT S01E04 MUL", link: "https://new6.gdflix.dad/file/pEHWCweR5h" },
-      { quality: "4K UHD GOT S01E05 MUL", link: "https://new6.gdflix.dad/file/Z7mDIPdaf2" },
-      { quality: "4K UHD GOT S01E06 MUL", link: "https://new6.gdflix.dad/file/u3b7i9NchN" },
-      { quality: "4K UHD GOT S01E07 MUL", link: "https://new6.gdflix.dad/file/3hAROJM077" },
-      { quality: "4K UHD GOT S01E08 MUL", link: "https://new6.gdflix.dad/file/11Rmt2jijl" },
-      { quality: "4K UHD GOT S01E09 MUL", link: "https://new6.gdflix.dad/file/4A5f89bW5i" },
-      { quality: "4K UHD GOT S01E10 MUL", link: "https://new6.gdflix.dad/file/7vNcjzjmCc" }
-    ]
-  },
-  {
-  title: "John Wick Collection",
-  img: "https://theposterdb.com/api/assets/17550/view",
-  description: "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
-  downloadLinks: [
-    { quality: "1080p WEBDL ChapteR 1", link: "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
-    { quality: "1080p WEBDL ChapteR 2", link: "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
-    { quality: "1080p WEBDL ChapteR 3", link: "https://gdlink.dev/file/2eQHtRChOshri6W" },
-    { quality: "1080p WEBDL ChapteR 4", link: "https://gdlink.dev/file/Edn4T5T3TxrM0xf" },
-    
-  ]
-  },
+  
+
+  
   {
   title: "Stranger Things S01",
   img: "https://image.tmdb.org/t/p/original/jS3pbMv7CCajFRd52eK77R0scku.jpg",
-  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
-  downloadLinks: [
-    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
-    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/07w8XtoMLN" },
-  
-  ]
-},
-  {
-  title: "Khauf (2025)",
-  img: "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
   description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
   downloadLinks: [
     { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
@@ -110,15 +106,24 @@ const movies = [
   
   ]
 },
-  {
-  title: "Moon knight(2022)",
-  img: "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
-  description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
-  downloadLinks: [
-    { quality: "1080p BluraY S01 ZIP", link: "https://vifix.site/gdflix/YsVUM3pVym" },
 
-  ]
-},
+    {
+    title: "Game of Thrones S01 (2011)",
+    img: "https://image.tmdb.org/t/p/original/fw9hNiJO0U5MUg2XGyCOlTS3jdS.jpg",
+    description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
+    downloadLinks: [
+      { quality: "4K UHD GOT S01E01 MUL", link: "https://new6.gdflix.dad/file/NseSwvJISK" },
+      { quality: "4K UHD GOT S01E02 MUL", link: "https://new6.gdflix.dad/file/RgNpAjB7q2" },
+      { quality: "4K UHD GOT S01E03 MUL", link: "https://new6.gdflix.dad/file/UX512ZJ1RX" },
+      { quality: "4K UHD GOT S01E04 MUL", link: "https://new6.gdflix.dad/file/pEHWCweR5h" },
+      { quality: "4K UHD GOT S01E05 MUL", link: "https://new6.gdflix.dad/file/Z7mDIPdaf2" },
+      { quality: "4K UHD GOT S01E06 MUL", link: "https://new6.gdflix.dad/file/u3b7i9NchN" },
+      { quality: "4K UHD GOT S01E07 MUL", link: "https://new6.gdflix.dad/file/3hAROJM077" },
+      { quality: "4K UHD GOT S01E08 MUL", link: "https://new6.gdflix.dad/file/11Rmt2jijl" },
+      { quality: "4K UHD GOT S01E09 MUL", link: "https://new6.gdflix.dad/file/4A5f89bW5i" },
+      { quality: "4K UHD GOT S01E10 MUL", link: "https://new6.gdflix.dad/file/7vNcjzjmCc" }
+    ]
+  },
 
   {
     title: "Game of Thrones S02 (2011)",
@@ -153,6 +158,24 @@ const movies = [
     { quality: "4K UHD GOT S03E09 MUL", link: "https://new6.gdflix.dad/file/1chuZNjzDd" },
     { quality: "4K UHD GOT S03E10 MUL", link: "https://new6.gdflix.dad/file/kBFQZmJd6x" }
   ]
+},
+    {
+  title: "Game of Thrones s04 (2011)",
+  img: "https://image.tmdb.org/t/p/original/gdeLQ5odsYE5EZ6hhnm2PwnjycB.jpg",
+  description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
+  downloadLinks: [
+    { quality: "4K UHD GOT s04e01 MUL", link: "https://new6.gdflix.dad/file/qQnuXcjcu5" },
+    { quality: "4K UHD GOT s04e02 MUL", link: "https://new6.gdflix.dad/file/z0Xu8H9SV1" },
+    { quality: "4K UHD GOT s04e03 MUL", link: "https://new6.gdflix.dad/file/b7bGr4q64g" },
+    { quality: "4K UHD GOT s04e04 MUL", link: "https://new6.gdflix.dad/file/cJJ27a8ZCP" },
+    { quality: "4K UHD GOT s04e05 MUL", link: "https://new6.gdflix.dad/file/jeCxHDfZKe" },
+    { quality: "4K UHD GOT s04e06 MUL", link: "https://new6.gdflix.dad/file/SxCZjWPhdP" },
+    { quality: "4K UHD GOT s04e07 MUL", link: "https://new6.gdflix.dad/file/H9AIwR8GmB" },
+    { quality: "4K UHD GOT s04e08 MUL", link: "https://new6.gdflix.dad/file/e3NBZi0uBR" },
+    { quality: "4K UHD GOT s04e09 MUL", link: "https://new6.gdflix.dad/file/EKYzhh9BIr" },
+    { quality: "4K UHD GOT s04e10 MUL", link: "https://new6.gdflix.dad/file/fo2mRHrlfp" }
+  ]
 }
+
 
 ];
