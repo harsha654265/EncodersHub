@@ -276,18 +276,31 @@
     }
 
     function openModal(movie) {
-      modalTitle.textContent = movie.title;
-      modalDescription.textContent = movie.description;
-      downloadLinks.innerHTML = '';
-      movie.downloadLinks.forEach(link => {
-        const a = document.createElement('a');
-        a.href = link.link;
-        a.target = "_blank";
-        a.textContent = link.quality;
-        downloadLinks.appendChild(a);
-      });
-      modal.classList.add('show');
-    }
+  modalTitle.textContent = movie.title;
+  modalDescription.textContent = movie.description;
+  downloadLinks.innerHTML = '';
+
+  movie.downloadLinks.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.link;
+    a.target = "_blank";
+    a.textContent = link.quality;
+
+    // Add the event listener to trigger popunder after a slight delay
+    a.addEventListener('click', function () {
+      setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = "//pl26448161.profitableratecpm.com/fa/c8/6c/fac86ca59d46b3e41ea1da75cc618404.js";
+        document.body.appendChild(script);
+      }, 150); // short delay to improve chance of background pop
+    });
+
+    downloadLinks.appendChild(a);
+  });
+
+  modal.classList.add('show');
+}
+
 
     function closeModal() {
       modal.classList.remove('show');
