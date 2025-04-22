@@ -39,13 +39,23 @@ const movies = [
   
   ]
 },
+  {
+  title: "Khauf (2025)",
+  img: "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
+  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/07w8XtoMLN" },
+  
+  ]
+},
     {
   title: "Stranger Things S02",
   img: "https://image.tmdb.org/t/p/original/uAc35R8pBa7ykvDfgy1tQs76ETP.jpg",
-  description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+  description: "Madhu moves into a hostel in Delhi to start afresh, but her room hides a sinister presence that begins to get stronger each day, alarming the other women on her floor. They know what the room hides and desperately want her gone before it is too late for them all.",
   downloadLinks: [
-    { quality: "1080p HEVC NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/r97hySr6JG" },
-    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/L6r29hgAVH" },
+    { quality: "1080p AMZN WEB-DL  HIN ZIP", link: "https://new6.gdflix.dad/file/pxhmpa4wkTAQYPI" },
+   
   
   ]
 },
