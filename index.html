@@ -282,105 +282,31 @@
     </a>
   </div>
 
+  <script src="x9_data_dump.js"></script>
+  
+  <!-- Add the popup and new tab disabling script here -->
   <script>
-    const featuredMoviesGrid = document.getElementById('featuredMovies');
-    const movieGrid = document.getElementById('movieGrid');
-    const searchInput = document.getElementById('searchInput');
-    const modal = document.getElementById('movieModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
-    const downloadLinks = document.getElementById('downloadLinks');
+    // Prevent links from opening in new tabs (popups) and handle ads properly
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all links on the page
+      const links = document.querySelectorAll('a');
 
-    function renderMovies(movieList, grid) {
-      grid.innerHTML = '';
-      movieList.forEach(movie => {
-        const card = document.createElement('div');
-        card.classList.add('movie-card');
-        card.innerHTML = `
-          <img src="${movie.img}" alt="${movie.title}">
-          <div class="movie-title">${movie.title}</div>
-        `;
-        card.addEventListener('click', () => openModal(movie));
-        grid.appendChild(card);
-      });
-    }
-
-    function openModal(movie) {
-      modalTitle.textContent = movie.title;
-      modalDescription.textContent = movie.description;
-      downloadLinks.innerHTML = movie.downloadLinks.map(link => `
-        <a href="${link}" target="_blank">Download Link</a>
-      `).join('');
-      modal.classList.add('show');
-    }
-
-    function closeModal() {
-      modal.classList.remove('show');
-    }
-
-    searchInput.addEventListener('input', () => {
-      const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchInput.value.toLowerCase()));
-      renderMovies(filteredMovies, movieGrid);
-    });
-
-    const movies = [
-      {
-        title: "Movie 1",
-        description: "Description of movie 1",
-        img: "https://via.placeholder.com/300x400",
-        downloadLinks: ["#link1", "#link2"]
-      },
-      {
-        title: "Movie 2",
-        description: "Description of movie 2",
-        img: "https://via.placeholder.com/300x400",
-        downloadLinks: ["#link1", "#link2"]
-      },
-      // Add more movies as needed
-    ];
-
-    renderMovies(movies, movieGrid);
-    renderMovies(movies.slice(0, 4), featuredMoviesGrid);
-    
-    (function() {
-      const popunderScript = document.createElement('script');
-      popunderScript.src = 'https://cdn.propdog.com/popunder.js'; // URL to PropellerAds Popunder script
-      popunderScript.onload = function() {
-        // Assuming Popunder's SDK/API provides a method to trigger ads
-        const popunderTrigger = document.createElement('button');
-        popunderTrigger.textContent = 'Download Now';
-        popunderTrigger.addEventListener('click', function() {
-          // Trigger popunder on button click
-          popunder.show();
+      links.forEach(link => {
+        link.addEventListener('click', function (e) {
+          // If the link is an ad link and has a target="_blank", disable new tab opening
+          if (link.target === "_blank" || link.href.includes('advertisement')) {
+            e.preventDefault(); // Prevent the default behavior
+            window.location.href = link.href; // Open the link in the same window
+          }
         });
-        document.body.appendChild(popunderTrigger);
-      };
-      document.head.appendChild(popunderScript);
-    })();
-  </script>
-  <script>
-  // Prevent links from opening in new tabs (popups) and handle ads properly
-  document.addEventListener('DOMContentLoaded', function () {
-    // Select all links on the page
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
-      link.addEventListener('click', function (e) {
-        // If the link is an ad link and has a target="_blank", disable new tab opening
-        if (link.target === "_blank" || link.href.includes('advertisement')) {
-          e.preventDefault(); // Prevent the default behavior
-          window.location.href = link.href; // Open the link in the same window
-        }
       });
+
+      // Optional: Prevent popups or new windows from being opened
+      window.open = function () {
+        console.log('Popup blocked');
+        return null; // This will block the window.open() calls made by any ad scripts
+      };
     });
-
-    // Optional: Prevent popups or new windows from being opened
-    window.open = function () {
-      console.log('Popup blocked');
-      return null; // This will block the window.open() calls made by any ad scripts
-    };
-  });
-</script>
-
+  </script>
 </body>
 </html>
