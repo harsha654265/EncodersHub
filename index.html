@@ -283,30 +283,96 @@
   </div>
 
   <script src="x9_data_dump.js"></script>
-  
-  <!-- Add the popup and new tab disabling script here -->
   <script>
-    // Prevent links from opening in new tabs (popups) and handle ads properly
-    document.addEventListener('DOMContentLoaded', function () {
-      // Select all links on the page
-      const links = document.querySelectorAll('a');
+    const featuredMoviesGrid = document.getElementById('featuredMovies');
+    const movieGrid = document.getElementById('movieGrid');
+    const searchInput = document.getElementById('searchInput');
+    const modal = document.getElementById('movieModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const downloadLinks = document.getElementById('downloadLinks');
 
-      links.forEach(link => {
-        link.addEventListener('click', function (e) {
-          // If the link is an ad link and has a target="_blank", disable new tab opening
-          if (link.target === "_blank" || link.href.includes('advertisement')) {
-            e.preventDefault(); // Prevent the default behavior
-            window.location.href = link.href; // Open the link in the same window
-          }
-        });
+    function renderMovies(movieList, grid) {
+      grid.innerHTML = '';
+      movieList.forEach(movie => {
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
+        card.innerHTML = `
+          <img src="${movie.img}" alt="${movie.title}">
+          <div class="movie-title">${movie.title}</div>
+        `;
+        card.addEventListener('click', () => openModal(movie));
+        grid.appendChild(card);
       });
+    }
 
-      // Optional: Prevent popups or new windows from being opened
-      window.open = function () {
-        console.log('Popup blocked');
-        return null; // This will block the window.open() calls made by any ad scripts
-      };
+    function openModal(movie) {
+      modalTitle.textContent = movie.title;
+      modalDescription.textContent = movie.description;
+      downloadLinks.innerHTML = '';
+      movie.downloadLinks.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.link;
+        a.target = "_blank";
+        a.textContent = link.quality;
+        downloadLinks.appendChild(a);
+      });
+      modal.classList.add('show');
+    }
+
+    function closeModal() {
+      modal.classList.remove('show');
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
     });
+
+    searchInput.addEventListener('input', () => {
+      const keyword = searchInput.value.toLowerCase();
+      const featuredSection = document.querySelector('section h2');
+
+      if (keyword) {
+        const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
+        renderMovies(filtered, movieGrid);
+        featuredMoviesGrid.innerHTML = '';
+        featuredSection.style.display = 'none';
+      } else {
+        renderMovies(featuredMovies, featuredMoviesGrid);
+        renderMovies(movies, movieGrid);
+        featuredSection.style.display = 'block';
+      }
+    });
+
+    const featuredMovies = movies.slice(0, 10);
+    renderMovies(featuredMovies, featuredMoviesGrid);
+    renderMovies(movies, movieGrid);
   </script>
+  <script>
+  // Prevent links from opening in new tabs (popups) and handle ads properly
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all links on the page
+    const links = document.querySelectorAll('a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        // If the link is an ad link and has a target="_blank", disable new tab opening
+        if (link.target === "_blank" || link.href.includes('advertisement')) {
+          e.preventDefault(); // Prevent the default behavior
+          window.location.href = link.href; // Open the link in the same window
+        }
+      });
+    });
+
+    // Optional: Prevent popups or new windows from being opened
+    window.open = function () {
+      console.log('Popup blocked');
+      return null; // This will block the window.open() calls made by any ad scripts
+    };
+  });
+</script>
+
 </body>
 </html>
