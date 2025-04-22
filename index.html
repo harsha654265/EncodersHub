@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
   <script src="brighttag.js"></script>
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -222,6 +223,18 @@
       width: 30px;
       height: 30px;
     }
+
+    #adblock-message {
+      display: none;
+      background: #ffdddd;
+      color: #800000;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #e0b4b4;
+      margin: 20px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -257,6 +270,10 @@
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
       Join our Telegram Channel to Request Movies!
     </a>
+  </div>
+
+  <div id="adblock-message">
+    😢 It looks like you're using an ad blocker or private DNS. Please consider disabling it to support us. Thank you! ❤️
   </div>
 
   <script src="x9_data_dump.js"></script>
@@ -332,16 +349,25 @@
   <script async="async" data-cfasync="false" src="//pl26448228.profitableratecpm.com/f0c66a39eddef88b616c3aa1cac5951e/invoke.js"></script>
   <div id="container-f0c66a39eddef88b616c3aa1cac5951e"></div>
   <script type="text/javascript">
-	atOptions = {
-		'key' : '227915762de219121780abb9d42ba81c',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/227915762de219121780abb9d42ba81c/invoke.js"></script>
-  https://www.profitableratecpm.com/p7nxw5uv4t?key=3803056810382129e7a340533c26c035
+    atOptions = {
+      'key' : '227915762de219121780abb9d42ba81c',
+      'format' : 'iframe',
+      'height' : 60,
+      'width' : 468,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/227915762de219121780abb9d42ba81c/invoke.js"></script>
   <script type='text/javascript' src='//pl26449492.profitableratecpm.com/3e/c3/4b/3ec34b71e01b0fcfbc935fddde5175ba.js'></script>
+
+  <!-- AdBlock Detection Script -->
+  <script>
+    const testAd = document.createElement("script");
+    testAd.src = "https://ad.propellerads.com/script.js"; // replace with your actual ad zone if needed
+    testAd.onerror = function() {
+      document.getElementById("adblock-message").style.display = "block";
+    };
+    document.head.appendChild(testAd);
+  </script>
 </body>
 </html>
