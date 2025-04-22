@@ -1,4 +1,35 @@
 const movies = [
+    {
+  title: "Mirzapur (2018) S01 ",
+  img: "https://image.tmdb.org/t/p/original/p0qM8hhlMF5DuxHBzl2EZR6TehX.jpg",
+  description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
+  downloadLinks: [
+    { quality: "1080p HEVC  AMZN WEB-DL  MUL ZIP", link: "https://new6.gdflix.dad/file/2yyluWSS3E" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/44pY8DVIF3" },
+  
+  ]
+},
+   {
+  title: "Mirzapur (2018) S02 ",
+  img: "https://image.tmdb.org/t/p/original/nQyM0gixhRQuwZmv383v02qf8dE.jpg",
+  description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
+  downloadLinks: [
+    { quality: "1080p HEVC  AMZN WEB-DL  MUL ZIP", link: "https://new6.gdflix.dad/file/bfTaUUjtm9" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/39VZBYIMNz" },
+  
+  ]
+},
+   {
+  title: "Mirzapur (2018) S03 ",
+  img: "https://image.tmdb.org/t/p/original/tzOnlogwpQPPC6AUhYSz8URuRFD.jpg",
+  description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
+  downloadLinks: [
+    { quality: "1080p HEVC  AMZN WEB-DL  MUL ZIP", link: "https://new6.gdflix.dad/file/acVAQBWquN" },
+    { quality: "1080p AV1 NF WEB-DL  MUL", link: "https://new6.gdflix.dad/file/Q3vvnrOtMO" },
+    { quality: "2180p  BONUS EP NF WEB-DL  HIN", link: "https://hubcloud.bz/drive/tacxe6aff6tuqqx" },
+  
+  ]
+},
   
   {
     title: "Game of Thrones S01 (2011)",
