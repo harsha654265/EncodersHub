@@ -358,5 +358,29 @@
       document.head.appendChild(popunderScript);
     })();
   </script>
+  <script>
+  // Prevent links from opening in new tabs (popups) and handle ads properly
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all links on the page
+    const links = document.querySelectorAll('a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        // If the link is an ad link and has a target="_blank", disable new tab opening
+        if (link.target === "_blank" || link.href.includes('advertisement')) {
+          e.preventDefault(); // Prevent the default behavior
+          window.location.href = link.href; // Open the link in the same window
+        }
+      });
+    });
+
+    // Optional: Prevent popups or new windows from being opened
+    window.open = function () {
+      console.log('Popup blocked');
+      return null; // This will block the window.open() calls made by any ad scripts
+    };
+  });
+</script>
+
 </body>
 </html>
