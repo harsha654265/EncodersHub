@@ -282,8 +282,30 @@
     </a>
   </div>
 
-  <script src="x9_data_dump.js"></script>
   <script>
+    // Block popups and links opening in new windows
+    (function() {
+      // Override window.open to block popups
+      window.open = function() {
+        console.log("Attempt to open a new tab or window has been blocked.");
+        return null;
+      };
+
+      // Block links with target="_blank" from opening in a new tab
+      document.querySelectorAll('a[target="_blank"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default action (opening in new tab)
+          alert("Opening links in a new tab is blocked on this site.");
+        });
+      });
+
+      // Block any attempt to open new windows via JavaScript
+      window.onbeforeunload = function() {
+        // Notify the user if they attempt to navigate away
+        return "Are you sure you want to leave this page? Your action may trigger unwanted popups.";
+      };
+    })();
+
     const featuredMoviesGrid = document.getElementById('featuredMovies');
     const movieGrid = document.getElementById('movieGrid');
     const searchInput = document.getElementById('searchInput');
@@ -350,27 +372,5 @@
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-  (function() {
-    // Override window.open to block popups
-    window.open = function() {
-        console.log("Attempt to open a new tab or window has been blocked.");
-        return null;  // Return null to prevent the window from opening
-    };
-
-    // Block links with target="_blank" from opening in a new tab
-    document.querySelectorAll('a[target="_blank"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action (opening in new tab)
-            alert("Opening links in a new tab is blocked on this site.");
-        });
-    });
-
-    // Block any attempt to open new windows via JavaScript
-    window.onbeforeunload = function() {
-        // Notify the user if they attempt to navigate away
-        return "Are you sure you want to leave this page? Your action may trigger unwanted popups.";
-    };
-})();
-
 </body>
 </html>
