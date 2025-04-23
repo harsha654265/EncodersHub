@@ -1,10 +1,73 @@
 const movies = [
+ 
+  {
+  title: "Mr. Perfect (2011)",
+  img: "https://image.tmdb.org/t/p/original/tOYpxUX2ISEvdJ1FqwPUZAPy2Hy.jpg",
+  description: "Vicky breaks his engagement with Priya, his childhood friend, after he learns that she is making many compromises for his sake. However, time makes him realise the need for compromises in life.",
+  downloadLinks: [
+    { quality: "1080p BLU-RaY AVC  42.5gb", link: "https://new6.gdflix.dad/xfile/IMQ5fpEJzZ" },
+    { quality: "1080p BLU-RaY AVC  33.73gb", link: "https://new6.gdflix.dad/xfile/1YXm5aUHyj" },
+    { quality: "1080p BLU-RaY AVC  30.73gb", link: "https://new6.gdflix.dad/xfile/1YXm5aUHyj" },
+    { quality: "1080p BLU-RaY AVC  6.65gb", link: "https://scloud.snub-tiptop-half.workers.dev/?download=bd7d3a937d3e18ee3740deb7463dd3d8%3A6d12c28fad9bd7fb767bed2f56a07f27d35df3725c87c36500b1cbe38e6f6328b251d3e783030b77d26c436c52f24da2a832ae0ab98eff544ff4022dd4debe7a48efb96d7b98adf158a765c58613d32de2b17dea46035169800a6e3e84d7815968e79957d993586912bfef6b508b10d366867d134f254678c54423cb14a7098b10e48355e6bf365763911b7636bc1efab8162256887163d0e4363e73d65e2607efb52d3889033f390b294b0f49af31de" },
+    { quality: "1080p BLU-RaY AVC  7.13gb", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=4fb0e0958909daf8c7fcac987e66ad8e%3Ac177e06dc79e04ca3cf6919b7f86d4411055dd113d27199bd32bd210e4195bd88a6b8b1cf10c3b2d7213ca19046ecbc18e02a9841b5522acd2dcc4d449e02d7cac48cb6041cef9f13d1f61d4a8981e5ce47375d27979cf29987d5c069051e8284bd3ca05cdc8aba1545db18fcfc5708ec2d647567fd276af825ee2e134eaab3822955bc799a78e11f231134357ff0f26e5ba4dbe943cba809ef89d5a052795478f16b8576a0be1adf61a9dd6ce8976ca" },
+    { quality: "1080p BLU-RaY AVC  2.95", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=cae6199097289153f4aa602eea27c14f%3Aad61b6cca56d625ed12b4a8f32fe60381e19e9a27a6eda6e68234bbde8ca0897911668c5f26ed0cf5a3d6917876675f9f9f32f02a1b80c3a5eb836d38d888db23f893cbf30d9413accd495e3406271c8f77c1ae2e2761b6e58d7bbe5155730368f263bd62641249e2f3f71fbf87cc3a99ec2c409daeb8b0c4b84cb87e2431372aaccfc453c125edfdd755a4fe9ed27fdf8bc071949324fed5d5b3f21485fe0f9b071af1c349c244a14c2584aff81c7fb
+" },
+  ]
+},
+  {
+  title: "Darling (2010)",
+  img: "https://image.tmdb.org/t/p/original/lUPhjbTUbOdprc9waFcB47bmKKE.jpg",
+  description: "Prabha prepares to meet Nandini, his childhood friend, at a reunion party organised by his father. However, things take a turn when Nisha, a gangster's daughter, falls in love with him.",
+  downloadLinks: [
+    { quality: "1080p BLU-RaY REmUX 36.2gb", link: "https://hubcloud.bz/drive/y1hf7hiofiotmri" },
+    { quality: "1080p AVC BLU-RaY 14.45gb", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=17a19438f5e7a84edc5491e8ebc24d57%3A2e3d7dbfb286bb5d71eaf1d48f07c3203e37277a699ab0e851c6bc36fe1ed715263cae916a0aec4d64d253125ee2f5241a97b4904b2f51d0cb78b0a23f848c856b38910aaef184c69e6340d2d42f459a203e30b867047de7931605e2e7fac34c1790bbb5d61090944e1b89060f7191dd570eb97e9e330172e440f943c81808d00c81a374a65b694a240775ed84601dfe0883cf7a8245c2466ffe91e7c1a74b7d606c23392232c127d027839352a353d0
+" },
+    { quality: "1080p HEVC BLU-RaY WEB-DL 6.09GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=24706c50a29ae3e536fc118f7727969f%3Adc6c040e98734f9d676c8f6987c975f5a0c6eb850fd0637f35d3c7b02df265448db5a9744e56c0e7f4136d4faae0fcebd280f0df5acca2317e9b83c18507ccc8fd8ebcf9277006a3d44447437c4c692fbfb852f4120b735e3ebdc5b9af661cebec76b5aa6c869b008c9086cd0d56f586d550306a8a69df5826f72e8209e2e4668bc2fc28a1cbc2b6cfd98a62cb137ae748475809e9e28f7ae2ea8bb68e1a1aadafdeb4be0a246b2589bd68d4e06631ef
+" },
+    { quality: "1080p AVC BLU-RaY WEB-DL  2.53gb ", link: "https://scloud.snub-tiptop-half.workers.dev/?download=68eb088b5f80098c22c342df88b32f05%3A9b8475a1fe63bd18b7b2e9afafc03f3c1a1607a8f600d94b128d2383b08d5d05dc6592e3174e18e03de8c2bad396ea8c800c3c1c0c2e7f024b4bf63adc863ddd337a0bfdbb9040a3ac156289f79e03b583b8817e2c6e32044bc1f302385fe1266f61c6f8c9c138d8a40bd587a4c7d6df6adc4302cdc8265d51538045f3360c25e6a488ece00b0eb7f176ff64b30ebbc6597cb04cd7dfc1145309d1b4c33765061c616465139a3328628eb315c776e3f5
+" },
+    { quality: "1080p BLU-RaY HIN + TEL  2.56gb", link: "https://scloud.snub-tiptop-half.workers.dev/?download=795c403a236c62beb30b201b2250467a%3Ac0d9157947b6560776962fe18b9c5d6c914357f0086b91ea3b05e96df2ff492567f8a1902f87247b28845e3826f8ff7c22b63e463bff5f80e8f44b45883183ae334f0045c530e4cf339ba5fdce16a5ac49e88e5ac14dd47257f1b7cceab1e7b851d9fe742f754112e0b6534c7f4411b4eb5210129d13c54951a78f4f08b75345d80dcc90ae7011c7531740578d9b7c5b68ff50287427df10e882d3b01a8be77289f98467e57e8f259b01648164701592
+" },
+  ]
+},
+  {
+  title: "Ek Niranjan (2009)",
+  img: "https://image.tmdb.org/t/p/original/tT0ElSp7p8d8Wsgv6Z1xFmLL8lY.jpg",
+  description: "A bounty hunter searches for the family he was separated from as a child, and falls in love with the sister of a gang member.",
+  downloadLinks: [
+    { quality: "1080p AMZN WEB-DL 8.46GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=b53154a4c2ac629340bc73043060f60d%3A783cbc809df32836c7d947095bf2b51717b977589ab348146343b744ce575bf59e373fc9df240e0a56937797c2ab24e474668e999f843679e015a84a3028ebac4285ff0c8787a424e0974fdb0c385de50350a83d8d3fec379295c27c8a72e436540a44bad23fca70d465343619ee7c31df711f04e3d33e153e86fd5a9612df184a0cac36793710e38140f0d9128997ccc86b41801134f35280e5b096ba4a247be025d1d30942c27b4237dfa54f6f1b91" },
+    { quality: "1080p AMZN WEB-DL 3.28GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=8f7a39e266062dc9e04a9eb8e9c9f3bc%3Ac4c22cad8b5554b90c178d8352b551a22d4b911f25fc54fd952f624c891faa311af8e9ea991006eae75aacc9a54e709501080960ded78b8e0931c5abbecdf7499fc07bd233a8ae5dd31b06c2a792a61c431f8afb30f60b87aeb898d6552e744d4267a608c2849e2ede73a6073ea0e6f1d94759d0f5b1d5e6aeaabc5c88e8b237fe1c4dcbc4a3f19937cdcb6fd673b3ca047ba99b4c199619effae656dbdff484393ecb3d661806b9c25ae4fb58b13c1a
+" },
+  ]
+},
+  {
+  title: "Billa (2009)",
+  img: "https://image.tmdb.org/t/p/original/dJlJskiQFVDcWdb2f9FGl23x84m.jpg",
+  description: "A police inspector sends a gangster-lookalike to uncover the gang's secrets.",
+  downloadLinks: [
+    { quality: "4K-2180p HYBRID REMASTERED WEB-DL 21.04GB", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=77d5080d00afc4b0fb4357dc1f85805f%3A5062529aa3fa8863b23d9ad3ff9b2acbb9f43dce6588995eb32c5cb5ac485a75898da985f7ddc96fb2764d388cf1caed5df56803c1daa61bc258d3e9428c26b73c6b98454c92079a5ca7a6881df6a6361649503f62b514aa4ba13e7e4e80757b309777c0fb16a577bffe13880bf8ba93678e28e511c4726702cd0d67c816bf249584bcb6c6c9d07822654c6b07f0c05c1ff134b4494f6092aa33275523309a3a33d5ba0debfe1e35044a3d06cf53e2d8
+" },
+    { quality: "1080p AVC  WEB-DL  5.06GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=1e325bbba2b942b17af6c773e11edd18%3A0b32d02b3024fb56fc74cb72813b9e0e37b8c76f1fb63aa1af97f7fd36db4cb2ae1bb8e83d3f6988e5d8d2d745a5006749dc856b797864838066459c80362df0deec44f2025750b5f0690bb5f4ff0b8d5edaf608b0181eebe97cdbb7e18005eb79183ef9db7d468fda4262170e8857b44e8fc0fae9b303da277999aa8d2c74bad88382c36093bdbea6239d9e89228656e815cd7f479f75528beb78af40c8ddff01dfd8dc585b3244277788f0d1854433
+" },
+    { quality: "1080p HEVC WEB-DL 3.19GB", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=48aa65f8c556e82ced72c5134fdd9216%3Aa993b219478387762d87de2e26336c68bfbedc9dff9cf35550a20adbbc7cdce1507f725a155913eceaee92fc9ae64ea12ac85ca76d98b759aae683f5a7801d090942a295ca5931d8f5ba092f1f6fb3a8e04bb008ac072914032f03b27ca890001309e6bcedb542770988a4e27377f9d65aac47472921298ae181acc1cacf5d90be0a1885553d3c3d16202146c79d8b698c7c33e7464ec4452c859ebb449ca551a7747518c096b19a225c89f06e5025ab
+" },
+  ]
+},
+  {
+  title: "Bujjigaadu: Made in Chennai (2008)",
+  img: "https://image.tmdb.org/t/p/original/fVDPpKS4ylQf1qtEvfaDjh6ehhP.jpg",
+  description: "Bujji runs away from his home in his childhood because of a dispute with his girlfriend Chitti. He ends up in Chennai for 12 years, and the rest of the story is about how they meet now to make their love successful.",
+  downloadLinks: [
+    { quality: "1080p HEVC NF WEB-DL 2.5GB", link: "https://fastupload.io/a2afe094d390cf76" },
+    
+  ]
+},
   {
     title: "Munna (2007)",
     img: "https://image.tmdb.org/t/p/original/nny02VHCbeMVoYuezJidDSr7eLN.jpg",
     description: "Munna (Prabhas) is a college student aiming to eliminate mafia don Kakha (Prakash Raj), who controls the city. Munna seeks personal vengeance against Kakha, his estranged father, responsible for his mother's death and his sister's murder. An honest politician, Srinivasa Rao (Kota Srinivasa Rao), is killed while exposing Kakha. Munna's classmate Nidhi (Ileana D'Cruz) falls in love with him. A rival don, Aatma (Rahul Dev), tries to recruit Munna, but he refuses. A mind game ensues as Munna challenges Kakha, with Kakha's second wife and children joining Munna after betrayals and the death of his best friend reveal Aatma's allegiance to Kakha.",
     downloadLinks: [
-      { quality: "1080p HEVC Ai Upscaled 10bit 5.71 GB", link: "https://new2.gdtot.zip/file/6132425977" }
+      { quality: "1080p HEVC Ai Upscaled 10bit 5.71 GB", link: "https://new2.gdtot.dad/file/6132425977" }
     ]
   },
   {
@@ -51,7 +114,7 @@ const movies = [
     img: "https://image.tmdb.org/t/p/original/3OkbWNeRVQopeGwdocnwk0fXW3j.jpg",
     description: "Venkat and Sailaja meet on a train and fall in love. Sailaja's father, disapproving of their relationship, plans to marry her to Bhadranna, a ruthless landlord obsessed with her, leading to conflict and drama.",
     downloadLinks: [
-      { quality: "1080p HEVC Ai Upscale x264 3.50 GB", link: "https://pmslink.sbs/5618/" }
+      { quality: "1080p HEVC Ai Upscale x264 3.50 GB", link: "https://hubcloud.bz/drive/zcjozg5cas1xd_w" }
     ]
   },
   {
