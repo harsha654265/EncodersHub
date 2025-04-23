@@ -1,4 +1,4 @@
-const movies = [
+const moviess = [
   {
     "title": "Rebel (2012)",
     "img": "https://image.tmdb.org/t/p/original/dNTzorrVmcJ25fUGzs9FfkoXb0P.jpg",
