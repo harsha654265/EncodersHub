@@ -31,19 +31,18 @@ const movies = [
     img: "https://image.tmdb.org/t/p/original/sW7aw6fLcQC4rVYLNcDuyXjbM0S.jpg",
     description: "Sivaji and his family, displaced from Sri Lanka, become bonded laborers in Vishakhapatnam. Inspired by his legendary namesake, Sivaji rises to lead and protect the oppressed against local injustices.",
     downloadLinks: [
-      { quality: "1080p HEVC Ai Upscale x264 DTS+DD 5.1 15.39 GB", link: "https://new6.gdflix.dad/file/3aVsm8qonm"},
+      { quality: "1080p HEVC Ai Upscale x264 DTS+DD 5.1 15.39 GB", link: "https://new6.gdflix.dad/file/3aVsm8qonm" },
       { quality: "1080p HEVC AMZN WEB-DL HIN+TEL 5.19 GB", link: "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=b0eaa8d984894f1af1ad47c47a4f103d%3A5b7b71668a1edc0c425039671464ae169cdfd221fb421dc967abf862aa06bd13aeb19ecfcd9f3b8d7ad6551ac18c1df72aa6a2faa8a78ca52dde93e1dc1dc39b54494e0d7143dcfd11d7ae91b6158c369608d9c6291fc8ab358fb78f4294b7d516649ea58f5a957391d900a456954a549432323412f75dc8933156a69487631aeada3827823a2864a2532521ecefd3b54f08e3d78c93409ecef2bfae99335f46aac50deb3da61a4ff855d542bbe8e4e3" },
       { quality: "1080p HEVC Ai Upscale x264 3.47 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=d3dacda72a6fdaea05bfa4fbd33c6563%3Aaceeafee8ec754dbdaaf0a0f5fc0508efd228af8a4c5d2f2e0928202708868fa630d8c0266e81119ba64cb8933285674331e2053600d17d8c64b88f9d4ae22766167ee419d76c0aed0029111e2344e869be66b4e2713641f9cf02bea792a0a6211bc207b99885f7c1b6fff99f487bc0d43428a13d4aeba00db8d0321d86325129320e0ee36204e4637d6ffab9f96a296959de4dd57e315985c764fa7224429696a0e6d42d3a2a292e4dbfd5587979175" },
-      { quality: "1080p HEVC Ai Upscale x264 2.95 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=6f43007c46ad852dc8c79af52ffa2d11%3Adff1d0c40126426380e7551c7e6640565b14cb841d62f21fa171faab95f996c7fc9226dd6c3b370d748c1d34bb5d453774ed62f4d2cd0f4f311aa7b633cc8d5b90411e352ad6734e62c4e5c3ba7c1f961fd8215e7dbe5737f17297d70e50fd30574de6c6484cd491c53c355eff7451d6b579fe87f1aff7d760334272099c49fff77263ece5292e04d5a5d7f5cedc169ea1f90ea4bc30948bb6f47734068cce53d7a4d1a8f8d2ab6f9b631bf0961e1035"},
-  ]
+      { quality: "1080p HEVC Ai Upscale x264 2.95 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=6f43007c46ad852dc8c79af52ffa2d11%3Adff1d0c40126426380e7551c7e6640565b14cb841d62f21fa171faab95f996c7fc9226dd6c3b370d748c1d34bb5d453774ed62f4d2cd0f4f311aa7b633cc8d5b90411e352ad6734e62c4e5c3ba7c1f961fd8215e7dbe5737f17297d70e50fd30574de6c6484cd491c53c355eff7451d6b579fe87f1aff7d760334272099c49fff77263ece5292e04d5a5d7f5cedc169ea1f90ea4bc30948bb6f47734068cce53d7a4d1a8f8d2ab6f9b631bf0961e1035" }
+    ]
   },
   {
     title: "Chakram (2005)",
     img: "https://image.tmdb.org/t/p/original/a6GsbSqaFFUjIMWqutlVbnE3Lgo.jpg",
     description: "Chakram (Prabhas), a foreign returnee, dreams of building a hospital in Pulivendula. He loves his colleague Lakshmi (Asin Thottumkal), but leaves her after discovering he has cancer. Moving to Hyderabad's Sahara Colony, he helps solve local issues without revealing his illness. Another woman, also named Lakshmi (Charmy), falls for him. The story unfolds as a poignant tale of love and sacrifice amidst his battle with cancer.",
     downloadLinks: [
-      { quality: "1080p AMZN WEB-DL x264 9.45 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=9eaae39ce96f27c96d5210e1aa81e4be%3Adaeef9eb0464e2b1cbffbd687848eb116e25ad1e42a3b99628d03fba1c17a9d0acac5b8e410db8aae3605f28c6be5b93ffeca87cc90b18deed82816af990ab5b6c223e645681ec4c402b77d9d715abcb1d18a5d608d257f2785a09689b08ecef9738f87c3d714aa2eb9b0d29faaad3e9f53e44f94bcf0768fda3f4c67be11053ccf75f269ef97bcbc4a3e9d53a831d69241989af610102512072410406f66af5da8bda2a9d0bcb930283f77f7d7cd219
-" },
+      { quality: "1080p AMZN WEB-DL x264 9.45 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=9eaae39ce96f27c96d5210e1aa81e4be%3Adaeef9eb0464e2b1cbffbd687848eb116e25ad1e42a3b99628d03fba1c17a9d0acac5b8e410db8aae3605f28c6be5b93ffeca87cc90b18deed82816af990ab5b6c223e645681ec4c402b77d9d715abcb1d18a5d608d257f2785a09689b08ecef9738f87c3d714aa2eb9b0d29faaad3e9f53e44f94bcf0768fda3f4c67be11053ccf75f269ef97bcbc4a3e9d53a831d69241989af610102512072410406f66af5da8bda2a9d0bcb930283f77f7d7cd219" },
       { quality: "1080p AMZN WEB-DL x264 2.86 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=7c95b965ba7eaf6e334d60e1d4362adf%3A868682b2bcb6b8bb95d026d2d7750c76b8ce13e3eb1822a8c32f0a1d9900fde40a79912c3bfd6ac2d60b5e43d07a4eb0bb71e67d1c572453bc191c7d001226b1d4f8542135414bb779fa236cd41b4b892fb14970a3a9e6754c483f911769238f21040829d0fe2b12b3c551461b6b0bd198eb08aaead2e9bb390904ce9b0bc8e48f41dd270dcf96a600bf695b33176b7ef81fdc71330c6c69187b416a03730af311a5a69dc6b351d494d89b9444875ce6" }
     ]
   },
@@ -73,8 +72,7 @@ const movies = [
       { quality: "1080p HEVC Ai Upscale x264 15.85 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=1be72becab424d933e5149a347b73cac%3A3b517d04aaffae8bb8c337be4569a35b0011b49f8ed42f7218dec8511a0d78bdf7ceb3223370ae2b760c9f8266aeb88d963f3d10fcd33a30474ef3309182099e586841d0b73b70cf80cc4fe8e9d284cf43b5010a4d4e57d0363cfef54e8dadcb1a7e9eb90117918663e1113a9d918f0a64d4f37023d2d9075000151df379814f0c787f9d86db109aae0644ff98cdba98f4328c930c54288d5584b19174cff30cc6de9eecfc3be6c7349e5ee337377f18" },
       { quality: "1080p HEVC Ai Upscale x264 11.00 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=2ffbd46a808ff2a185676fb9108ebfbf%3Aa52be9d96bd59914000e0cb6c14e51724b92f63af52b97db0709b5da37bd53e173e9d9f803c5d315996890cce295e88e034a0a93a7bc13fcd7bba5e468ace3bfd4b18146c5a0bb608ab8b743d668ae00665f6f3285e6c2f75dc9e73716e0d2c05fef5481e2f8b1d1671fcb5b852152c9a0c1fb6c40a9b8e901886a65ffb0a1b0556f91d991aac271ba233a6add1e3b2927ef9b756afeb7e5aef469017bdba7c530b47dfbe525bf7097135fc5f27023a3" },
       { quality: "1080p HEVC Ai Upscale x264 7.28 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=5242e89272b7161f91654b1b05f4a60a%3A886b0352e9aa34c60174871c79de93476cba52482b6e40a9d4cd06268285fcf5ac8fa86cc7a88695acd60fc2d4e8333dd46e126dbb5b38f64283bc6e7431b4d7f90c19875b9dcf00749c0ffac5b6b8b8b110f8a773d332cdda3ed1847991e6afdb9343313797eb84dac4b6698f1552ab8add5e64cb01e4a9a5532d984de9fb3093a7422ba3638f9c8a34d1e13ca0ddc38bcc3f8422c803c184e3b5e7f4fa36677b3d0a3f58e0eb8946664303a1ec9cf7" },
-      { quality: "1080p HEVC Ai Upscale x264 3.80 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=a72493198a3b3f76a90efa459e1ee7f0%3A2f2955b15108f29ef5a4912f175625a6b85f006463200a8ef3412bcd487e63ba9f74b5f99772b232717ab13976101347267e288a6b26dc1e574fce59899b08f0bfbea1e7ac995890a6215c7dc1d001a3047439e138fa9753f08c62857f8bc7429b79f0faa076c64690270d6816d67e4f13d8d0dc0068e97477b4fc01f85c389f95ad21515367a1e4723da33e503f116ba48c71e1cfecb1e1a33a731c5f3c0cbe0b992a46a564b598ccf08f1b9b91179f
-" }
+      { quality: "1080p HEVC Ai Upscale x264 3.80 GB", link: "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=a72493198a3b3f76a90efa459e1ee7f0%3A2f2955b15108f29ef5a4912f175625a6b85f006463200a8ef3412bcd487e63ba9f74b5f99772b232717ab13976101347267e288a6b26dc1e574fce59899b08f0bfbea1e7ac995890a6215c7dc1d001a3047439e138fa9753f08c62857f8bc7429b79f0faa076c64690270d6816d67e4f13d8d0dc0068e97477b4fc01f85c389f95ad21515367a1e4723da33e503f116ba48c71e1cfecb1e1a33a731c5f3c0cbe0b992a46a564b598ccf08f1b9b91179f" }
     ]
   },
   {
@@ -82,10 +80,10 @@ const movies = [
     img: "https://theposterdb.com/api/assets/17550/view",
     description: "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
     downloadLinks: [
-      { quality: "1080p WEBDL ChapteR 1", link: "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
-      { quality: "1080p WEBDL ChapteR 2", link: "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
-      { quality: "1080p WEBDL ChapteR 3", link: "https://gdlink.dev/file/2eQHtRChOshri6W" },
-      { quality: "1080p WEBDL ChapteR 4", link: "https://gdlink.dev/file/Edn4T5T3TxrM0xf" }
+      { quality: "1080p WEBDL Chapter 1", link: "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
+      { quality: "1080p WEBDL Chapter 2", link: "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
+      { quality: "1080p WEBDL Chapter 3", link: "https://gdlink.dev/file/2eQHtRChOshri6W" },
+      { quality: "1080p WEBDL Chapter 4", link: "https://gdlink.dev/file/Edn4T5T3TxrM0xf" }
     ]
   },
   {
@@ -98,15 +96,15 @@ const movies = [
     ]
   },
   {
-    title: "Moon knight(2022)",
+    title: "Moon Knight (2022)",
     img: "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
     description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
     downloadLinks: [
-      { quality: "1080p BluraY S01 ZIP", link: "https://vifix.site/gdflix/YsVUM3pVym" }
+      { quality: "1080p Bluray S01 ZIP", link: "https://vifix.site/gdflix/YsVUM3pVym" }
     ]
   },
   {
-    title: "Mirzapur (2018) S01 ",
+    title: "Mirzapur (2018) S01",
     img: "https://image.tmdb.org/t/p/original/p0qM8hhlMF5DuxHBzl2EZR6TehX.jpg",
     description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
     downloadLinks: [
@@ -115,7 +113,7 @@ const movies = [
     ]
   },
   {
-    title: "Mirzapur (2018) S02 ",
+    title: "Mirzapur (2018) S02",
     img: "https://image.tmdb.org/t/p/original/nQyM0gixhRQuwZmv383v02qf8dE.jpg",
     description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
     downloadLinks: [
@@ -124,7 +122,7 @@ const movies = [
     ]
   },
   {
-    title: "Mirzapur (2018) S03 ",
+    title: "Mirzapur (2018) S03",
     img: "https://image.tmdb.org/t/p/original/tzOnlogwpQPPC6AUhYSz8URuRFD.jpg",
     description: "The iron-fisted Akhandanand Tripathi is a millionaire carpet exporter and the mafia don of Mirzapur. His son, Munna, is an unworthy, power-hungry heir who will stop at nothing to inherit his father's legacy. An incident at a wedding procession forces him to cross paths with Ramakant Pandit, an upstanding lawyer, and his sons, Guddu and Bablu. It snowballs into a game of ambition, power and greed that threatens the fabric of this lawless city.",
     downloadLinks: [
@@ -220,20 +218,25 @@ const movies = [
     ]
   },
   {
-    title: "Game of Thrones s04 (2011)",
+    title: "Game of Thrones S04 (2011)",
     img: "https://image.tmdb.org/t/p/original/gdeLQ5odsYE5EZ6hhnm2PwnjycB.jpg",
     description: "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north...",
     downloadLinks: [
-      { quality: "4K UHD GOT s04e01 MUL", link: "https://new6.gdflix.dad/file/qQnuXcjcu5" },
-      { quality: "4K UHD GOT s04e02 MUL", link: "https://new6.gdflix.dad/file/z0Xu8H9SV1" },
-      { quality: "4K UHD GOT s04e03 MUL", link: "https://new6.gdflix.dad/file/b7bGr4q64g" },
-      { quality: "4K UHD GOT s04e04 MUL", link: "https://new6.gdflix.dad/file/cJJ27a8ZCP" },
-      { quality: "4K UHD GOT s04e05 MUL", link: "https://new6.gdflix.dad/file/jeCxHDfZKe" },
-      { quality: "4K UHD GOT s04e06 MUL", link: "https://new6.gdflix.dad/file/SxCZjWPhdP" },
-      { quality: "4K UHD GOT s04e07 MUL", link: "https://new6.gdflix.dad/file/H9AIwR8GmB" },
-      { quality: "4K UHD GOT s04e08 MUL", link: "https://new6.gdflix.dad/file/e3NBZi0uBR" },
-      { quality: "4K UHD GOT s04e09 MUL", link: "https://new6.gdflix.dad/file/EKYzhh9BIr" },
-      { quality: "4K UHD GOT s04e10 MUL", link: "https://new6.gdflix.dad/file/fo2mRHrlfp" }
+      { quality: "4K UHD GOT S04E01 MUL", link: "https://new6.gdflix.dad/file/qQnuXcjcu5" },
+      { quality: "4K UHD GOT S04E02 MUL", link: "https://new6.gdflix.dad/file/z0Xu8H9SV1" },
+      { quality: "4K UHD GOT S04E03 MUL", link: "https://new6.gdflix.dad/file/b7bGr4q64g" },
+      { quality: "4K UHD GOT S04E04 MUL", link: "https://new6.gdflix.dad/file/cJJ27a8ZCP" },
+      { quality: "4K UHD GOT S04E05 MUL", link: "https://new6.gdflix.dad/file/jeCxHDfZKe" },
+      { quality: "4K UHD GOT S04E06 MUL", link: "https://new6.gdflix.dad/file/SxCZjWPhdP" },
+      { quality: "4K UHD GOT S04E07 MUL", link: "https://new6.gdflix.dad/file/H9AIwR8GmB" },
+      { quality: "4K UHD GOT S04E08 MUL", link: "https://new6.gdflix.dad/file/e3NBZi0uBR" },
+      { quality: "4K UHD GOT S04E09 MUL", link: "https://new6.gdflix.dad/file/EKYzhh9BIr" },
+      { quality: "4K UHD GOT S04E10 MUL", link: "https://new6.gdflix.dad/file/fo2mRHrlfp" }
     ]
   }
 ];
+
+// Example usage: Log all movie titles to the console
+movies.forEach(movie => {
+  console.log(movie.title);
+});
