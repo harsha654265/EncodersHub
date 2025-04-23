@@ -1,14 +1,55 @@
 const movies = [
   {
-    "title": "Rebel (2012)",
-    "img": "https://image.tmdb.org/t/p/original/dNTzorrVmcJ25fUGzs9FfkoXb0P.jpg",
-    "description": "After his parents are brutally murdered, a man goes on a quest to find his parents' killers. He finds that his own uncle is involved in the killings.",
+    "title": "Mr. Perfect (2011)",
+    "img": "https://image.tmdb.org/t/p/original/tOYpxUX2ISEvdJ1FqwPUZAPy2Hy.jpg",
+    "description": "Vicky breaks his engagement with Priya, his childhood friend, after he learns that she is making many compromises for his sake. However, time makes him realise the need for compromises in life.",
     "downloadLinks": [
-      { "quality": "1080p  REMuXx  37.6GB", "link": "https://hubcloud.bz/drive/bfi8hsfruhfedna" },
-      { "quality": "1080p BLU-RaY AVC HIN +TEL  14.5GB", "link": "https://new17.gdtot.dad/file/121593038835" },
-      { "quality": "1080p SUNNxT WEB-DL  5.65GB ", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=86af07bc3c22a5fbf4b89e34459cfc52%3Ae1ccb5fac2c64dff0c4c14feb26d644d8301cad8e31f403bde6f9762b875c01c37da91b7619eb12da57d85cffdf5fdab178dbc25536a6c816c7e7321e296c118f2da6eab36de1159a2b08d42933eb1a1e86afaccd47e4bf4d69ca4f379c8640019083093519f61317b858445f5ce640a671835a09b5e8b2b2d09fa60aab14782355bb14afd588c644f127583ca8a242ba7f57bd43d3e013c598eb6fa030f9d10bf05598c5ebda691b0cd9bfb39fee571" },
-      { "quality": "1080p BLU-RaY HEVC  4.7GB", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=3f668a270ab75aa0de78417d7e20f580%3Aef45244b932efdbd0d7a8b8731845b62a638dd6c9779b5d3f5ac2288a09e46c23dbeddedc93d8e8408387d28cd738e50bc828eed445a1697c1531e7198c7eba791b4531df4a049837bf638ad091e055203982f6a9bdad31ff79849e42747d9a188a7b9e5de274d25e402edd3d45f9b988df8da84fcb5c10891aea8133eb35ae88c6489bc147b8ac09e1b86b0e8c2a23ba5161d16ec3efc27c04e62c5f64d4a627af163b6e308167c5045b10e12913c15" }
-      
+      { "quality": "1080p BLU-RaY AVC 42.5gb", "link": "https://new6.gdflix.dad/xfile/IMQ5fpEJzZ" },
+      { "quality": "1080p BLU-RaY AVC 33.73gb", "link": "https://new6.gdflix.dad/xfile/1YXm5aUHyj" },
+      { "quality": "1080p BLU-RaY AVC 30.73gb", "link": "https://new6.gdflix.dad/xfile/1YXm5aUHyj" },
+      { "quality": "1080p BLU-RaY AVC 6.65gb", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=bd7d3a937d3e18ee3740deb7463dd3d8%3A6d12c28fad9bd7fb767bed2f56a07f27..." },
+      { "quality": "1080p BLU-RaY AVC 7.13gb", "link": "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=4fb0e0958909daf8c7fcac987e66ad8e%3Ac177e06dc79e04ca..." },
+      { "quality": "1080p BLU-RaY AVC 2.95gb", "link": "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=cae6199097289153f4aa602eea27c14f%3Aad61b6cca56d625ed12b4a8f32fe6038..." }
     ]
   },
-];
+  {
+    "title": "Darling (2010)",
+    "img": "https://image.tmdb.org/t/p/original/lUPhjbTUbOdprc9waFcB47bmKKE.jpg",
+    "description": "Prabha prepares to meet Nandini, his childhood friend, at a reunion party organised by his father. However, things take a turn when Nisha, a gangster's daughter, falls in love with him.",
+    "downloadLinks": [
+      { "quality": "1080p BLU-RaY REmUX 36.2gb", "link": "https://hubcloud.bz/drive/y1hf7hiofiotmri" },
+      { "quality": "1080p AVC BLU-RaY 14.45gb", "link": "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=17a19438f5e7a84edc5491e8ebc24d57%3A2e3d7dbfb286bb5d..." },
+      { "quality": "1080p HEVC BLU-RaY WEB-DL 6.09GB", "link": "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=24706c50a29ae3e536fc118f7727969f%3Adc6c040e98734f..." },
+      { "quality": "1080p AVC BLU-RaY WEB-DL 2.53gb", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=68eb088b5f80098c22c342df88b32f05%3A9b8475a1fe63bd18..." },
+      { "quality": "1080p BLU-RaY HIN + TEL 2.56gb", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=795c403a236c62beb30b201b2250467a%3Ac0d9157947b6560..." }
+    ]
+  },
+  {
+    "title": "Ek Niranjan (2009)",
+    "img": "https://image.tmdb.org/t/p/original/tT0ElSp7p8d8Wsgv6Z1xFmLL8lY.jpg",
+    "description": "A bounty hunter searches for the family he was separated from as a child, and falls in love with the sister of a gang member.",
+    "downloadLinks": [
+      { "quality": "1080p AMZN WEB-DL 8.46GB", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=b53154a4c2ac629340bc73043060f60d%3A783cbc809df3283..." },
+      { "quality": "1080p AMZN WEB-DL 3.28GB", "link": "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=8f7a39e266062dc9e04a9eb8e9c9f3bc%3Ac4c22cad8b5554b..." }
+    ]
+  },
+  {
+    "title": "Billa (2009)",
+    "img": "https://image.tmdb.org/t/p/original/dJlJskiQFVDcWdb2f9FGl23x84m.jpg",
+    "description": "A police inspector sends a gangster-lookalike to uncover the gang's secrets.",
+    "downloadLinks": [
+      { "quality": "4K-2180p HYBRID REMASTERED WEB-DL 21.04GB", "link": "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=77d5080d00afc4b0fb4357dc1f85805f%3A5062529aa3fa88..." },
+      { "quality": "1080p AVC WEB-DL 5.06GB", "link": "https://sparkling-sound-8a68.gusto-gusto-veal.workers.dev/?download=1e325bbba2b942b17af6c773e11edd18%3A0b32d02b3024fb..." },
+      { "quality": "1080p HEVC WEB-DL 3.19GB", "link": "https://shiny-bird-d62b.5gkwwmjk.workers.dev/?download=48aa65f8c556e82ced72c5134fdd9216%3Aa993b219478387..." }
+    ]
+  },
+  {
+    "title": "Bujjigaadu: Made in Chennai (2008)",
+    "img": "https://image.tmdb.org/t/p/original/fVDPpKS4ylQf1qtEvfaDjh6ehhP.jpg",
+    "description": "Bujji runs away from his home in his childhood because of a dispute with his girlfriend Chitti. He ends up in Chennai for 12 years, and the rest of the story is about how they meet now to make their love successful.",
+    "downloadLinks": [
+      { "quality": "1080p HEVC NF WEB-DL 2.5GB", "link": "https://fastupload.io/a2afe094d390cf76" }
+    ]
+  }
+]
+
