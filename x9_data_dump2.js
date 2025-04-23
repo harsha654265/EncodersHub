@@ -1,4 +1,4 @@
-const movies = [
+const movies2 = [
   {
     "title": "Mr. Perfect (2011)",
     "img": "https://image.tmdb.org/t/p/original/tOYpxUX2ISEvdJ1FqwPUZAPy2Hy.jpg",
