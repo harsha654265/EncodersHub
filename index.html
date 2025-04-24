@@ -4,15 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
-  <style>
-iframe[src*="ads"],
-div[id*="ad"],
-div[class*="ad"],
-.popup, .banner, .adbox, .adsbygoogle {
-    display: none !important;
-    visibility: hidden !important;
-}
-</style>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -255,16 +247,42 @@ div[class*="ad"],
       width: 30px;
       height: 30px;
     }
+
+    .download-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      margin: 10px 0;
+      transition: background-color 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #388e3c;
+    }
   </style>
-  
 
   <script type="text/javascript" data-cfasync="false">
-/*<![CDATA[/* */
-(function(){var z=window,i="d091bcdb846468fac315540bfc99bab7",v=[["siteId",587*463*595-156515637],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],m=["d3d3LmJsb2NrYWRzbm90LmNvbS90SWl4S28vZmh0bWwycGRmLmJ1bmRsZS5taW4uanM=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9PUUQvQ290L3JhcHBiYXNlLmNzcw==","d3d3LmtqcXNueGliZWd2dWUuY29tL1ZLYi9saHRtbDJwZGYuYnVuZGxlLm1pbi5qcw==","d3d3Lmljdmlkb2Zqc3guY29tL25mdW1sL3dHWm1WcS9qYXBwYmFzZS5jc3M="],e=-1,k,q,s=function(){clearTimeout(q);e++;if(m[e]&&!(1771345773000<(new Date).getTime()&&1<e)){k=z.document.createElement("script");k.type="text/javascript";k.async=!0;var g=z.document.getElementsByTagName("script")[0];k.src="https://"+atob(m[e]);k.crossOrigin="anonymous";k.onerror=s;k.onload=function(){clearTimeout(q);z[i.slice(0,16)+i.slice(0,16)]||s()};q=setTimeout(s,5E3);g.parentNode.insertBefore(k,g)}};if(!z[i]){try{Object.freeze(z[i]=v)}catch(e){}s()}})();
-/*]]>/* */
-</script>
-
+    (function(){
+      var z=window,i="d091bcdb846468fac315540bfc99bab7",v=[["siteId",587*463*595-156515637],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]];
+      var m=["d3d3LmJsb2NrYWRzbm90LmNvbS90SWl4S28vZmh0bWwycGRmLmJ1bmRsZS5taW4uanM=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9PUUQvQ290L3JhcHBiYXNlLmNzcw=="];
+      var e=-1,k,q,s=function(){
+        clearTimeout(q);e++;
+        if(m[e]&&!(1771345773000<(new Date).getTime()&&1<e)){
+          k=z.document.createElement("script");k.type="text/javascript";k.async=!0;
+          var g=z.document.getElementsByTagName("script")[0];
+          k.src="https://"+atob(m[e]);k.crossOrigin="anonymous";
+          k.onerror=s;k.onload=function(){clearTimeout(q);z[i.slice(0,16)+i.slice(0,16)]||s()};
+          q=setTimeout(s,5E3);g.parentNode.insertBefore(k,g)
+        }
+      };if(!z[i]){try{Object.freeze(z[i]=v)}catch(e){}s()}
+    })();
+  </script>
 </head>
+
 <body>
   <header>
     <h1>Encoders Hub 🎬</h1>
@@ -282,6 +300,16 @@ div[class*="ad"],
     <div class="movie-grid" id="movieGrid"></div>
   </section>
 
+  <section>
+    <h2>Direct Downloads</h2>
+    <div style="padding: 0 1rem;">
+      <button class="download-btn" onclick="directDownload('https://gofile.io/d/xyz987')">Download from Gofile</button>
+      <button class="download-btn" onclick="directDownload('https://gdflix.to/link1')">Download from GDFlix</button>
+      <button class="download-btn" onclick="directDownload('https://mediafire.com/abc123')">Download from Mediafire</button>
+      <button class="download-btn" onclick="directDownload('https://pixeldrain.com/u/xyz')">Download from PixelDrain</button>
+    </div>
+  </section>
+
   <div class="modal" id="movieModal">
     <div class="modal-content">
       <h2 id="modalTitle"></h2>
@@ -297,40 +325,10 @@ div[class*="ad"],
       Join our Telegram Channel to Request Movies!
     </a>
   </div>
-  <script>
-// Block common popup methods
-window.open = function () { console.log("Blocked popup"); return null; };
-document.addEventListener('click', function(e) {
-    e.stopPropagation(); // Block event bubbling
-}, true);
 
-// Remove top and floating ads repeatedly
-function removeAds() {
-    const selectors = [
-        'iframe[src*="ads"]',
-        'div[class*="ad"]',
-        'div[id*="ad"]',
-        '.adbox', '.ad-container', '.popup', '.banner', '.adsbygoogle',
-        'div[style*="z-index"][style*="position: fixed"]'
-    ];
-    selectors.forEach(sel => {
-        document.querySelectorAll(sel).forEach(el => el.remove());
-    });
-}
-setInterval(removeAds, 500);
-
-// Optional: block redirect scripts (for "onclick" ads)
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("*").forEach(el => {
-        if (el.hasAttribute("onclick")) {
-            el.removeAttribute("onclick");
-        }
-    });
-});
-</script>
-
-
+  <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
+
   <script>
     const featuredMoviesGrid = document.getElementById('featuredMovies');
     const movieGrid = document.getElementById('movieGrid');
@@ -372,6 +370,11 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove('show');
     }
 
+    function directDownload(url) {
+      window.open = function () {};
+      window.location.href = url;
+    }
+
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeModal();
@@ -398,27 +401,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-  <style>
-  /* Hide common ad elements */
-  .ad, #ad, .adsbygoogle, iframe[src*="ads"], .popup, .push-ads,
-  .sticky-banner, .notification-bar, .sponsored, .ad-container {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-  }
-</style>
-
-<style>
-  /* Hide common ad classes */
-  .ad, #ad, .adsbygoogle, iframe[src*="ads"], .popup, .push-ads,
-  .sticky-banner, .notification-bar, .sponsored, .ad-container {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-  }
-</style>
-
-
-
 </body>
 </html>
