@@ -300,7 +300,7 @@
     }
 
     .section-count {
-      color: #FFD700;
+      color: #fff;
       font-size: 0.9rem;
       font-weight: bold;
       margin-right: 0.5rem;
@@ -318,8 +318,7 @@
     <div class="section-header">
       <h2 id="featuredTitle">Featured</h2>
       <div>
-        <span id="featuredCount" class="section-count"></span>
-        <a class="see-all" id="seeAllFeatured" onclick="toggleFeatured()">See All</a>
+        <a class="see-all" id="seeAllFeatured">See All</a>
       </div>
     </div>
     <div class="movie-grid" id="featuredMovies"></div>
@@ -388,10 +387,8 @@
     const featuredTitle = document.getElementById('featuredTitle');
     const moviesTitle = document.getElementById('moviesTitle');
     const webSeriesTitle = document.getElementById('webSeriesTitle');
-    const seeAllFeatured = document.getElementById('seeAllFeatured');
     const seeAllMovies = document.getElementById('seeAllMovies');
     const seeAllWebSeries = document.getElementById('seeAllWebSeries');
-    const featuredCount = document.getElementById('featuredCount');
     const moviesCount = document.getElementById('moviesCount');
     const webSeriesCount = document.getElementById('webSeriesCount');
 
@@ -414,17 +411,16 @@
     const moviesList = movies.filter(movie => !webSeriesTitles.includes(movie.title));
     const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
 
-    let isFeaturedExpanded = false;
     let isMoviesExpanded = false;
     let isWebSeriesExpanded = false;
 
-    function renderMovies(itemList, grid, titleElement, sectionName, countElement) {
+    function renderMovies(itemList, grid, titleElement, sectionName, countElement, totalCount) {
       grid.style.opacity = '0';
       grid.innerHTML = '';
       if (itemList.length === 0) {
         grid.innerHTML = '<div class="no-results">No results found</div>';
         titleElement.textContent = sectionName;
-        countElement.textContent = itemList.length;
+        countElement.textContent = `(${itemList.length})`;
         grid.style.opacity = '1';
         return;
       }
@@ -439,7 +435,9 @@
         grid.appendChild(card);
       });
       titleElement.textContent = sectionName;
-      countElement.textContent = itemList.length;
+      if (countElement) {
+        countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
+      }
       setTimeout(() => { grid.style.opacity = '1'; }, 100);
     }
 
@@ -469,24 +467,13 @@
       modal.classList.remove('show');
     }
 
-    function toggleFeatured() {
-      isFeaturedExpanded = !isFeaturedExpanded;
-      if (isFeaturedExpanded) {
-        renderMovies(movies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
-        seeAllFeatured.textContent = 'Show Less';
-      } else {
-        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
-        seeAllFeatured.textContent = 'See All';
-      }
-    }
-
     function toggleMovies() {
       isMoviesExpanded = !isMoviesExpanded;
       if (isMoviesExpanded) {
-        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies', moviesCount);
+        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies', moviesCount, moviesList.length);
         seeAllMovies.textContent = 'Show Less';
       } else {
-        renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
+        renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount, moviesList.length);
         seeAllMovies.textContent = 'See All';
       }
     }
@@ -494,10 +481,10 @@
     function toggleWebSeries() {
       isWebSeriesExpanded = !isWebSeriesExpanded;
       if (isWebSeriesExpanded) {
-        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, webSeriesList.length);
         seeAllWebSeries.textContent = 'Show Less';
       } else {
-        renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, webSeriesList.length);
         seeAllWebSeries.textContent = 'See All';
       }
     }
@@ -540,18 +527,17 @@
           );
         });
 
-        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount, filteredMovies.length);
+        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, filteredWebSeries.length);
         featuredMoviesGrid.innerHTML = '';
         featuredSection.style.display = 'none';
       } else {
-        renderMovies(isFeaturedExpanded ? movies : featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
-        renderMovies(isMoviesExpanded ? moviesList : moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
-        renderMovies(isWebSeriesExpanded ? webSeriesList : webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', null);
+        renderMovies(isMoviesExpanded ? moviesList : moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount, moviesList.length);
+        renderMovies(isWebSeriesExpanded ? webSeriesList : webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, webSeriesList.length);
         featuredSection.style.display = 'block';
         moviesSection.style.display = 'block';
         webSeriesSection.style.display = 'block';
-        seeAllFeatured.textContent = isFeaturedExpanded ? 'Show Less' : 'See All';
         seeAllMovies.textContent = isMoviesExpanded ? 'Show Less' : 'See All';
         seeAllWebSeries.textContent = isWebSeriesExpanded ? 'Show Less' : 'See All';
       }
@@ -559,9 +545,9 @@
 
     // Featured section: First 12 items from the combined movies array
     const featuredMovies = movies.slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
-    renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
-    renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', null);
+    renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount, moviesList.length);
+    renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, webSeriesList.length);
   </script>
   <script>
     // Detect if an ad blocker is active
