@@ -376,5 +376,52 @@
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
+  <script>
+  // Detect if an ad blocker is active
+  window.addEventListener('load', function () {
+    const ad = document.createElement('div');
+    ad.innerHTML = '&nbsp;';
+    ad.className = 'adsbox';
+    ad.style.position = 'absolute';
+    ad.style.height = '1px';
+    document.body.appendChild(ad);
+
+    window.setTimeout(function () {
+      if (ad.offsetHeight === 0) {
+        // Ad blocker is on, show the message
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = '#000';
+        overlay.style.color = '#fff';
+        overlay.style.display = 'flex';
+        overlay.style.flexDirection = 'column';
+        overlay.style.justifyContent = 'center';
+        overlay.style.alignItems = 'center';
+        overlay.style.zIndex = '9999';
+        overlay.innerHTML = `
+          <h2>Please Disable Ad-Blocker</h2>
+          <p>Refresh this page after disabling</p>
+        `;
+        document.body.appendChild(overlay);
+      }
+      document.body.removeChild(ad);
+    }, 100);
+  });
+</script>
+
+<style>
+  .adsbox {
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    top: -1000px !important;
+  }
+</style>
+
 </body>
 </html>
