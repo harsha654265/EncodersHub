@@ -202,7 +202,7 @@
     .modal-content p {
       font-size: 1rem;
       line-height: 1.5;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .file-list a {
@@ -264,13 +264,20 @@
       width: 30px;
       height: 30px;
     }
+
+    .no-results {
+      text-align: center;
+      color: #FFD700;
+      font-size: 1.2rem;
+      padding: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
     <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads! 🚀</div>
-    <input type="text" id="searchInput" placeholder="Search movies...">
+    <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc.">
   </header>
 
   <section>
@@ -286,7 +293,7 @@
   <div class="modal" id="movieModal">
     <div class="modal-content">
       <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
+      <div id="modalDetails"></div>
       <div class="file-list" id="downloadLinks"></div>
       <button class="close-btn" onclick="closeModal()">Close</button>
     </div>
@@ -304,7 +311,7 @@
       All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users.<br>
       Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
     </p>
-    <p>&copy; 2025 Encoders Hub. All Rights Reserved.</p>
+    <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
   <script src="movie.js"></script>
@@ -315,11 +322,15 @@
     const searchInput = document.getElementById('searchInput');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
+    const modalDetails = document.getElementById('modalDetails');
     const downloadLinks = document.getElementById('downloadLinks');
 
     function renderMovies(movieList, grid) {
       grid.innerHTML = '';
+      if (movieList.length === 0) {
+        grid.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+      }
       movieList.forEach(movie => {
         const card = document.createElement('div');
         card.classList.add('movie-card');
@@ -334,7 +345,15 @@
 
     function openModal(movie) {
       modalTitle.textContent = movie.title;
-      modalDescription.textContent = movie.description;
+      modalDetails.innerHTML = `
+        <p><strong>Genres:</strong> ${movie.genres?.join(', ') || 'N/A'}</p>
+        <p><strong>Runtime:</strong> ${movie.runtime || 'N/A'}</p>
+        <p><strong>Release Date:</strong> ${movie.releaseDate || 'N/A'}</p>
+        <p><strong>Tags:</strong> ${movie.tags?.join(', ') || 'N/A'}</p>
+        <p><strong>Heroes:</strong> ${movie.heroes?.join(', ') || 'N/A'}</p>
+        <p><strong>Heroines:</strong> ${movie.heroines?.join(', ') || 'N/A'}</p>
+        <p><strong>Directors:</strong> ${movie.directors?.join(', ') || 'N/A'}</p>
+      `;
       downloadLinks.innerHTML = '';
       movie.downloadLinks.forEach(link => {
         const a = document.createElement('a');
@@ -358,10 +377,22 @@
 
     searchInput.addEventListener('input', () => {
       const keyword = searchInput.value.toLowerCase();
-      const featuredSection = document.querySelector('section h2');
+      const featuredSection = document.querySelector('section:first-of-type');
 
       if (keyword) {
-        const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
+        const filtered = movies.filter(movie => {
+          const releaseYear = movie.releaseDate?.split('-')[0] || '';
+          return (
+            movie.title?.toLowerCase().includes(keyword) ||
+            movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
+            movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
+            movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
+            movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
+            movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
+            movie.releaseDate?.toLowerCase().includes(keyword) ||
+            releaseYear.includes(keyword)
+          );
+        });
         renderMovies(filtered, movieGrid);
         featuredMoviesGrid.innerHTML = '';
         featuredSection.style.display = 'none';
@@ -377,51 +408,49 @@
     renderMovies(movies, movieGrid);
   </script>
   <script>
-  // Detect if an ad blocker is active
-  window.addEventListener('load', function () {
-    const ad = document.createElement('div');
-    ad.innerHTML = '&nbsp;';
-    ad.className = 'adsbox';
-    ad.style.position = 'absolute';
-    ad.style.height = '1px';
-    document.body.appendChild(ad);
+    // Detect if an ad blocker is active
+    window.addEventListener('load', function () {
+      const ad = document.createElement('div');
+      ad.innerHTML = ' ';
+      ad.className = 'adsbox';
+      ad.style.position = 'absolute';
+      ad.style.height = '1px';
+      document.body.appendChild(ad);
 
-    window.setTimeout(function () {
-      if (ad.offsetHeight === 0) {
-        // Ad blocker is on, show the message
-        const overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = '#000';
-        overlay.style.color = '#fff';
-        overlay.style.display = 'flex';
-        overlay.style.flexDirection = 'column';
-        overlay.style.justifyContent = 'center';
-        overlay.style.alignItems = 'center';
-        overlay.style.zIndex = '9999';
-        overlay.innerHTML = `
-          <h2>Please Disable Ad-Blocker</h2>
-          <p>Refresh this page after disabling</p>
-        `;
-        document.body.appendChild(overlay);
-      }
-      document.body.removeChild(ad);
-    }, 100);
-  });
-</script>
+      window.setTimeout(function () {
+        if (ad.offsetHeight === 0) {
+          const overlay = document.createElement('div');
+          overlay.style.position = 'fixed';
+          overlay.style.top = '0';
+          overlay.style.left = '0';
+          overlay.style.width = '100%';
+          overlay.style.height = '100%';
+          overlay.style.backgroundColor = '#000';
+          overlay.style.color = '#fff';
+          overlay.style.display = 'flex';
+          overlay.style.flexDirection = 'column';
+          overlay.style.justifyContent = 'center';
+          overlay.style.alignItems = 'center';
+          overlay.style.zIndex = '9999';
+          overlay.innerHTML = `
+            <h2>Please Disable Ad-Blocker</h2>
+            <p>Refresh this page after disabling</p>
+          `;
+          document.body.appendChild(overlay);
+        }
+        document.body.removeChild(ad);
+      }, 100);
+    });
+  </script>
 
-<style>
-  .adsbox {
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    top: -1000px !important;
-  }
-</style>
-
+  <style>
+    .adsbox {
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      top: -1000px !important;
+    }
+  </style>
 </body>
 </html>
