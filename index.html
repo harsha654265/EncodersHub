@@ -307,6 +307,74 @@ body {
       Join our Telegram Channel to Request Movies!
     </a>
   </div>
+  <script>
+  const movieCount = document.getElementById('movieCount');
+  const sellAllButton = document.getElementById('sellAllButton');
+  const pagination = document.getElementById('pagination');
+  const searchInput = document.getElementById('searchInput');
+  const movieGrid = document.getElementById('movieGrid');
+
+  const moviesPerPage = 12;
+  let currentPage = 1;
+
+  function renderMovies(movieList, grid) {
+    grid.innerHTML = '';
+    movieList.forEach(movie => {
+      const card = document.createElement('div');
+      card.classList.add('movie-card');
+      card.innerHTML = `
+        <img src="${movie.img}" alt="${movie.title}">
+        <div class="movie-title">${movie.title}</div>
+      `;
+      card.addEventListener('click', () => openModal(movie));
+      grid.appendChild(card);
+    });
+  }
+
+  function updateMovieCount() {
+    movieCount.textContent = `(${movies.length} Movies)`;
+  }
+
+  function paginateMovies() {
+    const start = (currentPage - 1) * moviesPerPage;
+    const end = start + moviesPerPage;
+    const currentMovies = movies.slice(start, end);
+
+    renderMovies(currentMovies, movieGrid);
+    updateMovieCount();
+
+    const totalPages = Math.ceil(movies.length / moviesPerPage);
+    createPagination(totalPages);
+  }
+
+  function createPagination(totalPages) {
+    pagination.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement('button');
+      button.textContent = i;
+      button.addEventListener('click', () => {
+        currentPage = i;
+        paginateMovies();
+      });
+      pagination.appendChild(button);
+    }
+  }
+
+  sellAllButton.addEventListener('click', () => {
+    alert("Sell All clicked! Implement functionality as needed.");
+  });
+
+  searchInput.addEventListener('input', () => {
+    const keyword = searchInput.value.toLowerCase();
+    const filtered = movies.filter(movie => movie.title.toLowerCase().includes(keyword));
+    renderMovies(filtered, movieGrid);
+    updateMovieCount();
+    pagination.innerHTML = '';
+  });
+
+  // Initial Render
+  paginateMovies();
+</script>
 
   <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
