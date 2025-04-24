@@ -22,24 +22,7 @@ body {
 
 
 
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: #0d0d0d;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-#bgCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
+ 
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -291,7 +274,7 @@ body {
 
 </head>
 <body>
-  <canvas id="bgCanvas"></canvas>
+  
 
   <header>
     <h1>Encoders Hub 🎬</h1>
@@ -394,64 +377,7 @@ body {
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-  <script>
-  const canvas = document.getElementById("bgCanvas");
-  const ctx = canvas.getContext("2d");
-
-  let particles = [];
-  const particleCount = 100;
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.radius = Math.random() * 1.5 + 1;
-      this.speedX = Math.random() * 0.5 - 0.25;
-      this.speedY = Math.random() * 0.5 - 0.25;
-    }
-
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
-      ctx.fill();
-    }
-  }
-
-  function initParticles() {
-    particles = [];
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-  }
-
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-    requestAnimationFrame(animateParticles);
-  }
-
-  initParticles();
-  animateParticles();
-</script>
+  
 
 </body>
 </html>
