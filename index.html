@@ -369,7 +369,7 @@
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
-    <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads! 🚀</div>
+    <div class="middle-highlight">🚀 Use Brave Browser for GDFlix to avoid ads! 🚀</div>
     <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc.">
   </header>
 
@@ -421,6 +421,9 @@
     <a href="https://t.me/encodershub" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
     </a>
+    <p style="margin: 0.5rem; font-size: 0.9rem;">
+      To avoid ads on GDFlix, use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> or disable your ad blocker for GDFlix in your browser settings.
+    </p>
   </div>
 
   <div style="text-align: center; color: #aaa; padding: 1rem; font-size: 0.9rem;">
@@ -478,7 +481,7 @@
     let filteredMovies = moviesList;
     let filteredWebSeries = webSeriesList;
     const moviesPerPage = 12;
-    const webSeriesPerPage = 6;
+    const webSeriesPerPage = 12;
 
     function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
       grid.style.opacity = '0';
@@ -673,9 +676,16 @@
           overlay.style.justifyContent = 'center';
           overlay.style.alignItems = 'center';
           overlay.style.zIndex = '9999';
+          overlay.style.padding = '1rem';
+          overlay.style.textAlign = 'center';
           overlay.innerHTML = `
-            <h2>Please Disable Ad-Blocker</h2>
-            <p>Refresh this page after disabling</p>
+            <h2>Ad Blocker Detected</h2>
+            <p>To access Encoders Hub and GDFlix content, please:</p>
+            <ul style="list-style: none; padding: 0;">
+              <li>Disable your ad blocker for GDFlix in your browser settings, or</li>
+              <li>Use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> for an ad-free experience.</li>
+            </ul>
+            <p>After making changes, refresh this page.</p>
           `;
           document.body.appendChild(overlay);
         }
