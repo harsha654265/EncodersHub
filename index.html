@@ -282,6 +282,12 @@
       margin-bottom: 0.5rem;
     }
 
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     .see-all {
       display: inline-block;
       background: #FFD700;
@@ -303,7 +309,6 @@
       color: #fff;
       font-size: 0.9rem;
       font-weight: bold;
-      margin-right: 0.5rem;
     }
 
     .pagination {
@@ -352,7 +357,9 @@
 
   <section id="featuredSection">
     <div class="section-header">
-      <h2 id="featuredTitle">Featured</h2>
+      <div class="section-title">
+        <h2 id="featuredTitle">Featured</h2>
+      </div>
       <div>
         <a class="see-all" id="seeAllFeatured">See All</a>
       </div>
@@ -362,9 +369,11 @@
 
   <section id="moviesSection">
     <div class="section-header">
-      <h2 id="moviesTitle">All Movies</h2>
-      <div>
+      <div class="section-title">
+        <h2 id="moviesTitle">All Movies</h2>
         <span id="moviesCount" class="section-count"></span>
+      </div>
+      <div>
         <div id="moviesPagination" class="pagination"></div>
       </div>
     </div>
@@ -373,9 +382,11 @@
 
   <section id="webSeriesSection">
     <div class="section-header">
-      <h2 id="webSeriesTitle">Web Series</h2>
-      <div>
+      <div class="section-title">
+        <h2 id="webSeriesTitle">Web Series</h2>
         <span id="webSeriesCount" class="section-count"></span>
+      </div>
+      <div>
         <div id="webSeriesPagination" class="pagination"></div>
       </div>
     </div>
@@ -454,7 +465,7 @@
     const moviesPerPage = 12;
     const webSeriesPerPage = 6;
 
-    function renderMovies(itemList, grid, titleElement, sectionName, countElement, totalCount, page, itemsPerPage, paginationElement) {
+    function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
       grid.style.opacity = '0';
       grid.innerHTML = '';
       paginationElement.innerHTML = '';
@@ -499,10 +510,10 @@
           if (page > 1) {
             if (sectionName === 'All Movies') {
               moviesCurrentPage--;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount, filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
             } else if (sectionName === 'Web Series') {
               webSeriesCurrentPage--;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
             }
           }
         });
@@ -519,10 +530,10 @@
           if (page < totalPages) {
             if (sectionName === 'All Movies') {
               moviesCurrentPage++;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount, filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
             } else if (sectionName === 'Web Series') {
               webSeriesCurrentPage++;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
             }
           }
         });
@@ -598,8 +609,8 @@
 
         moviesCurrentPage = 1;
         webSeriesCurrentPage = 1;
-        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount, filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
         featuredMoviesGrid.innerHTML = '';
         featuredSection.style.display = 'none';
       } else {
@@ -607,9 +618,9 @@
         filteredWebSeries = webSeriesList;
         moviesCurrentPage = 1;
         webSeriesCurrentPage = 1;
-        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', null, null, 1, 12, document.createElement('div'));
-        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount, filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
+        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
         featuredSection.style.display = 'block';
         moviesSection.style.display = 'block';
         webSeriesSection.style.display = 'block';
@@ -618,9 +629,9 @@
 
     // Featured section: First 12 items from the combined movies array
     const featuredMovies = movies.slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', null, null, 1, 12, document.createElement('div'));
-    renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies', moviesCount, moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount, webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
+    renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
   </script>
   <script>
     // Detect if an ad blocker is active
