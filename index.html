@@ -302,6 +302,7 @@
     .section-count {
       color: #FFD700;
       font-size: 0.9rem;
+      font-weight: bold;
       margin-right: 0.5rem;
     }
   </style>
@@ -422,7 +423,7 @@
       grid.innerHTML = '';
       if (itemList.length === 0) {
         grid.innerHTML = '<div class="no-results">No results found</div>';
-        titleElement.textContent = `${sectionName} (${itemList.length})`;
+        titleElement.textContent = sectionName;
         countElement.textContent = itemList.length;
         grid.style.opacity = '1';
         return;
@@ -437,7 +438,7 @@
         card.addEventListener('click', () => openModal(item));
         grid.appendChild(card);
       });
-      titleElement.textContent = `${sectionName} (${itemList.length})`;
+      titleElement.textContent = sectionName;
       countElement.textContent = itemList.length;
       setTimeout(() => { grid.style.opacity = '1'; }, 100);
     }
