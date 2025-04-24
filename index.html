@@ -307,7 +307,7 @@
 
     .section-count {
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       font-weight: bold;
     }
 
@@ -325,9 +325,14 @@
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 8px;
-      font-size: 1rem;
+      font-size: 1.2rem;
       cursor: pointer;
       transition: background 0.3s, transform 0.2s;
+      min-width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .pagination button:hover {
@@ -346,6 +351,19 @@
       font-size: 1rem;
       margin: 0 0.5rem;
     }
+
+    @media (max-width: 480px) {
+      .pagination button {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        min-width: 36px;
+        height: 36px;
+      }
+
+      .pagination span {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -359,9 +377,6 @@
     <div class="section-header">
       <div class="section-title">
         <h2 id="featuredTitle">Featured</h2>
-      </div>
-      <div>
-        <a class="see-all" id="seeAllFeatured">See All</a>
       </div>
     </div>
     <div class="movie-grid" id="featuredMovies"></div>
@@ -504,7 +519,7 @@
       // Pagination controls
       if (totalPages > 1) {
         const prevButton = document.createElement('button');
-        prevButton.textContent = 'Previous';
+        prevButton.innerHTML = '←';
         prevButton.disabled = page === 1;
         prevButton.addEventListener('click', () => {
           if (page > 1) {
@@ -524,7 +539,7 @@
         paginationElement.appendChild(pageInfo);
 
         const nextButton = document.createElement('button');
-        nextButton.textContent = 'Next';
+        nextButton.innerHTML = '→';
         nextButton.disabled = page === totalPages;
         nextButton.addEventListener('click', () => {
           if (page < totalPages) {
