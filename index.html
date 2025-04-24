@@ -11,16 +11,15 @@
       min-height: 100vh;
       position: relative;
     }
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #0f0f0f);
-  background-size: 200% 200%;
-  animation: gradientBG 20s ease infinite;
-  color: #fff;
-}
 
-
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #0f0f0f);
+      background-size: 200% 200%;
+      animation: gradientBG 20s ease infinite;
+      color: #fff;
+    }
 
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
@@ -48,15 +47,14 @@ body {
     }
 
     .middle-highlight {
-  color: #FFD700;
-  font-weight: bold;
-  font-size: 1.05rem; /* slightly larger */
-  text-align: center;
-  flex: 1;
-  padding: 0 1rem;
-  white-space: nowrap;
-}
-
+      color: #FFD700;
+      font-weight: bold;
+      font-size: 1.05rem;
+      text-align: center;
+      flex: 1;
+      padding: 0 1rem;
+      white-space: nowrap;
+    }
 
     input[type="text"] {
       padding: 0.5rem;
@@ -68,29 +66,28 @@ body {
     }
 
     @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-  header h1,
-  .middle-highlight,
-  input[type="text"] {
-    width: 100%;
-    max-width: 300px;
-  }
+      header h1,
+      .middle-highlight,
+      input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+      }
 
-  .middle-highlight {
-    font-size: 0.75rem;
-    margin-top: 0.3rem;
-  }
+      .middle-highlight {
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+      }
 
-  input[type="text"] {
-    margin-top: 0.5rem;
-  }
-}
-
+      input[type="text"] {
+        margin-top: 0.5rem;
+      }
+    }
 
     .movie-grid {
       display: grid;
@@ -266,19 +263,11 @@ body {
       height: 30px;
     }
   </style>
-
-  <!-- Optional Ad script (you can remove if needed) -->
-  <script type="text/javascript" data-cfasync="false">
-  /*<![CDATA[*/
-  (function(){/* custom ad blocking fallback script here if needed */})();
-  /*]]>*/
-  </script>
 </head>
-
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
-    <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads!🚀</div>
+    <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads! 🚀</div>
     <input type="text" id="searchInput" placeholder="Search movies...">
   </header>
 
@@ -304,10 +293,17 @@ body {
   <div class="footer">
     <a href="https://t.me/encodershub" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
-      Join our Telegram Channel to Request Movies!
     </a>
   </div>
-  
+
+  <div style="text-align: center; color: #aaa; padding: 1rem; font-size: 0.9rem;">
+    <p><strong>Powered by Encoders Hub</strong></p>
+    <p>
+      All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users.<br>
+      Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
+    </p>
+    <p>&copy; 2025 Encoders Hub. All Rights Reserved.</p>
+  </div>
 
   <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
