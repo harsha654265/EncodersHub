@@ -367,32 +367,74 @@
   }
 </style>
 
+<style>
+  /* Hide common ad classes */
+  .ad, #ad, .adsbygoogle, iframe[src*="ads"], .popup, .push-ads,
+  .sticky-banner, .notification-bar, .sponsored, .ad-container {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+</style>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Remove known ad containers
-    const adSelectors = ['.ad', '#ad', '.adsbygoogle', 'iframe[src*="ads"]', '.popup', '.push-ads'];
+  function removeAds() {
+    const adSelectors = [
+      '.ad', '#ad', '.adsbygoogle', 'iframe[src*="ads"]',
+      '.popup', '.push-ads', '.sticky-banner', '.notification-bar',
+      '.sponsored', '.ad-container'
+    ];
+
     adSelectors.forEach(selector => {
       document.querySelectorAll(selector).forEach(el => el.remove());
     });
 
-    // Override all download button clicks
+    // Remove top fixed ads (like the Confirmed/Myntra ones)
+    const allDivs = document.querySelectorAll('div');
+    allDivs.forEach(div => {
+      const txt = div.innerText || "";
+      if (
+        txt.includes("Confirmed: ₹") ||
+        txt.includes("Take your money now") ||
+        txt.includes("Myntra Daily Deals") ||
+        txt.includes("दैनिक सौदे")
+      ) {
+        div.remove();
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Run initially
+    removeAds();
+
+    // Then re-run every 1.5 seconds (for dynamic ads)
+    setInterval(removeAds, 1500);
+
+    // Clean up download buttons
     const downloadButtons = document.querySelectorAll('a, button');
     downloadButtons.forEach(btn => {
       btn.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        if (href && href.includes("gofile.io")) {
+        if (href && (href.includes("gofile.io") || href.includes("gdflix") || href.includes("mediafire"))) {
           e.preventDefault();
           e.stopPropagation();
-          window.location.href = href; // instantly redirect to real link
+          window.location.href = href;
         }
       });
     });
 
-    // Stop annoying timed redirects or JS traps
+    // Force all links to open in same tab
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.setAttribute('target', '_self');
+    });
+
+    // Disable forced popups and redirects
     window.setTimeout = () => {};
     window.open = (url) => { window.location.href = url; };
   });
 </script>
+
 <script>
   document.querySelectorAll('a[target="_blank"]').forEach(link => {
     link.setAttribute('target', '_self');
