@@ -357,5 +357,47 @@
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
+  <style>
+  /* Hide common ad elements */
+  .ad, #ad, .adsbygoogle, iframe[src*="ads"], .popup, .push-ads,
+  .sticky-banner, .notification-bar, .sponsored, .ad-container {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Remove known ad containers
+    const adSelectors = ['.ad', '#ad', '.adsbygoogle', 'iframe[src*="ads"]', '.popup', '.push-ads'];
+    adSelectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach(el => el.remove());
+    });
+
+    // Override all download button clicks
+    const downloadButtons = document.querySelectorAll('a, button');
+    downloadButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.includes("gofile.io")) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = href; // instantly redirect to real link
+        }
+      });
+    });
+
+    // Stop annoying timed redirects or JS traps
+    window.setTimeout = () => {};
+    window.open = (url) => { window.location.href = url; };
+  });
+</script>
+<script>
+  document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.setAttribute('target', '_self');
+  });
+</script>
+
 </body>
 </html>
