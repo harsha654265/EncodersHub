@@ -271,6 +271,25 @@
       font-size: 1.2rem;
       padding: 2rem;
     }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .see-all {
+      color: #FFD700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .see-all:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -281,18 +300,27 @@
   </header>
 
   <section id="featuredSection">
-    <h2>Featured</h2>
+    <div class="section-header">
+      <h2 id="featuredTitle">Featured</h2>
+      <a class="see-all" id="seeAllFeatured" onclick="toggleFeatured()">See All</a>
+    </div>
     <div class="movie-grid" id="featuredMovies"></div>
   </section>
 
-  <section id="webSeriesSection">
-    <h2>Web Series</h2>
-    <div class="web-series-grid" id="webSeriesGrid"></div>
+  <section id="moviesSection">
+    <div class="section-header">
+      <h2 id="moviesTitle">All Movies</h2>
+      <a class="see-all" href="#moviesSection">See All</a>
+    </div>
+    <div class="movie-grid" id="movieGrid"></div>
   </section>
 
-  <section id="moviesSection">
-    <h2>All Movies</h2>
-    <div class="movie-grid" id="movieGrid"></div>
+  <section id="webSeriesSection">
+    <div class="section-header">
+      <h2 id="webSeriesTitle">Web Series</h2>
+      <a class="see-all" href="#webSeriesSection">See All</a>
+    </div>
+    <div class="web-series-grid" id="webSeriesGrid"></div>
   </section>
 
   <div class="modal" id="movieModal">
@@ -331,8 +359,12 @@
     const modalDetails = document.getElementById('modalDetails');
     const downloadLinks = document.getElementById('downloadLinks');
     const featuredSection = document.getElementById('featuredSection');
-    const webSeriesSection = document.getElementById('webSeriesSection');
     const moviesSection = document.getElementById('moviesSection');
+    const webSeriesSection = document.getElementById('webSeriesSection');
+    const featuredTitle = document.getElementById('featuredTitle');
+    const moviesTitle = document.getElementById('moviesTitle');
+    const webSeriesTitle = document.getElementById('webSeriesTitle');
+    const seeAllFeatured = document.getElementById('seeAllFeatured');
 
     // Split movies and web series
     const webSeriesTitles = [
@@ -353,13 +385,16 @@
     const moviesList = movies.filter(movie => !webSeriesTitles.includes(movie.title));
     const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
 
-    function renderMovies(movieList, grid) {
+    let isFeaturedExpanded = false;
+
+    function renderMovies(itemList, grid, titleElement, sectionName) {
       grid.innerHTML = '';
-      if (movieList.length === 0) {
+      if (itemList.length === 0) {
         grid.innerHTML = '<div class="no-results">No results found</div>';
+        titleElement.textContent = `${sectionName} (${itemList.length})`;
         return;
       }
-      movieList.forEach(item => {
+      itemList.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('movie-card');
         card.innerHTML = `
@@ -369,6 +404,7 @@
         card.addEventListener('click', () => openModal(item));
         grid.appendChild(card);
       });
+      titleElement.textContent = `${sectionName} (${itemList.length})`;
     }
 
     function openModal(item) {
@@ -395,6 +431,17 @@
 
     function closeModal() {
       modal.classList.remove('show');
+    }
+
+    function toggleFeatured() {
+      isFeaturedExpanded = !isFeaturedExpanded;
+      if (isFeaturedExpanded) {
+        renderMovies(movies, featuredMoviesGrid, featuredTitle, 'Featured');
+        seeAllFeatured.textContent = 'Show Less';
+      } else {
+        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
+        seeAllFeatured.textContent = 'See All';
+      }
     }
 
     window.addEventListener('click', (e) => {
@@ -435,25 +482,26 @@
           );
         });
 
-        renderMovies(filteredMovies, movieGrid);
-        renderMovies(filteredWebSeries, webSeriesGrid);
+        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies');
+        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series');
         featuredMoviesGrid.innerHTML = '';
         featuredSection.style.display = 'none';
       } else {
-        renderMovies(featuredMovies, featuredMoviesGrid);
-        renderMovies(moviesList, movieGrid);
-        renderMovies(webSeriesList, webSeriesGrid);
+        renderMovies(isFeaturedExpanded ? movies : featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
+        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies');
+        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series');
         featuredSection.style.display = 'block';
-        webSeriesSection.style.display = 'block';
         moviesSection.style.display = 'block';
+        webSeriesSection.style.display = 'block';
+        seeAllFeatured.textContent = isFeaturedExpanded ? 'Show Less' : 'See All';
       }
     });
 
     // Featured section: First 12 items from the combined movies array
     const featuredMovies = movies.slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid);
-    renderMovies(moviesList, movieGrid);
-    renderMovies(webSeriesList, webSeriesGrid);
+    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
+    renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies');
+    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series');
   </script>
   <script>
     // Detect if an ad blocker is active
