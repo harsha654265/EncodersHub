@@ -188,8 +188,8 @@ const movies = [
     img: "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
     description: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
     downloadLinks: [
-      { quality: "1080p HEVC NF WEB-DL MUL", link: "https://new6.gdflix.dad/file/ZIHlxGlRvG" },
-      { quality: "1080p AV1 NF WEB-DL MUL", link: "https://new6.gdflix.dad/file/07w8XtoMLN" }
+      { quality: "1080p AMZN DS4K 7.03GB", link: "https://hubcloud.bz/drive/g65qi3erg41gyr4" },
+      { quality: "1080p AMZN DS4K 7.87GB", link: "https://hubcloud.bz/drive/nbz5u12qdjmclgn" }
     ]
   },
   {
