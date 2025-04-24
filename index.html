@@ -5,33 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
   <style>
-body {
-  background: linear-gradient(-45deg, #1f1c2c, #928DAB, #1f1c2c);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-}
+    html, body {
+      overflow-x: hidden;
+      font-size: 16px;
+      min-height: 100vh;
+      position: relative;
+    }
 
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-    
-
-</style>
-
-
-
- 
-  <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #1f1c2c, #928DAB, #1f1c2c);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
       margin: 0;
-      background: #121212;
-      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     header {
@@ -56,7 +49,7 @@ body {
     .middle-highlight {
       color: #FFD700;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.85rem;
       text-align: center;
       flex: 1;
       padding: 0 1rem;
@@ -68,6 +61,7 @@ body {
       border-radius: 8px;
       border: none;
       width: 200px;
+      font-size: 16px;
       margin-top: 0.5rem;
     }
 
@@ -78,8 +72,8 @@ body {
       }
 
       .middle-highlight {
-        margin: 0.5rem 0;
-        font-size: 0.95rem;
+        font-size: 0.75rem;
+        width: 100%;
         text-align: center;
       }
 
@@ -185,14 +179,8 @@ body {
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .modal-content h2 {
@@ -269,16 +257,16 @@ body {
       height: 30px;
     }
   </style>
+
+  <!-- Optional Ad script (you can remove if needed) -->
   <script type="text/javascript" data-cfasync="false">
-/*<![CDATA[/* */
-(function(){var z=window,i="d091bcdb846468fac315540bfc99bab7",v=[["siteId",587*463*595-156515637],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],m=["d3d3LmJsb2NrYWRzbm90LmNvbS90SWl4S28vZmh0bWwycGRmLmJ1bmRsZS5taW4uanM=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9PUUQvQ290L3JhcHBiYXNlLmNzcw==","d3d3LmtqcXNueGliZWd2dWUuY29tL1ZLYi9saHRtbDJwZGYuYnVuZGxlLm1pbi5qcw==","d3d3Lmljdmlkb2Zqc3guY29tL25mdW1sL3dHWm1WcS9qYXBwYmFzZS5jc3M="],e=-1,k,q,s=function(){clearTimeout(q);e++;if(m[e]&&!(1771345773000<(new Date).getTime()&&1<e)){k=z.document.createElement("script");k.type="text/javascript";k.async=!0;var g=z.document.getElementsByTagName("script")[0];k.src="https://"+atob(m[e]);k.crossOrigin="anonymous";k.onerror=s;k.onload=function(){clearTimeout(q);z[i.slice(0,16)+i.slice(0,16)]||s()};q=setTimeout(s,5E3);g.parentNode.insertBefore(k,g)}};if(!z[i]){try{Object.freeze(z[i]=v)}catch(e){}s()}})();
-/*]]>/* */
-</script>
-
+  /*<![CDATA[*/
+  (function(){/* custom ad blocking fallback script here if needed */})();
+  /*]]>*/
+  </script>
 </head>
-<body>
-  
 
+<body>
   <header>
     <h1>Encoders Hub 🎬</h1>
     <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads!</div>
@@ -310,8 +298,8 @@ body {
       Join our Telegram Channel to Request Movies!
     </a>
   </div>
-  <script src="movie.js"></script>
 
+  <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
   <script>
     const featuredMoviesGrid = document.getElementById('featuredMovies');
@@ -380,7 +368,5 @@ body {
     renderMovies(featuredMovies, featuredMoviesGrid);
     renderMovies(movies, movieGrid);
   </script>
-  
-
 </body>
 </html>
