@@ -1,4 +1,35 @@
 const movies = [
+ {
+  "title": "Mirchi (2013)",
+  "img": "https://image.tmdb.org/t/p/original/rNj5OmO7KXkZsmsZO7XI6CX0aRs.jpg",
+  "description": "A man returns to his country in order, ostensibly, to reform his girlfriend's violent family, but he seems to have a strange connection and a rather dark past.",
+  "downloadLinks": [
+    { "quality": "1080p Blu-Ray AVC 38.28GB", "link": "https://new6.gdflix.dad/wfile/KtGgU7RtwC" },
+    { "quality": "1080p SBV BD50 REMUX 36.08GB ", "link": "https://hubcloud.bz/drive/wrzz8shasc4h48e" },
+    { "quality": "1080p 10bit Bluray TEL-HIN  HEVC 5.8GB", "link": "https://hubcloud.bz/drive/bjsscv399hodvjy" },
+    { "quality": "720p 10bit Bluray TEL-HIN  HEVC 1.9GB", "link": "https://hubcloud.bz/drive/s8m09mafymvmlhv" }
+  ]
+},
+ {
+  "title": "Bāhubali: The Beginning (2015)",
+  "img": "https://image.tmdb.org/t/p/original/9BAjt8nSSms62uOVYn1t3C3dVto.jpg",
+  "description": "The young Shivudu is left as a foundling in a small village by his mother. By the time he’s grown up, it has become apparent that he possesses exceptional gifts. He meets the beautiful warrior princess Avanthika and learns that her queen has been held captive for the last 25 years. Shividu sets off to rescue her, discovering his own origins in the process.",
+  "downloadLinks": [
+    { "quality": "4K-2160p UHD Bluray  AVC  [Tel+Tam+Hin+Mal] 20.5GB", "link": "https://new6.gdflix.dad/xfile/1srmUTiMwR" },
+    { "quality": "1080p AMZN CBR WEB-DL HIN+TEL 10.18GB", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=fc1922966c5a2888c0da2d647ca9ad7e%3Ad2cc935c564014e6df8a49db63a7037887c0c07fba0ca53192c2732b1e342801635fe721b058aaa1c216e8ecde268e102e8281494cf34f69f7c997aa601aad81edaaed53de47ca70f12d21d7122ddf93129c091114a4b61f52b8a55a159b1485f6881759b2b973a98f55a2bd86521f5ebba139b87d742c37e2937489bd7828c55445e8e3ea9afe1f50a7d34d27ea6500ae95ca061aa1b41d40eb93bae84fc66642a93c16d897328da35525ef0cc95f62" },
+    { "quality": "1080p AMZN WEB-DL HIN+TEL 7.08GB", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=c1cb735d8c9ecae61ee74ac08e00dcb3%3A6a09fbc9c7d1e035ccb15acb372a6af0f100e010cbd8fe3142d87cdd046c619dc1b9f61e57e447e6fa6049afce7e64ad473e307607debb5d17a64e9f73b7fcf1c5c03270087f4c3ed331a9e837e88f151aa946265ac9fcd307c7aa3a20e71d9bae3e16e509d7b2a964c045f9df2a53340e2fa4d146b8a5b6e77a05adb73ddf69fb1003869d89eebd07e9d68edd27d07490c148312477fc4606153fac7e57d7b50b7b255f3a7aa2e3a7abba07ef27dd34" },
+    { "quality": "1080p  AVC WEB-DL 2.43GB", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=edd466711abec7d59593606b88577cf4%3A0e62cdc6f61717277e949d90a14c725a5278fc520ee82261c91a1c13fe9ae1db3b48e420772e665a4d4e7ba94834c7380be0b0c58d46f4f853649d73bbb7747a8296ed654f34e377fe9b6b1cf823f3f9ce4178e6d2bec1c3ea1fa0c9b066f1493de17cbe3976ea8de30522a39b66397166e2e8d20e57963f369b2ba98b970277fb534640d3d123009710da24b7b8b68d374b06c666848cf0265da0c402b0eeb997dc535fb6b7b16f3b628601a8db3da8" }
+  ]
+},
+ {
+  "title": "Bāhubali 2: The Conclusion (2017)",
+  "img": "https://image.tmdb.org/t/p/original/21sC2assImQIYCEDA84Qh9d1RsK.jpg",
+  "description": "When Mahendra, the son of Bāhubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
+  "downloadLinks": [
+    { "quality": "1080p BluRay REMUX 24.39", "link": "https://hubcloud.bz/drive/b833l3v3xrmisgd" }
+    
+  ]
+},
  
  
   {
@@ -14,6 +45,7 @@ const movies = [
       { "quality": "1080p BLU-RaY AVC 2.95gb", "link": "https://scloud.snub-tiptop-half.workers.dev/?download=10347f0344d563a8da3b9c2ee7c23dae%3Afa26d5458cac9eb045814b7c87b36006fc9c998f4789eb88b145d6c4e417e4998580d0531ba69ba168db12278fe81682eb574c34c3500e839744c85abe091463545fac72b95d564809d1626e94b8c66f77e981258354eb2126f9c890a9742395281c3b5f5bdca0f14ccb5228c0472ced60ed7d9bb7c330e82c6c46f76d9b873f915a873660ba212008b5c252f753c2cb54d1bda5bf5bd8507cb558f8bf964db9b9c402a0c972a2a3f63e3a5e1b9d5444" }
     ]
   },
+ 
  {
     "title": "Rebel (2012)",
     "img": "https://image.tmdb.org/t/p/original/dNTzorrVmcJ25fUGzs9FfkoXb0P.jpg",
