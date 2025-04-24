@@ -96,6 +96,7 @@
       grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
       gap: 1rem;
       padding: 1rem;
+      transition: opacity 0.3s ease;
     }
 
     @media (min-width: 480px) {
@@ -131,6 +132,7 @@
       aspect-ratio: 2/3;
       object-fit: cover;
       border-radius: 12px;
+      loading: lazy;
     }
 
     .movie-title {
@@ -277,18 +279,24 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .see-all {
-      color: #FFD700;
+      display: inline-block;
+      background: #FFD700;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
       font-size: 1rem;
       text-decoration: none;
       cursor: pointer;
-      transition: color 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .see-all:hover {
-      color: #fff;
+      background: #fff;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -310,7 +318,7 @@
   <section id="moviesSection">
     <div class="section-header">
       <h2 id="moviesTitle">All Movies</h2>
-      <a class="see-all" href="#moviesSection">See All</a>
+      <a class="see-all" id="seeAllMovies" onclick="toggleMovies()">See All</a>
     </div>
     <div class="movie-grid" id="movieGrid"></div>
   </section>
@@ -318,7 +326,7 @@
   <section id="webSeriesSection">
     <div class="section-header">
       <h2 id="webSeriesTitle">Web Series</h2>
-      <a class="see-all" href="#webSeriesSection">See All</a>
+      <a class="see-all" id="seeAllWebSeries" onclick="toggleWebSeries()">See All</a>
     </div>
     <div class="web-series-grid" id="webSeriesGrid"></div>
   </section>
@@ -365,6 +373,8 @@
     const moviesTitle = document.getElementById('moviesTitle');
     const webSeriesTitle = document.getElementById('webSeriesTitle');
     const seeAllFeatured = document.getElementById('seeAllFeatured');
+    const seeAllMovies = document.getElementById('seeAllMovies');
+    const seeAllWebSeries = document.getElementById('seeAllWebSeries');
 
     // Split movies and web series
     const webSeriesTitles = [
@@ -386,25 +396,30 @@
     const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
 
     let isFeaturedExpanded = false;
+    let isMoviesExpanded = false;
+    let isWebSeriesExpanded = false;
 
     function renderMovies(itemList, grid, titleElement, sectionName) {
+      grid.style.opacity = '0';
       grid.innerHTML = '';
       if (itemList.length === 0) {
         grid.innerHTML = '<div class="no-results">No results found</div>';
         titleElement.textContent = `${sectionName} (${itemList.length})`;
+        grid.style.opacity = '1';
         return;
       }
       itemList.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('movie-card');
         card.innerHTML = `
-          <img src="${item.img}" alt="${item.title}">
+          <img src="${item.img}" alt="${item.title}" loading="lazy">
           <div class="movie-title">${item.title}</div>
         `;
         card.addEventListener('click', () => openModal(item));
         grid.appendChild(card);
       });
       titleElement.textContent = `${sectionName} (${itemList.length})`;
+      setTimeout(() => { grid.style.opacity = '1'; }, 100);
     }
 
     function openModal(item) {
@@ -441,6 +456,28 @@
       } else {
         renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
         seeAllFeatured.textContent = 'See All';
+      }
+    }
+
+    function toggleMovies() {
+      isMoviesExpanded = !isMoviesExpanded;
+      if (isMoviesExpanded) {
+        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies');
+        seeAllMovies.textContent = 'Show Less';
+      } else {
+        renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies');
+        seeAllMovies.textContent = 'See All';
+      }
+    }
+
+    function toggleWebSeries() {
+      isWebSeriesExpanded = !isWebSeriesExpanded;
+      if (isWebSeriesExpanded) {
+        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series');
+        seeAllWebSeries.textContent = 'Show Less';
+      } else {
+        renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series');
+        seeAllWebSeries.textContent = 'See All';
       }
     }
 
@@ -488,20 +525,22 @@
         featuredSection.style.display = 'none';
       } else {
         renderMovies(isFeaturedExpanded ? movies : featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
-        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies');
-        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series');
+        renderMovies(isMoviesExpanded ? moviesList : moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies');
+        renderMovies(isWebSeriesExpanded ? webSeriesList : webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series');
         featuredSection.style.display = 'block';
         moviesSection.style.display = 'block';
         webSeriesSection.style.display = 'block';
         seeAllFeatured.textContent = isFeaturedExpanded ? 'Show Less' : 'See All';
+        seeAllMovies.textContent = isMoviesExpanded ? 'Show Less' : 'See All';
+        seeAllWebSeries.textContent = isWebSeriesExpanded ? 'Show Less' : 'See All';
       }
     });
 
     // Featured section: First 12 items from the combined movies array
     const featuredMovies = movies.slice(0, 12);
     renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured');
-    renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies');
-    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series');
+    renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies');
+    renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series');
   </script>
   <script>
     // Detect if an ad blocker is active
