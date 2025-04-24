@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
-  
+  <style>
+iframe[src*="ads"],
+div[id*="ad"],
+div[class*="ad"],
+.popup, .banner, .adbox, .adsbygoogle {
+    display: none !important;
+    visibility: hidden !important;
+}
+</style>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -248,6 +256,8 @@
       height: 30px;
     }
   </style>
+  
+
   <script type="text/javascript" data-cfasync="false">
 /*<![CDATA[/* */
 (function(){var z=window,i="d091bcdb846468fac315540bfc99bab7",v=[["siteId",587*463*595-156515637],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],m=["d3d3LmJsb2NrYWRzbm90LmNvbS90SWl4S28vZmh0bWwycGRmLmJ1bmRsZS5taW4uanM=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9PUUQvQ290L3JhcHBiYXNlLmNzcw==","d3d3LmtqcXNueGliZWd2dWUuY29tL1ZLYi9saHRtbDJwZGYuYnVuZGxlLm1pbi5qcw==","d3d3Lmljdmlkb2Zqc3guY29tL25mdW1sL3dHWm1WcS9qYXBwYmFzZS5jc3M="],e=-1,k,q,s=function(){clearTimeout(q);e++;if(m[e]&&!(1771345773000<(new Date).getTime()&&1<e)){k=z.document.createElement("script");k.type="text/javascript";k.async=!0;var g=z.document.getElementsByTagName("script")[0];k.src="https://"+atob(m[e]);k.crossOrigin="anonymous";k.onerror=s;k.onload=function(){clearTimeout(q);z[i.slice(0,16)+i.slice(0,16)]||s()};q=setTimeout(s,5E3);g.parentNode.insertBefore(k,g)}};if(!z[i]){try{Object.freeze(z[i]=v)}catch(e){}s()}})();
@@ -287,7 +297,38 @@
       Join our Telegram Channel to Request Movies!
     </a>
   </div>
-  <script src="movie.js"></script>
+  <script>
+// Block common popup methods
+window.open = function () { console.log("Blocked popup"); return null; };
+document.addEventListener('click', function(e) {
+    e.stopPropagation(); // Block event bubbling
+}, true);
+
+// Remove top and floating ads repeatedly
+function removeAds() {
+    const selectors = [
+        'iframe[src*="ads"]',
+        'div[class*="ad"]',
+        'div[id*="ad"]',
+        '.adbox', '.ad-container', '.popup', '.banner', '.adsbygoogle',
+        'div[style*="z-index"][style*="position: fixed"]'
+    ];
+    selectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => el.remove());
+    });
+}
+setInterval(removeAds, 500);
+
+// Optional: block redirect scripts (for "onclick" ads)
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("*").forEach(el => {
+        if (el.hasAttribute("onclick")) {
+            el.removeAttribute("onclick");
+        }
+    });
+});
+</script>
+
 
   <script src="x9_data_dump.js"></script>
   <script>
@@ -377,69 +418,7 @@
   }
 </style>
 
-<script>
-  function removeAds() {
-    const adSelectors = [
-      '.ad', '#ad', '.adsbygoogle', 'iframe[src*="ads"]',
-      '.popup', '.push-ads', '.sticky-banner', '.notification-bar',
-      '.sponsored', '.ad-container'
-    ];
 
-    adSelectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach(el => el.remove());
-    });
-
-    // Remove top fixed ads (like the Confirmed/Myntra ones)
-    const allDivs = document.querySelectorAll('div');
-    allDivs.forEach(div => {
-      const txt = div.innerText || "";
-      if (
-        txt.includes("Confirmed: ₹") ||
-        txt.includes("Take your money now") ||
-        txt.includes("Myntra Daily Deals") ||
-        txt.includes("दैनिक सौदे")
-      ) {
-        div.remove();
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Run initially
-    removeAds();
-
-    // Then re-run every 1.5 seconds (for dynamic ads)
-    setInterval(removeAds, 1500);
-
-    // Clean up download buttons
-    const downloadButtons = document.querySelectorAll('a, button');
-    downloadButtons.forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href && (href.includes("gofile.io") || href.includes("gdflix") || href.includes("mediafire"))) {
-          e.preventDefault();
-          e.stopPropagation();
-          window.location.href = href;
-        }
-      });
-    });
-
-    // Force all links to open in same tab
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-      link.setAttribute('target', '_self');
-    });
-
-    // Disable forced popups and redirects
-    window.setTimeout = () => {};
-    window.open = (url) => { window.location.href = url; };
-  });
-</script>
-
-<script>
-  document.querySelectorAll('a[target="_blank"]').forEach(link => {
-    link.setAttribute('target', '_self');
-  });
-</script>
 
 </body>
 </html>
