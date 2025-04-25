@@ -364,6 +364,14 @@
         font-size: 0.9rem;
       }
     }
+
+    .adsbox {
+      height: 1px !important;
+      width: 1px !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      top: -1000px !important;
+    }
   </style>
 </head>
 <body>
@@ -435,8 +443,8 @@
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
-  <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
+  <script src="webseries.js"></script>
   <script>
     const featuredMoviesGrid = document.getElementById('featuredMovies');
     const movieGrid = document.getElementById('movieGrid');
@@ -457,24 +465,9 @@
     const moviesPagination = document.getElementById('moviesPagination');
     const webSeriesPagination = document.getElementById('webSeriesPagination');
 
-    // Split movies and web series
-    const webSeriesTitles = [
-      'Moon Knight (2022)',
-      'Mirzapur (2018) S01',
-      'Mirzapur (2018) S02',
-      'Mirzapur (2018) S03',
-      'Stranger Things S01',
-      'Stranger Things S02',
-      'Stranger Things S03',
-      'Stranger Things S04',
-      'Game of Thrones S01 (2011)',
-      'Game of Thrones S02 (2011)',
-      'Game of Thrones S03 (2011)',
-      'Game of Thrones S04 (2011)'
-    ];
-
-    const moviesList = movies.filter(movie => !webSeriesTitles.includes(movie.title));
-    const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
+    // Use pre-split data from global variables
+    const moviesList = window.movieData;
+    const webSeriesList = window.webSeriesData;
 
     let moviesCurrentPage = 1;
     let webSeriesCurrentPage = 1;
@@ -636,7 +629,7 @@
         filteredWebSeries = webSeriesList;
         moviesCurrentPage = 1;
         webSeriesCurrentPage = 1;
-        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
+        renderMovies([...moviesList, ...webSeriesList].slice(0, 12), featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
         renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
         renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
         featuredSection.style.display = 'block';
@@ -645,8 +638,8 @@
       }
     });
 
-    // Featured section: First 12 items from the combined movies array
-    const featuredMovies = movies.slice(0, 12);
+    // Featured section: First 12 items from combined movies and web series
+    const featuredMovies = [...moviesList, ...webSeriesList].slice(0, 12);
     renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
     renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
     renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
@@ -693,15 +686,5 @@
       }, 100);
     });
   </script>
-
-  <style>
-    .adsbox {
-      height: 1px !important;
-      width: 1px !important;
-      overflow: hidden !important;
-      position: absolute !important;
-      top: -1000px !important;
-    }
-  </style>
 </body>
 </html>
