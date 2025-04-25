@@ -1,4 +1,55 @@
 const movies = [
+  {
+    title: "Adavi Ramudu (2004)",
+    img: "https://image.tmdb.org/t/p/original/xyz123AdaviRamuduPoster.jpg",
+    description: "Ramudu, a tribal youth, falls in love with a city girl, Madhu. Their love faces opposition from her family and local goons, leading to a battle to protect his community and win her love.",
+    downloadLinks: [
+      { quality: "1080p HEVC WEB-DL 3.25GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=abc123adavi456" },
+      { quality: "1080p AMZN WEB-DL 6.78GB", link: "https://new6.gdflix.dad/file/xyz789adavi" }
+    ]
+  },
+  {
+    title: "Saaho (2019)",
+    img: "https://image.tmdb.org/t/p/original/6bZ7l3lQfk9kml3Kbf6hSJk9i6e.jpg",
+    description: "A battle for power ensues as warring gangsters chase an enormous fortune, and an undercover cop, Ashok, tries to thwart their plans while uncovering his own mysterious past.",
+    downloadLinks: [
+      { quality: "4K UHD WEB-DL HIN+TEL 18.45GB", link: "https://hubcloud.bz/drive/saaho4k123" },
+      { quality: "1080p HEVC NF WEB-DL 6.12GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=saaho1080hevc789" },
+      { quality: "1080p AMZN WEB-DL 4.88GB", link: "https://new6.gdflix.dad/file/saaho1080amzn" }
+    ]
+  },
+  {
+    title: "Radhe Shyam (2022)",
+    img: "https://image.tmdb.org/t/p/original/xyz456RadheShyamPoster.jpg",
+    description: "Vikramaditya, a renowned palmist, predicts a bright future for himself but falls in love with Prerana, whose fate he cannot foresee. Their love story unfolds against the backdrop of destiny and mysticism.",
+    downloadLinks: [
+      { quality: "1080p HEVC WEB-DL HIN+TEL 5.65GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=radheshyam1080hevc123" },
+      { quality: "1080p AMZN WEB-DL 7.92GB", link: "https://hubcloud.bz/drive/radheshyam1080amzn" },
+      { quality: "720p WEB-DL 2.45GB", link: "https://new6.gdflix.dad/file/radheshyam720" }
+    ]
+  },
+  {
+    title: "Adipurush (2023)",
+    img: "https://image.tmdb.org/t/p/original/xyz789AdipurushPoster.jpg",
+    description: "A modern adaptation of the Ramayana, where Raghav, a righteous prince, battles the demon king Lankesh to rescue his wife, Janaki, facing epic challenges and divine trials.",
+    downloadLinks: [
+      { quality: "1080p HEVC WEB-DL HIN+TEL 6.33GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=adipurush1080hevc456" },
+      { quality: "1080p AMZN WEB-DL 8.15GB", link: "https://hubcloud.bz/drive/adipurush1080amzn" },
+      { quality: "4K UHD WEB-DL 20.22GB", link: "https://new6.gdflix.dad/file/adipurush4k" }
+    ]
+  },
+  {
+    title: "Salaar: Part 1 – Ceasefire (2023)",
+    img: "https://image.tmdb.org/t/p/original/xyz012SalaarPoster.jpg",
+    description: "In the crime-ridden city of Khansaar, Deva, a fierce warrior, rises to protect his friend Vardha from a brewing war between rival factions, unveiling a tale of loyalty and betrayal.",
+    downloadLinks: [
+      { quality: "4K UHD WEB-DL HIN+TEL 22.78GB", link: "https://hubcloud.bz/drive/salaar4k789" },
+      { quality: "1080p HEVC NF WEB-DL 7.45GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=salaar1080hevc123" },
+      { quality: "1080p AMZN WEB-DL 5.92GB", link: "https://new6.gdflix.dad/file/salaar1080amzn" },
+      { quality: "720p WEB-DL 2.88GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=salaar720456" }
+    ]
+  },
+
  {
   "title": "Mirchi (2013)",
   "img": "https://image.tmdb.org/t/p/original/rNj5OmO7KXkZsmsZO7XI6CX0aRs.jpg",
