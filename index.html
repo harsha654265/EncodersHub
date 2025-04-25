@@ -1,705 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Encoders Hub</title>
-  <link rel="icon" type="image/png" href="https://em-content.zobj.net/source/microsoft-teams/363/clapper-board_1f3ac.png">
-
-  <style>
-    html, body {
-      overflow-x: hidden;
-      font-size: 16px;
-      min-height: 100vh;
-      position: relative;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #0f0f0f);
-      background-size: 200% 200%;
-      animation: gradientBG 20s ease infinite;
-      color: #fff;
-    }
-
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    header {
-      background: #1f1f1f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-    }
-
-    .middle-highlight {
-      color: #FFD700;
-      font-weight: bold;
-      font-size: 1.05rem;
-      text-align: center;
-      flex: 1;
-      padding: 0 1rem;
-      white-space: nowrap;
-    }
-
-    input[type="text"] {
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: none;
-      width: 200px;
-      font-size: 16px;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      header h1,
-      .middle-highlight,
-      input[type="text"] {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .middle-highlight {
-        font-size: 0.75rem;
-        margin-top: 0.3rem;
-      }
-
-      input[type="text"] {
-        margin-top: 0.5rem;
-      }
-    }
-
-    .movie-grid, .web-series-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-      transition: opacity 0.3s ease;
-    }
-
-    @media (min-width: 480px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      }
-    }
-
-    @media (min-width: 768px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      }
-    }
-
-    .movie-card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
-      position: relative;
-    }
-
-    .movie-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 2/3;
-      object-fit: cover;
-      border-radius: 12px;
-      loading: lazy;
-    }
-
-    .movie-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 0.5rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #FFD700;
-      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
-      border-radius: 0 0 12px 12px;
-    }
-
-    .movie-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .modal.show {
-      display: flex;
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .modal-content {
-      background: linear-gradient(135deg, #333, #444);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 90%;
-      color: #fff;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
-      animation: fadeIn 0.5s ease-in-out;
-      overflow-y: auto;
-      max-height: 80vh;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .modal-content h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-      color: #FFD700;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .modal-content p {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 0.5rem;
-    }
-
-    .file-list a {
-      display: block;
-      background: #333;
-      border-radius: 8px;
-      color: #FFD700;
-      padding: 12px;
-      margin: 8px 0;
-      text-decoration: none;
-      font-size: 1.1rem;
-      text-align: center;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .file-list a:hover {
-      background: #FFD700;
-      color: #121212;
-      transform: translateY(-3px);
-    }
-
-    .close-btn {
-      background: #ff4444;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      color: white;
-      font-size: 1rem;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .close-btn:hover {
-      background: #ff1a1a;
-      transform: scale(1.05);
-    }
-
-    .footer {
-      background: #1f1f1f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: #fff;
-    }
-
-    .footer a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    .footer img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .no-results {
-      text-align: center;
-      color: #FFD700;
-      font-size: 1.2rem;
-      padding: 2rem;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .see-all {
-      display: inline-block;
-      background: #FFD700;
-      color: #121212;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .see-all:hover {
-      background: #fff;
-      transform: scale(1.05);
-    }
-
-    .section-count {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .pagination button {
-      background: #FFD700;
-      color: #121212;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-      min-width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pagination button:hover {
-      background: #fff;
-      transform: scale(1.05);
-    }
-
-    .pagination button:disabled {
-      background: #555;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .pagination span {
-      color: #FFD700;
-      font-size: 1rem;
-      margin: 0 0.5rem;
-    }
-
-    @media (max-width: 480px) {
-      .pagination button {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-        min-width: 36px;
-        height: 36px;
-      }
-
-      .pagination span {
-        font-size: 0.9rem;
-      }
-    }
-
-    .adsbox {
-      height: 1px !important;
-      width: 1px !important;
-      overflow: hidden !important;
-      position: absolute !important;
-      top: -1000px !important;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoders Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .section {
+            margin: 20px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .card h3 {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .download-links a {
+            display: block;
+            margin: 5px 0;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .download-links a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>🎬 Encoders Hub 🎬</h1>
-    <div class="middle-highlight">🚀 Use Brave Browser for GDFlix to avoid ads! 🚀</div>
-    <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc.">
-  </header>
+    <header>
+        <h1>🎬 Encoders Hub 🎬</h1>
+        <p>🚀 Use Brave Browser for GDFlix to avoid ads! 🚀</p>
+    </header>
 
-  <section id="featuredSection">
-    <div class="section-header">
-      <div class="section-title">
-        <h2 id="featuredTitle">Featured</h2>
-      </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc." onkeyup="searchContent()">
     </div>
-    <div class="movie-grid" id="featuredMovies"></div>
-  </section>
 
-  <section id="moviesSection">
-    <div class="section-header">
-      <div class="section-title">
-        <h2 id="moviesTitle">All Movies</h2>
-        <span id="moviesCount" class="section-count"></span>
-      </div>
-      <div>
-        <div id="moviesPagination" class="pagination"></div>
-      </div>
+    <div class="section" id="featuredSection">
+        <h2>Featured</h2>
+        <div id="featuredContent" class="card-container">
+            <p class="loading">Loading featured content...</p>
+        </div>
     </div>
-    <div class="movie-grid" id="movieGrid"></div>
-  </section>
 
-  <section id="webSeriesSection">
-    <div class="section-header">
-      <div class="section-title">
-        <h2 id="webSeriesTitle">Web Series</h2>
-        <span id="webSeriesCount" class="section-count"></span>
-      </div>
-      <div>
-        <div id="webSeriesPagination" class="pagination"></div>
-      </div>
+    <div class="section" id="moviesSection">
+        <h2>All Movies</h2>
+        <div id="moviesContent" class="card-container">
+            <p class="loading">Loading movies...</p>
+        </div>
     </div>
-    <div class="web-series-grid" id="webSeriesGrid"></div>
-  </section>
 
-  <div class="modal" id="movieModal">
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
-      <div id="modalDetails"></div>
-      <div class="file-list" id="downloadLinks"></div>
-      <button class="close-btn" onclick="closeModal()">Close</button>
+    <div class="section" id="webSeriesSection">
+        <h2>Web Series</h2>
+        <div id="webSeriesContent" class="card-container">
+            <p class="loading">Loading web series...</p>
+        </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <a href="https://t.me/encodershub" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
-    </a>
-    <p style="margin: 0.5rem; font-size: 0.9rem;">
-      <a href="https://brave.com/" target="_blank" style="color: #FFD700;"></a>
-    </p>
-  </div>
+    <footer>
+        <p>Powered by Encoders Hub</p>
+        <p>All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.</p>
+        <p>© 2025 Encoders Hub. All Rights Reserved.</p>
+    </footer>
 
-  <div style="text-align: center; color: #aaa; padding: 1rem; font-size: 0.9rem;">
-    <p><strong>Powered by Encoders Hub</strong></p>
-    <p>
-      All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users.<br>
-      Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
-    </p>
-    <p>© 2025 Encoders Hub. All Rights Reserved.</p>
-  </div>
-
-  <script src="x9_data_dump.js" defer></script>
-  <script src="webseries.js" defer></script>
-  <script>
-    window.onload = function() {
-      const featuredMoviesGrid = document.getElementById('featuredMovies');
-      const movieGrid = document.getElementById('movieGrid');
-      const webSeriesGrid = document.getElementById('webSeriesGrid');
-      const searchInput = document.getElementById('searchInput');
-      const modal = document.getElementById('movieModal');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalDetails = document.getElementById('modalDetails');
-      const downloadLinks = document.getElementById('downloadLinks');
-      const featuredSection = document.getElementById('featuredSection');
-      const moviesSection = document.getElementById('moviesSection');
-      const webSeriesSection = document.getElementById('webSeriesSection');
-      const featuredTitle = document.getElementById('featuredTitle');
-      const moviesTitle = document.getElementById('moviesTitle');
-      const webSeriesTitle = document.getElementById('webSeriesTitle');
-      const moviesCount = document.getElementById('moviesCount');
-      const webSeriesCount = document.getElementById('webSeriesCount');
-      const moviesPagination = document.getElementById('moviesPagination');
-      const webSeriesPagination = document.getElementById('webSeriesPagination');
-
-      // Check if data is loaded
-      if (!window.movieData || !window.webSeriesData) {
-        console.error('Data loading error: window.movieData or window.webSeriesData is undefined');
-        featuredMoviesGrid.innerHTML = '<div class="no-results">Error: Failed to load movies or web series data. Please check the console for details.</div>';
-        movieGrid.innerHTML = '<div class="no-results">Error: Failed to load movies data.</div>';
-        webSeriesGrid.innerHTML = '<div class="no-results">Error: Failed to load web series data.</div>';
-        return;
-      }
-
-      // Log data for debugging
-      console.log('Movies:', window.movieData);
-      console.log('Web Series:', window.webSeriesData);
-
-      // Use pre-split data from global variables
-      const moviesList = window.movieData || [];
-      const webSeriesList = window.webSeriesData || [];
-
-      let moviesCurrentPage = 1;
-      let webSeriesCurrentPage = 1;
-      let filteredMovies = moviesList;
-      let filteredWebSeries = webSeriesList;
-      const moviesPerPage = 12;
-      const webSeriesPerPage = 12;
-
-      function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
-        grid.style.opacity = '0';
-        grid.innerHTML = '';
-        paginationElement.innerHTML = '';
-
-        if (!itemList || itemList.length === 0) {
-          grid.innerHTML = '<div class="no-results">No results found</div>';
-          titleElement.textContent = sectionName;
-          if (countElement) {
-            countElement.textContent = `(0)`;
-          }
-          grid.style.opacity = '1';
-          return;
+    <script src="x9_data_dump.js" defer></script>
+    <script src="webseries.js" defer></script>
+    <script defer>
+        function createCard(item) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${item.img}" alt="${item.title}">
+                <h3>${item.title}</h3>
+                <p>Genres: ${item.genres.join(', ')}</p>
+                <p>Runtime: ${item.runtime}</p>
+                <p>Release Date: ${item.releaseDate}</p>
+                <p>Tags: ${item.tags.join(', ')}</p>
+                <p>Heroes: ${item.heroes.join(', ')}</p>
+                <p>Heroines: ${item.heroines.length ? item.heroines.join(', ') : 'N/A'}</p>
+                <p>Directors: ${item.directors.join(', ')}</p>
+                <div class="download-links">
+                    ${item.downloadLinks.map(link => `<a href="${link.link}" target="_blank">${link.quality}</a>`).join('')}
+                </div>
+            `;
+            return card;
         }
 
-        const totalPages = Math.ceil(itemList.length / itemsPerPage);
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        const paginatedItems = itemList.slice(start, end);
+        function displayMovies() {
+            const moviesContent = document.getElementById('moviesContent');
+            moviesContent.innerHTML = ''; // Clear loading message
 
-        paginatedItems.forEach(item => {
-          const card = document.createElement('div');
-          card.classList.add('movie-card');
-          card.innerHTML = `
-            <img src="${item.img}" alt="${item.title}" loading="lazy">
-            <div class="movie-title">${item.title}</div>
-          `;
-          card.addEventListener('click', () => openModal(item));
-          grid.appendChild(card);
-        });
-
-        titleElement.textContent = sectionName;
-        if (countElement) {
-          countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
-        }
-
-        // Pagination controls
-        if (totalPages > 1) {
-          const prevButton = document.createElement('button');
-          prevButton.innerHTML = '←';
-          prevButton.disabled = page === 1;
-          prevButton.addEventListener('click', () => {
-            if (page > 1) {
-              if (sectionName === 'All Movies') {
-                moviesCurrentPage--;
-                renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-              } else if (sectionName === 'Web Series') {
-                webSeriesCurrentPage--;
-                renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-              }
+            if (!window.movieData || window.movieData.length === 0) {
+                moviesContent.innerHTML = '<p class="error">Error: Failed to load movies data. Retrying...</p>';
+                console.error('Movies data not found or empty:', window.movieData);
+                setTimeout(() => {
+                    if (confirm('Failed to load movies data. Would you like to reload the page?')) {
+                        window.location.reload();
+                    }
+                }, 2000);
+                return;
             }
-          });
-          paginationElement.appendChild(prevButton);
 
-          const pageInfo = document.createElement('span');
-          pageInfo.textContent = `Page ${page} of ${totalPages}`;
-          paginationElement.appendChild(pageInfo);
+            window.movieData.forEach(movie => {
+                const card = createCard(movie);
+                moviesContent.appendChild(card);
+            });
+        }
 
-          const nextButton = document.createElement('button');
-          nextButton.innerHTML = '→';
-          nextButton.disabled = page === totalPages;
-          nextButton.addEventListener('click', () => {
-            if (page < totalPages) {
-              if (sectionName === 'All Movies') {
-                moviesCurrentPage++;
-                renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-              } else if (sectionName === 'Web Series') {
-                webSeriesCurrentPage++;
-                renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-              }
+        function displayWebSeries() {
+            const webSeriesContent = document.getElementById('webSeriesContent');
+            webSeriesContent.innerHTML = ''; // Clear loading message
+
+            if (!window.webSeriesData || window.webSeriesData.length === 0) {
+                webSeriesContent.innerHTML = '<p class="error">Error: Failed to load web series data. Retrying...</p>';
+                console.error('Web series data not found or empty:', window.webSeriesData);
+                setTimeout(() => {
+                    if (confirm('Failed to load web series data. Would you like to reload the page?')) {
+                        window.location.reload();
+                    }
+                }, 2000);
+                return;
             }
-          });
-          paginationElement.appendChild(nextButton);
+
+            window.webSeriesData.forEach(series => {
+                const card = createCard(series);
+                webSeriesContent.appendChild(card);
+            });
         }
 
-        setTimeout(() => { grid.style.opacity = '1'; }, 100);
-      }
+        function displayFeatured() {
+            const featuredContent = document.getElementById('featuredContent');
+            featuredContent.innerHTML = ''; // Clear loading message
 
-      function openModal(item) {
-        modalTitle.textContent = item.title;
-        modalDetails.innerHTML = `
-          <p><strong>Genres:</strong> ${item.genres?.join(', ') || 'N/A'}</p>
-          <p><strong>Runtime:</strong> ${item.runtime || 'N/A'}</p>
-          <p><strong>Release Date:</strong> ${item.releaseDate || 'N/A'}</p>
-          <p><strong>Tags:</strong> ${item.tags?.join(', ') || 'N/A'}</p>
-          <p><strong>Heroes:</strong> ${item.heroes?.join(', ') || 'N/A'}</p>
-          <p><strong>Heroines:</strong> ${item.heroines?.join(', ') || 'N/A'}</p>
-          <p><strong>Directors:</strong> ${item.directors?.join(', ') || 'N/A'}</p>
-        `;
-        downloadLinks.innerHTML = '';
-        item.downloadLinks.forEach(link => {
-          const a = document.createElement('a');
-          a.href = link.link;
-          a.target = "_blank";
-          a.textContent = link.quality;
-          downloadLinks.appendChild(a);
+            const allContent = [];
+            if (window.movieData) allContent.push(...window.movieData);
+            if (window.webSeriesData) allContent.push(...window.webSeriesData);
+
+            if (allContent.length === 0) {
+                featuredContent.innerHTML = '<p class="error">Error: Failed to load featured content. Retrying...</p>';
+                console.error('Featured content not found or empty');
+                setTimeout(() => {
+                    if (confirm('Failed to load featured content. Would you like to reload the page?')) {
+                        window.location.reload();
+                    }
+                }, 2000);
+                return;
+            }
+
+            const featuredItems = allContent.sort(() => 0.5 - Math.random()).slice(0, 3);
+            featuredItems.forEach(item => {
+                const card = createCard(item);
+                featuredContent.appendChild(card);
+            });
+        }
+
+        function searchContent() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const allContent = [];
+            if (window.movieData) allContent.push(...window.movieData);
+            if (window.webSeriesData) allContent.push(...window.webSeriesData);
+
+            const filteredContent = allContent.filter(item =>
+                item.title.toLowerCase().includes(searchTerm) ||
+                item.genres.some(genre => genre.toLowerCase().includes(searchTerm)) ||
+                item.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                item.heroes.some(hero => hero.toLowerCase().includes(searchTerm)) ||
+                item.heroines.some(heroine => heroine.toLowerCase().includes(searchTerm)) ||
+                item.directors.some(director => director.toLowerCase().includes(searchTerm))
+            );
+
+            const moviesContent = document.getElementById('moviesContent');
+            const webSeriesContent = document.getElementById('webSeriesContent');
+            const featuredContent = document.getElementById('featuredContent');
+
+            moviesContent.innerHTML = '';
+            webSeriesContent.innerHTML = '';
+            featuredContent.innerHTML = '';
+
+            const filteredMovies = filteredContent.filter(item => window.movieData.includes(item));
+            const filteredSeries = filteredContent.filter(item => window.webSeriesData.includes(item));
+
+            filteredMovies.forEach(movie => {
+                const card = createCard(movie);
+                moviesContent.appendChild(card);
+            });
+
+            filteredSeries.forEach(series => {
+                const card = createCard(series);
+                webSeriesContent.appendChild(card);
+            });
+
+            const featuredItems = filteredContent.sort(() => 0.5 - Math.random()).slice(0, 3);
+            featuredItems.forEach(item => {
+                const card = createCard(item);
+                featuredContent.appendChild(card);
+            });
+        }
+
+        // Initialize content after scripts are loaded
+        window.addEventListener('load', () => {
+            try {
+                displayFeatured();
+                displayMovies();
+                displayWebSeries();
+            } catch (error) {
+                console.error('Error initializing content:', error);
+                const sections = ['featuredContent', 'moviesContent', 'webSeriesContent'];
+                sections.forEach(section => {
+                    document.getElementById(section).innerHTML = '<p class="error">Error: Failed to load content. Please try reloading the page.</p>';
+                });
+                setTimeout(() => {
+                    if (confirm('Failed to load content. Would you like to reload the page?')) {
+                        window.location.reload();
+                    }
+                }, 2000);
+            }
         });
-        modal.classList.add('show');
-      }
-
-      function closeModal() {
-        modal.classList.remove('show');
-      }
-
-      window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-
-      searchInput.addEventListener('input', () => {
-        const keyword = searchInput.value.toLowerCase();
-
-        if (keyword) {
-          filteredMovies = moviesList.filter(movie => {
-            const releaseYear = movie.releaseDate?.split('-')[0] || '';
-            return (
-              movie.title?.toLowerCase().includes(keyword) ||
-              movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-              movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-              movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-              movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-              movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-              movie.releaseDate?.toLowerCase().includes(keyword) ||
-              releaseYear.includes(keyword)
-            );
-          });
-
-          filteredWebSeries = webSeriesList.filter(series => {
-            const releaseYear = series.releaseDate?.split('-')[0] || '';
-            return (
-              series.title?.toLowerCase().includes(keyword) ||
-              series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-              series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-              series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-              series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-              series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-              series.releaseDate?.toLowerCase().includes(keyword) ||
-              releaseYear.includes(keyword)
-            );
-          });
-
-          moviesCurrentPage = 1;
-          webSeriesCurrentPage = 1;
-          renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-          renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-          featuredMoviesGrid.innerHTML = '';
-          featuredSection.style.display = 'none';
-        } else {
-          filteredMovies = moviesList;
-          filteredWebSeries = webSeriesList;
-          moviesCurrentPage = 1;
-          webSeriesCurrentPage = 1;
-          renderMovies([...moviesList, ...webSeriesList].slice(0, 12), featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-          renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-          renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-          featuredSection.style.display = 'block';
-          moviesSection.style.display = 'block';
-          webSeriesSection.style.display = 'block';
-        }
-      });
-
-      // Featured section: First 12 items from combined movies and web series
-      const featuredMovies = [...moviesList, ...webSeriesList].slice(0, 12);
-      renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-      renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-      renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-    };
-  </script>
-  <script>
-    // Detect if an ad blocker is active
-    window.addEventListener('load', function () {
-      const ad = document.createElement('div');
-      ad.innerHTML = ' ';
-      ad.className = 'adsbox';
-      ad.style.position = 'absolute';
-      ad.style.height = '1px';
-      document.body.appendChild(ad);
-
-      window.setTimeout(function () {
-        if (ad.offsetHeight === 0) {
-          const overlay = document.createElement('div');
-          overlay.style.position = 'fixed';
-          overlay.style.top = '0';
-          overlay.style.left = '0';
-          overlay.style.width = '100%';
-          overlay.style.height = '100%';
-          overlay.style.backgroundColor = '#000';
-          overlay.style.color = '#fff';
-          overlay.style.display = 'flex';
-          overlay.style.flexDirection = 'column';
-          overlay.style.justifyContent = 'center';
-          overlay.style.alignItems = 'center';
-          overlay.style.zIndex = '9999';
-          overlay.style.padding = '1rem';
-          overlay.style.textAlign = 'center';
-          overlay.innerHTML = `
-            <h2>Ad Blocker Detected</h2>
-            <p>To access Encoders Hub and GDFlix content, please:</p>
-            <ul style="list-style: none; padding: 0;">
-              <li>Disable your ad blocker for GDFlix in your browser settings, or</li>
-              <li>Use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> for an ad-free experience.</li>
-            </ul>
-            <p>After making changes, refresh this page.</p>
-          `;
-          document.body.appendChild(overlay);
-        }
-        document.body.removeChild(ad);
-      }, 100);
-    });
-  </script>
+    </script>
 </body>
 </html>
