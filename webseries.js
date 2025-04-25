@@ -39,7 +39,7 @@ const webSeriesData = [
     "heroines": ["Rasika Dugal"],
     "directors": ["Gurmmeet Singh"],
     "downloadLinks": [
-      { "quality": "1080p HEVC AMZN WEB-DL MUL ZIP", "link": "https://new6.gdflix.dad/file/bfTaUUjtmk" }
+      { "quality": "1080p HEVC AMZN WEB-DL MUL ZIP", "link": "https://new6.gdflix.dad/file/bfTaUUjtmQ" }
     ]
   },
   {
@@ -141,7 +141,7 @@ const webSeriesData = [
     ]
   },
   {
-    "title": "Game of Thrones S02 (2012)",
+    "title": "Game of Thrones S02 (2011)",
     "img": "https://image.tmdb.org/t/p/original/bw6DlqljVFIinhBA7uDSNha6Lnp.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
@@ -160,11 +160,11 @@ const webSeriesData = [
       { "quality": "4K UHD GOT S02E07 MUL", "link": "https://new6.gdflix.dad/file/rmmxf09mUX" },
       { "quality": "4K UHD GOT S02E08 MUL", "link": "https://new6.gdflix.dad/file/2qxdf9ugMa" },
       { "quality": "4K UHD GOT S02E09 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBh" },
-      { "quality": "4K UHD GOT S02E10 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBi" }
+      { "quality": "4K UHD GOT S02E10 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBh" }
     ]
   },
   {
-    "title": "Game of Thrones S03 (2013)",
+    "title": "Game of Thrones S03 (2011)",
     "img": "https://image.tmdb.org/t/p/original/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
@@ -187,7 +187,7 @@ const webSeriesData = [
     ]
   },
   {
-    "title": "Game of Thrones S04 (2014)",
+    "title": "Game of Thrones S04 (2011)",
     "img": "https://image.tmdb.org/t/p/original/gdeLQ5odsYE5EZ6hhnm2PwnjycB.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
@@ -212,8 +212,6 @@ const webSeriesData = [
 ];
 
 // Make data accessible globally
-window.webSeriesData = webSeriesData;
-
 // Example usage: Log all web series titles to the console
 webSeriesData.forEach(series => {
   console.log(series.title);
