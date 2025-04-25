@@ -282,12 +282,6 @@
       margin-bottom: 0.5rem;
     }
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
     .see-all {
       display: inline-block;
       background: #FFD700;
@@ -306,77 +300,26 @@
     }
 
     .section-count {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .pagination button {
-      background: #FFD700;
-      color: #121212;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-      min-width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pagination button:hover {
-      background: #fff;
-      transform: scale(1.05);
-    }
-
-    .pagination button:disabled {
-      background: #555;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .pagination span {
       color: #FFD700;
-      font-size: 1rem;
-      margin: 0 0.5rem;
-    }
-
-    @media (max-width: 480px) {
-      .pagination button {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-        min-width: 36px;
-        height: 36px;
-      }
-
-      .pagination span {
-        font-size: 0.9rem;
-      }
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
-    <div class="middle-highlight">🚀 Use Brave Browser for GDFlix to avoid ads! 🚀</div>
+    <div class="middle-highlight">🚀 Use Brave Browser For GDFLIX To Avoid Ads! 🚀</div>
     <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc.">
   </header>
 
   <section id="featuredSection">
     <div class="section-header">
-      <div class="section-title">
-        <h2 id="featuredTitle">Featured</h2>
+      <h2 id="featuredTitle">Featured</h2>
+      <div>
+        <span id="featuredCount" class="section-count"></span>
+        <a class="see-all" id="seeAllFeatured" onclick="toggleFeatured()">See All</a>
       </div>
     </div>
     <div class="movie-grid" id="featuredMovies"></div>
@@ -384,12 +327,10 @@
 
   <section id="moviesSection">
     <div class="section-header">
-      <div class="section-title">
-        <h2 id="moviesTitle">All Movies</h2>
-        <span id="moviesCount" class="section-count"></span>
-      </div>
+      <h2 id="moviesTitle">All Movies</h2>
       <div>
-        <div id="moviesPagination" class="pagination"></div>
+        <span id="moviesCount" class="section-count"></span>
+        <a class="see-all" id="seeAllMovies" onclick="toggleMovies()">See All</a>
       </div>
     </div>
     <div class="movie-grid" id="movieGrid"></div>
@@ -397,12 +338,10 @@
 
   <section id="webSeriesSection">
     <div class="section-header">
-      <div class="section-title">
-        <h2 id="webSeriesTitle">Web Series</h2>
-        <span id="webSeriesCount" class="section-count"></span>
-      </div>
+      <h2 id="webSeriesTitle">Web Series</h2>
       <div>
-        <div id="webSeriesPagination" class="pagination"></div>
+        <span id="webSeriesCount" class="section-count"></span>
+        <a class="see-all" id="seeAllWebSeries" onclick="toggleWebSeries()">See All</a>
       </div>
     </div>
     <div class="web-series-grid" id="webSeriesGrid"></div>
@@ -421,9 +360,6 @@
     <a href="https://t.me/encodershub" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
     </a>
-    <p style="margin: 0.5rem; font-size: 0.9rem;">
-      To avoid ads on GDFlix, use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> or disable your ad blocker for GDFlix in your browser settings.
-    </p>
   </div>
 
   <div style="text-align: center; color: #aaa; padding: 1rem; font-size: 0.9rem;">
@@ -452,10 +388,12 @@
     const featuredTitle = document.getElementById('featuredTitle');
     const moviesTitle = document.getElementById('moviesTitle');
     const webSeriesTitle = document.getElementById('webSeriesTitle');
+    const seeAllFeatured = document.getElementById('seeAllFeatured');
+    const seeAllMovies = document.getElementById('seeAllMovies');
+    const seeAllWebSeries = document.getElementById('seeAllWebSeries');
+    const featuredCount = document.getElementById('featuredCount');
     const moviesCount = document.getElementById('moviesCount');
     const webSeriesCount = document.getElementById('webSeriesCount');
-    const moviesPagination = document.getElementById('moviesPagination');
-    const webSeriesPagination = document.getElementById('webSeriesPagination');
 
     // Split movies and web series
     const webSeriesTitles = [
@@ -476,34 +414,21 @@
     const moviesList = movies.filter(movie => !webSeriesTitles.includes(movie.title));
     const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
 
-    let moviesCurrentPage = 1;
-    let webSeriesCurrentPage = 1;
-    let filteredMovies = moviesList;
-    let filteredWebSeries = webSeriesList;
-    const moviesPerPage = 12;
-    const webSeriesPerPage = 12;
+    let isFeaturedExpanded = false;
+    let isMoviesExpanded = false;
+    let isWebSeriesExpanded = false;
 
-    function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
+    function renderMovies(itemList, grid, titleElement, sectionName, countElement) {
       grid.style.opacity = '0';
       grid.innerHTML = '';
-      paginationElement.innerHTML = '';
-
       if (itemList.length === 0) {
         grid.innerHTML = '<div class="no-results">No results found</div>';
         titleElement.textContent = sectionName;
-        if (countElement) {
-          countElement.textContent = `(0)`;
-        }
+        countElement.textContent = itemList.length;
         grid.style.opacity = '1';
         return;
       }
-
-      const totalPages = Math.ceil(itemList.length / itemsPerPage);
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const paginatedItems = itemList.slice(start, end);
-
-      paginatedItems.forEach(item => {
+      itemList.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('movie-card');
         card.innerHTML = `
@@ -513,51 +438,8 @@
         card.addEventListener('click', () => openModal(item));
         grid.appendChild(card);
       });
-
       titleElement.textContent = sectionName;
-      if (countElement) {
-        countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
-      }
-
-      // Pagination controls
-      if (totalPages > 1) {
-        const prevButton = document.createElement('button');
-        prevButton.innerHTML = '←';
-        prevButton.disabled = page === 1;
-        prevButton.addEventListener('click', () => {
-          if (page > 1) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage--;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage--;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(prevButton);
-
-        const pageInfo = document.createElement('span');
-        pageInfo.textContent = `Page ${page} of ${totalPages}`;
-        paginationElement.appendChild(pageInfo);
-
-        const nextButton = document.createElement('button');
-        nextButton.innerHTML = '→';
-        nextButton.disabled = page === totalPages;
-        nextButton.addEventListener('click', () => {
-          if (page < totalPages) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage++;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage++;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(nextButton);
-      }
-
+      countElement.textContent = itemList.length;
       setTimeout(() => { grid.style.opacity = '1'; }, 100);
     }
 
@@ -587,6 +469,39 @@
       modal.classList.remove('show');
     }
 
+    function toggleFeatured() {
+      isFeaturedExpanded = !isFeaturedExpanded;
+      if (isFeaturedExpanded) {
+        renderMovies(movies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
+        seeAllFeatured.textContent = 'Show Less';
+      } else {
+        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
+        seeAllFeatured.textContent = 'See All';
+      }
+    }
+
+    function toggleMovies() {
+      isMoviesExpanded = !isMoviesExpanded;
+      if (isMoviesExpanded) {
+        renderMovies(moviesList, movieGrid, moviesTitle, 'All Movies', moviesCount);
+        seeAllMovies.textContent = 'Show Less';
+      } else {
+        renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
+        seeAllMovies.textContent = 'See All';
+      }
+    }
+
+    function toggleWebSeries() {
+      isWebSeriesExpanded = !isWebSeriesExpanded;
+      if (isWebSeriesExpanded) {
+        renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        seeAllWebSeries.textContent = 'Show Less';
+      } else {
+        renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
+        seeAllWebSeries.textContent = 'See All';
+      }
+    }
+
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeModal();
@@ -597,7 +512,7 @@
       const keyword = searchInput.value.toLowerCase();
 
       if (keyword) {
-        filteredMovies = moviesList.filter(movie => {
+        const filteredMovies = moviesList.filter(movie => {
           const releaseYear = movie.releaseDate?.split('-')[0] || '';
           return (
             movie.title?.toLowerCase().includes(keyword) ||
@@ -611,7 +526,7 @@
           );
         });
 
-        filteredWebSeries = webSeriesList.filter(series => {
+        const filteredWebSeries = webSeriesList.filter(series => {
           const releaseYear = series.releaseDate?.split('-')[0] || '';
           return (
             series.title?.toLowerCase().includes(keyword) ||
@@ -625,31 +540,28 @@
           );
         });
 
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+        renderMovies(filteredMovies, movieGrid, moviesTitle, 'All Movies', moviesCount);
+        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
         featuredMoviesGrid.innerHTML = '';
         featuredSection.style.display = 'none';
       } else {
-        filteredMovies = moviesList;
-        filteredWebSeries = webSeriesList;
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+        renderMovies(isFeaturedExpanded ? movies : featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
+        renderMovies(isMoviesExpanded ? moviesList : moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
+        renderMovies(isWebSeriesExpanded ? webSeriesList : webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
         featuredSection.style.display = 'block';
         moviesSection.style.display = 'block';
         webSeriesSection.style.display = 'block';
+        seeAllFeatured.textContent = isFeaturedExpanded ? 'Show Less' : 'See All';
+        seeAllMovies.textContent = isMoviesExpanded ? 'Show Less' : 'See All';
+        seeAllWebSeries.textContent = isWebSeriesExpanded ? 'Show Less' : 'See All';
       }
     });
 
     // Featured section: First 12 items from the combined movies array
     const featuredMovies = movies.slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-    renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, 'Featured', featuredCount);
+    renderMovies(moviesList.slice(0, 12), movieGrid, moviesTitle, 'All Movies', moviesCount);
+    renderMovies(webSeriesList.slice(0, 6), webSeriesGrid, webSeriesTitle, 'Web Series', webSeriesCount);
   </script>
   <script>
     // Detect if an ad blocker is active
@@ -676,16 +588,9 @@
           overlay.style.justifyContent = 'center';
           overlay.style.alignItems = 'center';
           overlay.style.zIndex = '9999';
-          overlay.style.padding = '1rem';
-          overlay.style.textAlign = 'center';
           overlay.innerHTML = `
-            <h2>Ad Blocker Detected</h2>
-            <p>To access Encoders Hub and GDFlix content, please:</p>
-            <ul style="list-style: none; padding: 0;">
-              <li>Disable your ad blocker for GDFlix in your browser settings, or</li>
-              <li>Use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> for an ad-free experience.</li>
-            </ul>
-            <p>After making changes, refresh this page.</p>
+            <h2>Please Disable Ad-Blocker</h2>
+            <p>Refresh this page after disabling</p>
           `;
           document.body.appendChild(overlay);
         }
