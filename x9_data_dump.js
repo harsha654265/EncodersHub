@@ -1,4 +1,4 @@
-const movies = [
+const movieData = [
   {
     "title": "Mirchi (2013)",
     "img": "https://image.tmdb.org/t/p/original/rNj5OmO7KXkZsmsZO7XI6CX0aRs.jpg",
@@ -134,7 +134,7 @@ const movies = [
   },
   {
     "title": "Bujjigaadu: Made in Chennai (2008)",
-    "img": "https://image.tmdb.org/t/p/original/fVDPpKS4ylQf1qtEvfaDjh6ehhP.jpg",
+    "img": "https://image.tmdb.org/t/p/original/fVDPpKS4ylQopeGwdocnwk0fXW3j.jpg",
     "genres": ["Action", "Romance", "Comedy"],
     "runtime": "2h 40m",
     "releaseDate": "2008-05-23",
@@ -305,6 +305,6 @@ const movies = [
 ];
 
 // Example usage: Log all movie titles to the console
-movies.forEach(movie => {
+movieData.forEach(movie => {
   console.log(movie.title);
 });
