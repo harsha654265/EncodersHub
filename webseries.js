@@ -1,4 +1,4 @@
-const webSeries = [
+const webSeriesData = [
   {
     "title": "Moon Knight (2022)",
     "img": "https://image.tmdb.org/t/p/original/5kT3iyseQiVMxUzDVH2gl1MOy4.jpg",
@@ -39,7 +39,7 @@ const webSeries = [
     "heroines": ["Rasika Dugal"],
     "directors": ["Gurmmeet Singh"],
     "downloadLinks": [
-      { "quality": "1080p HEVC AMZN WEB-DL MUL ZIP", "link": "https://new6.gdflix.dad/file/bfTaUUjtm██
+      { "quality": "1080p HEVC AMZN WEB-DL MUL ZIP", "link": "https://new6.gdflix.dad/file/bfTaUUjtmk" }
     ]
   },
   {
@@ -141,7 +141,7 @@ const webSeries = [
     ]
   },
   {
-    "title": "Game of Thrones S02 (2011)",
+    "title": "Game of Thrones S02 (2012)",
     "img": "https://image.tmdb.org/t/p/original/bw6DlqljVFIinhBA7uDSNha6Lnp.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
@@ -160,11 +160,11 @@ const webSeries = [
       { "quality": "4K UHD GOT S02E07 MUL", "link": "https://new6.gdflix.dad/file/rmmxf09mUX" },
       { "quality": "4K UHD GOT S02E08 MUL", "link": "https://new6.gdflix.dad/file/2qxdf9ugMa" },
       { "quality": "4K UHD GOT S02E09 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBh" },
-      { "quality": "4K UHD GOT S02E10 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBh" }
+      { "quality": "4K UHD GOT S02E10 MUL", "link": "https://new6.gdflix.dad/file/QuWYUkSUBi" }
     ]
   },
   {
-    "title": "Game of Thrones S03 (2011)",
+    "title": "Game of Thrones S03 (2013)",
     "img": "https://image.tmdb.org/t/p/original/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
@@ -187,14 +187,14 @@ const webSeries = [
     ]
   },
   {
-    "title": "Game of Thrones S04 (2011)",
+    "title": "Game of Thrones S04 (2014)",
     "img": "https://image.tmdb.org/t/p/original/gdeLQ5odsYE5EZ6hhnm2PwnjycB.jpg",
     "genres": ["Fantasy", "Drama", "Adventure"],
     "runtime": "1h per episode",
     "releaseDate": "2014-04-06",
     "tags": ["Politics", "War", "Fantasy"],
     "heroes": ["Kit Harington", "Peter Dinklage"],
- "heroines": ["Emilia Clarke", "Lena Headey"],
+    "heroines": ["Emilia Clarke", "Lena Headey"],
     "directors": ["David Benioff", "D. B. Weiss"],
     "downloadLinks": [
       { "quality": "4K UHD GOT S04E01 MUL", "link": "https://new6.gdflix.dad/file/qQnuXcjcu5" },
@@ -212,9 +212,9 @@ const webSeries = [
 ];
 
 // Make data accessible globally
-window.webSeries = webSeries;
+window.webSeriesData = webSeriesData;
 
 // Example usage: Log all web series titles to the console
-webSeries.forEach(series => {
+webSeriesData.forEach(series => {
   console.log(series.title);
 });
