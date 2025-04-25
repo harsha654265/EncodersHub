@@ -443,206 +443,221 @@
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
-  <script src="x9_data_dump.js"></script>
-  <script src="webseries.js"></script>
+  <script src="x9_data_dump.js" defer></script>
+  <script src="webseries.js" defer></script>
   <script>
-    const featuredMoviesGrid = document.getElementById('featuredMovies');
-    const movieGrid = document.getElementById('movieGrid');
-    const webSeriesGrid = document.getElementById('webSeriesGrid');
-    const searchInput = document.getElementById('searchInput');
-    const modal = document.getElementById('movieModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDetails = document.getElementById('modalDetails');
-    const downloadLinks = document.getElementById('downloadLinks');
-    const featuredSection = document.getElementById('featuredSection');
-    const moviesSection = document.getElementById('moviesSection');
-    const webSeriesSection = document.getElementById('webSeriesSection');
-    const featuredTitle = document.getElementById('featuredTitle');
-    const moviesTitle = document.getElementById('moviesTitle');
-    const webSeriesTitle = document.getElementById('webSeriesTitle');
-    const moviesCount = document.getElementById('moviesCount');
-    const webSeriesCount = document.getElementById('webSeriesCount');
-    const moviesPagination = document.getElementById('moviesPagination');
-    const webSeriesPagination = document.getElementById('webSeriesPagination');
+    window.onload = function() {
+      const featuredMoviesGrid = document.getElementById('featuredMovies');
+      const movieGrid = document.getElementById('movieGrid');
+      const webSeriesGrid = document.getElementById('webSeriesGrid');
+      const searchInput = document.getElementById('searchInput');
+      const modal = document.getElementById('movieModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDetails = document.getElementById('modalDetails');
+      const downloadLinks = document.getElementById('downloadLinks');
+      const featuredSection = document.getElementById('featuredSection');
+      const moviesSection = document.getElementById('moviesSection');
+      const webSeriesSection = document.getElementById('webSeriesSection');
+      const featuredTitle = document.getElementById('featuredTitle');
+      const moviesTitle = document.getElementById('moviesTitle');
+      const webSeriesTitle = document.getElementById('webSeriesTitle');
+      const moviesCount = document.getElementById('moviesCount');
+      const webSeriesCount = document.getElementById('webSeriesCount');
+      const moviesPagination = document.getElementById('moviesPagination');
+      const webSeriesPagination = document.getElementById('webSeriesPagination');
 
-    // Use pre-split data from global variables
-    const moviesList = window.movieData;
-    const webSeriesList = window.webSeriesData;
-
-    let moviesCurrentPage = 1;
-    let webSeriesCurrentPage = 1;
-    let filteredMovies = moviesList;
-    let filteredWebSeries = webSeriesList;
-    const moviesPerPage = 12;
-    const webSeriesPerPage = 12;
-
-    function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
-      grid.style.opacity = '0';
-      grid.innerHTML = '';
-      paginationElement.innerHTML = '';
-
-      if (itemList.length === 0) {
-        grid.innerHTML = '<div class="no-results">No results found</div>';
-        titleElement.textContent = sectionName;
-        if (countElement) {
-          countElement.textContent = `(0)`;
-        }
-        grid.style.opacity = '1';
+      // Check if data is loaded
+      if (!window.movieData || !window.webSeriesData) {
+        console.error('Data loading error: window.movieData or window.webSeriesData is undefined');
+        featuredMoviesGrid.innerHTML = '<div class="no-results">Error: Failed to load movies or web series data. Please check the console for details.</div>';
+        movieGrid.innerHTML = '<div class="no-results">Error: Failed to load movies data.</div>';
+        webSeriesGrid.innerHTML = '<div class="no-results">Error: Failed to load web series data.</div>';
         return;
       }
 
-      const totalPages = Math.ceil(itemList.length / itemsPerPage);
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const paginatedItems = itemList.slice(start, end);
+      // Log data for debugging
+      console.log('Movies:', window.movieData);
+      console.log('Web Series:', window.webSeriesData);
 
-      paginatedItems.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('movie-card');
-        card.innerHTML = `
-          <img src="${item.img}" alt="${item.title}" loading="lazy">
-          <div class="movie-title">${item.title}</div>
+      // Use pre-split data from global variables
+      const moviesList = window.movieData || [];
+      const webSeriesList = window.webSeriesData || [];
+
+      let moviesCurrentPage = 1;
+      let webSeriesCurrentPage = 1;
+      let filteredMovies = moviesList;
+      let filteredWebSeries = webSeriesList;
+      const moviesPerPage = 12;
+      const webSeriesPerPage = 12;
+
+      function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
+        grid.style.opacity = '0';
+        grid.innerHTML = '';
+        paginationElement.innerHTML = '';
+
+        if (!itemList || itemList.length === 0) {
+          grid.innerHTML = '<div class="no-results">No results found</div>';
+          titleElement.textContent = sectionName;
+          if (countElement) {
+            countElement.textContent = `(0)`;
+          }
+          grid.style.opacity = '1';
+          return;
+        }
+
+        const totalPages = Math.ceil(itemList.length / itemsPerPage);
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const paginatedItems = itemList.slice(start, end);
+
+        paginatedItems.forEach(item => {
+          const card = document.createElement('div');
+          card.classList.add('movie-card');
+          card.innerHTML = `
+            <img src="${item.img}" alt="${item.title}" loading="lazy">
+            <div class="movie-title">${item.title}</div>
+          `;
+          card.addEventListener('click', () => openModal(item));
+          grid.appendChild(card);
+        });
+
+        titleElement.textContent = sectionName;
+        if (countElement) {
+          countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
+        }
+
+        // Pagination controls
+        if (totalPages > 1) {
+          const prevButton = document.createElement('button');
+          prevButton.innerHTML = '←';
+          prevButton.disabled = page === 1;
+          prevButton.addEventListener('click', () => {
+            if (page > 1) {
+              if (sectionName === 'All Movies') {
+                moviesCurrentPage--;
+                renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              } else if (sectionName === 'Web Series') {
+                webSeriesCurrentPage--;
+                renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              }
+            }
+          });
+          paginationElement.appendChild(prevButton);
+
+          const pageInfo = document.createElement('span');
+          pageInfo.textContent = `Page ${page} of ${totalPages}`;
+          paginationElement.appendChild(pageInfo);
+
+          const nextButton = document.createElement('button');
+          nextButton.innerHTML = '→';
+          nextButton.disabled = page === totalPages;
+          nextButton.addEventListener('click', () => {
+            if (page < totalPages) {
+              if (sectionName === 'All Movies') {
+                moviesCurrentPage++;
+                renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              } else if (sectionName === 'Web Series') {
+                webSeriesCurrentPage++;
+                renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              }
+            }
+          });
+          paginationElement.appendChild(nextButton);
+        }
+
+        setTimeout(() => { grid.style.opacity = '1'; }, 100);
+      }
+
+      function openModal(item) {
+        modalTitle.textContent = item.title;
+        modalDetails.innerHTML = `
+          <p><strong>Genres:</strong> ${item.genres?.join(', ') || 'N/A'}</p>
+          <p><strong>Runtime:</strong> ${item.runtime || 'N/A'}</p>
+          <p><strong>Release Date:</strong> ${item.releaseDate || 'N/A'}</p>
+          <p><strong>Tags:</strong> ${item.tags?.join(', ') || 'N/A'}</p>
+          <p><strong>Heroes:</strong> ${item.heroes?.join(', ') || 'N/A'}</p>
+          <p><strong>Heroines:</strong> ${item.heroines?.join(', ') || 'N/A'}</p>
+          <p><strong>Directors:</strong> ${item.directors?.join(', ') || 'N/A'}</p>
         `;
-        card.addEventListener('click', () => openModal(item));
-        grid.appendChild(card);
+        downloadLinks.innerHTML = '';
+        item.downloadLinks.forEach(link => {
+          const a = document.createElement('a');
+          a.href = link.link;
+          a.target = "_blank";
+          a.textContent = link.quality;
+          downloadLinks.appendChild(a);
+        });
+        modal.classList.add('show');
+      }
+
+      function closeModal() {
+        modal.classList.remove('show');
+      }
+
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
       });
 
-      titleElement.textContent = sectionName;
-      if (countElement) {
-        countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
-      }
+      searchInput.addEventListener('input', () => {
+        const keyword = searchInput.value.toLowerCase();
 
-      // Pagination controls
-      if (totalPages > 1) {
-        const prevButton = document.createElement('button');
-        prevButton.innerHTML = '←';
-        prevButton.disabled = page === 1;
-        prevButton.addEventListener('click', () => {
-          if (page > 1) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage--;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage--;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(prevButton);
+        if (keyword) {
+          filteredMovies = moviesList.filter(movie => {
+            const releaseYear = movie.releaseDate?.split('-')[0] || '';
+            return (
+              movie.title?.toLowerCase().includes(keyword) ||
+              movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
+              movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
+              movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
+              movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
+              movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
+              movie.releaseDate?.toLowerCase().includes(keyword) ||
+              releaseYear.includes(keyword)
+            );
+          });
 
-        const pageInfo = document.createElement('span');
-        pageInfo.textContent = `Page ${page} of ${totalPages}`;
-        paginationElement.appendChild(pageInfo);
+          filteredWebSeries = webSeriesList.filter(series => {
+            const releaseYear = series.releaseDate?.split('-')[0] || '';
+            return (
+              series.title?.toLowerCase().includes(keyword) ||
+              series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
+              series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
+              series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
+              series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
+              series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
+              series.releaseDate?.toLowerCase().includes(keyword) ||
+              releaseYear.includes(keyword)
+            );
+          });
 
-        const nextButton = document.createElement('button');
-        nextButton.innerHTML = '→';
-        nextButton.disabled = page === totalPages;
-        nextButton.addEventListener('click', () => {
-          if (page < totalPages) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage++;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage++;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(nextButton);
-      }
-
-      setTimeout(() => { grid.style.opacity = '1'; }, 100);
-    }
-
-    function openModal(item) {
-      modalTitle.textContent = item.title;
-      modalDetails.innerHTML = `
-        <p><strong>Genres:</strong> ${item.genres?.join(', ') || 'N/A'}</p>
-        <p><strong>Runtime:</strong> ${item.runtime || 'N/A'}</p>
-        <p><strong>Release Date:</strong> ${item.releaseDate || 'N/A'}</p>
-        <p><strong>Tags:</strong> ${item.tags?.join(', ') || 'N/A'}</p>
-        <p><strong>Heroes:</strong> ${item.heroes?.join(', ') || 'N/A'}</p>
-        <p><strong>Heroines:</strong> ${item.heroines?.join(', ') || 'N/A'}</p>
-        <p><strong>Directors:</strong> ${item.directors?.join(', ') || 'N/A'}</p>
-      `;
-      downloadLinks.innerHTML = '';
-      item.downloadLinks.forEach(link => {
-        const a = document.createElement('a');
-        a.href = link.link;
-        a.target = "_blank";
-        a.textContent = link.quality;
-        downloadLinks.appendChild(a);
+          moviesCurrentPage = 1;
+          webSeriesCurrentPage = 1;
+          renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+          renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+          featuredMoviesGrid.innerHTML = '';
+          featuredSection.style.display = 'none';
+        } else {
+          filteredMovies = moviesList;
+          filteredWebSeries = webSeriesList;
+          moviesCurrentPage = 1;
+          webSeriesCurrentPage = 1;
+          renderMovies([...moviesList, ...webSeriesList].slice(0, 12), featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
+          renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+          renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+          featuredSection.style.display = 'block';
+          moviesSection.style.display = 'block';
+          webSeriesSection.style.display = 'block';
+        }
       });
-      modal.classList.add('show');
-    }
 
-    function closeModal() {
-      modal.classList.remove('show');
-    }
-
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    searchInput.addEventListener('input', () => {
-      const keyword = searchInput.value.toLowerCase();
-
-      if (keyword) {
-        filteredMovies = moviesList.filter(movie => {
-          const releaseYear = movie.releaseDate?.split('-')[0] || '';
-          return (
-            movie.title?.toLowerCase().includes(keyword) ||
-            movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-            movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-            movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-            movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-            movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-            movie.releaseDate?.toLowerCase().includes(keyword) ||
-            releaseYear.includes(keyword)
-          );
-        });
-
-        filteredWebSeries = webSeriesList.filter(series => {
-          const releaseYear = series.releaseDate?.split('-')[0] || '';
-          return (
-            series.title?.toLowerCase().includes(keyword) ||
-            series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-            series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-            series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-            series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-            series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-            series.releaseDate?.toLowerCase().includes(keyword) ||
-            releaseYear.includes(keyword)
-          );
-        });
-
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-        featuredMoviesGrid.innerHTML = '';
-        featuredSection.style.display = 'none';
-      } else {
-        filteredMovies = moviesList;
-        filteredWebSeries = webSeriesList;
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies([...moviesList, ...webSeriesList].slice(0, 12), featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-        featuredSection.style.display = 'block';
-        moviesSection.style.display = 'block';
-        webSeriesSection.style.display = 'block';
-      }
-    });
-
-    // Featured section: First 12 items from combined movies and web series
-    const featuredMovies = [...moviesList, ...webSeriesList].slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-    renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+      // Featured section: First 12 items from combined movies and web series
+      const featuredMovies = [...moviesList, ...webSeriesList].slice(0, 12);
+      renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
+      renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+      renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+    };
   </script>
   <script>
     // Detect if an ad blocker is active
