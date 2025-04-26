@@ -284,7 +284,7 @@ const movies = [
       { quality: "1080p BluRay REMUX 24.39", link: "https://hubcloud.bz/drive/b833l3v3xrmisgd" },
       { quality: "1080p BluRay AVC 34GB", link: "https://new6.gdflix.dad/xfile/lJpJvBap069BwrX" },
       { quality: "1080p BluRay AVC 4.9GB", link: "https://new6.gdflix.dad/xfile/yz9Tom2lHypi1dp" },
-      { quality: "1080p BluRay AVC 3.7GB", link: "" }
+      { quality: "1080p BluRay AVC 3.7GB", link: "https://new6.gdflix.dad/xfile/F11cOHXdGAwwTmZ" }
     ]
   },
   {
