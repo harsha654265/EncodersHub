@@ -431,23 +431,7 @@ const movies = [
       { quality: "1080p DS4K NF WEB-DL MULTI 4.85GB", link: "https://hubcloud.bz/drive/br6yed8odvccyyn" }
     ]
   },
-  {
-    "title": "John Wick Collection",
-    "img": "https://theposterdb.com/api/assets/17550/view",
-    "genres": ["Action", "Thriller"],
-    "runtime": "Varies",
-    "releaseDate": "2014-10-24",
-    "tags": ["Revenge", "Crime", "Action"],
-    "heroes": ["Keanu Reeves"],
-    "heroines": [],
-    "directors": ["Chad Stahelski"],
-    "downloadLinks": [
-      { "quality": "1080p WEBDL Chapter 1", "link": "https://gdlink.dev/file/zBRsO7g8wcdJLXf" },
-      { "quality": "1080p WEBDL Chapter 2", "link": "https://gdlink.dev/file/R0OEeLr2hWQE37s" },
-      { "quality": "1080p WEBDL Chapter 3", "link": "https://gdlink.dev/file/2eQHtRChOshri6W" },
-      { "quality": "1080p WEBDL Chapter 4", "link": "https://gdlink.dev/file/Edn4T5T3TxrM0xf" }
-    ]
-  },
+  
   {
     "title": "Khauf (2025)",
     "img": "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
