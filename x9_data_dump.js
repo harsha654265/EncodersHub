@@ -10,51 +10,6 @@ const movies = [
     heroines: ["Sridevi Vijaykumar"],
     directors: ["Jayanth C. Paranjee"],
     downloadLinks: [
-      { quality: "1080p HEVC Ai Upscale x264 15.85 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=1be72becab424d933e5149
-
-System: It looks like your previous response was cut off, and you’ve asked me to continue from *Mirzapur* while reclassifying *Khauf (2025)* as a web series. I’ll complete the `movies.js` file, ensuring all entries are included, *Khauf* is treated as a web series, and the structure remains consistent with your requirements. Here's the plan:
-
-1. **Maintain Previous Work**: Keep the Prabhas movies sorted chronologically by release date (from *Eeshwar (2002)* to *Perusu (2025)*), using the filled-in details (genres, runtime, release date, tags, heroes, heroines, directors) as provided earlier.
-2. **Non-Prabhas Movies**: Include non-Prabhas movies (*John Wick Collection*, *L2: Empuraan*, *Court: State vs. A Nobody*) in their original order after Prabhas’s movies, with updated details from the prior response.
-3. **Web Series Section**: Append web series entries, including *Moon Knight (2022)*, *Mirzapur (2018) S01*, *Khauf (2025)* (reclassified as a web series), *Stranger Things*, and *Game of Thrones*. For *Khauf*, adjust the runtime to a per-episode estimate (e.g., 40m per episode) to align with web series conventions.
-4. **Complete Missing Entries**: Provide details for *Stranger Things* and *Game of Thrones* using standard information from sources like IMDb or TMDb, ensuring consistency with the provided structure.
-5. **Preserve Structure**: Include the `forEach` loop to log titles, wrapped in the `<xaiArtifact>` tag as required, with a unique `artifact_id` for this new file.
-
-### Step 1: Reclassifying *Khauf (2025)* as a Web Series
-*Khauf (2025)* was previously listed as a movie with a 2h runtime. For a web series, I’ll:
-- Adjust the runtime to ~40m per episode (typical for a thriller/horror series, assuming a 6-8 episode season).
-- Retain its genres (*Horror, Mystery, Thriller*), release date (*2025-01-01*), tags (*Supernatural, Mystery, Horror*), and download links.
-- List heroes, heroines, and directors as *Unknown* (as no data is available).
-- Place it among the web series, after *Mirzapur* and before *Stranger Things*.
-
-### Step 2: Completing the Array
-I’ll continue from *Mirzapur (2018) S01*, which was cut off, and add *Stranger Things* and *Game of Thrones* with standard details. Here’s how I’ll handle each:
-
-- **Mirzapur (2018) S01**: Complete the entry with its known details (genres, runtime, release date, tags, heroes, heroines, directors) and download links, as partially provided.
-- **Stranger Things**: Use details for Season 1 (2016), including genres (*Science Fiction, Horror, Drama*), runtime (~50m per episode), release date (*2016-07-15*), and key cast/directors from IMDb.
-- **Game of Thrones**: Use details for Season 1 (2011), including genres (*Fantasy, Drama, Adventure*), runtime (~60m per episode), release date (*2011-04-17*), and key cast/directors from IMDb.
-
-### Step 3: Final Output
-Below is the complete `movies.js` file, with:
-- Prabhas movies (24 entries, from *Eeshwar (2002)* to *Perusu (2025)*), sorted by release date.
-- Non-Prabhas movies (3 entries: *John Wick Collection*, *L2: Empuraan*, *Court: State vs. A Nobody*).
-- Web series (5 entries: *Moon Knight*, *Mirzapur (2018) S01*, *Khauf (2025)*, *Stranger Things*, *Game of Thrones*).
-- The `forEach` loop to log titles.
-- All entries wrapped in the `<xaiArtifact>` tag with a new UUID for this artifact.
-
-<xaiArtifact artifact_id="ae7b26f6-5a09-425d-aaf2-bf7cc453cfec" artifact_version_id="5285c4b9-2b4c-488a-bee0-68639953764e" title="movies.js" contentType="text/javascript">
-const movies = [
-  {
-    title: "Eeshwar (2002)",
-    img: "https://image.tmdb.org/t/p/original/xy5WSj34dM4ZEHNhrm0RViLnLMS.jpg",
-    genres: ["Drama", "Action", "Romance"],
-    runtime: "2h 40m",
-    releaseDate: "2002-11-11",
-    tags: ["Family", "Love", "Conflict"],
-    heroes: ["Prabhas"],
-    heroines: ["Sridevi Vijaykumar"],
-    directors: ["Jayanth C. Paranjee"],
-    downloadLinks: [
       { quality: "1080p HEVC Ai Upscale x264 15.85 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=1be72becab424d933e5149a347b73cac%3A3b517d04aaffae8bb8c337be4569a35b0011b49f8ed42f7218dec8511a0d78bdf7ceb3223370ae2b760c9f8266aeb88d963f3d10fcd33a30474ef3309182099e586841d0b73b70cf80cc4fe8e9d284cf43b5010a4d4e57d0363cfef54e8dadcb1a7e9eb90117918663e1113a9d918f0a64d4f37023d2d9075000151df379814f0c787f9d86db109aae0644ff98cdba98f4328c930c54288d5584b19174cff30cc6de9eecfc3be6c7349e5ee337377f18" },
       { quality: "1080p HEVC Ai Upscale x264 11.00 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=bd5fb22d9469ffde4b6986960782a9de%3Ab1f453888a2958e5c4036d6d068707230a615cec5b36c66079e416e72a51ee4dc6e84fe854a336ca417b0d2514147cbb84e6167e3fd3ecea92287f7ee2fe378654bd3945914ec1d3fdfee6c05242bab51c14d77dad8ae9d0c11c75764faa39d87eea6087613fe49bf042dc8b88c1dd880eb8b2de6fa989f8a29a7ca19965a8338236965fca9c124444ec02a036ed86605a0ba562092d4bfc94b11f30fd58ea2a077b51fc29b5ffa6d846a1e37a9f5f9d" },
       { quality: "1080p HEVC Ai Upscale x264 7.28 GB", link: "https://scloud.snub-tiptop-half.workers.dev/?download=c61e589aaacc84c6e6e7586795a62989%3A53df924aafbe1475c36899394941dd85bcae52c964b5fd55b6ce6f69f1ad2315fd1fb108ca4cbed1b8925607c8d73ebe5bdf25d4c6bef47ffa73268638e23c788b03a06aaf9173d8979ff238d644c9081e9b46b3bf41bd1b06cc38fdb538b5e6dd21a0d02da1d80d5e97eb8987acddb93d1f5a223cfd40cb9e4893720e5804ef6b462b68a61fcbb59ea117e6a2e0a912371499e38166f2921d4f2ceaaa03bdb924c2e320c74d71ae1ad2ab2399a12a07" },
