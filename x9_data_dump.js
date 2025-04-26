@@ -657,7 +657,22 @@ const movies = [
       { "quality": "4K UHD GOT S04E09 MUL", "link": "https://new6.gdflix.dad/file/EKYzhh9BIr" },
       { "quality": "4K UHD GOT S04E10 MUL", "link": "https://new6.gdflix.dad/file/fo2mRHrlfp" }
     ]
-  }
+  },
+  {
+    "title": "Khauf (2025)",
+    "img": "https://image.tmdb.org/t/p/original/puwKd7W9iCocEy11Z1XJ5sN2RaG.jpg",
+    "genres": ["Horror", "Mystery", "Thriller"],
+    "runtime": "2h 0m",
+    "releaseDate": "2025-01-01",
+    "tags": ["Supernatural", "Mystery", "Horror"],
+    "heroes": ["Unknown"],
+    "heroines": ["Unknown"],
+    "directors": ["Unknown"],
+    "downloadLinks": [
+      { "quality": "1080p AMZN DS4K 7.03GB", "link": "https://hubcloud.bz/drive/g65qi3erg41gyr4" },
+      { "quality": "1080p AMZN DS4K 7.87GB", "link": "https://hubcloud.bz/drive/nbz5u12qdjmclgn" }
+    ]
+  },
 ];
 
 // Example usage: Log all movie titles to the console
