@@ -17,6 +17,223 @@ const movies = [
     ]
   },
   {
+    "title": "Vedalam (2015)",
+    "img": "https://image.tmdb.org/t/p/original/6tBUp8xG3Y8rVnxF9oWvXgqLnK7.jpg",
+    "genres": ["Action", "Thriller"],
+    "runtime": "2h 28m",
+    "releaseDate": "2015-11-10",
+    "tags": ["Revenge", "Family", "Crime"],
+    "heroes": ["Ajith Kumar"],
+    "heroines": ["Shruti Haasan"],
+    "directors": ["Siva"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 510 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQVUFzVWFWbkZUcE1icmg0WkxqOFRWMHBNd1ZDdUlNY2J2Tm9VR21ibmhjYVNidzZnaU1STFJhZERmZVFiTEZ3P2tleT1ha05vTlZsRlYwOUhNbkJGT0V4U2FuUk9NMVZrWlZKNmQwaG5ibnBS&token=MTAwNTI1" },
+      { "quality": "720p HEVC 850 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQV3pHQXVQLVA3UGlieEk1aUJiazQ5ZDBLMmVsdmRqZDRFZ3dRUHVKbksyc2JzZThabFRDNjVyclk1b0VSS0pRP2tleT1XbnB1V0ZwcGFsSnhkM0V3VW14emRpMUtORzFzTlVKa2RFSldlUzFu&token=MDkwNTI1" },
+      { "quality": "720p HD 1.3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOazVNMGdIQWNLNG9mVmp4NUFOeUpqQ3REamFTUTNzMEtoSjFqdFR4WTFTMGUtMlRBTGtTWWw0RjRMUkUwd09RP2tleT1iazQ1ZVdGRmRDMU1PR0Z6WTFkdGJWOTZVbFV6UWxOVmRHY3pkVmRS&token=MTAwNTI1" },
+      { "quality": "1080p HD 3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPWkhKb0dsSDZQQ0pFbVBfODYwRmYwMTVNV0VJelpxQlRFMVZKVms5M2llVmx4T2MtVzkzUmZ6SDdYTjhSOVV3P2tleT1XbEYxZEVoblVqVjRMVmxvYm5GcWFYVm1jVGRYYW5CR1pERnNWVFZu&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Heartbeats: Pyaar Aur Armaan S01 (2024)",
+    "img": "https://image.tmdb.org/t/p/original/placeholder.jpg",
+    "genres": ["Drama", "Romance"],
+    "runtime": "N/A",
+    "releaseDate": "2024-01-01",
+    "tags": ["Love", "Relationships"],
+    "heroes": ["Unknown"],
+    "heroines": ["Unknown"],
+    "directors": ["Unknown"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 800 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPNVAtWnphT1RDNjZxdjZtUEFLeTdMNXdzUFRqRnJOYndrc3FOV1JPeElPT3R6U1dQclFxWGY2YUxxNGthaEx3P2tleT1lRUZEU2pNd04weEdhVVl0YUc5RWRYSkxkWGRKYldVM0xVcDRRaTEz&token=MTAwNTI1" },
+      { "quality": "720p HEVC 2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPbjIySUVYR21QYkVwaEppNHBLR1FKdl81b2JId1dFemFaTkJZRWJQajluRVRydmNEeU5YZS1hX3ZoeHVFcVdBP2tleT1TekZCV0cweFZXWnJWWFI2YUhWbWJYUjVjVFJWYmt0Rk9WVlZOa0pu&token=MDkwNTI1" },
+      { "quality": "1080p HEVC 3.9 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOQlh1R2F4M2JzZFFEMHJyYmdaQTFvSXpUY19ZX0JXbzdQdmJaT3FUTE5FekpmZkJwOFdzb1Q3MlVOUTVhTGdnP2tleT1VRkJETFRKUFowTTFabU51Vm5rNGExUmxVVFJoUVVGcmVEWjBSM2xS&token=MTAwNTI1" }
+    ]
+  },
+  {
+    "title": "Pyaar Reloaded: Naan Sigappu Manithan (2014)",
+    "img": "https://image.tmdb.org/t/p/original/3kZ8J7QJ5yY5zZ8J7QJ5yY5zZ8J.jpg",
+    "genres": ["Action", "Thriller"],
+    "runtime": "2h 41m",
+    "releaseDate": "2014-04-11",
+    "tags": ["Vigilante", "Justice"],
+    "heroes": ["Vishal"],
+    "heroines": ["Lakshmi Menon"],
+    "directors": ["Thiru"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 510 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPR2dLbXk5NktsamZuazNuLVhpb1I4UjRhZWxwM3lmV1dPZ2hkQUdVQXNMSTlRR1V0RzkzcjU5Zktnc0tOZ0VnP2tleT1lRzAyZEU1RFp6UjBURE5NUzFoYU1IQkVOa05uZFhaTldGbGZXRUZS&token=MTAwNTI1" },
+      { "quality": "720p HEVC 820 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOVFZyUnZKam0yeVA2blp6WHE2RGMyR0VWNXA3WXloaERNYzNiOHEzWlhvYVFIWk51Q1F2cUJYYTlmaG5JdXVRP2tleT1ORTR5Y2psbVMwTklVSFZ6Y0VwV1pFMWpjR2RwTFc1TFExSTBhRFoz&token=MDkwNTI1" },
+      { "quality": "720p HD 1.3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOQXA4czhYLXkyWVNjOF8wLXF1T2JBYW5pMkRYVG94WFRJMW93M2Rab0R3bk1TaWFFb2pPeWtJLXV5MWRTak9BP2tleT1ZekoyYVZvNGMxZFFRV3MxTnpkaFVtSnhXVlJxUkhOZlYwNUZVbXhu&token=MTAwNTI1" },
+      { "quality": "1080p HD 3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNNmRPVEcxZW93YTYzNTZHaXdtTEdZei1UUzJBUHdlQ08zNzFPR3Q5dy0weWdja05xQXBlQ0djWlVBS3cwNEh3P2tleT1Wa1ZwWTFwa1puVTNabVpSUjBVMWVHaHBRVmhXYkRsU1ozcHJTMXBC&token=MTAwNTI1" }
+    ]
+  },
+  {
+    "title": "Pyari Padmini: Pannaiyarum Padminiyum (2014)",
+    "img": "https://image.tmdb.org/t/p/original/7zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Comedy", "Drama"],
+    "runtime": "2h 24m",
+    "releaseDate": "2014-02-07",
+    "tags": ["Nostalgia", "Rural Life"],
+    "heroes": ["Vijay Sethupathi"],
+    "heroines": ["Jayaprakash"],
+    "directors": ["Arun Kumar"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 490 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPWDlDejR1X2tXMF96V29GbC1DbkFEZEdNd1JId3dFZF9jeFpiUE13bUV1Zm54T3d5NEJxcDhFT3A2WnlXRHN3P2tleT1RM2N5T0VWT1RFaHlNWGwyV1ZaemJsWk5NRWwzUzBsZlFUSXpMWEZS&token=MDkwNTI1" },
+      { "quality": "720p HEVC 780 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNVng1bW5iZVhoVmRxbHN3QTlhalBvOHpIeFRKSWQ5TUxEWDZHVm94NjJUOHFLNU1rUTlsNmd2bWYxVjhOZGVBP2tleT1jSE51VjFWdGFtZHZiUzFrYUd4WkxXNXVSbXMzWWxsclozWmlYek5C&token=MDkwNTI1" },
+      { "quality": "720p HD 1.3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNNnUwR0FEVVBrZTktanlzenhqTEx5SFdUcU9YTGJBYzk4dVVtRVAtU01nc09kTEwxcTlvQzlNMm16elZjS2lBP2tleT1PVkZOWWtjNGRFWmllVTVhUWtOeWFuUmZXRkI1YUVvME1YTkJkV3Qz&token=MTAwNTI1" },
+      { "quality": "1080p HD 2.9 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPRzV3aGJucmNUcFk1a2FhUy0xTkRmRHVrOFFhSkl5M3lTZTVTV3psSktOaDV4R1JEUEZNRGIzSjVac1ZqWTZRP2tleT1UbGRZVW05dmJHbGFUMkZKUlVWS1ZGVTBNRll5UVhOQmNUaDRXR0Yz&token=MTAwNTI1" }
+    ]
+  },
+  {
+    "title": "Sammathame (2022)",
+    "img": "https://image.tmdb.org/t/p/original/8yV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Romance", "Comedy"],
+    "runtime": "2h 10m",
+    "releaseDate": "2022-06-24",
+    "tags": ["Love", "Humor"],
+    "heroes": ["Kiran Abbavaram"],
+    "heroines": ["Chandini Chowdary"],
+    "directors": ["Gopinath Reddy"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 420 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPU1NZODVSWlhQSWlpRTBLZkE4SGx2N2tzVTd4NUR2bGJqTjhLSG1URS1OV3djYnJvcUpYOVBkQXNDc2N0Nm1nP2tleT1lR3MzTmxFMmFIUnRZVFYyYXpSaVdsVnVXbEZJYVVaV2VGazBkVXAz&token=MTAwNTI1" },
+      { "quality": "720p HEVC 700 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPVC1oWU1YUG9hekdkVHVVMEVoMWdFMXJrUXVsTXRTcWdFMHp5ZXRXS1NEUjdqdkt6TkkxYWRmY3FKOGlQNWx3P2tleT1ZWEJ0V1c0MFZ6RkNWR1JzTm1aZlZXMVdWa1ptTXpBMlNGbGhhWEJS&token=MDkwNTI1" },
+      { "quality": "720p HD 1.1 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOcTJpNUNLZVFlSmk2X19aODhTR3BNUVg4dlZ5b3dpUEM0Tm5QQ0d2Vm5zQ1BmcWdlT2pUaXVPMVprMUtCZEVBP2tleT1ZVXhHVmtWNVRXeEZZM2RYTjFwQ1luQkhObFpvUnpKcWQyTmhjVzFu&token=MDkwNTI1" },
+      { "quality": "1080p HD 2.5 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBORXVoUjhNM2pSYy1OYk9PNW9fTU50Q1VHbHRHcnIzdmM5LTRKMWZud2h6My1HWUh5Vjc0QndrQU1uMWFaNU93P2tleT1Ra1F4VTNvMGIzQndjVmRDU2tSTGJsTjRaRmRuYWxCMWFXZzJPSFZS&token=MDkwNTI1" },
+      { "quality": "2160p HEVC 3.4 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNdk5yTHRsVFhsblZrTC1lR3NOWjB4bjJVWDEwTnQwZ2s2M0l4V0ZCaUlqOG9KV3F1aGhPVTVBNEt2ZWlBeFFBP2tleT1ja0p3VmpkeWVWZzNjV05SVTFaamFuaEJhM1kzVjNob2RqSjVWblpS&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Divorce Ke Liye Kuch Bhi Karega S01 (2024)",
+    "img": "https://image.tmdb.org/t/p/original/placeholder.jpg",
+    "genres": ["Comedy", "Drama"],
+    "runtime": "N/A",
+    "releaseDate": "2024-01-01",
+    "tags": ["Divorce", "Humor"],
+    "heroes": ["Unknown"],
+    "heroines": ["Unknown"],
+    "directors": ["Unknown"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 500 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNM2ZlTVU0VWFEbTVnVmJiQmpHQzhyZDM2V2NhaVZxaTlJaHE4d2hmS190UDhoSUxRV3ZHMU5kMFBld0JxUF9RP2tleT1TRGgyTFZjeFNVWXdXak5HUWxOcGFIbDFTRms1WDNWMmNqTXlTbGhu&token=MDkwNTI1" },
+      { "quality": "720p HEVC 1 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQek1EUEp4N1VtU2g4WjEweWZqRWg5RW9BZ3YtTnhkd09CM2pXUS1wRjRkdmt2TURqRGljMVNZU1JQQjdmbmtBP2tleT1ZbUpWUWxsR00weDVNSGN3U1VSdGEzWnNaV0ZFVDBkTllWQklOMlYz&token=MTAwNTI1" },
+      { "quality": "1080p HEVC 2.2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOTHZad2dKeEQ0c0Jxc19jaUdLcXJuSjJHX2t5UUlsNEMtaWxQcG1qd2JnMHEtSWN1aWEtdUh4VkhVRTU3RHN3P2tleT1WV05oZEVsSGVVODRaaTFrTFRVeWEwTkpObEUwTmtRME4yUTFhR3BC&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Sikandar Ka Muqaddar (2024)",
+    "img": "https://image.tmdb.org/t/p/original/9zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Action", "Crime"],
+    "runtime": "2h 15m",
+    "releaseDate": "2024-11-01",
+    "tags": ["Heist", "Betrayal"],
+    "heroes": ["Jimmy Shergill"],
+    "heroines": ["Tamannaah Bhatia"],
+    "directors": ["Neeraj Pandey"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 480 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNYW5mSWJjVGUtREhncmJXTWpiSERtV04yVlRMdVVTSW5nX05VSGYtbENzRXlwZGdUNVpQQmNLZS1RdXNLYkh3P2tleT1RV3BVTnpaUU5rUkNiWGxhYTBsaFdWSnFNRjlTVDNablVFUndURzFC&token=MDkwNTI1" },
+      { "quality": "720p HEVC 800 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOTUZSX1p6OEc5QjdCQ1BZXzNRUHRzYUgzeFozX1JQSWVsTnphaUFrcTNmNnBDRjZLSnNzRllzd21DZ3RqZnR3P2tleT1VRW95YWtSVE9IUmxXRlIzT1ZObVNqVldXVXRDWDFGeUxYZDRZbWhS&token=MDkwNTI1" },
+      { "quality": "720p HD 1.2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPREFMM1ZxSzJnRndfRERxanBGQkVpWGVNRE1rQV9EVjVqU3dVc1hHdTBlWmdVZXl1TGVVQ3gxbXR4X3dsUGx3P2tleT1UVFpvTmpaWVpIUnJOa04yTW1kdGEyeHpUemx5WnpWaU1XUkVSVkJS&token=MDkwNTI1" },
+      { "quality": "1080p HD 2.8 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPQ1pPYmdHWHEwVUhnaXc4VzBZb21QNTdqVDJ0eF9MNXZDckl5TWplcW1IbTQ1X1ZmZDlmVVNySDF4R2d1d0R3P2tleT1TM1p1UjBWVVNraFdZVWxsTkdZeFZWZENOREkzY1VOQ2QyVnFXRTEz&token=MDgwNTI1" },
+      { "quality": "2160p HEVC 4 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNUUhTQmFrelpVby1uUUk4b2NiTWpLSGctQ2h6SGk3VWw5bE1nNHlqUkxGR2xueXV2LUZnaXpvdzluZ3lZeDZ3P2tleT1lR2hYYlRSRloxWjNaRnBVU1c5dFNpMW9iamMyYlZWblUwZ3pSMWQz&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Hello Mini S03 (2021)",
+    "img": "https://image.tmdb.org/t/p/original/6zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Thriller", "Drama"],
+    "runtime": "N/A",
+    "releaseDate": "2021-04-23",
+    "tags": ["Stalker", "Suspense"],
+    "heroes": ["Anshul Pandey"],
+    "heroines": ["Anuja Joshi"],
+    "directors": ["Arif Khan"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 700 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOSFBXQWZoQ29WbGVfQVVPdW9SelVmTlNDZTZTWE5jTFZwblVFOFlHb0hVQ3JEejg1dUFKSVEtRDE1aWg5YVZnP2tleT1ObUZGZVRBM1JrTnNZemRXUmtkcFZFSTJjbEU1VFVodWFGVlVibVJC&token=MTAwNTI1" },
+      { "quality": "720p HEVC 1.4 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQT3JkUnBsZGNGbExyVllnVnNsLVo1YjZpNmlVUkE4VXRTd0lRdlFsdTZ6cGZwbk82b2JNWnBBZDlsbVJzNlh3P2tleT1Xak5OTUZkVFVscGpVbUpOU1U5R1JVcHFWelYxWDJOSFZYVkJja0Yz&token=MTAwNTI1" },
+      { "quality": "1080p HEVC 3.3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPc0RnX2cyZEhGVmdoMHZJaU1fTU8xRFJIcGE1bXZtb2VQQjJ3X1pKTFg2MlVQb25Memd6VlJsVkFZRVZaMjlnP2tleT1XalEyUm5wdk1VNTFWR2Q0TlVsSFZXdGZYM1Z1YjNnMFMwSnplV05S&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Hello Mini S02 (2021)",
+    "img": "https://image.tmdb.org/t/p/original/6zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Thriller", "Drama"],
+    "runtime": "N/A",
+    "releaseDate": "2021-02-26",
+    "tags": ["Stalker", "Suspense"],
+    "heroes": ["Anshul Pandey"],
+    "heroines": ["Anuja Joshi"],
+    "directors": ["Faruk Kabir"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 760 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPN1czYTljbFRXQTVBRDJyWXBKTW91X2c1Ri1BaF9VcUE4NWlJZGxrX0tncHYzR0NKbk5zMkhwQ2pWUEVFdUNRP2tleT1jWEEwVjJoRlpWZ3hZbFZQTkdKbGEwRXhVSE5SUTFkUFJFcEZkRlIz&token=MDkwNTI1" },
+      { "quality": "720p HEVC 1.5 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNcE9pZ1FsMlNYWEVmdFhUM1l5WWtBWG9BYzBYeWJsQ3VNblNGeEpfdUZQSGdpZl9hampyT2ZPMmd5d3F0bTN3P2tleT1lbUpSV0V3elUxcEtTMGt0WnpGbWNWQmpkMjR0VUdWcU5FeHJWMXAz&token=MDkwNTI1" },
+      { "quality": "1080p HEVC 3.5 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPQ213T0pha3IzbDNIWW5rTjlDOHB2emFQUTV1R2V6UnV3akhsYW0zci1fa3g2ZWhvbk1HSDltS1VnUnRSVU1BP2tleT1jMVZMWldkbmFUZHJTSEpPVmpFemMwWnlOSGxVYlhoZmFtOUZiVjlS&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Hello Mini S01 (2019)",
+    "img": "https://image.tmdb.org/t/p/original/6zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Thriller", "Drama"],
+    "runtime": "N/A",
+    "releaseDate": "2019-10-01",
+    "tags": ["Stalker", "Suspense"],
+    "heroes": ["Anshul Pandey"],
+    "heroines": ["Anuja Joshi"],
+    "directors": ["Faruk Kabir"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 1 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPU3ZlcmpUbTFZV0R1a0JkYmlhSmlYM0xmd2l2bzhCblRoT3hKRWdOVHYtM2dHa3BZdnZPS1NLdWlLWEZyblhBP2tleT1jRTlNZEcxdE5VMXZWSE5HWjBwUVgyNTNObkJIYjA5Zk56STBORWxC&token=MTAwNTI1" },
+      { "quality": "720p HEVC 2.2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNazRodGowTm5LVG9JRzF1VFFGRGFsc3l5aUg4VHZlTGlwX1RKV295bzFNdGZaQUQtMldjQzhlUGVBUVRxdTNRP2tleT1WMWxyY1VkYVZHMTBkWFo2WWpkcVNtcHZOR2hhUjB4eWVWWk9XbTEz&token=MDkwNTI1" },
+      { "quality": "1080p HEVC 5 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPbDM3bzRKSE93NE1aYnd3X3h2SC12UFpjOE1xclFEd1dtanNnemF1VnRkMEttaVZvSGJ2cmhlQjc1ak53SE5nP2tleT1Sa05FVURWb1puZHNRMDFwVUhsdlgxQlNPRXRGYTA5RWNteEVaR2Qz&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Mandaar (2021)",
+    "img": "https://image.tmdb.org/t/p/original/5zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Drama", "Crime"],
+    "runtime": "N/A",
+    "releaseDate": "2021-11-19",
+    "tags": ["Power Struggle", "Betrayal"],
+    "heroes": ["Soham Chakraborty"],
+    "heroines": ["Aniruddha Roy Chowdhury"],
+    "directors": ["Aniruddha Roy Chowdhury"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 620 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBORVpUMUVYOEtMUy1LZ0kyUHpoaE9BWldEQ190M2VHTUJMVkpDSzFtUTJzeWQ1WndNLVpkMFh6NmdZdFVFRC1BP2tleT1WM0oxZDFWSWVqQjBYM1JvYTNwTVIxaE1PR05YWlRKUU1XeHlOVTFS&token=MTAwNTI1" },
+      { "quality": "720p HEVC 1.2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPcklnejNaeTg4N0NmOTItM3ktUWFfRXdsZmtlNmEtU20yOG95VFk2eHVRZVI0REtLTlB5X0tjSmNGUEJBSklRP2tleT1YME5aUmsxd01UQnpiVnBJYTE5dVQwdDJURVpoUW5wVmFVaHZkbmgz&token=MDkwNTI1" },
+      { "quality": "1080p HEVC 2.8 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQRThFUzljWlRjX3ROc0ZzbGFXc1ZRRlplTXlJSFJYUzg0cnd1OW9NazhRbXRIRjNwOFdHUjk2dDlRODQ2Z0NRP2tleT1lWGhRT0RFM1ZtZFNaVE5xZUU5WVIyTllNVFoyZEVVM1FVSm1hbFpS&token=MTAwNTI1" }
+    ]
+  },
+  {
+    "title": "Parachute S01 (2024)",
+    "img": "https://image.tmdb.org/t/p/original/placeholder.jpg",
+    "genres": ["Drama", "Adventure"],
+    "runtime": "N/A",
+    "releaseDate": "2024-01-01",
+    "tags": ["Survival", "Journey"],
+    "heroes": ["Unknown"],
+    "heroines": ["Unknown"],
+    "directors": ["Unknown"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 420 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNZDRacGNCVzZWNHZXVlpyMGFLTmxEalNTR2djTFdEZmdHTzlNMzBEdkFwbEFJYndzQ1lVRnhzVDlnWkk1X3N3P2tleT1WRmhZY0RSUWmySnpURkp1TlZaQ05XeFdWWGxrTmtacWJISnpVblZu&token=MDkwNTI1" },
+      { "quality": "720p HEVC 890 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQLTlNRVhMWHhFU1J3ejB6V29OSFNMb2N2NGxONnZMMmJPTjJxVU45ZE5GRGcwZjRpdU84c3NQSDFWM25RTmRnP2tleT1NbFZIU1RRelQzcDVVMFpVWlhGeWRVUnhPVmhuZERVemEzVXdVa0pu&token=MTAwNTI1" },
+      { "quality": "1080p HEVC 2.2 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPNndELXpmQzB2UVBscHVYUXpONDRRNEpQVXoxNm9XV1lTZFlRSXl3TVN6d3dvUEF5Ylhla0kwdzN6WElfUER3P2tleT1ibXhtVGpoVlZWQlBOaTFpZDJKSlYyWnRURWgxY2pka1lWOTBaMWxu&token=MDkwNTI1" }
+    ]
+  },
+  {
+    "title": "Lucky Baskhar (2024)",
+    "img": "https://image.tmdb.org/t/p/original/4zV2J7QJ5yY5zV2J7QJ5yY5zV2J.jpg",
+    "genres": ["Drama", "Thriller"],
+    "runtime": "2h 35m",
+    "releaseDate": "2024-10-31",
+    "tags": ["Finance", "Ambition"],
+    "heroes": ["Dulquer Salmaan"],
+    "heroines": ["Meenakshi Chaudhary"],
+    "directors": ["Venky Atluri"],
+    "downloadLinks": [
+      { "quality": "480p HEVC 490 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQdm50Qnd1aHA4OG1Wc09zM0I3ZW9EWVdJZmlZRXUwVGNYZW1rN1lVcHBsemJZVkNYY0g3NEZjRHJZU0xRX3pnP2tleT1RMjluWlVsQ2VGOURUVVk0WkdJMGNuTmhTV1pKTFRGVlozVTVjWFpS&token=MDgwNTI1" },
+      { "quality": "720p HEVC 820 MB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPekFfQnc3ekxVRm9QWGlWSzQxM2NZbnpGQXozSFhQRVctaUdwMjl2VWV6TzVEZHNwcFR0QUVKQnVQTEYzX1FRP2tleT1RbHBxVjB0RWJHMDBMWFo0WW5KTWIzbHhiUzExVEhSc2EyWklNelpS&token=MDkwNTI1" },
+      { "quality": "720p HD 1.3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNdjlyazFTVjRVc0YzOWVDOXZwQjdWbHVMMnBUYzlkZW1WM2NfQmpOcExyWUFTbGZDSUExTEpISE84UFAzWFlnP2tleT1RMmN6VUcxQlNERm9VRWhwVDJ0c01XVkNWSFJvZW1nM1RGOTJkRmgz&token=MDkwNTI1" },
+      { "quality": "1080p HD 3 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQVVEwdXhJWUpMWUVzeHpVdUZPdWpWMGFnNVZfdTZXM3BoOUtKZ2JVdFlGSUstVzEzTDd4S09rZDhsUlQ3UjV3P2tleT1NRUZWVkVKT1NHdDJZelZKV2tacGJHMXVaSE5XY1hOSmVHWnZXRmhS&token=MDgwNTI1" },
+      { "quality": "2160p HEVC 5 GB", "link": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBNVGpCTlN1NnU3dWdwQURUWWJSbS1jNmVDVHVuUjJ3RzBNWTJYLUxuZ1lVSmNYWC1yTmNlaGhmd2VSbHBQZE1RP2tleT1kR3ByUW5BdFZsSk5aMlJpZFdrelQqUmlabmQxU25aek1tTkZNWEoz&token=MDgwNTI1" }
+    ]
+  },
+  {
     title: "Raghavendra (2003)",
     img: "https://image.tmdb.org/t/p/original/bQ5T8Uh8l44uBXSJgv9I26IE1sA.jpg",
     genres: ["Action", "Drama"],
