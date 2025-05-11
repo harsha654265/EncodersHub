@@ -77,6 +77,7 @@
       padding: 0.5rem 1rem;
       margin-bottom: 0.5rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       cursor: pointer;
     }
@@ -86,8 +87,12 @@
     }
 
     .movie-item .title {
-      flex: 1;
       font-size: 1.1rem;
+    }
+
+    .movie-item .languages {
+      font-size: 1rem;
+      color: #28a745;
     }
 
     .pagination {
@@ -231,7 +236,7 @@
 </head>
 <body>
   <header>
-    <h1>🎬 Encoders Hub 🎬</h1>
+    <h1>🎬 ENCODERS HUB 🎬</h1>
     <a href="https://t.me/encodershub" target="_blank" class="telegram-btn">Join @EncodersHub on Telegram</a>
   </header>
 
@@ -309,6 +314,49 @@
       return title.replace(/^FREE\s*/, '');
     }
 
+    function formatTitle(title) {
+      // Remove "FREE" prefix
+      let cleanTitle = removeFreePrefix(title);
+      
+      // Extract the first year (e.g., "2025")
+      const yearMatch = cleanTitle.match(/\b(\d{4})\b/);
+      let firstYear = yearMatch ? yearMatch[1] : '';
+      
+      // Remove the year and everything after it from the title
+      if (yearMatch) {
+        cleanTitle = cleanTitle.substring(0, yearMatch.index).trim();
+      }
+
+      // Extract languages and additional year if present
+      const parts = cleanTitle.split(' ');
+      let languages = [];
+      let secondYear = '';
+
+      // Common languages to look for
+      const langKeywords = ['HINDI', 'TELUGU', 'TAMIL', 'ENGLISH', 'MALAYALAM', 'BOLLYWOOD', 'SOUTH'];
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const part = parts[i].toUpperCase();
+        if (langKeywords.includes(part)) {
+          languages.push(parts[i]);
+          parts.splice(i, 1);
+        } else if (part.match(/^\d{4}$/) && part !== firstYear) {
+          secondYear = part;
+          parts.splice(i, 1);
+        } else if (['DUAL', 'AUDIO', 'UNCUT', 'MOVIE', 'HD', 'ESUB', 'BLURAY', 'HDRIP'].includes(part)) {
+          parts.splice(i, 1);
+        }
+      }
+
+      // Reconstruct the title
+      cleanTitle = parts.join(' ').trim();
+      if (!cleanTitle) cleanTitle = 'Unknown Title'; // Fallback if title is empty after cleaning
+
+      return {
+        formattedTitle: `NEW ${cleanTitle} (${firstYear})${secondYear ? ` (${secondYear})` : ''}`,
+        languages: languages.join(', ')
+      };
+    }
+
     function renderMovies(filter = '') {
       movieList.innerHTML = '';
       const filtered = sortByLatestDate(movies).filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
@@ -322,9 +370,10 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title);
+        const { formattedTitle, languages } = formatTitle(item.title);
         itemElement.innerHTML = `
-          <span class="title">${cleanTitle}</span>
+          <span class="title">${formattedTitle}</span>
+          <span class="languages">${languages}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
@@ -344,9 +393,10 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title);
+        const { formattedTitle, languages } = formatTitle(item.title);
         itemElement.innerHTML = `
-          <span class="title">${cleanTitle}</span>
+          <span class="title">${formattedTitle}</span>
+          <span class="languages">${languages}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
@@ -354,7 +404,8 @@
     }
 
     function openModal(item) {
-      modalTitle.textContent = removeFreePrefix(item.title);
+      const { formattedTitle } = formatTitle(item.title);
+      modalTitle.textContent = formattedTitle;
       downloadLinks.innerHTML = '';
       item.download_links.forEach(link => {
         const a = document.createElement('a');
