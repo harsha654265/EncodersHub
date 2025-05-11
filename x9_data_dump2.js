@@ -1,4 +1,4 @@
-const movies = [
+const moviesFromDump2 = [
   {
     title: "Jack (2025)",
     releaseDate: "2025-01-15",
