@@ -45,6 +45,8 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       outline: none;
+      display: block;
+      margin: 0 auto;
     }
 
     .movie-list, .web-series-list {
@@ -161,14 +163,37 @@
       padding: 1rem;
     }
 
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .pagination button {
+      background: #007bff;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .pagination button:hover {
+      background: #0056b3;
+    }
+
+    .pagination button:disabled {
+      background: #6c757d;
+      cursor: not-allowed;
+    }
+
     .footer {
       background: #007bff;
       padding: 1rem;
       text-align: center;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
     }
 
     .footer p, .footer a {
@@ -176,7 +201,6 @@
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
-      margin: 0;
     }
   </style>
 </head>
@@ -194,6 +218,10 @@
       <h2>All Movies</h2>
     </div>
     <div class="movie-list" id="movieList"></div>
+    <div class="pagination" id="moviePagination">
+      <button id="moviePrevBtn" disabled>⬅ Previous</button>
+      <button id="movieNextBtn">Next ➡️</button>
+    </div>
   </section>
 
   <section id="webSeriesSection">
@@ -201,6 +229,10 @@
       <h2>Web Series</h2>
     </div>
     <div class="web-series-list" id="webSeriesList"></div>
+    <div class="pagination" id="webSeriesPagination">
+      <button id="webSeriesPrevBtn" disabled>⬅ Previous</button>
+      <button id="webSeriesNextBtn">Next ➡️</button>
+    </div>
   </section>
 
   <div class="modal" id="movieModal">
@@ -225,49 +257,90 @@
     const modalTitle = document.getElementById('modalTitle');
     const downloadLinks = document.getElementById('downloadLinks');
     const searchBar = document.getElementById('searchBar');
+    const moviePrevBtn = document.getElementById('moviePrevBtn');
+    const movieNextBtn = document.getElementById('movieNextBtn');
+    const webSeriesPrevBtn = document.getElementById('webSeriesPrevBtn');
+    const webSeriesNextBtn = document.getElementById('webSeriesNextBtn');
+
+    let moviePage = 0;
+    let webSeriesPage = 0;
+    const itemsPerPage = 10;
+
+    // Sort by date descending (latest first)
+    function sortByDateDesc(items) {
+      return items.sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+
+    // Remove "free" from the start of title (case-insensitive)
+    function cleanTitle(title) {
+      return title.replace(/^free\s+/i, '').trim();
+    }
 
     // Render movies
     function renderMovies(filter = '') {
       movieList.innerHTML = '';
-      const filteredMovies = movies.filter(item => 
+      const sortedMovies = sortByDateDesc([...movies]);
+      const filteredMovies = sortedMovies.filter(item => 
         item.title.toLowerCase().includes(filter.toLowerCase())
       );
-      if (!filteredMovies || filteredMovies.length === 0) {
+      const start = moviePage * itemsPerPage;
+      const end = start + itemsPerPage;
+      const paginatedMovies = filteredMovies.slice(start, end);
+
+      if (!paginatedMovies || paginatedMovies.length === 0) {
         movieList.innerHTML = '<div class="no-results">No movies found</div>';
+        moviePrevBtn.disabled = true;
+        movieNextBtn.disabled = true;
         return;
       }
-      filteredMovies.forEach(item => {
+
+      paginatedMovies.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          <span class="title">${item.title}</span>
+          <span class="title">${cleanTitle(item.title)}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
       });
+
+      moviePrevBtn.disabled = moviePage === 0;
+      movieNextBtn.disabled = end >= filteredMovies.length;
     }
 
     // Render web series
     function renderWebSeries(filter = '') {
       webSeriesList.innerHTML = '';
-      const filteredWebSeries = webSeries.filter(item => 
+      const sortedWebSeries = sortByDateDesc([...webSeries]);
+      const filteredWebSeries = sortedWebSeries.filter(item => 
         item.title.toLowerCase().includes(filter.toLowerCase())
       );
-      if (!filteredWebSeries || filteredWebSeries.length === 0) {
+      const start = webSeriesPage * itemsPerPage;
+      const end = start + itemsPerPage;
+.Printf("%d %d", start, end);
+      const paginatedWebSeries = filteredWebSeries.slice(start, end);
+
+      if (!paginatedWebSeries || paginatedWebSeries.length === 0) {
         webSeriesList.innerHTML = '<div class="no-results">No web series found</div>';
+        webSeriesPrevBtn.disabled = true;
+        webSeriesNextBtn.disabled = true;
         return;
       }
-      filteredWebSeries.forEach(item => {
+
+      paginatedWebSeries.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          <span class="title">${item.title}</span>
+          <span class="title">${cleanTitle(item.title)}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
       });
+
+      webSeriesPrevBtn.disabled = webSeriesPage === 0;
+      webSeriesNextBtn.disabled = end >= filteredWebSeries.length;
     }
 
     function openModal(item) {
@@ -290,8 +363,35 @@
     // Search functionality
     searchBar.addEventListener('input', (e) => {
       const searchTerm = e.target.value;
+      moviePage = 0;
+      webSeriesPage = 0;
       renderMovies(searchTerm);
       renderWebSeries(searchTerm);
+    });
+
+    // Pagination event listeners
+    moviePrevBtn.addEventListener('click', () => {
+      if (moviePage > 0) {
+        moviePage--;
+        renderMovies(searchBar.value);
+      }
+    });
+
+    movieNextBtn.addEventListener('click', () => {
+      moviePage++;
+      renderMovies(searchBar.value);
+    });
+
+    webSeriesPrevBtn.addEventListener('click', () => {
+      if (webSeriesPage > 0) {
+        webSeriesPage--;
+        renderWebSeries(searchBar.value);
+      }
+    });
+
+    webSeriesNextBtn.addEventListener('click', () => {
+      webSeriesPage++;
+      renderWebSeries(searchBar.value);
     });
 
     window.addEventListener('click', (e) => {
