@@ -29,7 +29,7 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
-      text-transform: uppercase; /* Make header text uppercase */
+      text-transform: uppercase;
     }
 
     .movie-list, .web-series-list {
@@ -57,19 +57,9 @@
       font-weight: bold;
     }
 
-    .movie-item .new-label {
-      color: #dc3545;
-      font-weight: bold;
-    }
-
     .movie-item .title {
       flex: 1;
       font-size: 1.1rem;
-    }
-
-    .movie-item .language {
-      color: #28a745;
-      font-weight: bold;
     }
 
     .modal {
@@ -107,12 +97,7 @@
       color: #007bff;
       text-align: center;
       margin-bottom: 1rem;
-      text-transform: uppercase; /* Make modal title uppercase */
-    }
-
-    .modal-content p {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
 
     .file-list a {
@@ -124,7 +109,7 @@
       margin: 8px 0;
       text-decoration: none;
       text-align: center;
-      text-transform: uppercase; /* Make download links uppercase */
+      text-transform: uppercase;
     }
 
     .file-list a:hover {
@@ -172,7 +157,7 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      text-transform: uppercase; /* Make footer text uppercase */
+      text-transform: uppercase;
     }
   </style>
 </head>
@@ -198,7 +183,6 @@
   <div class="modal" id="movieModal">
     <div class="modal-content">
       <h2 id="modalTitle"></h2>
-      <div id="modalDetails"></div>
       <div class="file-list" id="downloadLinks"></div>
       <button class="close-btn" onclick="closeModal()">Close</button>
     </div>
@@ -216,7 +200,6 @@
     const webSeriesList = document.getElementById('webSeriesList');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
-    const modalDetails = document.getElementById('modalDetails');
     const downloadLinks = document.getElementById('downloadLinks');
 
     // Render movies
@@ -229,15 +212,9 @@
       movies.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const releaseYear = item.releaseDate.split('-')[0];
-        const languages = item.tags.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag));
-        const languageText = languages.length > 0 ? languages.join(', ') : 'N/A';
-        const isNew = item.tags.includes('New');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          ${isNew ? '<span class="new-label">NEW</span>' : ''}
-          <span class="title">${item.title} (${releaseYear})</span>
-          <span class="language">${languageText}</span>
+          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
@@ -254,15 +231,9 @@
       webSeries.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const releaseYear = item.releaseDate.split('-')[0];
-        const languages = item.tags.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag));
-        const languageText = languages.length > 0 ? languages.join(', ') : 'N/A';
-        const isNew = item.tags.includes('New');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          ${isNew ? '<span class="new-label">NEW</span>' : ''}
-          <span class="title">${item.title} (${releaseYear})</span>
-          <span class="language">${languageText}</span>
+          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
@@ -271,21 +242,12 @@
 
     function openModal(item) {
       modalTitle.textContent = item.title;
-      modalDetails.innerHTML = `
-        <p><strong>Genres:</strong> ${item.genres.join(', ')}</p>
-        <p><strong>Runtime:</strong> ${item.runtime}</p>
-        <p><strong>Release Date:</strong> ${item.releaseDate}</p>
-        <p><strong>Tags:</strong> ${item.tags.join(', ')}</p>
-        <p><strong>Heroes:</strong> ${item.heroes.join(', ')}</p>
-        <p><strong>Heroines:</strong> ${item.heroines.join(', ')}</p>
-        <p><strong>Directors:</strong> ${item.directors.join(', ')}</p>
-      `;
       downloadLinks.innerHTML = '';
-      item.downloadLinks.forEach(link => {
+      item.download_links.forEach(link => {
         const a = document.createElement('a');
-        a.href = link.link;
+        a.href = link.url;
         a.target = "_blank";
-        a.textContent = link.quality;
+        a.textContent = `${link.size} (${link.quality})`;
         downloadLinks.appendChild(a);
       });
       modal.classList.add('show');
