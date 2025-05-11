@@ -7,28 +7,17 @@
   <link rel="icon" type="image/png" href="https://em-content.zobj.net/source/microsoft-teams/363/clapper-board_1f3ac.png">
 
   <style>
-    html, body {
-      overflow-x: hidden;
-      font-size: 16px;
-      min-height: 100vh;
-      position: relative;
-      margin: 0;
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec, #f0f4f8);
-      background-size: 200% 200%;
-      animation: gradientBG 20s ease infinite;
+      background: #f0f4f8;
       color: #333;
-    }
-
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      margin: 0;
+      padding: 0;
     }
 
     header {
       background: #007bff;
-      padding: 1rem 2rem;
+      padding: 1rem;
       text-align: center;
       color: #fff;
     }
@@ -42,22 +31,7 @@
       gap: 10px;
     }
 
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-    }
-
-    input[type="text"] {
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 300px;
-      font-size: 16px;
-      margin: 1rem auto;
-      display: block;
-    }
-
-    .movie-list, .web-series-list {
+    .movie-list {
       padding: 1rem;
     }
 
@@ -71,7 +45,6 @@
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
     .movie-item:hover {
@@ -109,15 +82,10 @@
       justify-content: center;
       align-items: center;
       z-index: 999;
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .modal.show {
       display: flex;
-      opacity: 1;
-      transform: scale(1);
     }
 
     .modal-content {
@@ -128,14 +96,8 @@
       width: 90%;
       color: #333;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
-      animation: fadeIn 0.5s ease-in-out;
-      overflow-y: auto;
       max-height: 80vh;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      overflow-y: auto;
     }
 
     .modal-content h2 {
@@ -148,7 +110,6 @@
 
     .modal-content p {
       font-size: 1rem;
-      line-height: 1.5;
       margin-bottom: 0.5rem;
     }
 
@@ -160,14 +121,11 @@
       padding: 12px;
       margin: 8px 0;
       text-decoration: none;
-      font-size: 1.1rem;
       text-align: center;
-      transition: background 0.3s, transform 0.3s;
     }
 
     .file-list a:hover {
       background: #0056b3;
-      transform: translateY(-3px);
     }
 
     .close-btn {
@@ -178,8 +136,6 @@
       cursor: pointer;
       border-radius: 8px;
       color: white;
-      font-size: 1rem;
-      transition: background 0.3s, transform 0.2s;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -187,74 +143,19 @@
 
     .close-btn:hover {
       background: #c82333;
-      transform: scale(1.05);
-    }
-
-    .section-header {
-      padding: 0 1rem;
-      margin-bottom: 0.5rem;
     }
 
     .section-header h2 {
       font-size: 1.5rem;
       color: #333;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .pagination button {
-      background: #007bff;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-      min-width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pagination button:hover {
-      background: #0056b3;
-      transform: scale(1.05);
-    }
-
-    .pagination button:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .pagination span {
-      color: #333;
-      font-size: 1rem;
-      margin: 0 0.5rem;
-    }
-
-    .no-results {
-      text-align: center;
-      color: #dc3545;
-      font-size: 1.2rem;
-      padding: 2rem;
+      padding: 0 1rem;
     }
 
     .footer {
       background: #007bff;
-      padding: 1rem 2rem;
+      padding: 1rem;
       text-align: center;
       color: #fff;
-      position: relative;
-      bottom: 0;
       width: 100%;
     }
 
@@ -268,25 +169,13 @@
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
-    <p>ONLY HIGH QUALITY MOVIES/WEB SERIES</p>
   </header>
-
-  <input type="text" id="searchInput" placeholder="Search by title, language, year, etc.">
 
   <section id="moviesSection">
     <div class="section-header">
-      <h2 id="moviesTitle">All Movies</h2>
+      <h2>All Movies</h2>
     </div>
     <div class="movie-list" id="movieList"></div>
-    <div id="moviesPagination" class="pagination"></div>
-  </section>
-
-  <section id="webSeriesSection">
-    <div class="section-header">
-      <h2 id="webSeriesTitle">Web Series</h2>
-    </div>
-    <div class="web-series-list" id="webSeriesList"></div>
-    <div id="webSeriesPagination" class="pagination"></div>
   </section>
 
   <div class="modal" id="movieModal">
@@ -304,7 +193,6 @@
   </div>
 
   <script>
-    // Define the movies data directly in the script
     const allMovies = [
       {
         title: "Jack (2025)",
@@ -377,64 +265,21 @@
     ];
 
     const movieList = document.getElementById('movieList');
-    const webSeriesList = document.getElementById('webSeriesList');
-    const searchInput = document.getElementById('searchInput');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDetails = document.getElementById('modalDetails');
     const downloadLinks = document.getElementById('downloadLinks');
-    const moviesTitle = document.getElementById('moviesTitle');
-    const webSeriesTitle = document.getElementById('webSeriesTitle');
-    const moviesPagination = document.getElementById('moviesPagination');
-    const webSeriesPagination = document.getElementById('webSeriesPagination');
 
-    // Split movies and web series
-    const webSeriesTitles = [
-      'Moon Knight (2022)',
-      'Mirzapur (2018) S01',
-      'Mirzapur (2018) S02',
-      'Mirzapur (2018) S03',
-      'Stranger Things S01',
-      'Stranger Things S02',
-      'Stranger Things S03',
-      'Stranger Things S04',
-      'Game of Thrones S01 (2011)',
-      'Game of Thrones S02 (2011)',
-      'Game of Thrones S03 (2011)',
-      'Game of Thrones S04 (2011)'
-    ];
-
-    const moviesList = allMovies.filter(movie => !webSeriesTitles.includes(movie.title));
-    const webSeriesList = allMovies.filter(movie => webSeriesTitles.includes(movie.title));
-
-    let moviesCurrentPage = 1;
-    let webSeriesCurrentPage = 1;
-    let filteredMovies = moviesList;
-    let filteredWebSeries = webSeriesList;
-    const itemsPerPage = 20;
-
-    function renderItems(itemList, listElement, titleElement, sectionName, page, paginationElement) {
-      listElement.innerHTML = '';
-      paginationElement.innerHTML = '';
-
-      if (itemList.length === 0) {
-        listElement.innerHTML = '<div class="no-results">No results found</div>';
-        titleElement.textContent = sectionName;
-        return;
-      }
-
-      const totalPages = Math.ceil(itemList.length / itemsPerPage);
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const paginatedItems = itemList.slice(start, end);
-
-      paginatedItems.forEach(item => {
+    // Render movies
+    function renderMovies() {
+      movieList.innerHTML = '';
+      allMovies.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const releaseYear = item.releaseDate?.split('-')[0] || '';
-        const languages = item.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
+        const releaseYear = item.releaseDate.split('-')[0];
+        const languages = item.tags.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag));
         const languageText = languages.length > 0 ? languages.join(', ') : 'N/A';
-        const isNew = item.tags?.includes('New') || false;
+        const isNew = item.tags.includes('New');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
           ${isNew ? '<span class="new-label">NEW</span>' : ''}
@@ -442,61 +287,20 @@
           <span class="language">${languageText}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
-        listElement.appendChild(itemElement);
+        movieList.appendChild(itemElement);
       });
-
-      titleElement.textContent = sectionName;
-
-      // Pagination controls
-      if (totalPages > 1) {
-        const prevButton = document.createElement('button');
-        prevButton.innerHTML = '←';
-        prevButton.disabled = page === 1;
-        prevButton.addEventListener('click', () => {
-          if (page > 1) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage--;
-              renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage--;
-              renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(prevButton);
-
-        const pageInfo = document.createElement('span');
-        pageInfo.textContent = `Page ${page} of ${totalPages}`;
-        paginationElement.appendChild(pageInfo);
-
-        const nextButton = document.createElement('button');
-        nextButton.innerHTML = '→';
-        nextButton.disabled = page === totalPages;
-        nextButton.addEventListener('click', () => {
-          if (page < totalPages) {
-            if (sectionName === 'All Movies') {
-              moviesCurrentPage++;
-              renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
-            } else if (sectionName === 'Web Series') {
-              webSeriesCurrentPage++;
-              renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
-            }
-          }
-        });
-        paginationElement.appendChild(nextButton);
-      }
     }
 
     function openModal(item) {
       modalTitle.textContent = item.title;
       modalDetails.innerHTML = `
-        <p><strong>Genres:</strong> ${item.genres?.join(', ') || 'N/A'}</p>
-        <p><strong>Runtime:</strong> ${item.runtime || 'N/A'}</p>
-        <p><strong>Release Date:</strong> ${item.releaseDate || 'N/A'}</p>
-        <p><strong>Tags:</strong> ${item.tags?.join(', ') || 'N/A'}</p>
-        <p><strong>Heroes:</strong> ${item.heroes?.join(', ') || 'N/A'}</p>
-        <p><strong>Heroines:</strong> ${item.heroines?.join(', ') || 'N/A'}</p>
-        <p><strong>Directors:</strong> ${item.directors?.join(', ') || 'N/A'}</p>
+        <p><strong>Genres:</strong> ${item.genres.join(', ')}</p>
+        <p><strong>Runtime:</strong> ${item.runtime}</p>
+        <p><strong>Release Date:</strong> ${item.releaseDate}</p>
+        <p><strong>Tags:</strong> ${item.tags.join(', ')}</p>
+        <p><strong>Heroes:</strong> ${item.heroes.join(', ')}</p>
+        <p><strong>Heroines:</strong> ${item.heroines.join(', ')}</p>
+        <p><strong>Directors:</strong> ${item.directors.join(', ')}</p>
       `;
       downloadLinks.innerHTML = '';
       item.downloadLinks.forEach(link => {
@@ -519,50 +323,8 @@
       }
     });
 
-    searchInput.addEventListener('input', () => {
-      const keyword = searchInput.value.toLowerCase();
-
-      filteredMovies = moviesList.filter(movie => {
-        const releaseYear = movie.releaseDate?.split('-')[0] || '';
-        const languages = movie.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
-        return (
-          movie.title?.toLowerCase().includes(keyword) ||
-          movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-          movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-          movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-          movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-          movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-          movie.releaseDate?.toLowerCase().includes(keyword) ||
-          releaseYear.includes(keyword) ||
-          languages.some(lang => lang.toLowerCase().includes(keyword))
-        );
-      });
-
-      filteredWebSeries = webSeriesList.filter(series => {
-        const releaseYear = series.releaseDate?.split('-')[0] || '';
-        const languages = series.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
-        return (
-          series.title?.toLowerCase().includes(keyword) ||
-          series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-          series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-          series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-          series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-          series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-          series.releaseDate?.toLowerCase().includes(keyword) ||
-          releaseYear.includes(keyword) ||
-          languages.some(lang => lang.toLowerCase().includes(keyword))
-        );
-      });
-
-      moviesCurrentPage = 1;
-      webSeriesCurrentPage = 1;
-      renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
-      renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
-    });
-
     // Initial render
-    renderItems(moviesList, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
-    renderItems(webSeriesList, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
+    renderMovies();
   </script>
 </body>
 </html>
