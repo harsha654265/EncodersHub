@@ -306,6 +306,10 @@
   <script src="x9_data_dump.js"></script>
   <script src="x9_data_dump2.js"></script>
   <script>
+    // Ensure both data arrays are defined, provide fallback if not
+    const moviesFromDump1 = typeof moviesFromDump1 !== 'undefined' ? moviesFromDump1 : [];
+    const moviesFromDump2 = typeof moviesFromDump2 !== 'undefined' ? moviesFromDump2 : [];
+
     // Combine movies from both data files
     const allMovies = [...moviesFromDump1, ...moviesFromDump2];
 
@@ -320,6 +324,9 @@
     const webSeriesTitle = document.getElementById('webSeriesTitle');
     const moviesPagination = document.getElementById('moviesPagination');
     const webSeriesPagination = document.getElementById('webSeriesPagination');
+
+    // Debug: Log the combined movies array to ensure data is loaded
+    console.log('Combined Movies:', allMovies);
 
     // Split movies and web series
     const webSeriesTitles = [
