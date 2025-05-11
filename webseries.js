@@ -1,6 +1,6 @@
 const webSeries = [
     {
-        "title": "Free The Royals S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "The Royals S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -20,7 +20,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Gram Chikitsalay S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Gram Chikitsalay S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "650mb",
@@ -40,7 +40,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Peaky Blinders S02 2014 Hindi English Dual Audio Completed Web Series BluRay HEVC ESub",
+        "title": "Peaky Blinders S02 2014 Hindi English Dual Audio Completed Web Series BluRay HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -60,7 +60,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Legacy of the Raisingghs Kull S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "The Legacy of the Raisingghs Kull S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "780mb",
@@ -80,7 +80,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Black White And Gray Love Kills S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Black White And Gray Love Kills S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "750mb",
@@ -100,7 +100,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Peaky Blinders S01 2013 Hindi English Dual Audio Completed Web Series BluRay HEVC ESub",
+        "title": "Peaky Blinders S01 2013 Hindi English Dual Audio Completed Web Series BluRay HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -120,7 +120,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Gangs of Puri S02 2025 Odia Completed Web Series HEVC ESub",
+        "title": "Gangs of Puri S02 2025 Odia Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -140,7 +140,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Gangs of Puri S01 2022 Odia Completed Web Series HEVC ESub",
+        "title": "Gangs of Puri S01 2022 Odia Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -160,7 +160,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Daredevil Born Again S01 2025 Hindi English Dual Audio Completed MCU Web Series HEVC ESub",
+        "title": "Daredevil Born Again S01 2025 Hindi English Dual Audio Completed MCU Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "620mb",
@@ -195,7 +195,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Wheel of Time S03 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Wheel of Time S03 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -230,7 +230,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Khauf S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Khauf S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -250,7 +250,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Last of Us S01 2023 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Last of Us S01 2023 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "780mb",
@@ -285,7 +285,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free La Brea S01 2021 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "La Brea S01 2021 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "650mb",
@@ -320,7 +320,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Waking of a Nation S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "The Waking of a Nation S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "840mb",
@@ -340,7 +340,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Legend of Hanuman S06 2025 Hindi Animation Completed Web Series HEVC ESub",
+        "title": "The Legend of Hanuman S06 2025 Hindi Animation Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -360,7 +360,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Karma S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Karma S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "800mb",
@@ -380,7 +380,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Chamak S2 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Chamak S2 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "900mb",
@@ -400,7 +400,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Daayan S01 2025 Hindi Dubbed Completed Web Series HEVC ESub",
+        "title": "Daayan S01 2025 Hindi Dubbed Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -420,7 +420,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Adolescence S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Adolescence S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "680mb",
@@ -440,7 +440,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Bondsman S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Bondsman S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "750mb",
@@ -460,7 +460,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free House of David S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "House of David S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "680mb",
@@ -495,7 +495,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Reacher S03 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Reacher S03 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1.1gb",
@@ -515,7 +515,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Kill Dill The Heartbreak Club S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Kill Dill The Heartbreak Club S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "780mb",
@@ -535,7 +535,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Newtopia S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Newtopia S01 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -555,7 +555,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Kanneda S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Kanneda S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "750mb",
@@ -575,7 +575,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Khakee The Bengal Chapter S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Khakee The Bengal Chapter S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -595,7 +595,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Loot Kaand S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Loot Kaand S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "770mb",
@@ -615,7 +615,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Knuckles S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Knuckles S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -635,7 +635,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Moon Knight S01 2022 Hindi English Dual Audio MCU Completed Web Series HEVC ESub",
+        "title": "Moon Knight S01 2022 Hindi English Dual Audio MCU Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "860mb",
@@ -655,7 +655,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Daredevil S03 2018 Hindi English Dual Audio MCU Completed Web Series HEVC ESub",
+        "title": "Daredevil S03 2018 Hindi English Dual Audio MCU Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "950mb",
@@ -690,7 +690,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Daredevil S02 2016 Hindi English Dual Audio MCU Completed Web Series BluRay HEVC ESub",
+        "title": "Daredevil S02 2016 Hindi English Dual Audio MCU Completed Web Series BluRay HEVC ESub",
         "download_links": [
             {
                 "size": "950mb",
@@ -725,7 +725,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Daredevil S01 2015 Hindi English Dual Audio MCU Completed Web Series BluRay HEVC ESub",
+        "title": "Daredevil S01 2015 Hindi English Dual Audio MCU Completed Web Series BluRay HEVC ESub",
         "download_links": [
             {
                 "size": "900mb",
@@ -760,7 +760,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Dupahiya S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Dupahiya S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -780,7 +780,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Dabba Cartel S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Dabba Cartel S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "900mb",
@@ -800,7 +800,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free 29th February Kudi Yedamaithe 2025 South Hindi Dubbed Completed Web Series HEVC ESub",
+        "title": "29th February Kudi Yedamaithe 2025 South Hindi Dubbed Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -820,7 +820,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Love Under Construction S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Love Under Construction S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "600mb",
@@ -840,7 +840,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Suzhal The Vortex S02 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Suzhal The Vortex S02 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "800mb",
@@ -860,7 +860,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Aashram S03 Part 02 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Aashram S03 Part 02 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "600mb",
@@ -880,7 +880,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Crime Beat S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Crime Beat S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "710mb",
@@ -900,7 +900,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free School Friends S03 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "School Friends S03 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "900mb",
@@ -920,7 +920,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Oops Ab Kya S012025 Hindi Completed Web Series HEVC ESub",
+        "title": "Oops Ab Kya S012025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -940,7 +940,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Pyar Ka Professor S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Pyar Ka Professor S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -960,7 +960,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Greatest Rivalry India vs Pakistan S01 2025 Hindi Completed Documentary HEVC ESub",
+        "title": "The Greatest Rivalry India vs Pakistan S01 2025 Hindi Completed Documentary HEVC ESub",
         "download_links": [
             {
                 "size": "340mb",
@@ -980,7 +980,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Bada Naam Karenge S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Bada Naam Karenge S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "600mb",
@@ -1015,7 +1015,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Kobali S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Kobali S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "600mb",
@@ -1035,7 +1035,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Secrets of the Shiledars S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "The Secrets of the Shiledars S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "630mb",
@@ -1055,7 +1055,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Apharan S02 2022 Hindi Completed Web Series HEVC ESub",
+        "title": "Apharan S02 2022 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "750mb",
@@ -1075,7 +1075,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Apharan S01 2018 Hindi Completed Web Series HEVC ESub",
+        "title": "Apharan S01 2018 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "850mb",
@@ -1095,7 +1095,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Secret Level S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Secret Level S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -1115,7 +1115,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Power Of Paanch S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Power Of Paanch S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1135,7 +1135,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Paatal Lok S02 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Paatal Lok S02 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "720mb",
@@ -1155,7 +1155,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Chidiya Udd S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Chidiya Udd S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "740mb",
@@ -1175,7 +1175,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free All of Us Are Dead 2022 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "All of Us Are Dead 2022 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -1210,7 +1210,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Ek Farzi Love Story S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Ek Farzi Love Story S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "660mb",
@@ -1245,7 +1245,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Black Warrant S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Black Warrant S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "920mb",
@@ -1265,7 +1265,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Agra Affair S01 2025 Hindi Completed Web Series HEVC ESub",
+        "title": "Agra Affair S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "650mb",
@@ -1285,7 +1285,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Alice in Borderland S02 2022 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Alice in Borderland S02 2022 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1.4gb",
@@ -1305,7 +1305,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Alice in Borderland S01 2020 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Alice in Borderland S01 2020 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -1325,7 +1325,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Paatal Lok S01 2020 Hindi Completed Web Series HEVC ESub",
+        "title": "Paatal Lok S01 2020 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -1345,7 +1345,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Rig S02 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Rig S02 2025 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1365,7 +1365,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Family Man S02 2021 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Family Man S02 2021 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -1400,7 +1400,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Family Man S01 2019 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Family Man S01 2019 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1435,7 +1435,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Scam 1992 S01 2020 Hindi Completed Web Series HEVC ESub",
+        "title": "Scam 1992 S01 2020 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "760mb",
@@ -1470,7 +1470,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Doctors S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Doctors S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -1490,7 +1490,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Squid Game S02 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "Squid Game S02 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "550mb",
@@ -1535,7 +1535,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Party Till I Die S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Party Till I Die S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -1555,7 +1555,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Moonwalk S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Moonwalk S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "780mb",
@@ -1575,7 +1575,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Swipe Crime S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Swipe Crime S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "850mb",
@@ -1595,7 +1595,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free The Day of the Jackal S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
+        "title": "The Day of the Jackal S01 2024 Hindi English Dual Audio Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "770mb",
@@ -1630,7 +1630,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Aindham Vedham S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Aindham Vedham S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "800mb",
@@ -1650,7 +1650,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Harikatha Sambhavami Yuge Yuge S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Harikatha Sambhavami Yuge Yuge S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -1670,7 +1670,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free SSS Sex Secret Aur Saaya 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "SSS Sex Secret Aur Saaya 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -1690,7 +1690,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Mismatched S03 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Mismatched S03 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "880mb",
@@ -1710,7 +1710,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Mismatched S02 2020 Hindi Completed Web Series HEVC ESub",
+        "title": "Mismatched S02 2020 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "900mb",
@@ -1730,7 +1730,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Mismatched S01 2020 Hindi Completed Web Series HEVC ESub",
+        "title": "Mismatched S01 2020 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "550mb",
@@ -1750,7 +1750,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Thukra Ke Mera Pyaar S01 2024 Hindi Completed Web Series HEVC ESub Ep 11 19 Add",
+        "title": "Thukra Ke Mera Pyaar S01 2024 Hindi Completed Web Series HEVC ESub Ep 11 19 Add",
         "download_links": [
             {
                 "size": "630mb",
@@ -1785,7 +1785,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Bandish Bandits S01 2020 Hindi Completed Web Series HEVC ESub",
+        "title": "Bandish Bandits S01 2020 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "830mb",
@@ -1805,7 +1805,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Bandish Bandits S02 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Bandish Bandits S02 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "880mb",
@@ -1825,7 +1825,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Tanaav S02 2024 Hindi Completed Web Series HEVC ESub Part 02 Ep 07 12 Added",
+        "title": "Tanaav S02 2024 Hindi Completed Web Series HEVC ESub Part 02 Ep 07 12 Added",
         "download_links": [
             {
                 "size": "680mb",
@@ -1860,7 +1860,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Mohrey S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Mohrey S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "880mb",
@@ -1880,7 +1880,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Heartbeats Pyaar Aur Armaan S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Heartbeats Pyaar Aur Armaan S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "800mb",
@@ -1900,7 +1900,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Divorce Ke Liye Kuch Bhi Karega S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Divorce Ke Liye Kuch Bhi Karega S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1920,7 +1920,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Hello Mini S03 2021 Hindi Completed Web Series HEVC ESub",
+        "title": "Hello Mini S03 2021 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "700mb",
@@ -1940,7 +1940,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Hello Mini S02 2021 Hindi Completed Web Series HEVC ESub",
+        "title": "Hello Mini S02 2021 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "760mb",
@@ -1960,7 +1960,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Hello Mini S01 2019 Hindi Completed Web Series HEVC ESub",
+        "title": "Hello Mini S01 2019 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "1gb",
@@ -1980,7 +1980,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Mandaar 2021 Hindi Completed Web Series HEVC ESub",
+        "title": "Mandaar 2021 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "620mb",
@@ -2000,7 +2000,7 @@ const webSeries = [
         ]
     },
     {
-        "title": "Free Parachute S01 2024 Hindi Completed Web Series HEVC ESub",
+        "title": "Parachute S01 2024 Hindi Completed Web Series HEVC ESub",
         "download_links": [
             {
                 "size": "420mb",
