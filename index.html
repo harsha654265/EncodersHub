@@ -49,33 +49,32 @@
 
     .movie-list, .web-series-list {
       padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
     .movie-item {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 0.5rem 1rem;
-      margin-bottom: 0.5rem;
+      padding: 0.5rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between; /* Changed to space-between to push arrow to the right */
-      gap: 0.5rem;
       cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s;
     }
 
     .movie-item:hover {
+      transform: scale(1.05);
       background: #e9ecef;
     }
 
-    .movie-item .arrow {
-      color: #dc3545;
-      font-weight: bold;
-    }
-
     .movie-item .title {
-      flex: 1;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
 
     .pagination {
@@ -83,8 +82,20 @@
       justify-content: center;
       gap: 1rem;
       padding: 1rem 0;
+    }
+
+    .pagination span {
       font-size: 1.5rem;
       cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .pagination span:hover {
+      background: #0056b3;
     }
 
     .modal {
@@ -169,6 +180,7 @@
       color: #dc3545;
       font-size: 1.2rem;
       padding: 1rem;
+      grid-column: 1 / -1;
     }
 
     .footer {
@@ -197,6 +209,10 @@
       .search-container input {
         width: 100%;
         text-align: center;
+      }
+
+      .movie-list, .web-series-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
     }
   </style>
@@ -277,7 +293,7 @@
     }
 
     function removeFreePrefix(title) {
-      return title.replace(/^FREE\s*/, ''); // Removes "FREE" followed by any spaces at the start
+      return title.replace(/^FREE\s*/, '');
     }
 
     function renderMovies(filter = '') {
@@ -293,10 +309,9 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
+        const cleanTitle = removeFreePrefix(item.title);
         itemElement.innerHTML = `
           <span class="title">${cleanTitle}</span>
-          <span class="arrow">➡️</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
@@ -316,10 +331,9 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
+        const cleanTitle = removeFreePrefix(item.title);
         itemElement.innerHTML = `
           <span class="title">${cleanTitle}</span>
-          <span class="arrow">➡️</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
@@ -327,7 +341,7 @@
     }
 
     function openModal(item) {
-      modalTitle.textContent = removeFreePrefix(item.title); // Also remove "FREE" in the modal title
+      modalTitle.textContent = removeFreePrefix(item.title);
       downloadLinks.innerHTML = '';
       item.download_links.forEach(link => {
         const a = document.createElement('a');
