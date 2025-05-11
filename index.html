@@ -32,6 +32,21 @@
       text-transform: uppercase;
     }
 
+    .search-container {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 500px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
     .movie-list, .web-series-list {
       padding: 1rem;
     }
@@ -151,6 +166,9 @@
       padding: 1rem;
       text-align: center;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     .footer p, .footer a {
@@ -158,6 +176,7 @@
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
+      margin: 0;
     }
   </style>
 </head>
@@ -165,6 +184,10 @@
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
   </header>
+
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search movies or web series..." />
+  </div>
 
   <section id="moviesSection">
     <div class="section-header">
@@ -201,15 +224,19 @@
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
     const downloadLinks = document.getElementById('downloadLinks');
+    const searchBar = document.getElementById('searchBar');
 
     // Render movies
-    function renderMovies() {
+    function renderMovies(filter = '') {
       movieList.innerHTML = '';
-      if (!movies || movies.length === 0) {
+      const filteredMovies = movies.filter(item => 
+        item.title.toLowerCase().includes(filter.toLowerCase())
+      );
+      if (!filteredMovies || filteredMovies.length === 0) {
         movieList.innerHTML = '<div class="no-results">No movies found</div>';
         return;
       }
-      movies.forEach(item => {
+      filteredMovies.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
@@ -222,13 +249,16 @@
     }
 
     // Render web series
-    function renderWebSeries() {
+    function renderWebSeries(filter = '') {
       webSeriesList.innerHTML = '';
-      if (!webSeries || webSeries.length === 0) {
+      const filteredWebSeries = webSeries.filter(item => 
+        item.title.toLowerCase().includes(filter.toLowerCase())
+      );
+      if (!filteredWebSeries || filteredWebSeries.length === 0) {
         webSeriesList.innerHTML = '<div class="no-results">No web series found</div>';
         return;
       }
-      webSeries.forEach(item => {
+      filteredWebSeries.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
@@ -256,6 +286,13 @@
     function closeModal() {
       modal.classList.remove('show');
     }
+
+    // Search functionality
+    searchBar.addEventListener('input', (e) => {
+      const searchTerm = e.target.value;
+      renderMovies(searchTerm);
+      renderWebSeries(searchTerm);
+    });
 
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
