@@ -53,7 +53,19 @@ const movies = [
       { quality: "2160p-hevc (4.2gb)", link: "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPeU5tMzlNZFlWYVJ4UzVhMUJWRndLUXdIMTZIeHdLeVFiZmZBb3NqekRhenQyd1dkREE1d1l6U21fSGJiWnpBP2tleT1VVkZWYUZCRU1XMVVWamhZYnpOdmIza3hZM1kwVW1FNVMybHVZV1Ju&token=MTAwNTI1" }
     ]
   },
+    {
+        "title": "Jack 2025",
+        "release_date": "2025",
+        "download_links": [
+            {"size": "440mb", "quality": "480p-hd", "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBPSmx3ZjRUcTR4V0I5RkFkVVZodklWSURQbHI0R093Nlp4MGVGYlVLNFBuWExINzZXQThVakdlWnhuSk5aMDFnP2tleT1OVzFWU0U1WldDMVljV1ppVXpCTGVVWkhaRkZmTW1sNWVWUmtlVjlC&token=MTAwNTI1"},
+            {"size": "730mb", "quality": "720p-hevc", "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQbXZoRVowcnNBa0h6a2dKRTRoWktrRUZnMWhZSUpYM0l4a3A3eFBiTjdmMUM2cHdfMEJ6OVhudFg1VUFxUlFnP2tleT1TRVJQT0c5RFVYbDRYekpOYkdOUVNVcHVOakJhT1ZKVlZrSnZhM0ZS&token=MTAwNTI1"},
+            {"size": "1.2gb", "quality": "720p-hd", "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQQnNMTG5QZmRwT2pHWi1tWmNKVlRiUUtMMlpwa251ay1GV0hob1ZPMXA3bThFVTh2Qk5xMmZkU0MydXR4WUlnP2tleT1WV1JNVGpSTlVYaHNUemd6ZEU5VlptZFlRbWhGU2xabmJsSTVaMjFS&token=MTAwNTI1"},
+            {"size": "2.7gb", "quality": "1080p-hd", "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQeW9qSUJieFNRMkhjMHpIMXFHMi1DdVZMR2g0U2cxT3AySWlUQUtYd01VeEdJOURQRHYza2ZPUjRlNjhQU01BP2tleT1kWEJ1VTFwbmEwMXRUREJZZGxOclpITlRhVXRrZERKcFowMU5hMmRC&token=MTAwNTI1"},
+            {"size": "4.8gb", "quality": "2160p-hevc", "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBOMFlYOFRvcmh0dWtSSUh5a2h1bmw3aUIzYVgwQ2tnUDg1QTA1Q2FUcVJNS0Q5ZFV5elI4ZlY4ZTdWS2poMC1nP2tleT1iREpDTURSYVF6aFdNMlZQYjAxMU1uWkZhRkkzYkZSdmRuWkJibWhS&token=MTAwNTI1"}
+        ]
+    },
   {
+   
     title: "L2 Empuraan (2025)",
     img: "https://via.placeholder.com/300x450?text=L2+Empuraan+2025",
     releaseDate: "2025-04-05",
