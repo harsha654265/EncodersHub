@@ -1,6 +1,6 @@
 const movies = [
     {
-        "title": "Free Jack 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Jack 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -30,7 +30,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Good Bad Ugly 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Good Bad Ugly 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -60,7 +60,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jewel Thief The Heist Begins 2025 Hindi English Dual Audio Bollywood Movie HD ESub",
+        "title": "Jewel Thief The Heist Begins 2025 Hindi English Dual Audio Bollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -90,7 +90,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free L2 Empuraan 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "L2 Empuraan 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "580mb",
@@ -120,7 +120,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Veer Dheera Sura Part 2 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Veer Dheera Sura Part 2 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -150,7 +150,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Eragon 2006 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Eragon 2006 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -170,7 +170,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Diplomat 2025 Bollywood Hindi Movie HD ESub",
+        "title": "The Diplomat 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -195,7 +195,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Odela 2 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Odela 2 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -220,7 +220,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Theevram 2012 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Theevram 2012 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -245,7 +245,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kesari Chapter 2 2025 Bollywood Hindi Movie HDRip",
+        "title": "Kesari Chapter 2 2025 Bollywood Hindi Movie HDRip",
         "download_links": [
             {
                 "size": "370mb",
@@ -275,7 +275,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vithaikkaaran 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Vithaikkaaran 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -300,7 +300,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gulu Gulu 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Gulu Gulu 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -325,7 +325,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Queen 2013 Bollywood Hindi BluRay Movie HD ESub",
+        "title": "Queen 2013 Bollywood Hindi BluRay Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -350,7 +350,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kalank 2019 Bollywood Hindi Movie HD ESub",
+        "title": "Kalank 2019 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -375,7 +375,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Driver Jamuna 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Driver Jamuna 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "330mb",
@@ -400,7 +400,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Khiladi 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Khiladi 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -430,7 +430,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Retro 2025 South Hindi Dubbed Movie PreDVD",
+        "title": "Retro 2025 South Hindi Dubbed Movie PreDVD",
         "download_links": [
             {
                 "size": "480mb",
@@ -450,7 +450,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free HIT 3 The Third Case 2025 South Hindi Dubbed Movie HQCam",
+        "title": "HIT 3 The Third Case 2025 South Hindi Dubbed Movie HQCam",
         "download_links": [
             {
                 "size": "480mb",
@@ -470,7 +470,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Thunderbolts 2025 MCU Hindi Dubbed Movie PreDvD",
+        "title": "Thunderbolts 2025 MCU Hindi Dubbed Movie PreDvD",
         "download_links": [
             {
                 "size": "360mb",
@@ -490,7 +490,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Bhootnii 2025 Bollywood Hindi Movie HQCam",
+        "title": "The Bhootnii 2025 Bollywood Hindi Movie HQCam",
         "download_links": [
             {
                 "size": "400mb",
@@ -510,7 +510,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Raid 2 2025 Bollywood Hindi Movie HQCam",
+        "title": "Raid 2 2025 Bollywood Hindi Movie HQCam",
         "download_links": [
             {
                 "size": "400mb",
@@ -530,7 +530,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Virupaksha 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Virupaksha 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -560,7 +560,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ala Vaikunthapurramuloo 2020 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Ala Vaikunthapurramuloo 2020 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -590,7 +590,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Costao 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Costao 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -610,7 +610,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ambajipeta Marriage Band 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Ambajipeta Marriage Band 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -635,7 +635,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bromance 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Bromance 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -660,7 +660,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jaat 2025 Bollywood Hindi Movie HDRip",
+        "title": "Jaat 2025 Bollywood Hindi Movie HDRip",
         "download_links": [
             {
                 "size": "480mb",
@@ -685,7 +685,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Chal Mera Putt 2 2021 Punjabi Movie HD ESub",
+        "title": "Chal Mera Putt 2 2021 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "340mb",
@@ -710,7 +710,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Monkey 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "The Monkey 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -730,7 +730,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Parasite 2019 Hindi Korean Dual Audio Hollywood Movie HD ESub",
+        "title": "Parasite 2019 Hindi Korean Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -750,7 +750,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Market Raja MBBS 2019 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Market Raja MBBS 2019 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -775,7 +775,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Prometheus 2012 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Prometheus 2012 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -795,7 +795,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Spark L I F E 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Spark L I F E 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -820,7 +820,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Intinti Ramayanam 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Intinti Ramayanam 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -845,7 +845,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Paappan 2022 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Paappan 2022 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -870,7 +870,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ground Zero 2025 Bollywood Hindi Movie HQCam",
+        "title": "Ground Zero 2025 Bollywood Hindi Movie HQCam",
         "download_links": [
             {
                 "size": "410mb",
@@ -890,7 +890,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Havoc 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Havoc 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -920,7 +920,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ash 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Ash 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -945,7 +945,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Live 2023 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Live 2023 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -970,7 +970,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mad Square 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Mad Square 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -995,7 +995,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tuk Tuk 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Tuk Tuk 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -1020,7 +1020,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Virunnu 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Virunnu 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -1045,7 +1045,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Majhail 2025 Punjabi Movie HD ESub",
+        "title": "Majhail 2025 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -1070,7 +1070,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Samajavaragamana 2023 South Hindi Dubbed Movie HD ESub",
+        "title": "Samajavaragamana 2023 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -1095,7 +1095,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Alita Battle Angel 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Alita Battle Angel 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -1125,7 +1125,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mission Majnu 2023 Bollywood Hindi Movie HD ESub",
+        "title": "Mission Majnu 2023 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -1150,7 +1150,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gangs of Wasseypur Part 1 2012 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Gangs of Wasseypur Part 1 2012 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -1175,7 +1175,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gangs of Wasseypur Part 2 2012 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Gangs of Wasseypur Part 2 2012 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1200,7 +1200,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jannat 2 2012 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Jannat 2 2012 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -1225,7 +1225,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jannat 2008 Bollywood Hindi Movie HD ESub",
+        "title": "Jannat 2008 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -1250,7 +1250,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Paisa Vasool 2017 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Paisa Vasool 2017 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -1275,7 +1275,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Officer 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Officer 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -1300,7 +1300,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Disco Raja 2020 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Disco Raja 2020 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -1330,7 +1330,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kathakali 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kathakali 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -1355,7 +1355,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ala Ninnu Cheri 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Ala Ninnu Cheri 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -1380,7 +1380,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sikandar 2025 Bollywood Hindi Movie HDRip",
+        "title": "Sikandar 2025 Bollywood Hindi Movie HDRip",
         "download_links": [
             {
                 "size": "450mb",
@@ -1400,7 +1400,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Logout 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Logout 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "300mb",
@@ -1415,7 +1415,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mere Husband Ki Biwi 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Mere Husband Ki Biwi 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -1440,7 +1440,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Chandni Chowk to China 2009 Bollywood Hindi Movie HD ESub",
+        "title": "Chandni Chowk to China 2009 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -1465,7 +1465,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gumasthan 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Gumasthan 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -1490,7 +1490,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Novocaine 2025 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Novocaine 2025 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -1515,7 +1515,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Last Stop in Yuma County 2023 Hindi English Dual Audio Hollywood Movie HD BluRay ESub",
+        "title": "The Last Stop in Yuma County 2023 Hindi English Dual Audio Hollywood Movie HD BluRay ESub",
         "download_links": [
             {
                 "size": "320mb",
@@ -1540,7 +1540,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tron Legacy 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Tron Legacy 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -1565,7 +1565,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Alien Vs Predator 2004 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Alien Vs Predator 2004 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -1585,7 +1585,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Aliens Vs Predator Requiem 2007 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Aliens Vs Predator Requiem 2007 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "340mb",
@@ -1605,7 +1605,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Predators 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Predators 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -1625,7 +1625,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Predators 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Predators 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -1645,7 +1645,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Predator 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Predator 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -1665,7 +1665,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Prey 2022 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Prey 2022 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -1685,7 +1685,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Cold Case Police Story 2 2021 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Cold Case Police Story 2 2021 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -1710,7 +1710,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Captain America Brave New World 2025 Hindi English Dual Audio MCU Movie HD",
+        "title": "Captain America Brave New World 2025 Hindi English Dual Audio MCU Movie HD",
         "download_links": [
             {
                 "size": "400mb",
@@ -1740,7 +1740,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mahadev Ka Gorakhpur 2024 Hindi Dubbed Movie HD ESub",
+        "title": "Mahadev Ka Gorakhpur 2024 Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -1765,7 +1765,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pravinkoodu Shappu 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Pravinkoodu Shappu 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -1790,7 +1790,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Superboys of Malegaon 2025 Hindi English Dual Audio Movie HD ESub",
+        "title": "Superboys of Malegaon 2025 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -1815,7 +1815,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Court State Vs A Nobody 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Court State Vs A Nobody 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1840,7 +1840,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sweetheart 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Sweetheart 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -1865,7 +1865,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Crazxy 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Crazxy 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "310mb",
@@ -1890,7 +1890,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Wolf Man 2025 Hindi Englsih Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Wolf Man 2025 Hindi Englsih Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -1915,7 +1915,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Chhorii 2 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Chhorii 2 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -1940,7 +1940,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Chhaava 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Chhaava 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -1975,7 +1975,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hoshiar Singh 2025 Panjabi Movie HD ESub",
+        "title": "Hoshiar Singh 2025 Panjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -2000,7 +2000,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free G20 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "G20 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -2020,7 +2020,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free John Wick Chapter 4 2023 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "John Wick Chapter 4 2023 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -2050,7 +2050,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free John Wick Chapter 3 Parabellum 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "John Wick Chapter 3 Parabellum 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -2080,7 +2080,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free John Wick Chapter 2 2017 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "John Wick Chapter 2 2017 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -2110,7 +2110,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free John Wick 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "John Wick 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -2140,7 +2140,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free FCUK Father Chitti Umaa Kaarthik 2021 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "FCUK Father Chitti Umaa Kaarthik 2021 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "550mb",
@@ -2165,7 +2165,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free 14 Days Girlfriend Intlo 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "14 Days Girlfriend Intlo 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -2190,7 +2190,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Connect 2022 Hindi Tamil Dual Audio UnCut South Movie HDRip ESub",
+        "title": "Connect 2022 Hindi Tamil Dual Audio UnCut South Movie HDRip ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -2215,7 +2215,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ascharya Fuck It Ascharyachakit 2018 Bollywood Hindi Movie HD ESub",
+        "title": "Ascharya Fuck It Ascharyachakit 2018 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -2240,7 +2240,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dragon Nest Warriors Dawn 2014 Hindi English Dual Audio Animated Movie BluRay HD ESub",
+        "title": "Dragon Nest Warriors Dawn 2014 Hindi English Dual Audio Animated Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "310mb",
@@ -2260,7 +2260,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free War 2019 Bollywood Hindi Movie HD BluRay ESub",
+        "title": "War 2019 Bollywood Hindi Movie HD BluRay ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -2290,7 +2290,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Test 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Test 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -2320,7 +2320,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Divine Fury 2019 Hindi Korean Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Divine Fury 2019 Hindi Korean Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -2345,7 +2345,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free First Man 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "First Man 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -2370,7 +2370,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mersal 2017 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Mersal 2017 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -2400,7 +2400,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Loveyapa 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Loveyapa 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -2425,7 +2425,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kaafir 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Kaafir 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -2450,7 +2450,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Adrishyam Yugi 2022 Hindi Malayalm Dual Audio UnCut South Movie HD ESub",
+        "title": "Adrishyam Yugi 2022 Hindi Malayalm Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -2475,7 +2475,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vasco Da Gama 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Vasco Da Gama 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -2500,7 +2500,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free 2 States 2014 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "2 States 2014 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -2525,7 +2525,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dark Phoenix 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Dark Phoenix 2019 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "390mb",
@@ -2550,7 +2550,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men Apocalypse 2016 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men Apocalypse 2016 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -2575,7 +2575,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Logan 2017 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Logan 2017 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -2600,7 +2600,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men Days of Future Past 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men Days of Future Past 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -2625,7 +2625,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rishte Naate 2025 Punjabi Movie HD ESub",
+        "title": "Rishte Naate 2025 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "330mb",
@@ -2650,7 +2650,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Wolverine 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Wolverine 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -2675,7 +2675,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men First Class 2011 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men First Class 2011 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -2700,7 +2700,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men Origins Wolverine 2009 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men Origins Wolverine 2009 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -2725,7 +2725,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Identity 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Identity 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -2750,7 +2750,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kotee 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Kotee 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -2775,7 +2775,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Yashoda 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Yashoda 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -2805,7 +2805,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Taron Paar 2025 Punjabi Movie HD ESub",
+        "title": "Taron Paar 2025 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -2830,7 +2830,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tantra 2024 South Hindi Dubbed Movie HD ESub",
+        "title": "Tantra 2024 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -2855,7 +2855,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Yeh Saali Aashiqui 2019 Bollywood Hindi Movie HD ESub",
+        "title": "Yeh Saali Aashiqui 2019 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -2880,7 +2880,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Garadi 2023 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Garadi 2023 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -2905,7 +2905,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mad 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Mad 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -2935,7 +2935,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men The Last Stand 2006 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men The Last Stand 2006 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -2960,7 +2960,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X2 X Men United 2003 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X2 X Men United 2003 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -2985,7 +2985,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free X Men 2000 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "X Men 2000 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -3010,7 +3010,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Viduthalai Part 2 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Viduthalai Part 2 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -3035,7 +3035,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Aghathiyaa 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Aghathiyaa 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -3065,7 +3065,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Den of Thieves 2 Pantera 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Den of Thieves 2 Pantera 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -3080,7 +3080,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Deva 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Deva 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -3110,7 +3110,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Twilight of the Warriors Walled In 2024 Hindi Chinese Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Twilight of the Warriors Walled In 2024 Hindi Chinese Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -3130,7 +3130,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mittran Da Challeya Truck Ni 2024 Punjabi Movie HD ESub",
+        "title": "Mittran Da Challeya Truck Ni 2024 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -3155,7 +3155,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Zootopia 2016 Hindi English Dual Audio Animated Movie BluRay HD ESub",
+        "title": "Zootopia 2016 Hindi English Dual Audio Animated Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -3175,7 +3175,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Titanic 1997 Hindi English Dual Audio Hollywood Movie Remastered BluRay HD ESub",
+        "title": "Titanic 1997 Hindi English Dual Audio Hollywood Movie Remastered BluRay HD ESub",
         "download_links": [
             {
                 "size": "650mb",
@@ -3200,7 +3200,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dangal 2016 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Dangal 2016 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -3225,7 +3225,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Your Name 2016 Hindi English Dual Audio Japanese Animated Movie BluRay HD ESub",
+        "title": "Your Name 2016 Hindi English Dual Audio Japanese Animated Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -3245,7 +3245,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kavacham 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Kavacham 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -3270,7 +3270,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Wolf of Wall Street 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Wolf of Wall Street 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "600mb",
@@ -3300,7 +3300,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Manasuku Nachindi Life Mein Twist 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Manasuku Nachindi Life Mein Twist 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -3325,7 +3325,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Okka Ammayi Thappa Asli Fighter 2016 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Okka Ammayi Thappa Asli Fighter 2016 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -3350,7 +3350,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Purushothamudu 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Purushothamudu 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -3375,7 +3375,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Brothers Grimsby 2016 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Brothers Grimsby 2016 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "300mb",
@@ -3395,7 +3395,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Iratta 2023 Hindi HQ Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Iratta 2023 Hindi HQ Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -3420,7 +3420,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Revelations 2025 Hindi Korean Dual Audio Hollywood Movie HD ESub",
+        "title": "Revelations 2025 Hindi Korean Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -3440,7 +3440,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Yevade Subramanyam Yeh Hai Zindagi 2015 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Yevade Subramanyam Yeh Hai Zindagi 2015 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -3465,7 +3465,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dragon 2025 Hindi Tamil Daul Audio UnCut South Movie HD ESub",
+        "title": "Dragon 2025 Hindi Tamil Daul Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -3495,7 +3495,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tej I Love You 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Tej I Love You 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -3520,7 +3520,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Officer on Duty 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Officer on Duty 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -3545,7 +3545,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dirty Angels 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Dirty Angels 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -3570,7 +3570,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Swag 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Swag 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -3600,7 +3600,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Uppena 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Uppena 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -3630,7 +3630,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sankranthiki Vasthunam 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Sankranthiki Vasthunam 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -3660,7 +3660,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sabdham 2025 Hindi South Dubbed Movie HDRip",
+        "title": "Sabdham 2025 Hindi South Dubbed Movie HDRip",
         "download_links": [
             {
                 "size": "460mb",
@@ -3680,7 +3680,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Viduthalai Part 1 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Viduthalai Part 1 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -3705,7 +3705,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ponman 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Ponman 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -3730,7 +3730,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Emergency 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Emergency 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -3755,7 +3755,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Azaad 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Azaad 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -3780,7 +3780,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vanvaas 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Vanvaas 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -3805,7 +3805,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Be Happy 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Be Happy 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -3830,7 +3830,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Agent 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Agent 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -3860,7 +3860,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hathya 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Hathya 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -3885,7 +3885,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Driving Licence 2019 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Driving Licence 2019 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -3910,7 +3910,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vidaamuyarchi 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Vidaamuyarchi 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -3945,7 +3945,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Yaathisai 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Yaathisai 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -3970,7 +3970,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Operation Raavan 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Operation Raavan 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -3995,7 +3995,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free My Dear Bootham 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "My Dear Bootham 2022 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -4020,7 +4020,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dhoom Dhaam 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Dhoom Dhaam 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -4045,7 +4045,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Footage 2025 South Hindi Dubbed Movie HDRip",
+        "title": "Footage 2025 South Hindi Dubbed Movie HDRip",
         "download_links": [
             {
                 "size": "400mb",
@@ -4065,7 +4065,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Nadaaniyan 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Nadaaniyan 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -4090,7 +4090,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rewind 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Rewind 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -4115,7 +4115,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kudumbasthan 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kudumbasthan 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -4140,7 +4140,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sky Force 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Sky Force 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "390mb",
@@ -4170,7 +4170,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Fateh 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Fateh 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -4200,7 +4200,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Thandel 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Thandel 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -4230,7 +4230,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Baapu A Fathers Story 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Baapu A Fathers Story 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -4255,7 +4255,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Game Changer 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Game Changer 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "530mb",
@@ -4290,7 +4290,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rekhachithram 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Rekhachithram 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -4315,7 +4315,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Aadujeevitham The Goat Life 2024 Hindi Malayalam Dual Audio UnCut Movie HD ESub",
+        "title": "Aadujeevitham The Goat Life 2024 Hindi Malayalam Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "570mb",
@@ -4350,7 +4350,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Percy Jackson Sea of Monsters 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Percy Jackson Sea of Monsters 2013 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -4375,7 +4375,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Percy Jackson And The Olympians The Lightning Thief 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Percy Jackson And The Olympians The Lightning Thief 2010 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -4400,7 +4400,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dil Dosti Aur Dogs 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Dil Dosti Aur Dogs 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "320mb",
@@ -4425,7 +4425,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rakshana 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Rakshana 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -4450,7 +4450,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Raduaa Returns 2024 Punjabi Movie HD ESub",
+        "title": "Raduaa Returns 2024 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -4475,7 +4475,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Max 2024 Hindi HQ Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Max 2024 Hindi HQ Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -4500,7 +4500,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Badass Ravi Kumar 2025 Bollywood Hindi Movie HDRip",
+        "title": "Badass Ravi Kumar 2025 Bollywood Hindi Movie HDRip",
         "download_links": [
             {
                 "size": "500mb",
@@ -4530,7 +4530,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sivappu Manjal Pachai Do Khiladi 2019 Hindi Tamil Dual Audio UnCut Movie HD ESub",
+        "title": "Sivappu Manjal Pachai Do Khiladi 2019 Hindi Tamil Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -4555,7 +4555,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Daaku Maharaaj 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Daaku Maharaaj 2025 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -4585,7 +4585,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Nutcracker and the Four Realms 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "The Nutcracker and the Four Realms 2018 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -4605,7 +4605,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Love Reddy 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
+        "title": "Love Reddy 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -4630,7 +4630,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Srikakulam Sherlock Holmes 2024 Hindi Telugu Dual Audio Uncut South Movie HD ESub",
+        "title": "Srikakulam Sherlock Holmes 2024 Hindi Telugu Dual Audio Uncut South Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -4655,7 +4655,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mastaney 2023 Punjabi Movie HD ESub",
+        "title": "Mastaney 2023 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -4680,7 +4680,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mufasa The Lion King 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Mufasa The Lion King 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -4710,7 +4710,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Mehta Boys 2025 Bollywood Hindi Movie HD ESub",
+        "title": "The Mehta Boys 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -4735,7 +4735,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jetty 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Jetty 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -4760,7 +4760,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sulthan 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Sulthan 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -4790,7 +4790,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gaddi Jaandi Ae Chalaangaan Maardi 2023 Punjabi Movie HD ESub",
+        "title": "Gaddi Jaandi Ae Chalaangaan Maardi 2023 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -4815,7 +4815,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free My Fault London 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "My Fault London 2025 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -4840,7 +4840,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Moonfall 2022 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Moonfall 2022 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -4870,7 +4870,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dil Diyan Gallan 2019 Punjabi Movie HD ESub",
+        "title": "Dil Diyan Gallan 2019 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -4895,7 +4895,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dhoom Dhaam 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Dhoom Dhaam 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -4920,7 +4920,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Shiddat 2021 Bollywood Hindi Movies HD ESub",
+        "title": "Shiddat 2021 Bollywood Hindi Movies HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -4950,7 +4950,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Marco 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Marco 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -4980,7 +4980,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sufna 2020 Punjabi Movie HD ESub",
+        "title": "Sufna 2020 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "530mb",
@@ -5005,7 +5005,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rocky Mental 2017 Punjabi Movie HD ESub",
+        "title": "Rocky Mental 2017 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -5030,7 +5030,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kadhalikka Neramillai 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kadhalikka Neramillai 2025 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -5055,7 +5055,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bobby Aur Rishi Ki Love Story 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Bobby Aur Rishi Ki Love Story 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "310mb",
@@ -5080,7 +5080,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Razakar 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Razakar 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -5105,7 +5105,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Babu 2024 Hindi Dubbed Movie HD ESub",
+        "title": "Babu 2024 Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -5130,7 +5130,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Devaki Nandana Vasudeva 2024 South Hindi Dubbed Movie HD ESub",
+        "title": "Devaki Nandana Vasudeva 2024 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -5160,7 +5160,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dungeons Dragons Honour Among Thieves 2023 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Dungeons Dragons Honour Among Thieves 2023 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5190,7 +5190,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tenant 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Tenant 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "320mb",
@@ -5215,7 +5215,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Om Bheem Bush 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
+        "title": "Om Bheem Bush 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5245,7 +5245,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Anora 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Anora 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -5270,7 +5270,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mrs 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Mrs 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -5290,7 +5290,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Martin 2024 Hindi Kannada Dual Audio South UnCut Movie HD ESub",
+        "title": "Martin 2024 Hindi Kannada Dual Audio South UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5320,7 +5320,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Moana 2 2024 Hindi English Dual Audio Animated Movie HD ESub",
+        "title": "Moana 2 2024 Hindi English Dual Audio Animated Movie HD ESub",
         "download_links": [
             {
                 "size": "330mb",
@@ -5350,7 +5350,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Moana 2016 Hindi English Dual Audio Animated Movie BluRay HD ESub",
+        "title": "Moana 2016 Hindi English Dual Audio Animated Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -5375,7 +5375,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kanguva 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kanguva 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -5405,7 +5405,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Veeram 2017 South Hindi Dubbed Movie HD ESub",
+        "title": "Veeram 2017 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "330mb",
@@ -5430,7 +5430,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Baby John 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Baby John 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -5465,7 +5465,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sanam Teri Kasam 2016 Bollywood Hindi Full Movie BluRay HD ESub",
+        "title": "Sanam Teri Kasam 2016 Bollywood Hindi Full Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5495,7 +5495,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bullet Train 2022 Hindi English Hollywood Dual Audio Movie BluRay HD ESub",
+        "title": "Bullet Train 2022 Hindi English Hollywood Dual Audio Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -5520,7 +5520,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Chal Mohan Ranga A AA 2 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Chal Mohan Ranga A AA 2 2018 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5545,7 +5545,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ae Dil Hai Mushkil 2016 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Ae Dil Hai Mushkil 2016 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -5575,7 +5575,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Legend of Maula Jatt 2022Punjabi Full Movie HDRip",
+        "title": "The Legend of Maula Jatt 2022Punjabi Full Movie HDRip",
         "download_links": [
             {
                 "size": "460mb",
@@ -5605,7 +5605,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Saale Aashiq 2025 Bollywood Hindi Movie HDTv",
+        "title": "Saale Aashiq 2025 Bollywood Hindi Movie HDTv",
         "download_links": [
             {
                 "size": "400mb",
@@ -5630,7 +5630,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Munna Bhai M B B S 2003 Bollywood Hindi Movie HD ESub",
+        "title": "Munna Bhai M B B S 2003 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -5660,7 +5660,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Lage Raho Munna Bhai 2006 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Lage Raho Munna Bhai 2006 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -5690,7 +5690,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free James 2022 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "James 2022 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -5720,7 +5720,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kodi Dharma Yogi 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kodi Dharma Yogi 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -5750,7 +5750,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ramayana The Legend of Prince Rama 2025 Hindi Animated Movie HDRip",
+        "title": "Ramayana The Legend of Prince Rama 2025 Hindi Animated Movie HDRip",
         "download_links": [
             {
                 "size": "410mb",
@@ -5775,7 +5775,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hate Story 2 2014 Bollywood Hindi Movie HD ESub",
+        "title": "Hate Story 2 2014 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -5800,7 +5800,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hate Story 3 2015 Bollywood Hindi Movie HD ESub",
+        "title": "Hate Story 3 2015 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "390mb",
@@ -5825,7 +5825,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hate Story 4 2018 Bollywood Hindi Movie HD ESub",
+        "title": "Hate Story 4 2018 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -5855,7 +5855,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hate Story 2012 Bollywood Hindi Movie HD ESub",
+        "title": "Hate Story 2012 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -5880,7 +5880,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Tabaah 2024 Punjabi Movie HD ESub",
+        "title": "Tabaah 2024 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -5910,7 +5910,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rathna Prapancha 2021 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Rathna Prapancha 2021 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -5935,7 +5935,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pushpa 2 The Rule 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Pushpa 2 The Rule 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "750mb",
@@ -5975,7 +5975,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Baby 2023 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Baby 2023 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "570mb",
@@ -6005,7 +6005,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Trance 2020 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Trance 2020 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -6035,7 +6035,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Veera Simha Reddy 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Veera Simha Reddy 2023 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -6065,7 +6065,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Lakshya 2004 Bollywood Hindi Movie HD ESub",
+        "title": "Lakshya 2004 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -6095,7 +6095,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sonic the Hedgehog 3 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Sonic the Hedgehog 3 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -6125,7 +6125,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Eagle 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Eagle 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -6160,7 +6160,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Barroz Guardian of Treasures 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Barroz Guardian of Treasures 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -6190,7 +6190,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sweet Dreams 2025 Bollywood Hindi Movie HD ESub",
+        "title": "Sweet Dreams 2025 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -6215,7 +6215,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hisaab Barabar 2025 Hindi Dubbed UnCut South Movie HD ESub",
+        "title": "Hisaab Barabar 2025 Hindi Dubbed UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -6240,7 +6240,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bhaje Vaayu Vegam 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Bhaje Vaayu Vegam 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -6275,7 +6275,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Garudan 2023 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Garudan 2023 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -6300,7 +6300,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pottel 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Pottel 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -6325,7 +6325,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kick 2 2015 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Kick 2 2015 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -6355,7 +6355,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jai Bhim 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Jai Bhim 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "550mb",
@@ -6390,7 +6390,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kesari 2019 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Kesari 2019 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -6420,7 +6420,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mr Local 2019 Hindi HQ Tamil Dual Audio UnCut Movie HD ESub",
+        "title": "Mr Local 2019 Hindi HQ Tamil Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "530mb",
@@ -6450,7 +6450,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Hellboy The Crooked Man 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Hellboy The Crooked Man 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -6475,7 +6475,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rowdy Boys 2022 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Rowdy Boys 2022 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -6505,7 +6505,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rifle Club 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Rifle Club 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -6530,7 +6530,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pani 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Pani 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -6555,7 +6555,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gandeevadhari Arjuna 2023 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Gandeevadhari Arjuna 2023 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -6585,7 +6585,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kraven the Hunter 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
+        "title": "Kraven the Hunter 2024 Hindi English Dual Audio Hollywood Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -6610,7 +6610,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bodyguard 2011 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Bodyguard 2011 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -6640,7 +6640,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sorgavaasal 2024 Hindi Tamil Dual Audio UnCut Movie HD ESub",
+        "title": "Sorgavaasal 2024 Hindi Tamil Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "440mb",
@@ -6665,7 +6665,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rider 2021 South Hindi Dubbed Movie HD",
+        "title": "Rider 2021 South Hindi Dubbed Movie HD",
         "download_links": [
             {
                 "size": "380mb",
@@ -6695,7 +6695,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mr Bachchan 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
+        "title": "Mr Bachchan 2024 Hindi Telugu Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -6725,7 +6725,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Nishabdham 2020 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Nishabdham 2020 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -6755,7 +6755,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sookshmadarshini 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Sookshmadarshini 2025 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -6790,7 +6790,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bachchala Malli 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Bachchala Malli 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -6820,7 +6820,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Sabarmati Report 2024 Bollywood Hindi Movie HD ESub",
+        "title": "The Sabarmati Report 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -6845,7 +6845,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ui 2024 South Hindi Dubbed Movie HD ESub",
+        "title": "Ui 2024 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -6875,7 +6875,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jalwayu Enclave 2022 Punjabi Movie HD ESub",
+        "title": "Jalwayu Enclave 2022 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "320mb",
@@ -6900,7 +6900,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Qalb 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Qalb 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "530mb",
@@ -6930,7 +6930,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Shukrana 2024 Punjabi Movie HD ESub",
+        "title": "Shukrana 2024 Punjabi Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -6955,7 +6955,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Automata 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
+        "title": "Automata 2014 Hindi English Dual Audio Hollywood Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -6980,7 +6980,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gogol A Terrible Vengeance 2018 Hindi Russian Dual Audio Movie BluRay HD ESub",
+        "title": "Gogol A Terrible Vengeance 2018 Hindi Russian Dual Audio Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -7000,7 +7000,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Azhar 2016 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Azhar 2016 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -7030,7 +7030,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Ramaiya Vastavaiya 2013 Bollywood Hindi Movie HD ESub",
+        "title": "Ramaiya Vastavaiya 2013 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -7060,7 +7060,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dashmi 2024 Hindi Full Movie HD",
+        "title": "Dashmi 2024 Hindi Full Movie HD",
         "download_links": [
             {
                 "size": "440mb",
@@ -7085,7 +7085,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sarkar 2018 Hindi HQ Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Sarkar 2018 Hindi HQ Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -7115,7 +7115,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Rangasthalam 2018 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Rangasthalam 2018 Hindi HQ Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "580mb",
@@ -7145,7 +7145,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Thangalaan 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Thangalaan 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -7175,7 +7175,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Venky Mama 2019 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Venky Mama 2019 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -7205,7 +7205,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gogol Viy 2018 Hindi Russian Dual Audio Movie BluRay HD ESub",
+        "title": "Gogol Viy 2018 Hindi Russian Dual Audio Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -7220,7 +7220,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kabali 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Kabali 2016 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -7250,7 +7250,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Annaatthe 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Annaatthe 2021 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -7280,7 +7280,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Simbaa 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Simbaa 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -7305,7 +7305,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Dishoom 2016 Bollywood Hindi Movie HD ESub",
+        "title": "Dishoom 2016 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -7335,7 +7335,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Wicked 2024 Hindi English Dual Audio Movie HD ESub",
+        "title": "Wicked 2024 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "540mb",
@@ -7365,7 +7365,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sarrainodu 2016 Hindi Telugu Dual Audio South UnCut Movie HD ESub",
+        "title": "Sarrainodu 2016 Hindi Telugu Dual Audio South UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -7390,7 +7390,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sindhubaadh 2019 South Hindi Dubbed Movie HD ESub",
+        "title": "Sindhubaadh 2019 South Hindi Dubbed Movie HD ESub",
         "download_links": [
             {
                 "size": "340mb",
@@ -7415,7 +7415,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kaatera 2023 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Kaatera 2023 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -7440,7 +7440,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The School for Good and Evil 2022 Hindi English Dual Audio Movie HD ESub",
+        "title": "The School for Good and Evil 2022 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -7460,7 +7460,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Your Fault 2024 Hindi English Dual Audio Movie HD ESub",
+        "title": "Your Fault 2024 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -7485,7 +7485,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free My Fault 2023 Hindi English Dual Audio Movie HD ESub",
+        "title": "My Fault 2023 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "460mb",
@@ -7505,7 +7505,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Mura 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Mura 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -7530,7 +7530,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bhool Bhulaiyaa 3 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Bhool Bhulaiyaa 3 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -7565,7 +7565,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free The Lion King 2019 Hindi English Dual Audio Movie BluRay HD ESub",
+        "title": "The Lion King 2019 Hindi English Dual Audio Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -7600,7 +7600,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jango 2021 Hindi Tamil Dual Audio UnCut Movie HD ESub",
+        "title": "Jango 2021 Hindi Tamil Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -7630,7 +7630,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bagheera 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Bagheera 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "520mb",
@@ -7660,7 +7660,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Gladiator II 2024 Hindi English Dual Audio Movie HD ESub",
+        "title": "Gladiator II 2024 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -7685,7 +7685,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Wanted Pandugod 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Wanted Pandugod 2022 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -7710,7 +7710,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Aashiqui 2 2013 Bollywood Hindi Movie BluRay HD ESub",
+        "title": "Aashiqui 2 2013 Bollywood Hindi Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -7740,7 +7740,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Aashiqui 1990 Bollywood Hindi Movie HD ESub",
+        "title": "Aashiqui 1990 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "470mb",
@@ -7765,7 +7765,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Alice in Wonderland 2010 Hindi English Dual Audio Movie BluRay HD ESub",
+        "title": "Alice in Wonderland 2010 Hindi English Dual Audio Movie BluRay HD ESub",
         "download_links": [
             {
                 "size": "370mb",
@@ -7785,7 +7785,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free RAM Rapid Action Mission 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "RAM Rapid Action Mission 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -7810,7 +7810,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free DK Bose 2013 Hindi Dubbed Full Movie HD",
+        "title": "DK Bose 2013 Hindi Dubbed Full Movie HD",
         "download_links": [
             {
                 "size": "250mb",
@@ -7835,7 +7835,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Case of Kondana 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Case of Kondana 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -7860,7 +7860,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Alanaati Ramchandrudu 2024 Hindi Telugu Dual Audio South UnCut Movie HD ESub",
+        "title": "Alanaati Ramchandrudu 2024 Hindi Telugu Dual Audio South UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -7885,7 +7885,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Shot Boot Three 2023 Hindi Tamil Dual Audio South UnCut Movie HD ESub",
+        "title": "Shot Boot Three 2023 Hindi Tamil Dual Audio South UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "400mb",
@@ -7910,7 +7910,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pyaar Dosti Aur Ek Chor My Dear Donga 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Pyaar Dosti Aur Ek Chor My Dear Donga 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "350mb",
@@ -7935,7 +7935,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jack N Jill 2022 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Jack N Jill 2022 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -7960,7 +7960,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Lal Salaam 2024 South Hindi Dubbed Movie HDTv",
+        "title": "Lal Salaam 2024 South Hindi Dubbed Movie HDTv",
         "download_links": [
             {
                 "size": "480mb",
@@ -7985,7 +7985,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Baasha Thudikkum Karangal 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Baasha Thudikkum Karangal 2023 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -8010,7 +8010,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Karungaapiyam Kali Kitaab 2023 Hindi Tamil Dual Audio South UnCut Movies HD ESub",
+        "title": "Karungaapiyam Kali Kitaab 2023 Hindi Tamil Dual Audio South UnCut Movies HD ESub",
         "download_links": [
             {
                 "size": "430mb",
@@ -8035,7 +8035,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Despatch 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Despatch 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -8060,7 +8060,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Singham Again 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Singham Again 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -8095,7 +8095,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Bougainvillea 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
+        "title": "Bougainvillea 2024 Hindi Malayalam Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -8120,7 +8120,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Red One 2024 Hindi English Dual Audio Movie HD ESub",
+        "title": "Red One 2024 Hindi English Dual Audio Movie HD ESub",
         "download_links": [
             {
                 "size": "380mb",
@@ -8155,7 +8155,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sir 2024 Hindi Tamil Dual Audio South UnCut Movie HD ESub",
+        "title": "Sir 2024 Hindi Tamil Dual Audio South UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -8180,7 +8180,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Venom The Last Dance 2024 Hindi English Dual Audio MCU Movie HD ESub",
+        "title": "Venom The Last Dance 2024 Hindi English Dual Audio MCU Movie HD ESub",
         "download_links": [
             {
                 "size": "360mb",
@@ -8210,7 +8210,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Devara Part 1 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Devara Part 1 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -8240,7 +8240,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Romeo 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Romeo 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -8270,7 +8270,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vicky Vidya Ka Woh Wala Video 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Vicky Vidya Ka Woh Wala Video 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "450mb",
@@ -8300,7 +8300,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Kalinga 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Kalinga 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -8325,7 +8325,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Agni 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Agni 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -8355,7 +8355,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Jigra 2024 Bollywood Hindi Movie HD ESub",
+        "title": "Jigra 2024 Bollywood Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -8385,7 +8385,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Amaran 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Amaran 2024 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "560mb",
@@ -8420,7 +8420,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Matka 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Matka 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "410mb",
@@ -8450,7 +8450,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Natasaarvabhowma 2019 Hindi Kannada Dual Audio UnCut Movie HD ESub",
+        "title": "Natasaarvabhowma 2019 Hindi Kannada Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "500mb",
@@ -8480,7 +8480,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Karataka Damanaka 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
+        "title": "Karataka Damanaka 2024 Hindi Kannada Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -8510,7 +8510,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Vedalam 2015 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Vedalam 2015 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -8535,7 +8535,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pyaar Reloaded Naan Sigappu Manithan 2014 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Pyaar Reloaded Naan Sigappu Manithan 2014 Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "510mb",
@@ -8560,7 +8560,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Pyari Padmini Pannaiyarum Padminiyum Hindi Tamil Dual Audio UnCut South Movie HD ESub",
+        "title": "Pyari Padmini Pannaiyarum Padminiyum Hindi Tamil Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
@@ -8585,7 +8585,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sammathame 2022 Hindi Telugu Dual Audio UnCut Movie HD ESub",
+        "title": "Sammathame 2022 Hindi Telugu Dual Audio UnCut Movie HD ESub",
         "download_links": [
             {
                 "size": "420mb",
@@ -8615,7 +8615,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Sikandar Ka Muqaddar 2024 Hindi Movie HD ESub",
+        "title": "Sikandar Ka Muqaddar 2024 Hindi Movie HD ESub",
         "download_links": [
             {
                 "size": "480mb",
@@ -8645,7 +8645,7 @@ const movies = [
         ]
     },
     {
-        "title": "Free Lucky Baskhar 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+        "title": "Lucky Baskhar 2024 Hindi Telugu Dual Audio UnCut South Movie HD ESub",
         "download_links": [
             {
                 "size": "490mb",
