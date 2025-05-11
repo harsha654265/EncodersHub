@@ -19,6 +19,299 @@ const webSeries = [
             }
         ]
     },
+  {
+    "title": "Moon Knight (2022) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p Bluray S01 ZIP",
+        "url": "https://vifix.site/gdflix/YsVUM3pVym"
+      }
+    ]
+  },
+  {
+    "title": "Mirzapur (2018) S01 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC AMZN WEB-DL MUL ZIP",
+        "url": "https://new6.gdflix.dad/file/2yyluWSS3E"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/44pY8DVIF3"
+      }
+    ]
+  },
+  {
+    "title": "Mirzapur (2018) S02 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC AMZN WEB-DL MUL ZIP",
+        "url": "https://new6.gdflix.dad/file/bfTaUUjtm9"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/39VZBYIMNz"
+      }
+    ]
+  },
+  {
+    "title": "Mirzapur (2018) S03 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC AMZN WEB-DL MUL ZIP",
+        "url": "https://new6.gdflix.dad/file/acVAQBWquN"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/Q3vvnrOtMO"
+      },
+      {
+        "quality": "2180p BONUS EP NF WEB-DL HIN",
+        "url": "https://hubcloud.bz/drive/tacxe6aff6tuqqx"
+      }
+    ]
+  },
+  {
+    "title": "Stranger Things S01 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/ZIHlxGlRvG"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/07w8XtoMLN"
+      }
+    ]
+  },
+  {
+    "title": "Stranger Things S02 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p AMZN WEB-DL HIN ZIP",
+        "url": "https://gdflix.dad/xfile/r97hySr6JG"
+      }
+    ]
+  },
+  {
+    "title": "Stranger Things S03 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/a5GnxcYQwa"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/esdn2Otz5S"
+      }
+    ]
+  },
+  {
+    "title": "Stranger Things S04 Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/HQl8QNbspx"
+      },
+      {
+        "quality": "1080p AV1 NF WEB-DL MUL",
+        "url": "https://new6.gdflix.dad/file/shESG15vae"
+      }
+    ]
+  },
+  {
+    "title": "Game of Thrones S01 (2011) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "4K UHD GOT S01E01 MUL",
+        "url": "https://new6.gdflix.dad/file/NseSwvJISK"
+      },
+      {
+        "quality": "4K UHD GOT S01E02 MUL",
+        "url": "https://new6.gdflix.dad/file/RgNpAjB7q2"
+      },
+      {
+        "quality": "4K UHD GOT S01E03 MUL",
+        "url": "https://new6.gdflix.dad/file/UX512ZJ1RX"
+      },
+      {
+        "quality": "4K UHD GOT S01E04 MUL",
+        "url": "https://new6.gdflix.dad/file/pEHWCweR5h"
+      },
+      {
+        "quality": "4K UHD GOT S01E05 MUL",
+        "url": "https://new6.gdflix.dad/file/Z7mDIPdaf2"
+      },
+      {
+        "quality": "4K UHD GOT S01E06 MUL",
+        "url": "https://new6.gdflix.dad/file/u3b7i9NchN"
+      },
+      {
+        "quality": "4K UHD GOT S01E07 MUL",
+        "url": "https://new6.gdflix.dad/file/3hAROJM077"
+      },
+      {
+        "quality": "4K UHD GOT S01E08 MUL",
+        "url": "https://new6.gdflix.dad/file/11Rmt2jijl"
+      },
+      {
+        "quality": "4K UHD GOT S01E09 MUL",
+        "url": "https://new6.gdflix.dad/file/4A5f89bW5i"
+      },
+      {
+        "quality": "4K UHD GOT S01E10 MUL",
+        "url": "https://new6.gdflix.dad/file/7vNcjzjmCc"
+      }
+    ]
+  },
+  {
+    "title": "Game of Thrones S02 (2011) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "4K UHD GOT S02E01 MUL",
+        "url": "https://new6.gdflix.dad/file/cHV93uVc8E"
+      },
+      {
+        "quality": "4K UHD GOT S02E02 MUL",
+        "url": "https://new6.gdflix.dad/file/FPfbQeCaZF"
+      },
+      {
+        "quality": "4K UHD GOT S02E03 MUL",
+        "url": "https://new6.gdflix.dad/file/LvmFY2ps7p"
+      },
+      {
+        "quality": "4K UHD GOT S02E04 MUL",
+        "url": "https://new6.gdflix.dad/file/hKaPPPWmkU"
+      },
+      {
+        "quality": "4K UHD GOT S02E05 MUL",
+        "url": "https://new6.gdflix.dad/file/VagvJmFum9"
+      },
+      {
+        "quality": "4K UHD GOT S02E06 MUL",
+        "url": "https://new6.gdflix.dad/file/tml4DfDSBu"
+      },
+      {
+        "quality": "4K UHD GOT S02E07 MUL",
+        "url": "https://new6.gdflix.dad/file/rmmxf09mUX"
+      },
+      {
+        "quality": "4K UHD GOT S02E08 MUL",
+        "url": "https://new6.gdflix.dad/file/2qxdf9ugMa"
+      },
+      {
+        "quality": "4K UHD GOT S02E09 MUL",
+        "url": "https://new6.gdflix.dad/file/QuWYUkSUBh"
+      },
+      {
+        "quality": "4K UHD GOT S02E10 MUL",
+        "url": "https://new6.gdflix.dad/file/QuWYUkSUBh"
+      }
+    ]
+  },
+  {
+    "title": "Game of Thrones S03 (2011) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "4K UHD GOT S03E01 MUL",
+        "url": "https://new6.gdflix.dad/file/cXcU7PCJKG"
+      },
+      {
+        "quality": "4K UHD GOT S03E02 MUL",
+        "url": "https://new6.gdflix.dad/file/FLpQAhmw1B"
+      },
+      {
+        "quality": "4K UHD GOT S03E03 MUL",
+        "url": "https://new6.gdflix.dad/file/LVqMn15Hku"
+      },
+      {
+        "quality": "4K UHD GOT S03E04 MUL",
+        "url": "https://new6.gdflix.dad/file/qvMGiBPAhp"
+      },
+      {
+        "quality": "4K UHD GOT S03E05 MUL",
+        "url": "https://new6.gdflix.dad/file/zXjvkBTm4h"
+      },
+      {
+        "quality": "4K UHD GOT S03E06 MUL",
+        "url": "https://new6.gdflix.dad/file/2F945aDfyl"
+      },
+      {
+        "quality": "4K UHD GOT S03E07 MUL",
+        "url": "https://new6.gdflix.dad/file/CtBz8RovTK"
+      },
+      {
+        "quality": "4K UHD GOT S03E08 MUL",
+        "url": "https://new6.gdflix.dad/file/uKFSqvieLp"
+      },
+      {
+        "quality": "4K UHD GOT S03E09 MUL",
+        "url": "https://new6.gdflix.dad/file/1chuZNjzDd"
+      },
+      {
+        "quality": "4K UHD GOT S03E10 MUL",
+        "url": "https://new6.gdflix.dad/file/kBFQZmJd6x"
+      }
+    ]
+  },
+  {
+    "title": "Game of Thrones S04 (2011) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "4K UHD GOT S04E01 MUL",
+        "url": "https://new6.gdflix.dad/file/qQnuXcjcu5"
+      },
+      {
+        "quality": "4K UHD GOT S04E02 MUL",
+        "url": "https://new6.gdflix.dad/file/z0Xu8H9SV1"
+      },
+      {
+        "quality": "4K UHD GOT S04E03 MUL",
+        "url": "https://new6.gdflix.dad/file/b7bGr4q64g"
+      },
+      {
+        "quality": "4K UHD GOT S04E04 MUL",
+        "url": "https://new6.gdflix.dad/file/cJJ27a8ZCP"
+      },
+      {
+        "quality": "4K UHD GOT S04E05 MUL",
+        "url": "https://new6.gdflix.dad/file/jeCxHDfZKe"
+      },
+      {
+        "quality": "4K UHD GOT S04E06 MUL",
+        "url": "https://new6.gdflix.dad/file/SxCZjWPhdP"
+      },
+      {
+        "quality": "4K UHD GOT S04E07 MUL",
+        "url": "https://new6.gdflix.dad/file/H9AIwR8GmB"
+      },
+      {
+        "quality": "4K UHD GOT S04E08 MUL",
+        "url": "https://new6.gdflix.dad/file/e3NBZi0uBR"
+      },
+      {
+        "quality": "4K UHD GOT S04E09 MUL",
+        "url": "https://new6.gdflix.dad/file/EKYzhh9BIr"
+      },
+      {
+        "quality": "4K UHD GOT S04E10 MUL",
+        "url": "https://new6.gdflix.dad/file/fo2mRHrlfp"
+      }
+    ]
+  },
+  {
+    "title": "Khauf (2025) Hindi Telugu Dual Audio UnCut Series HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p AMZN DS4K",
+        "url": "https://hubcloud.bz/drive/g65qi3erg41gyr4"
+      },
+      {
+        "quality": "1080p AMZN DS4K",
+        "url": "https://hubcloud.bz/drive/nbz5u12qdjmclgn"
+      }
+    ]
+  },
     {
         "title": "Gram Chikitsalay S01 2025 Hindi Completed Web Series HEVC ESub",
         "download_links": [
