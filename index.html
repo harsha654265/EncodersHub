@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encoders Hub</title>
   <link rel="icon" type="image/png" href="https://em-content.zobj.net/source/microsoft-teams/363/clapper-board_1f3ac.png">
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -34,8 +33,7 @@
 
     .search-container {
       padding: 1rem;
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
 
     .search-container input {
@@ -46,6 +44,7 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       outline: none;
+      text-align: center;
     }
 
     .movie-list, .web-series-list {
@@ -60,6 +59,7 @@
       margin-bottom: 0.5rem;
       display: flex;
       align-items: center;
+      justify-content: space-between; /* Changed to space-between to push arrow to the right */
       gap: 0.5rem;
       cursor: pointer;
     }
@@ -76,6 +76,15 @@
     .movie-item .title {
       flex: 1;
       font-size: 1.1rem;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .modal {
@@ -167,27 +176,28 @@
       padding: 1rem;
       text-align: center;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer p, .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
     }
 
     @media (max-width: 600px) {
-      .footer p:first-child {
+      .footer {
         display: none;
       }
-    }
 
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .pagination button {
-      background: none;
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      color: #007bff;
+      .search-container input {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -204,22 +214,22 @@
     <div class="section-header">
       <h2>All Movies</h2>
     </div>
-    <div class="movie-list" id="movieList"></div>
     <div class="pagination">
-      <button onclick="changePage('movies', -1)">⬅️</button>
-      <button onclick="changePage('movies', 1)">➡️</button>
+      <span onclick="changePage('movies', -1)">⬅️</span>
+      <span onclick="changePage('movies', 1)">➡️</span>
     </div>
+    <div class="movie-list" id="movieList"></div>
   </section>
 
   <section id="webSeriesSection">
     <div class="section-header">
       <h2>Web Series</h2>
     </div>
-    <div class="web-series-list" id="webSeriesList"></div>
     <div class="pagination">
-      <button onclick="changePage('webSeries', -1)">⬅️</button>
-      <button onclick="changePage('webSeries', 1)">➡️</button>
+      <span onclick="changePage('webSeries', -1)">⬅️</span>
+      <span onclick="changePage('webSeries', 1)">➡️</span>
     </div>
+    <div class="web-series-list" id="webSeriesList"></div>
   </section>
 
   <div class="modal" id="movieModal">
@@ -231,6 +241,7 @@
   </div>
 
   <div class="footer">
+    <p>Please join Telegram Channel: <a href="https://t.me/encodershub" target="_blank">@EncodersHub</a></p>
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
@@ -251,19 +262,27 @@
       return array.slice(page * pageSize, (page + 1) * pageSize);
     }
 
+    function sortByLatestDate(data) {
+      return data.slice().sort((a, b) => new Date(b.date || b.updated_at || 0) - new Date(a.date || a.updated_at || 0));
+    }
+
     function changePage(type, delta) {
       if (type === 'movies') {
-        moviePage += delta;
+        moviePage = Math.max(0, moviePage + delta);
         renderMovies(searchBar.value);
       } else {
-        webSeriesPage += delta;
+        webSeriesPage = Math.max(0, webSeriesPage + delta);
         renderWebSeries(searchBar.value);
       }
     }
 
+    function removeFreePrefix(title) {
+      return title.replace(/^FREE\s*/, ''); // Removes "FREE" followed by any spaces at the start
+    }
+
     function renderMovies(filter = '') {
       movieList.innerHTML = '';
-      const filtered = movies.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
+      const filtered = sortByLatestDate(movies).filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
       const paginated = paginate(filtered, moviePage);
 
       if (paginated.length === 0) {
@@ -274,9 +293,10 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
+        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
         itemElement.innerHTML = `
+          <span class="title">${cleanTitle}</span>
           <span class="arrow">➡️</span>
-          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
@@ -285,7 +305,7 @@
 
     function renderWebSeries(filter = '') {
       webSeriesList.innerHTML = '';
-      const filtered = webSeries.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
+      const filtered = sortByLatestDate(webSeries).filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
       const paginated = paginate(filtered, webSeriesPage);
 
       if (paginated.length === 0) {
@@ -296,9 +316,10 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
+        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
         itemElement.innerHTML = `
+          <span class="title">${cleanTitle}</span>
           <span class="arrow">➡️</span>
-          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
@@ -306,7 +327,7 @@
     }
 
     function openModal(item) {
-      modalTitle.textContent = item.title;
+      modalTitle.textContent = removeFreePrefix(item.title); // Also remove "FREE" in the modal title
       downloadLinks.innerHTML = '';
       item.download_links.forEach(link => {
         const a = document.createElement('a');
