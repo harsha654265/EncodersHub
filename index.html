@@ -303,10 +303,12 @@
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
-  
   <script src="x9_data_dump.js"></script>
   <script src="x9_data_dump2.js"></script>
   <script>
+    // Combine movies from both data files
+    const allMovies = [...moviesFromDump1, ...moviesFromDump2];
+
     const movieList = document.getElementById('movieList');
     const webSeriesList = document.getElementById('webSeriesList');
     const searchInput = document.getElementById('searchInput');
@@ -335,8 +337,8 @@
       'Game of Thrones S04 (2011)'
     ];
 
-    const moviesList = movies.filter(movie => !webSeriesTitles.includes(movie.title));
-    const webSeriesList = movies.filter(movie => webSeriesTitles.includes(movie.title));
+    const moviesList = allMovies.filter(movie => !webSeriesTitles.includes(movie.title));
+    const webSeriesList = allMovies.filter(movie => webSeriesTitles.includes(movie.title));
 
     let moviesCurrentPage = 1;
     let webSeriesCurrentPage = 1;
