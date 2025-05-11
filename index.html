@@ -12,15 +12,12 @@
       font-size: 16px;
       min-height: 100vh;
       position: relative;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #0f0f0f);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec, #f0f4f8);
       background-size: 200% 200%;
       animation: gradientBG 20s ease infinite;
-      color: #fff;
+      color: #333;
     }
 
     @keyframes gradientBG {
@@ -30,136 +27,84 @@
     }
 
     header {
-      background: #1f1f1f;
+      background: #007bff;
       padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      text-align: center;
+      color: #fff;
     }
 
     header h1 {
       margin: 0;
       font-size: 1.8rem;
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 10px;
-      white-space: nowrap;
     }
 
-    .middle-highlight {
-      color: #FFD700;
-      font-weight: bold;
-      font-size: 1.05rem;
-      text-align: center;
-      flex: 1;
-      padding: 0 1rem;
-      white-space: nowrap;
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
     }
 
     input[type="text"] {
       padding: 0.5rem;
       border-radius: 8px;
-      border: none;
-      width: 200px;
+      border: 1px solid #ccc;
+      width: 300px;
       font-size: 16px;
-      margin-top: 0.5rem;
+      margin: 1rem auto;
+      display: block;
     }
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      header h1,
-      .middle-highlight,
-      input[type="text"] {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .middle-highlight {
-        font-size: 0.75rem;
-        margin-top: 0.3rem;
-      }
-
-      input[type="text"] {
-        margin-top: 0.5rem;
-      }
-    }
-
-    .movie-grid, .web-series-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-      gap: 1rem;
+    .movie-list, .web-series-list {
       padding: 1rem;
-      transition: opacity 0.3s ease;
     }
 
-    @media (min-width: 480px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      }
-    }
-
-    @media (min-width: 768px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .movie-grid, .web-series-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      }
-    }
-
-    .movie-card {
-      background: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
+    .movie-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       cursor: pointer;
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
-      position: relative;
+      transition: background 0.3s ease;
     }
 
-    .movie-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 2/3;
-      object-fit: cover;
-      border-radius: 12px;
-      loading: lazy;
+    .movie-item:hover {
+      background: #e9ecef;
     }
 
-    .movie-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 0.5rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #FFD700;
-      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
-      border-radius: 0 0 12px 12px;
+    .movie-item .arrow {
+      color: #dc3545;
+      font-weight: bold;
     }
 
-    .movie-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+    .movie-item .new-label {
+      color: #dc3545;
+      font-weight: bold;
+    }
+
+    .movie-item .title {
+      flex: 1;
+      font-size: 1.1rem;
+    }
+
+    .movie-item .language {
+      color: #28a745;
+      font-weight: bold;
     }
 
     .modal {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.85);
       justify-content: center;
       align-items: center;
@@ -176,12 +121,12 @@
     }
 
     .modal-content {
-      background: linear-gradient(135deg, #333, #444);
+      background: #fff;
       padding: 2rem;
       border-radius: 12px;
       max-width: 600px;
       width: 90%;
-      color: #fff;
+      color: #333;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
       animation: fadeIn 0.5s ease-in-out;
       overflow-y: auto;
@@ -196,7 +141,7 @@
     .modal-content h2 {
       margin-top: 0;
       font-size: 1.6rem;
-      color: #FFD700;
+      color: #007bff;
       text-align: center;
       margin-bottom: 1rem;
     }
@@ -209,9 +154,9 @@
 
     .file-list a {
       display: block;
-      background: #333;
+      background: #007bff;
       border-radius: 8px;
-      color: #FFD700;
+      color: #fff;
       padding: 12px;
       margin: 8px 0;
       text-decoration: none;
@@ -221,13 +166,12 @@
     }
 
     .file-list a:hover {
-      background: #FFD700;
-      color: #121212;
+      background: #0056b3;
       transform: translateY(-3px);
     }
 
     .close-btn {
-      background: #ff4444;
+      background: #dc3545;
       border: none;
       padding: 0.5rem 1rem;
       margin-top: 1rem;
@@ -236,79 +180,24 @@
       color: white;
       font-size: 1rem;
       transition: background 0.3s, transform 0.2s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .close-btn:hover {
-      background: #ff1a1a;
+      background: #c82333;
       transform: scale(1.05);
     }
 
-    .footer {
-      background: #1f1f1f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: #fff;
-    }
-
-    .footer a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    .footer img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .no-results {
-      text-align: center;
-      color: #FFD700;
-      font-size: 1.2rem;
-      padding: 2rem;
-    }
-
     .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 0 1rem;
       margin-bottom: 0.5rem;
     }
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .see-all {
-      display: inline-block;
-      background: #FFD700;
-      color: #121212;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .see-all:hover {
-      background: #fff;
-      transform: scale(1.05);
-    }
-
-    .section-count {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
+    .section-header h2 {
+      font-size: 1.5rem;
+      color: #333;
     }
 
     .pagination {
@@ -320,8 +209,8 @@
     }
 
     .pagination button {
-      background: #FFD700;
-      color: #121212;
+      background: #007bff;
+      color: #fff;
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 8px;
@@ -336,76 +225,68 @@
     }
 
     .pagination button:hover {
-      background: #fff;
+      background: #0056b3;
       transform: scale(1.05);
     }
 
     .pagination button:disabled {
-      background: #555;
+      background: #ccc;
       cursor: not-allowed;
       transform: none;
     }
 
     .pagination span {
-      color: #FFD700;
+      color: #333;
       font-size: 1rem;
       margin: 0 0.5rem;
     }
 
-    @media (max-width: 480px) {
-      .pagination button {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-        min-width: 36px;
-        height: 36px;
-      }
+    .no-results {
+      text-align: center;
+      color: #dc3545;
+      font-size: 1.2rem;
+      padding: 2rem;
+    }
 
-      .pagination span {
-        font-size: 0.9rem;
-      }
+    .footer {
+      background: #007bff;
+      padding: 1rem 2rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
-    <div class="middle-highlight">🚀 Use Brave Browser for GDFlix to avoid ads! 🚀</div>
-    <input type="text" id="searchInput" placeholder="Search by title, hero, genre, etc.">
+    <p>ONLY HIGH QUALITY MOVIES/WEB SERIES</p>
   </header>
 
-  <section id="featuredSection">
-    <div class="section-header">
-      <div class="section-title">
-        <h2 id="featuredTitle">Featured</h2>
-      </div>
-    </div>
-    <div class="movie-grid" id="featuredMovies"></div>
-  </section>
+  <input type="text" id="searchInput" placeholder="Search by title, language, year, etc.">
 
   <section id="moviesSection">
     <div class="section-header">
-      <div class="section-title">
-        <h2 id="moviesTitle">All Movies</h2>
-        <span id="moviesCount" class="section-count"></span>
-      </div>
-      <div>
-        <div id="moviesPagination" class="pagination"></div>
-      </div>
+      <h2 id="moviesTitle">All Movies</h2>
     </div>
-    <div class="movie-grid" id="movieGrid"></div>
+    <div class="movie-list" id="movieList"></div>
+    <div id="moviesPagination" class="pagination"></div>
   </section>
 
   <section id="webSeriesSection">
     <div class="section-header">
-      <div class="section-title">
-        <h2 id="webSeriesTitle">Web Series</h2>
-        <span id="webSeriesCount" class="section-count"></span>
-      </div>
-      <div>
-        <div id="webSeriesPagination" class="pagination"></div>
-      </div>
+      <h2 id="webSeriesTitle">Web Series</h2>
     </div>
-    <div class="web-series-grid" id="webSeriesGrid"></div>
+    <div class="web-series-list" id="webSeriesList"></div>
+    <div id="webSeriesPagination" class="pagination"></div>
   </section>
 
   <div class="modal" id="movieModal">
@@ -418,42 +299,22 @@
   </div>
 
   <div class="footer">
-    <a href="https://t.me/encodershub" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo">
-    </a>
-    <p style="margin: 0.5rem; font-size: 0.9rem;">
-      <a href="https://brave.com/" target="_blank" style="color: #FFD700;"></a>
-    </p>
-  </div>
-
-  <div style="text-align: center; color: #aaa; padding: 1rem; font-size: 0.9rem;">
-    <p><strong>Powered by Encoders Hub</strong></p>
-    <p>
-      All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users.<br>
-      Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
-    </p>
+    <p>Please join Telegram Channel: <a href="https://t.me/encodershub" target="_blank">@EncodersHub</a></p>
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
   <script src="movie.js"></script>
   <script src="x9_data_dump.js"></script>
   <script>
-    const featuredMoviesGrid = document.getElementById('featuredMovies');
-    const movieGrid = document.getElementById('movieGrid');
-    const webSeriesGrid = document.getElementById('webSeriesGrid');
+    const movieList = document.getElementById('movieList');
+    const webSeriesList = document.getElementById('webSeriesList');
     const searchInput = document.getElementById('searchInput');
     const modal = document.getElementById('movieModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDetails = document.getElementById('modalDetails');
     const downloadLinks = document.getElementById('downloadLinks');
-    const featuredSection = document.getElementById('featuredSection');
-    const moviesSection = document.getElementById('moviesSection');
-    const webSeriesSection = document.getElementById('webSeriesSection');
-    const featuredTitle = document.getElementById('featuredTitle');
     const moviesTitle = document.getElementById('moviesTitle');
     const webSeriesTitle = document.getElementById('webSeriesTitle');
-    const moviesCount = document.getElementById('moviesCount');
-    const webSeriesCount = document.getElementById('webSeriesCount');
     const moviesPagination = document.getElementById('moviesPagination');
     const webSeriesPagination = document.getElementById('webSeriesPagination');
 
@@ -480,21 +341,15 @@
     let webSeriesCurrentPage = 1;
     let filteredMovies = moviesList;
     let filteredWebSeries = webSeriesList;
-    const moviesPerPage = 12;
-    const webSeriesPerPage = 12;
+    const itemsPerPage = 20;
 
-    function renderMovies(itemList, grid, titleElement, countElement, sectionName, totalCount, page, itemsPerPage, paginationElement) {
-      grid.style.opacity = '0';
-      grid.innerHTML = '';
+    function renderItems(itemList, listElement, titleElement, sectionName, page, paginationElement) {
+      listElement.innerHTML = '';
       paginationElement.innerHTML = '';
 
       if (itemList.length === 0) {
-        grid.innerHTML = '<div class="no-results">No results found</div>';
+        listElement.innerHTML = '<div class="no-results">No results found</div>';
         titleElement.textContent = sectionName;
-        if (countElement) {
-          countElement.textContent = `(0)`;
-        }
-        grid.style.opacity = '1';
         return;
       }
 
@@ -504,20 +359,23 @@
       const paginatedItems = itemList.slice(start, end);
 
       paginatedItems.forEach(item => {
-        const card = document.createElement('div');
-        card.classList.add('movie-card');
-        card.innerHTML = `
-          <img src="${item.img}" alt="${item.title}" loading="lazy">
-          <div class="movie-title">${item.title}</div>
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('movie-item');
+        const releaseYear = item.releaseDate?.split('-')[0] || '';
+        const languages = item.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
+        const languageText = languages.length > 0 ? languages.join(', ') : 'N/A';
+        const isNew = item.tags?.includes('New') || false;
+        itemElement.innerHTML = `
+          <span class="arrow">➡️</span>
+          ${isNew ? '<span class="new-label">NEW</span>' : ''}
+          <span class="title">${item.title} (${releaseYear})</span>
+          <span class="language">${languageText}</span>
         `;
-        card.addEventListener('click', () => openModal(item));
-        grid.appendChild(card);
+        itemElement.addEventListener('click', () => openModal(item));
+        listElement.appendChild(itemElement);
       });
 
       titleElement.textContent = sectionName;
-      if (countElement) {
-        countElement.textContent = `(${totalCount !== undefined ? totalCount : itemList.length})`;
-      }
 
       // Pagination controls
       if (totalPages > 1) {
@@ -528,10 +386,10 @@
           if (page > 1) {
             if (sectionName === 'All Movies') {
               moviesCurrentPage--;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
             } else if (sectionName === 'Web Series') {
               webSeriesCurrentPage--;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
             }
           }
         });
@@ -548,17 +406,15 @@
           if (page < totalPages) {
             if (sectionName === 'All Movies') {
               moviesCurrentPage++;
-              renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
+              renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
             } else if (sectionName === 'Web Series') {
               webSeriesCurrentPage++;
-              renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+              renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
             }
           }
         });
         paginationElement.appendChild(nextButton);
       }
-
-      setTimeout(() => { grid.style.opacity = '1'; }, 100);
     }
 
     function openModal(item) {
@@ -596,112 +452,47 @@
     searchInput.addEventListener('input', () => {
       const keyword = searchInput.value.toLowerCase();
 
-      if (keyword) {
-        filteredMovies = moviesList.filter(movie => {
-          const releaseYear = movie.releaseDate?.split('-')[0] || '';
-          return (
-            movie.title?.toLowerCase().includes(keyword) ||
-            movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-            movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-            movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-            movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-            movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-            movie.releaseDate?.toLowerCase().includes(keyword) ||
-            releaseYear.includes(keyword)
-          );
-        });
+      filteredMovies = moviesList.filter(movie => {
+        const releaseYear = movie.releaseDate?.split('-')[0] || '';
+        const languages = movie.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
+        return (
+          movie.title?.toLowerCase().includes(keyword) ||
+          movie.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
+          movie.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
+          movie.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
+          movie.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
+          movie.directors?.some(director => director.toLowerCase().includes(keyword)) ||
+          movie.releaseDate?.toLowerCase().includes(keyword) ||
+          releaseYear.includes(keyword) ||
+          languages.some(lang => lang.toLowerCase().includes(keyword))
+        );
+      });
 
-        filteredWebSeries = webSeriesList.filter(series => {
-          const releaseYear = series.releaseDate?.split('-')[0] || '';
-          return (
-            series.title?.toLowerCase().includes(keyword) ||
-            series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
-            series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
-            series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
-            series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
-            series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
-            series.releaseDate?.toLowerCase().includes(keyword) ||
-            releaseYear.includes(keyword)
-          );
-        });
+      filteredWebSeries = webSeriesList.filter(series => {
+        const releaseYear = series.releaseDate?.split('-')[0] || '';
+        const languages = series.tags?.filter(tag => ['Telugu', 'Tamil', 'Hindi', 'Kannada', 'Malayalam', 'English'].includes(tag)) || [];
+        return (
+          series.title?.toLowerCase().includes(keyword) ||
+          series.genres?.some(genre => genre.toLowerCase().includes(keyword)) ||
+          series.tags?.some(tag => tag.toLowerCase().includes(keyword)) ||
+          series.heroes?.some(hero => hero.toLowerCase().includes(keyword)) ||
+          series.heroines?.some(heroine => heroine.toLowerCase().includes(keyword)) ||
+          series.directors?.some(director => director.toLowerCase().includes(keyword)) ||
+          series.releaseDate?.toLowerCase().includes(keyword) ||
+          releaseYear.includes(keyword) ||
+          languages.some(lang => lang.toLowerCase().includes(keyword))
+        );
+      });
 
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-        featuredMoviesGrid.innerHTML = '';
-        featuredSection.style.display = 'none';
-      } else {
-        filteredMovies = moviesList;
-        filteredWebSeries = webSeriesList;
-        moviesCurrentPage = 1;
-        webSeriesCurrentPage = 1;
-        renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-        renderMovies(filteredMovies, movieGrid, moviesTitle, moviesCount, 'All Movies', filteredMovies.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-        renderMovies(filteredWebSeries, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', filteredWebSeries.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
-        featuredSection.style.display = 'block';
-        moviesSection.style.display = 'block';
-        webSeriesSection.style.display = 'block';
-      }
+      moviesCurrentPage = 1;
+      webSeriesCurrentPage = 1;
+      renderItems(filteredMovies, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
+      renderItems(filteredWebSeries, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
     });
 
-    // Featured section: First 12 items from the combined movies array
-    const featuredMovies = movies.slice(0, 12);
-    renderMovies(featuredMovies, featuredMoviesGrid, featuredTitle, null, 'Featured', null, 1, 12, document.createElement('div'));
-    renderMovies(moviesList, movieGrid, moviesTitle, moviesCount, 'All Movies', moviesList.length, moviesCurrentPage, moviesPerPage, moviesPagination);
-    renderMovies(webSeriesList, webSeriesGrid, webSeriesTitle, webSeriesCount, 'Web Series', webSeriesList.length, webSeriesCurrentPage, webSeriesPerPage, webSeriesPagination);
+    // Initial render
+    renderItems(moviesList, movieList, moviesTitle, 'All Movies', moviesCurrentPage, moviesPagination);
+    renderItems(webSeriesList, webSeriesList, webSeriesTitle, 'Web Series', webSeriesCurrentPage, webSeriesPagination);
   </script>
-  <script>
-    // Detect if an ad blocker is active
-    window.addEventListener('load', function () {
-      const ad = document.createElement('div');
-      ad.innerHTML = ' ';
-      ad.className = 'adsbox';
-      ad.style.position = 'absolute';
-      ad.style.height = '1px';
-      document.body.appendChild(ad);
-
-      window.setTimeout(function () {
-        if (ad.offsetHeight === 0) {
-          const overlay = document.createElement('div');
-          overlay.style.position = 'fixed';
-          overlay.style.top = '0';
-          overlay.style.left = '0';
-          overlay.style.width = '100%';
-          overlay.style.height = '100%';
-          overlay.style.backgroundColor = '#000';
-          overlay.style.color = '#fff';
-          overlay.style.display = 'flex';
-          overlay.style.flexDirection = 'column';
-          overlay.style.justifyContent = 'center';
-          overlay.style.alignItems = 'center';
-          overlay.style.zIndex = '9999';
-          overlay.style.padding = '1rem';
-          overlay.style.textAlign = 'center';
-          overlay.innerHTML = `
-            <h2>Ad Blocker Detected</h2>
-            <p>To access Encoders Hub and GDFlix content, please:</p>
-            <ul style="list-style: none; padding: 0;">
-              <li>Disable your ad blocker for GDFlix in your browser settings, or</li>
-              <li>Use <a href="https://brave.com/" target="_blank" style="color: #FFD700;">Brave Browser</a> for an ad-free experience.</li>
-            </ul>
-            <p>After making changes, refresh this page.</p>
-          `;
-          document.body.appendChild(overlay);
-        }
-        document.body.removeChild(ad);
-      }, 100);
-    });
-  </script>
-
-  <style>
-    .adsbox {
-      height: 1px !important;
-      width: 1px !important;
-      overflow: hidden !important;
-      position: absolute !important;
-      top: -1000px !important;
-    }
-  </style>
 </body>
 </html>
