@@ -12,6 +12,167 @@ const movies = [
                 "quality": "720p-hevc",
                 "url": "https://dlfiles.filesdl.in/dl/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQbXZoRVowcnNBa0h6a2dKRTRoWktrRUZnMWhZSUpYM0l4a3A3eFBiTjdmMUM2cHdfMEJ6OVhudFg1VUFxUlFnP2tleT1TRVJQT0c5RFVYbDRYekpOYkdOUVNVcHVOakJhT1ZKVlZrSnZhM0ZS&token=MTAwNTI1"
             },
+  {
+    "title": "Mirchi (2013) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p Blu-Ray AVC",
+        "url": "https://new6.gdflix.dad/wfile/KtGgU7RtwC"
+      },
+      {
+        "quality": "1080p SBV BD50 REMUX",
+        "url": "https://hubcloud.bz/drive/wrzz8shasc4h48e"
+      },
+      {
+        "quality": "1080p 10bit Bluray TEL-HIN HEVC",
+        "url": "https://hubcloud.bz/drive/bjsscv399hodvjy"
+      },
+      {
+        "quality": "720p 10bit Bluray TEL-HIN HEVC",
+        "url": "https://hubcloud.bz/drive/s8m09mafymvmlhv"
+      }
+    ]
+  },
+  {
+    "title": "Bāhubali: The Beginning (2015) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "4K-2160p UHD Bluray AVC [Tel+Tam+Hin+Mal]",
+        "url": "https://new6.gdflix.dad/xfile/1srmUTiMwR"
+      }
+    ]
+  },
+  {
+    "title": "Bāhubali 2: The Conclusion (2017) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p BluRay REMUX",
+        "url": "https://hubcloud.bz/drive/b833l3v3xrmisgd"
+      }
+    ]
+  },
+  {
+    "title": "Mr. Perfect (2011) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p BLU-RaY AVC",
+        "url": "https://new6.gdflix.dad/xfile/IMQ5fpEJzZ"
+      },
+      {
+        "quality": "1080p BLU-RaY AVC",
+        "url": "https://new6.gdflix.dad/xfile/1YXm5aUHyj"
+      },
+      {
+        "quality": "1080p BLU-RaY AVC",
+        "url": "https://new6.gdflix.dad/xfile/1YXm5aUHyj"
+      }
+    ]
+  },
+  {
+    "title": "Rebel (2012) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p REMuXx",
+        "url": "https://hubcloud.bz/drive/bfi8hsfruhfedna"
+      },
+      {
+        "quality": "1080p BLU-RaY AVC HIN +TEL",
+        "url": "https://new17.gdtot.dad/file/121593038835"
+      }
+    ]
+  },
+  {
+    "title": "Darling (2010) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p BLU-RaY REmUX",
+        "url": "https://hubcloud.bz/drive/y1hf7hiofiotmri"
+      }
+    ]
+  },
+  {
+    "title": "Bujjigaadu: Made in Chennai (2008) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC NF WEB-DL",
+        "url": "https://fastupload.io/a2afe094d390cf76"
+      }
+    ]
+  },
+  {
+    "title": "Munna (2007) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC Ai Upscaled 10bit",
+        "url": "https://new2.gdtot.dad/file/6132425977"
+      }
+    ]
+  },
+  {
+    "title": "Pournami (2006) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p x264 HYBRID JC WEBRIP",
+        "url": "https://hubcloud.bz/drive/nmspql7ckg7wplq"
+      }
+    ]
+  },
+  {
+    "title": "Chatrapathi (2005) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC Ai Upscale x264 DTS+DD 5.1",
+        "url": "https://new6.gdflix.dad/file/3aVsm8qonm"
+      }
+    ]
+  },
+  {
+    "title": "Varsham (2004) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p HEVC Ai Upscale x264",
+        "url": "https://hubcloud.bz/drive/zcjozg5cas1xd_w"
+      }
+    ]
+  },
+  {
+    "title": "Raghavendra (2003) Hindi Telugu Dual Audio UnCut South Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p AMZN WEB-DL x264",
+        "url": "https://new1.filepress.icu/file/65361e7c42c56e79254de2fc"
+      },
+      {
+        "quality": "1080p AMZN WEB-DL x264",
+        "url": "https://new1.filepress.icu/file/65361e7942c56e79254de1e9"
+      },
+      {
+        "quality": "1080p AMZN WEB-DL x264",
+        "url": "https://new1.filepress.icu/file/65361e7b42c56e79254de2a6"
+      }
+    ]
+  },
+  {
+    "title": "John Wick Collection Hindi Telugu Dual Audio UnCut Movie HD ESub",
+    "download_links": [
+      {
+        "quality": "1080p WEBDL Chapter 1",
+        "url": "https://gdlink.dev/file/zBRsO7g8wcdJLXf"
+      },
+      {
+        "quality": "1080p WEBDL Chapter 2",
+        "url": "https://gdlink.dev/file/R0OEeLr2hWQE37s"
+      },
+      {
+        "quality": "1080p WEBDL Chapter 3",
+        "url": "https://gdlink.dev/file/2eQHtRChOshri6W"
+      },
+      {
+        "quality": "1080p WEBDL Chapter 4",
+        "url": "https://gdlink.dev/file/Edn4T5T3TxrM0xf"
+      }
+    ]
+  },
             {
                 "size": "1.2gb",
                 "quality": "720p-hd",
