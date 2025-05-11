@@ -34,7 +34,8 @@
 
     .search-container {
       padding: 1rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
 
     .search-container input {
@@ -45,8 +46,6 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       outline: none;
-      display: block;
-      margin: 0 auto;
     }
 
     .movie-list, .web-series-list {
@@ -163,32 +162,6 @@
       padding: 1rem;
     }
 
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .pagination button {
-      background: #007bff;
-      border: none;
-      padding: 0.5rem 1rem;
-      color: #fff;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .pagination button:hover {
-      background: #0056b3;
-    }
-
-    .pagination button:disabled {
-      background: #6c757d;
-      cursor: not-allowed;
-    }
-
     .footer {
       background: #007bff;
       padding: 1rem;
@@ -196,11 +169,25 @@
       color: #fff;
     }
 
-    .footer p, .footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
+    @media (max-width: 600px) {
+      .footer p:first-child {
+        display: none;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .pagination button {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #007bff;
     }
   </style>
 </head>
@@ -218,9 +205,9 @@
       <h2>All Movies</h2>
     </div>
     <div class="movie-list" id="movieList"></div>
-    <div class="pagination" id="moviePagination">
-      <button id="moviePrevBtn" disabled>⬅ Previous</button>
-      <button id="movieNextBtn">Next ➡️</button>
+    <div class="pagination">
+      <button onclick="changePage('movies', -1)">⬅️</button>
+      <button onclick="changePage('movies', 1)">➡️</button>
     </div>
   </section>
 
@@ -229,9 +216,9 @@
       <h2>Web Series</h2>
     </div>
     <div class="web-series-list" id="webSeriesList"></div>
-    <div class="pagination" id="webSeriesPagination">
-      <button id="webSeriesPrevBtn" disabled>⬅ Previous</button>
-      <button id="webSeriesNextBtn">Next ➡️</button>
+    <div class="pagination">
+      <button onclick="changePage('webSeries', -1)">⬅️</button>
+      <button onclick="changePage('webSeries', 1)">➡️</button>
     </div>
   </section>
 
@@ -244,7 +231,6 @@
   </div>
 
   <div class="footer">
-    <p>Please join Telegram Channel: <a href="https://t.me/encodershub" target="_blank">@EncodersHub</a></p>
     <p>© 2025 Encoders Hub. All Rights Reserved.</p>
   </div>
 
@@ -257,90 +243,66 @@
     const modalTitle = document.getElementById('modalTitle');
     const downloadLinks = document.getElementById('downloadLinks');
     const searchBar = document.getElementById('searchBar');
-    const moviePrevBtn = document.getElementById('moviePrevBtn');
-    const movieNextBtn = document.getElementById('movieNextBtn');
-    const webSeriesPrevBtn = document.getElementById('webSeriesPrevBtn');
-    const webSeriesNextBtn = document.getElementById('webSeriesNextBtn');
-
     let moviePage = 0;
     let webSeriesPage = 0;
-    const itemsPerPage = 10;
+    const pageSize = 10;
 
-    // Sort by date descending (latest first)
-    function sortByDateDesc(items) {
-      return items.sort((a, b) => new Date(b.date) - new Date(a.date));
+    function paginate(array, page) {
+      return array.slice(page * pageSize, (page + 1) * pageSize);
     }
 
-    // Remove "free" from the start of title (case-insensitive)
-    function cleanTitle(title) {
-      return title.replace(/^free\s+/i, '').trim();
+    function changePage(type, delta) {
+      if (type === 'movies') {
+        moviePage += delta;
+        renderMovies(searchBar.value);
+      } else {
+        webSeriesPage += delta;
+        renderWebSeries(searchBar.value);
+      }
     }
 
-    // Render movies
     function renderMovies(filter = '') {
       movieList.innerHTML = '';
-      const sortedMovies = sortByDateDesc([...movies]);
-      const filteredMovies = sortedMovies.filter(item => 
-        item.title.toLowerCase().includes(filter.toLowerCase())
-      );
-      const start = moviePage * itemsPerPage;
-      const end = start + itemsPerPage;
-      const paginatedMovies = filteredMovies.slice(start, end);
+      const filtered = movies.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
+      const paginated = paginate(filtered, moviePage);
 
-      if (!paginatedMovies || paginatedMovies.length === 0) {
+      if (paginated.length === 0) {
         movieList.innerHTML = '<div class="no-results">No movies found</div>';
-        moviePrevBtn.disabled = true;
-        movieNextBtn.disabled = true;
         return;
       }
 
-      paginatedMovies.forEach(item => {
+      paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          <span class="title">${cleanTitle(item.title)}</span>
+          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
       });
-
-      moviePrevBtn.disabled = moviePage === 0;
-      movieNextBtn.disabled = end >= filteredMovies.length;
     }
 
-    // Render web series
     function renderWebSeries(filter = '') {
       webSeriesList.innerHTML = '';
-      const sortedWebSeries = sortByDateDesc([...webSeries]);
-      const filteredWebSeries = sortedWebSeries.filter(item => 
-        item.title.toLowerCase().includes(filter.toLowerCase())
-      );
-      const start = webSeriesPage * itemsPerPage;
-      const end = start + itemsPerPage;
-.Printf("%d %d", start, end);
-      const paginatedWebSeries = filteredWebSeries.slice(start, end);
+      const filtered = webSeries.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()));
+      const paginated = paginate(filtered, webSeriesPage);
 
-      if (!paginatedWebSeries || paginatedWebSeries.length === 0) {
+      if (paginated.length === 0) {
         webSeriesList.innerHTML = '<div class="no-results">No web series found</div>';
-        webSeriesPrevBtn.disabled = true;
-        webSeriesNextBtn.disabled = true;
         return;
       }
 
-      paginatedWebSeries.forEach(item => {
+      paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
         itemElement.innerHTML = `
           <span class="arrow">➡️</span>
-          <span class="title">${cleanTitle(item.title)}</span>
+          <span class="title">${item.title}</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
       });
-
-      webSeriesPrevBtn.disabled = webSeriesPage === 0;
-      webSeriesNextBtn.disabled = end >= filteredWebSeries.length;
     }
 
     function openModal(item) {
@@ -360,47 +322,18 @@
       modal.classList.remove('show');
     }
 
-    // Search functionality
-    searchBar.addEventListener('input', (e) => {
-      const searchTerm = e.target.value;
-      moviePage = 0;
-      webSeriesPage = 0;
-      renderMovies(searchTerm);
-      renderWebSeries(searchTerm);
+    searchBar.addEventListener('input', e => {
+      const term = e.target.value;
+      renderMovies(term);
+      renderWebSeries(term);
     });
 
-    // Pagination event listeners
-    moviePrevBtn.addEventListener('click', () => {
-      if (moviePage > 0) {
-        moviePage--;
-        renderMovies(searchBar.value);
-      }
-    });
-
-    movieNextBtn.addEventListener('click', () => {
-      moviePage++;
-      renderMovies(searchBar.value);
-    });
-
-    webSeriesPrevBtn.addEventListener('click', () => {
-      if (webSeriesPage > 0) {
-        webSeriesPage--;
-        renderWebSeries(searchBar.value);
-      }
-    });
-
-    webSeriesNextBtn.addEventListener('click', () => {
-      webSeriesPage++;
-      renderWebSeries(searchBar.value);
-    });
-
-    window.addEventListener('click', (e) => {
+    window.addEventListener('click', e => {
       if (e.target === modal) {
         closeModal();
       }
     });
 
-    // Initial render
     renderMovies();
     renderWebSeries();
   </script>
