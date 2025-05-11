@@ -19,6 +19,9 @@
       padding: 1rem;
       text-align: center;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     header h1 {
@@ -29,6 +32,22 @@
       align-items: center;
       gap: 10px;
       text-transform: uppercase;
+    }
+
+    .telegram-btn {
+      display: inline-block;
+      background: #fff;
+      color: #007bff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .telegram-btn:hover {
+      background: #e9ecef;
     }
 
     .search-container {
@@ -59,18 +78,11 @@
       margin-bottom: 0.5rem;
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Changed to space-between to push arrow to the right */
-      gap: 0.5rem;
       cursor: pointer;
     }
 
     .movie-item:hover {
       background: #e9ecef;
-    }
-
-    .movie-item .arrow {
-      color: #dc3545;
-      font-weight: bold;
     }
 
     .movie-item .title {
@@ -83,8 +95,24 @@
       justify-content: center;
       gap: 1rem;
       padding: 1rem 0;
+    }
+
+    .pagination span {
       font-size: 1.5rem;
       cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.2s;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pagination span:hover {
+      background: #0056b3;
     }
 
     .modal {
@@ -204,6 +232,7 @@
 <body>
   <header>
     <h1>🎬 Encoders Hub 🎬</h1>
+    <a href="https://t.me/encodershub" target="_blank" class="telegram-btn">Join @EncodersHub on Telegram</a>
   </header>
 
   <div class="search-container">
@@ -277,7 +306,7 @@
     }
 
     function removeFreePrefix(title) {
-      return title.replace(/^FREE\s*/, ''); // Removes "FREE" followed by any spaces at the start
+      return title.replace(/^FREE\s*/, '');
     }
 
     function renderMovies(filter = '') {
@@ -293,10 +322,9 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
+        const cleanTitle = removeFreePrefix(item.title);
         itemElement.innerHTML = `
           <span class="title">${cleanTitle}</span>
-          <span class="arrow">➡️</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         movieList.appendChild(itemElement);
@@ -316,10 +344,9 @@
       paginated.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('movie-item');
-        const cleanTitle = removeFreePrefix(item.title); // Remove "FREE" from the title
+        const cleanTitle = removeFreePrefix(item.title);
         itemElement.innerHTML = `
           <span class="title">${cleanTitle}</span>
-          <span class="arrow">➡️</span>
         `;
         itemElement.addEventListener('click', () => openModal(item));
         webSeriesList.appendChild(itemElement);
@@ -327,7 +354,7 @@
     }
 
     function openModal(item) {
-      modalTitle.textContent = removeFreePrefix(item.title); // Also remove "FREE" in the modal title
+      modalTitle.textContent = removeFreePrefix(item.title);
       downloadLinks.innerHTML = '';
       item.download_links.forEach(link => {
         const a = document.createElement('a');
