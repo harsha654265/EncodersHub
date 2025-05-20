@@ -314,6 +314,7 @@ const movies = [
       { quality: "4K UHD GOT S03E10 MUL", link: "https://new6.gdflix.dad/file/kBFQZmJd6x" }
     ]
   },
+ 
   {
     title: "Game of Thrones S04 (2011)",
     img: "https://image.tmdb.org/t/p/original/gdeLQ5odsYE5EZ6hhnm2PwnjycB.jpg",
@@ -332,6 +333,8 @@ const movies = [
     ]
   }
 ];
+
+
 
 // Example usage: Log all movie titles to the console
 movies.forEach(movie => {
